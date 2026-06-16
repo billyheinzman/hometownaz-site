@@ -1,0 +1,32 @@
+<!--
+  ===========================================================================
+  _nav.html — SINGLE SOURCE OF TRUTH for the sub-page navigation
+  ===========================================================================
+  This is the canonical sub-nav shared across all SCW pages.
+
+  HOW IT WORKS:
+    Running `python3 build-nav.py` reads this file and stamps its contents
+    into every HTML page in the site between the markers:
+        <!-- NAV:START -->  ...nav content...  <!-- NAV:END -->
+
+    To add a new page to the nav: edit this file, then run build-nav.py.
+    No need to touch each page individually.
+
+  CURRENT PAGE HIGHLIGHTING:
+    The build script automatically adds class="scw-nav-btn-current" to the
+    link matching the current page's filename, so each page shows its own
+    location highlighted.
+
+  WIDE/ORANGE buttons (Rec Centers, Find Your Club):
+    These stay in the markup with their special classes. The script just
+    appends `scw-nav-btn-current` when on that page.
+-->
+<nav class="scw-nav-grid">
+  <a href="sun-city-west/scw-events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="sun-city-west/scw-community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="sun-city-west/scw-golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="sun-city-west/scw-buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="sun-city-west/scw-things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="sun-city-west/scw-solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="sun-city-west/scw-rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</nav>

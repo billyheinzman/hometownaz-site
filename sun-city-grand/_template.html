@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{PAGE_TITLE}} — The Grand, Surprise AZ | Hometown AZ</title>
+<meta name="description" content="{{PAGE_DESCRIPTION}}">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESCRIPTION}}">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hometownaz.com/sun-city-grand/_template.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   The Grand — shared page styles
+   These match the SCW visual language but use a slightly warmer
+   palette to differentiate SG (upscale Del Webb) from SCW.
+   ============================================================ */
+:root{
+  /* The Grand palette — warmer/upscale variant of SCW */
+  --green:        #2d4538;       /* deep forest, slightly cooler than SCW */
+  --green-deep:   #1e2f25;
+  --green-soft:   #3d5847;
+  --green-mist:   #5a7064;
+  --orange:       #c8622a;       /* shared with SCW for brand consistency */
+  --orange-deep:  #a14d1f;
+  --orange-light: #e8a040;
+  --gold:         #d4a838;       /* upscale gold accent (SG-only) */
+  --gold-deep:    #a87d1c;
+  --gold-soft:    #e6c876;
+  --cream:        #f7f2e8;       /* slightly warmer than SCW cream */
+  --cream-warm:   #ede7d6;
+  --cream-deep:   #e3dac8;
+  --ink:          #2a261e;
+  --muted:        #6b6354;
+  --border:       #ddd6c8;
+  --border-soft:  #e8e0d0;
+  --serif:        'Playfair Display','Merriweather',Georgia,serif;
+  --sans:         'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;font-size:14.5px}
+a{color:var(--orange);text-decoration:none;transition:color .15s}
+a:hover{color:var(--orange-deep);text-decoration:underline}
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.scw-hero{background:var(--green);color:#fff;padding:28px 40px 32px;position:relative}
+.scw-back{display:inline-block;color:rgba(255,255,255,0.7);font-size:13px;font-weight:600;text-decoration:none;letter-spacing:0.04em;margin-bottom:18px;transition:color .15s}
+.scw-back:hover{color:#fff;text-decoration:none}
+.scw-hero-inner{max-width:1100px;margin:0 auto}
+.scw-tagline{display:inline-flex;align-items:center;gap:8px;color:var(--gold-soft);font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:14px}
+.scw-tagline-icon{font-size:14px}
+.scw-headline{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3rem);font-weight:600;line-height:1.1;letter-spacing:-0.01em}
+.scw-headline .accent{color:var(--gold-soft);font-style:italic;font-weight:500}
+.scw-lede{margin-top:14px;font-size:1.05rem;line-height:1.55;color:rgba(255,255,255,0.88);max-width:760px}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.scw-breadcrumb{background:var(--cream-warm);padding:10px 40px;border-bottom:1px solid var(--border);font-size:12.5px;color:var(--muted)}
+.scw-breadcrumb-inner{max-width:1100px;margin:0 auto}
+.scw-breadcrumb a{color:var(--green);font-weight:600}
+.scw-breadcrumb .sep{margin:0 8px;color:var(--border)}
+.scw-breadcrumb .current{color:var(--ink);font-weight:600}
+
+/* ============================================================
+   SUB-NAV GRID — same pattern as SCW so users feel consistency
+   ============================================================ */
+.scw-subnav-wrap{background:var(--green-soft);padding:18px 40px;border-bottom:1px solid var(--green-deep)}
+.scw-subnav-inner{max-width:1100px;margin:0 auto}
+.scw-nav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:8px;align-self:start}
+.scw-nav-btn{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#fff;color:var(--green);border:1px solid rgba(255,255,255,0.25);border-radius:28px;font-family:inherit;font-size:13px;font-weight:600;text-decoration:none;transition:all 0.15s;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.scw-nav-btn:hover{background:var(--cream);transform:translateY(-1px);text-decoration:none}
+.scw-nav-btn-icon{font-size:14px;flex-shrink:0}
+.scw-nav-btn-wide{grid-column:span 2}
+.scw-nav-btn-orange{background:var(--orange);color:#fff;border-color:var(--orange)}
+.scw-nav-btn-orange:hover{background:var(--orange-deep)}
+.scw-nav-btn-current{background:rgba(255,255,255,0.92) !important;color:var(--orange) !important;border-color:var(--orange) !important;box-shadow:0 2px 8px rgba(200,98,42,0.25),inset 0 0 0 1.5px var(--orange);cursor:default}
+.scw-nav-btn-current.scw-nav-btn-orange{background:var(--orange-deep) !important;color:#fff !important}
+.scw-nav-btn-current:hover{transform:none !important}
+
+/* ============================================================
+   CONTENT CONTAINER
+   ============================================================ */
+.scw-page{max-width:1100px;margin:0 auto;padding:40px}
+.scw-section{margin-bottom:48px}
+.scw-section-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.scw-section h2{font-family:var(--serif);font-size:2rem;font-weight:600;line-height:1.15;margin-bottom:16px;color:var(--green-deep)}
+.scw-section h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;margin:24px 0 10px;color:var(--green-deep)}
+.scw-section p{margin-bottom:14px;line-height:1.65}
+.scw-section ul,.scw-section ol{margin:0 0 14px 24px;line-height:1.65}
+.scw-section li{margin-bottom:6px}
+.scw-section strong{color:var(--green-deep);font-weight:700}
+.scw-section em{color:var(--orange);font-style:italic;font-weight:600}
+
+.scw-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.scw-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+
+.scw-cta-card{background:linear-gradient(135deg,var(--green) 0%,var(--green-soft) 100%);color:#fff;padding:36px 40px;border-radius:14px;text-align:center;margin:48px 0}
+.scw-cta-card h3{font-family:var(--serif);color:#fff;font-size:1.6rem;margin-bottom:10px}
+.scw-cta-card p{color:rgba(255,255,255,0.85);margin-bottom:22px;max-width:560px;margin-left:auto;margin-right:auto}
+.scw-cta-btn{display:inline-block;background:var(--orange);color:#fff;padding:12px 28px;border-radius:999px;font-weight:700;text-decoration:none;letter-spacing:0.04em;font-size:14px;transition:all .15s;box-shadow:0 4px 12px rgba(0,0,0,0.25)}
+.scw-cta-btn:hover{background:var(--orange-deep);transform:translateY(-1px);text-decoration:none;color:#fff}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.scw-footer{background:var(--green-deep);color:rgba(255,255,255,0.85);padding:36px 40px;text-align:center;font-size:13px;line-height:1.6;margin-top:40px}
+.scw-footer a{color:var(--gold-soft)}
+.scw-footer a:hover{color:#fff}
+.scw-footer-divider{height:1px;background:rgba(255,255,255,0.12);margin:18px auto;max-width:420px}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media(max-width:720px){
+  .scw-hero{padding:22px 18px 26px}
+  .scw-subnav-wrap{padding:14px 18px}
+  .scw-breadcrumb{padding:8px 18px}
+  .scw-page{padding:24px 18px}
+  .scw-headline{font-size:1.75rem}
+  .scw-section h2{font-size:1.5rem}
+  .scw-cta-card{padding:24px 22px}
+}
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City Grand",
+        "item": "https://hometownaz.com/sun-city-grand/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{PAGE_TITLE}} — The Grand, Surprise AZ",
+        "item": "https://hometownaz.com/sun-city-grand/_template.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{PAGE_TITLE}} — The Grand, Surprise AZ",
+    "description": "{{PAGE_DESCRIPTION}}",
+    "url": "https://hometownaz.com/sun-city-grand/_template.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City Grand, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <div class="scw-hero-inner">
+    <a href="../index.html" class="scw-back">← Back to homepage</a>
+    <div class="scw-tagline">
+      <span class="scw-tagline-icon">{{TAGLINE_ICON}}</span>
+      LONA KING &amp; BILLY HEINZMAN · THE GRAND EXPERTS
+    </div>
+    <h1 class="scw-headline">{{HEADLINE_PRE}} <span class="accent">{{HEADLINE_ACCENT}}</span> {{HEADLINE_POST}}</h1>
+    <p class="scw-lede">{{LEDE}}</p>
+  </div>
+</section>
+
+<nav class="scw-breadcrumb" aria-label="Breadcrumb">
+  <div class="scw-breadcrumb-inner">
+    <a href="../index.html">Home</a>
+    <span class="sep">›</span>
+    <a href="index.html">The Grand</a>
+    <span class="sep">›</span>
+    <span class="current">{{BREADCRUMB_CURRENT}}</span>
+  </div>
+</nav>
+
+<div class="scw-subnav-wrap">
+  <div class="scw-subnav-inner">
+    <!-- NAV:START -->
+    <!-- NAV:END -->
+  </div>
+</div>
+
+<main class="scw-page">
+
+  <!-- PAGE CONTENT GOES HERE -->
+  {{PAGE_CONTENT}}
+
+  <div class="scw-cta-card">
+    <h3>Want to talk The Grand?</h3>
+    <p>Lona King helped shape The Grand from day one — she was Del Webb's Senior Contract Director here from 1993 through 2004. There's nobody in the West Valley who knows this community better.</p>
+    <a href="../index.html#contact" class="scw-cta-btn">Talk to Lona &amp; Billy →</a>
+  </div>
+
+</main>
+
+<footer class="scw-footer">
+  <strong>Lona King &amp; Billy Heinzman</strong> · REALTORS® · HomeSmart West<br>
+  <a href="tel:+16232036271">(623) 203-6271</a> Lona · <a href="tel:+14802973830">(480) 297-3830</a> Billy<br>
+  <a href="mailto:azlonaking@gmail.com">azlonaking@gmail.com</a> · <a href="mailto:billyheinzman@gmail.com">billyheinzman@gmail.com</a>
+  <div class="scw-footer-divider"></div>
+  &copy; 2026 Lona King &amp; Billy Heinzman · This page covers The Grand in Surprise, Arizona.
+</footer>
+
+</body>
+</html>

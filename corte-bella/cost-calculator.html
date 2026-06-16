@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost Calculator — Coming Soon | Corte Bella | Hometown AZ</title>
+<meta name="description" content="The True Cost Calculator for Corte Bella — plug in a specific home and see your total all-in monthly carrying cost. HOA, property tax, insurance, mortgage, fees all rolled together.">
+<link rel="canonical" href="https://hometownaz.com/corte-bella/cost-calculator.html">
+<meta property="og:title" content="Cost Calculator for Corte Bella — Coming Soon">
+<meta property="og:description" content="The True Cost Calculator for Corte Bella — plug in a specific home and see your total all-in monthly carrying cost. HOA, property tax, insurance, mortgage, fees all rolled together.">
+<style>
+  :root {
+    --green: #1f5e3a;
+    --orange: #c8622a;
+    --bg: #faf6ed;
+    --card: #ffffff;
+    --ink: #2a2620;
+    --muted: #6b6354;
+    --border: rgba(0,0,0,0.08);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .scw-hero { padding: 24px 24px 12px; }
+  .scw-hero-inner { max-width: 1100px; margin: 0 auto; }
+  .scw-back {
+    display: inline-block; color: var(--orange); font-weight: 600;
+    text-decoration: none; font-size: 14px; margin-bottom: 16px;
+  }
+  .scw-brand-tagline {
+    font-size: 11px; letter-spacing: 0.15em; color: var(--muted);
+    font-weight: 700; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800;
+    margin: 0 0 20px; color: var(--green); line-height: 1.1;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  .scw-nav {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+    max-width: 800px; margin: 0 auto 24px;
+  }
+  @media (max-width: 700px) { .scw-nav { grid-template-columns: repeat(2, 1fr); } }
+  .scw-nav-btn {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 12px 8px; background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; color: var(--ink); text-decoration: none; font-size: 13px;
+    font-weight: 600; transition: all 0.15s; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; }
+  .scw-nav-btn:hover { background: #f0e7d4; border-color: var(--green); }
+  .scw-nav-btn-icon { font-size: 16px; }
+  .scw-nav-btn-wide { grid-column: span 3; }
+  @media (max-width: 700px) { .scw-nav-btn-wide { grid-column: span 2; } }
+  .scw-nav-btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
+  .scw-nav-btn-orange:hover { background: #b35628; border-color: #b35628; color: #fff; }
+  .cg-section { padding: 32px 24px; }
+  .cg-section.alt { background: #f0e7d4; }
+  .cg-prose-inner { max-width: 800px; margin: 0 auto; }
+  .cg-eyebrow {
+    display: inline-block; padding: 6px 14px; background: #fff;
+    border: 1px solid var(--border); border-radius: 999px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+  }
+  .cg-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem); font-weight: 700;
+    margin: 16px 0 20px; color: var(--green); line-height: 1.2;
+  }
+  .cg-lede { font-size: 1.05rem; color: var(--ink); }
+  .cg-coming-soon-banner {
+    background: linear-gradient(135deg, #c8622a 0%, #a14d1f 100%);
+    color: #fff; padding: 18px 24px; border-radius: 14px;
+    margin: 20px 0 32px; text-align: center;
+    box-shadow: 0 4px 16px rgba(200,98,42,0.25);
+  }
+  .cg-coming-soon-banner .cs-eyebrow {
+    font-size: 11px; letter-spacing: 0.2em; font-weight: 700;
+    text-transform: uppercase; opacity: 0.9; margin-bottom: 8px;
+  }
+  .cg-coming-soon-banner .cs-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700;
+  }
+  .cg-fee-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 14px;
+    margin-bottom: 16px; overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .cg-fee-header {
+    padding: 18px 22px 12px; border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #fdfaf2 0%, #fff 100%);
+  }
+  .cg-fee-name {
+    margin: 0; font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green); font-weight: 700;
+  }
+  .cg-fee-body { padding: 16px 22px; color: var(--ink); }
+  .cg-fee-body p { margin: 0 0 12px; }
+  .cg-fee-body p:last-child { margin-bottom: 0; }
+  .scw-footer-cta { padding: 32px 24px; background: #f0e7d4; }
+  .scw-footer-cta-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 700;
+    color: var(--green); margin-bottom: 8px;
+  }
+  .scw-footer-cta-sub { color: var(--muted); margin-bottom: 20px; }
+  .scw-footer-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .dual-call-wrap { display: contents; }
+  .scw-cta-btn {
+    display: inline-block; padding: 14px 24px; background: var(--green);
+    color: #fff; border-radius: 999px; text-decoration: none;
+    font-weight: 700; font-size: 14px;
+  }
+  .scw-cta-btn:hover { background: #174428; }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Corte Bella",
+        "item": "https://hometownaz.com/corte-bella/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cost Calculator — Coming Soon",
+        "item": "https://hometownaz.com/corte-bella/cost-calculator.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cost Calculator — Coming Soon",
+    "description": "The True Cost Calculator for Corte Bella — plug in a specific home and see your total all-in monthly carrying cost. HOA, property tax, insurance, mortgage, fees all rolled together.",
+    "url": "https://hometownaz.com/corte-bella/cost-calculator.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Corte Bella, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+<section class="scw-hero">
+  <div class="scw-hero-inner">
+    <a href="index.html" class="scw-back">← Back to Corte Bella</a>
+    <div class="scw-brand-tagline">LONA KING &amp; BILLY HEINZMAN · CORTE BELLA SPECIALISTS</div>
+    <h1 class="scw-headline">Cost <span class="accent">Calculator</span></h1>
+    <div class="scw-nav">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="clubhouse.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Clubhouse</a>
+</div>
+  </div>
+</section>
+
+<section class="cg-section">
+  <div class="cg-prose-inner">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="cg-eyebrow">🧮 Cost Calculator</div>
+    </div>
+    <h2 class="cg-h2">The True Cost Calculator for Corte Bella</h2>
+
+    <div class="cg-coming-soon-banner">
+      <div class="cs-eyebrow">🚧 Coming Soon</div>
+      <div class="cs-title">This page is under active development</div>
+    </div>
+
+    <p class="cg-lede">The <strong>True Cost Calculator</strong> will let you enter a specific Corte Bella home's asking price and get the complete picture: HOA, property tax, insurance, mortgage P&amp;I, one-time fees, and the all-in monthly carrying cost. We're finishing the build now.</p>
+
+    <div class="cg-fee-card">
+      <div class="cg-fee-header">
+        <h3 class="cg-fee-name">💡 Use Buyer Budget for now</h3>
+      </div>
+      <div class="cg-fee-body">
+        <p>Until the True Cost Calculator is live, the <strong><a href="buyer-budget.html" style="color:var(--orange);font-weight:700">Buyer Budget</a></strong> page does almost the same job — enter your monthly budget and cash on hand, and it tells you the max home price you can afford. Most buyers find that more useful anyway.</p>
+      </div>
+    </div>
+
+    <div class="cg-fee-card">
+      <div class="cg-fee-header">
+        <h3 class="cg-fee-name">🔍 Want a specific home costed out?</h3>
+      </div>
+      <div class="cg-fee-body">
+        <p>For a specific listing you're considering, <strong>just call us</strong>. We'll pull the home up in ARMLS, look at the actual HOA and any sub-HOA dues, run the mortgage math at current rates, and email you a one-page breakdown the same day. No charge, no obligation.</p>
+      </div>
+    </div>
+
+    <div class="cg-fee-card">
+      <div class="cg-fee-header">
+        <h3 class="cg-fee-name">📊 What the calculator will include</h3>
+      </div>
+      <div class="cg-fee-body">
+        <p>When live, this calculator will pull in: list price, current rate environment, property tax for the specific parcel, master HOA, sub-HOA if applicable, insurance estimate, one-time closing fees, and a complete monthly + annual cost breakdown.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-inner">
+    <div class="scw-footer-cta-title">Questions about Corte Bella?</div>
+    <div class="scw-footer-cta-sub">Lona has 20+ years of West Valley experience. <strong>She wrote some of these rules.</strong></div>
+    <div class="scw-footer-cta-row">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona &mdash; (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy &mdash; (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

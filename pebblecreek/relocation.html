@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>✈️ PebbleCreek Relocation Guide — Moving from Out of State | Hometown AZ</title>
+<meta name="description" content="Moving to PebbleCreek from out of state: Goodyear climate, cost of living, healthcare, utility setup, AZ-specific to-dos, practical relocation checklist.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/relocation.html">
+<meta property="og:title" content="✈️ PebbleCreek Relocation Guide — Moving from Out of State">
+<meta property="og:description" content="Moving to PebbleCreek from out of state: Goodyear climate, cost of living, healthcare, utility setup, AZ-specific to-dos, practical relocation checklist.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/relocation.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "✈️ PebbleCreek Relocation Guide — Moving from Out of State",
+        "item": "https://hometownaz.com/pebblecreek/relocation.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "✈️ PebbleCreek Relocation Guide — Moving from Out of State",
+    "description": "Moving to PebbleCreek from out of state: Goodyear climate, cost of living, healthcare, utility setup, AZ-specific to-dos, practical relocation checklist.",
+    "url": "https://hometownaz.com/pebblecreek/relocation.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">✈️</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline">Relocation <span class='accent'>Guide</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">✈️ Moving to PebbleCreek</div>
+      <h2 class="pc-h2">Relocation Guide</h2>
+    </div>
+    <p class="pc-lede">Most PebbleCreek buyers move here from out of state — California, the Midwest, the Northeast, Canada (winter residents). Here's what to know about the move, the area, and how to set yourself up before you arrive.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">THE BIGGER MOVE</div>
+    <h2 class="pc-h2">Goodyear, Arizona — what to expect</h2>
+    <p><strong>Goodyear</strong> is a fast-growing city in the West Valley of metro Phoenix. Population is around 110,000 and growing — and the area surrounding PebbleCreek has seen significant new retail and infrastructure investment in the past decade.</p>
+
+    <h3 class="pc-h3">Climate</h3>
+    <ul>
+      <li><strong>Winters:</strong> Mild and dry. Daytime highs 65-75°F, nights 40-50°F. Why everyone moves here.</li>
+      <li><strong>Spring/Fall:</strong> 75-95°F days, perfect.</li>
+      <li><strong>Summer:</strong> Hot. June through August routinely 100-115°F. Dry heat is more tolerable than humidity, but it's real heat.</li>
+      <li><strong>Rain:</strong> Mostly during the July-September monsoon season. Otherwise dry.</li>
+      <li><strong>Sunshine:</strong> 300+ days/year. Largely why so many retirees end up here.</li>
+    </ul>
+
+    <h3 class="pc-h3">Cost of living vs. other parts of the country</h3>
+    <p>Goodyear is generally cheaper than coastal California, comparable to or slightly above the Texas/Midwest average. Property taxes are notably lower than the East Coast and Midwest. State income tax is moderate (Arizona has graduated rates). <strong>Sales tax</strong> is on the higher end (~8% combined state and local).</p>
+
+    <h3 class="pc-h3">Healthcare</h3>
+    <p>This matters a lot at 55+, and the West Valley is well-served:</p>
+    <ul>
+      <li>Abrazo Health West Campus (Level 1 trauma)</li>
+      <li>Banner Estrella Medical Center</li>
+      <li>Mayo Clinic Phoenix</li>
+      <li>Barrow Neurological Institute</li>
+      <li>City of Hope (cancer treatment)</li>
+      <li>Southwest VA Clinic</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">PRACTICAL CHECKLIST</div>
+    <h2 class="pc-h2">Your relocation checklist</h2>
+
+    <h3 class="pc-h3">Before you move</h3>
+    <ul>
+      <li><strong>Visit at least once.</strong> Ideally during winter (October-March) to see the community in peak season. Robson's <strong>Preferred Guest Program</strong> (800-732-9949) offers 1-day to 4-day/3-night packages with reduced rates for prospective buyers.</li>
+      <li><strong>Get pre-qualified for a mortgage</strong> if you're financing. Arizona has many options for retiree-friendly mortgages, including asset-based qualification.</li>
+      <li><strong>Find a CPA who knows Arizona taxes.</strong> Especially important if you're keeping income property in another state.</li>
+      <li><strong>Talk to your insurance agent</strong> about converting auto and home policies to Arizona-based.</li>
+      <li><strong>Research Medicare Advantage plans</strong> for Maricopa County. Coverage networks differ from your home state.</li>
+    </ul>
+
+    <h3 class="pc-h3">Setting up utilities (call when you have closing date)</h3>
+    <ul>
+      <li><strong>Electric:</strong> APS (Arizona Public Service) — 602-371-7171</li>
+      <li><strong>Gas:</strong> Southwest Gas — 877-860-6020</li>
+      <li><strong>Water/Sewer:</strong> Liberty Utilities — 800-383-0834 (varies by service area)</li>
+      <li><strong>Trash:</strong> Republic Services (for Goodyear)</li>
+      <li><strong>Internet/TV:</strong> Cox Communications is dominant in this area; CenturyLink and 5G home internet are alternatives</li>
+    </ul>
+
+    <h3 class="pc-h3">Arizona-specific to-dos within 30 days of move</h3>
+    <ul>
+      <li><strong>Get an Arizona driver's license</strong> within 30 days at any AZ MVD office (now ADOT-MVD)</li>
+      <li><strong>Register your vehicle</strong> within 30 days. Annual vehicle license tax depends on year and value.</li>
+      <li><strong>Update voter registration</strong></li>
+      <li><strong>File homestead exemption</strong> with Maricopa County Assessor for primary-residence tax benefits</li>
+      <li><strong>Update Social Security, Medicare, Veterans Affairs records</strong></li>
+    </ul>
+
+    <h3 class="pc-h3">Moving logistics</h3>
+    <ul>
+      <li><strong>Long-distance movers:</strong> Get 3-4 quotes. Atlas, North American, Allied are major carriers in this corridor.</li>
+      <li><strong>Snowbird/partial move:</strong> Many PebbleCreek residents keep a primary home elsewhere and bring just essentials. Less expensive moving, but you need a furnished home plan.</li>
+      <li><strong>Vehicle transport:</strong> If you can't drive both cars, vehicle carriers can ship — typically $1,200-$1,800 from the Midwest, $1,800-$2,500 from the Northeast.</li>
+      <li><strong>Storage:</strong> Several local options if you need transitional storage. We can recommend.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">💡 INSIDER ADVICE</div>
+    <h2 class="pc-h2">What new PebbleCreek residents wish they'd known</h2>
+    <ul>
+      <li><strong>Get a golf cart.</strong> Even if you don't golf. It's the dominant way locals move around the community, and it's how you'll make friends — golf cart-friendly streets and "let's drive over and grab coffee" are part of the culture.</li>
+      <li><strong>Join clubs aggressively in your first 6 months.</strong> The PebbleCreek social scene rewards joining. Even if you'll quit some clubs later, joining several early helps you find your tribe quickly.</li>
+      <li><strong>Don't over-furnish before you arrive.</strong> Many homes need different furniture for the Arizona indoor-outdoor lifestyle. Wait and shop locally — Estrella Falls, Palm Valley Pavilions, and Westgate have great options.</li>
+      <li><strong>Get your AC checked annually.</strong> Air conditioning is critical in Phoenix; have a service plan in place before summer.</li>
+      <li><strong>Embrace the snowbird schedule.</strong> Many full-timers travel summers (June-August) to escape heat. Plan accordingly if you can.</li>
+      <li><strong>The Westwind Tavern is the new gathering spot.</strong> If you want to meet people, hang out there in evenings — the most socially active spot since it opened in 2025.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">📞 We've Done This Many Times</div>
+    <h2 class="pc-h2">Out-of-state buyer specialists</h2>
+    <p>We work with a lot of out-of-state buyers — from California, the Pacific Northwest, the Midwest, Canada. We're happy to:</p>
+    <ul>
+      <li>Send detailed video walkthroughs of homes you can't see in person</li>
+      <li>Coordinate with your out-of-state agent if you're selling first</li>
+      <li>Recommend trusted local pros (lenders, inspectors, moving companies, AC service)</li>
+      <li>Help you time the purchase around your sale</li>
+      <li>Hold open houses with FaceTime or video calls</li>
+    </ul>
+    <p><strong>Call Lona at (623) 203-6271 or Billy at (480) 297-3830.</strong> If you're 6 months out from a possible move, we'd still rather hear from you now than later — early conversations help avoid expensive mistakes.</p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>

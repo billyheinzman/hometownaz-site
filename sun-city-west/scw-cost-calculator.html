@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun City West True Cost Calculator — Beyond the Mortgage | Hometown AZ</title>
+<meta name="description" content="The real cost of owning a home in Sun City West, Arizona. Beyond mortgage — Asset Preservation Fee, recreation card, property tax, HOA, insurance, and ongoing maintenance. Free interactive calculator.">
+<meta property="og:title" content="Sun City West True Cost Calculator">
+<meta property="og:description" content="Calculate the actual cost of owning in Sun City West. Mortgage, fees, taxes, HOA, all in one tool.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hometownaz.com/sun-city-west/scw-cost-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --green: #2d3d2e;
+  --green-deep: #1f2c1f;
+  --green-soft: #3a5040;
+  --orange: #c8622a;
+  --orange-deep: #a14d1f;
+  --orange-light: #e8a040;
+  --sage: #4a7c59;
+  --cream: #f5f1ea;
+  --cream-warm: #ede8df;
+  --sand: #ede8df;
+  --border: #ddd6c8;
+  --border-soft: #e8e2d4;
+  --muted: #6b6354;
+  --text: #2a261e;
+  --radius: 6px;
+  --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--orange); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============ HERO (matches floor plans page) ============ */
+.scw-hero {
+  background: var(--green);
+  color: #fff;
+  padding: 24px 48px 40px;
+  position: relative;
+}
+
+.scw-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 14px; font-weight: 500; margin-bottom: 28px;
+  transition: color 0.15s;
+}
+.scw-back:hover { color: #fff; }
+
+.scw-hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.scw-tagline {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--orange);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 165, 0, 0.25);
+  border-radius: 100px;
+}
+.scw-tagline-icon {
+  width: 18px; height: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+.scw-headline {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 4rem; font-weight: 700;
+  line-height: 1.05; letter-spacing: -0.01em;
+  margin: 0;
+}
+.scw-headline .accent { color: var(--orange); }
+
+.scw-subhead {
+  font-size: 17px; line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  margin: 0 0 18px; max-width: 620px;
+}
+.scw-subhead strong { font-weight: 700; color: #fff; }
+
+.scw-note {
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px; line-height: 1.55;
+  max-width: 620px;
+}
+
+/* Side nav button grid */
+.scw-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-self: start;
+}
+.scw-nav-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  background: #fff; color: var(--green);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 28px;
+  font-family: inherit; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; justify-content: center; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+.scw-nav-btn.featured { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn.featured:hover { background: var(--orange-deep); }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+
+/* ============ STATS STRIP ============ */
+.scw-stats-strip {
+  background: var(--cream-warm);
+  padding: 28px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.scw-stats-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.scw-stat-num {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.9rem; font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.scw-stat-lbl {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ============ SECTION SHELL ============ */
+.scw-section {
+  padding: 72px 48px;
+  max-width: 100%;
+}
+.scw-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.scw-section-alt { background: var(--cream-warm); }
+.scw-section-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.scw-section h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 18px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.scw-section .lede {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 820px;
+  margin: 0 0 36px;
+  line-height: 1.6;
+}
+
+/* ============ ABOUT SECTION ============ */
+.scw-about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.scw-about-prose {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.scw-about-prose p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0 0 20px;
+  color: var(--text);
+}
+.scw-about-prose h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 32px 0 12px;
+  line-height: 1.25;
+}
+.scw-about-prose h3:first-child { margin-top: 0; }
+.scw-about-prose p:last-child { margin-bottom: 0; }
+.scw-about-prose strong { color: var(--green); }
+.scw-about-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+}
+.scw-about-card-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 16px;
+}
+.scw-about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.scw-about-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 14px;
+}
+.scw-about-list li:last-child { border-bottom: none; }
+.scw-about-list .lbl { color: var(--muted); }
+.scw-about-list .val { color: var(--green); font-weight: 700; }
+
+/* ============ TOOL CARDS ============ */
+.scw-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+.scw-tool-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.scw-tool-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--orange);
+  box-shadow: 0 12px 32px rgba(45, 61, 46, 0.12);
+  text-decoration: none;
+}
+.scw-tool-card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.scw-tool-card-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 8px;
+}
+.scw-tool-card-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex: 1;
+}
+.scw-tool-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.scw-tool-card-cta:after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.scw-tool-card:hover .scw-tool-card-cta:after { transform: translateX(3px); }
+.scw-tool-card.featured {
+  background: linear-gradient(135deg, #fff7ec 0%, #ffe9cc 100%);
+  border-color: var(--orange);
+}
+.scw-tool-card-badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ============ QUICK FACTS GRID ============ */
+.scw-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 56px;
+}
+.scw-fact h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--green);
+  margin: 0 0 8px;
+}
+.scw-fact p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ============ FAQ STYLES (port of original) ============ */
+.scw-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.scw-faq-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.scw-faq-item[open] { border-color: var(--orange); }
+.scw-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 24px;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background 0.15s;
+}
+.scw-faq-item summary:hover { background: var(--cream); }
+.scw-faq-item summary::-webkit-details-marker { display: none; }
+.scw-faq-item summary:after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--orange);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+.scw-faq-item[open] summary:after { transform: rotate(45deg); }
+.scw-faq-body {
+  padding: 4px 24px 22px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.scw-faq-body p { margin: 0 0 12px; }
+.scw-faq-body p:last-child { margin-bottom: 0; }
+.scw-faq-body strong { color: var(--green); }
+
+/* ============ FOOTER CTA ============ */
+.scw-footer-cta {
+  background: var(--green);
+  color: #fff;
+  padding: 56px 48px;
+  text-align: center;
+}
+.scw-footer-cta-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.8rem; font-weight: 700;
+  margin: 0 0 10px;
+}
+.scw-footer-cta-sub {
+  font-size: 16px; opacity: 0.85;
+  margin: 0 0 24px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scw-footer-cta-row {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+.scw-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px;
+  background: var(--orange); color: #fff;
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 15px; font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+.scw-cta-btn.outlined {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.scw-cta-btn.outlined:hover { background: rgba(255,255,255,0.18); }
+
+/* ============ MOBILE ============ */
+
+
+
+
+
+@media (max-width: 980px) {
+  .scw-hero { padding: 20px 20px 40px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .scw-headline { font-size: 2.5rem; }
+  .scw-stats-strip { padding: 24px 20px; }
+  .scw-stats-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .scw-section { padding: 48px 20px; }
+  .scw-section h2 { font-size: 1.8rem; }
+  .scw-about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .scw-tools-grid { grid-template-columns: 1fr; }
+  .scw-facts-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-faq-grid { grid-template-columns: 1fr; }
+  .scw-nav-grid { grid-template-columns: 1fr; }
+  .scw-footer-cta { padding: 40px 20px; }
+  .scw-footer-cta-title { font-size: 1.4rem; }
+}
+
+
+/* ============ TRUE COST CALCULATOR ============ */
+.tc-section { padding: 56px 48px 40px; }
+.tc-inner { max-width: 1200px; margin: 0 auto; }
+
+.tc-intro { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+.tc-eyebrow {
+  display: inline-block;
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--orange); font-weight: 700; margin-bottom: 12px;
+}
+.tc-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--green); margin: 0 0 14px;
+  line-height: 1.15;
+}
+.tc-lede {
+  font-size: 16px; color: var(--muted);
+  margin: 0; line-height: 1.6;
+}
+
+.tc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Inputs panel */
+.tc-inputs {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+}
+.tc-input-section {
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.tc-input-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.tc-input-section-title {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); font-weight: 700; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.tc-input-section-title .icon { font-size: 14px; }
+
+.tc-field { margin-bottom: 14px; }
+.tc-field:last-child { margin-bottom: 0; }
+.tc-field-label {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 13px; color: var(--text); font-weight: 600;
+  margin-bottom: 6px;
+}
+.tc-field-hint { font-size: 11px; color: var(--muted); font-weight: 400; font-style: italic; }
+.tc-field-row {
+  display: grid; grid-template-columns: 1fr auto; gap: 8px;
+  align-items: stretch;
+}
+.tc-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 14px; color: var(--text);
+  background: var(--cream);
+  transition: border-color 0.15s, background 0.15s;
+}
+.tc-input:focus {
+  outline: none; border-color: var(--orange); background: #fff;
+}
+.tc-input-prefix-wrap {
+  position: relative;
+}
+.tc-input-prefix-wrap::before {
+  content: attr(data-prefix);
+  position: absolute;
+  left: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 14px; color: var(--muted);
+  font-weight: 600;
+  pointer-events: none;
+}
+.tc-input-prefix-wrap .tc-input { padding-left: 28px; }
+.tc-input-suffix-wrap {
+  position: relative;
+}
+.tc-input-suffix-wrap::after {
+  content: attr(data-suffix);
+  position: absolute;
+  right: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 12px; color: var(--muted);
+  font-weight: 600;
+  pointer-events: none;
+}
+.tc-input-suffix-wrap .tc-input { padding-right: 36px; }
+
+.tc-field-slider-row {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: 4px;
+}
+.tc-field-slider-row input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+}
+.tc-field-slider-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.tc-field-slider-row input[type="range"]::-moz-range-thumb {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+.tc-slider-val {
+  font-size: 13px; font-weight: 700; color: var(--green);
+  min-width: 64px; text-align: right;
+}
+
+/* Results panel */
+.tc-results {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-deep) 100%);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  position: sticky; top: 24px;
+}
+.tc-results-eyebrow {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--orange-light); font-weight: 700; margin-bottom: 8px;
+}
+.tc-results-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.3rem; font-weight: 700;
+  margin: 0 0 22px;
+}
+
+.tc-headline-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.tc-headline-stat {
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.tc-headline-stat-lbl {
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.6); font-weight: 700;
+  margin-bottom: 6px;
+}
+.tc-headline-stat-val {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.tc-headline-stat-sub {
+  font-size: 11px; color: rgba(255,255,255,0.55);
+  margin-top: 4px;
+}
+
+.tc-breakdown-section { margin-bottom: 18px; }
+.tc-breakdown-section:last-child { margin-bottom: 0; }
+.tc-breakdown-title {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); font-weight: 700;
+  margin-bottom: 10px;
+}
+.tc-breakdown-row {
+  display: flex; justify-content: space-between;
+  font-size: 13px;
+  padding: 6px 0;
+  color: rgba(255,255,255,0.85);
+}
+.tc-breakdown-row.total {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 6px; padding-top: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+.tc-breakdown-row .lbl { color: rgba(255,255,255,0.7); }
+.tc-breakdown-row.total .lbl { color: #fff; }
+.tc-breakdown-row .val { font-weight: 600; color: #fff; }
+.tc-breakdown-row.zero { opacity: 0.45; }
+
+.tc-results-cta {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.tc-results-cta-lbl {
+  font-size: 12px; color: rgba(255,255,255,0.7);
+  margin-bottom: 12px; text-align: center;
+  line-height: 1.5;
+}
+.tc-results-cta-btn {
+  display: block; width: 100%;
+  padding: 13px;
+  background: var(--orange); color: #fff;
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 14px; font-weight: 700;
+  text-decoration: none; text-align: center;
+  transition: background 0.15s;
+  border: none; cursor: pointer;
+}
+.tc-results-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+
+.tc-disclaimer {
+  margin-top: 24px;
+  padding: 16px 18px;
+  background: var(--cream-warm);
+  border-radius: var(--radius);
+  font-size: 12px; line-height: 1.55;
+  color: var(--muted);
+}
+.tc-disclaimer strong { color: var(--green); }
+
+@media (max-width: 980px) {
+  .tc-section { padding: 36px 20px 28px; }
+  .tc-title { font-size: 1.6rem; }
+  .tc-grid { grid-template-columns: 1fr; gap: 18px; }
+  .tc-results { position: static; }
+  .tc-headline-stats { grid-template-columns: 1fr; }
+  .tc-inputs, .tc-results { padding: 22px 20px; }
+}
+
+
+/* ============ NAV BUTTON: WIDE ORANGE VARIANT ============ */
+.scw-nav-btn.scw-nav-btn-wide {
+  grid-column: 1 / -1;
+  justify-content: center;
+}
+.scw-nav-btn.scw-nav-btn-orange {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+  font-weight: 700;
+}
+.scw-nav-btn.scw-nav-btn-orange:hover {
+  background: var(--orange-deep);
+  border-color: var(--orange-deep);
+  color: #fff;
+}
+.scw-nav-btn.scw-nav-btn-orange .scw-nav-btn-icon {
+  filter: brightness(1.2);
+}
+
+
+/* === Dual phone CTA wrapper (Lona + Billy) — added 2026-05-11 === */
+.dual-call-wrap{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:stretch;}
+.dual-call-wrap > a{flex:1 1 auto;min-width:0;}
+@media (max-width:640px){
+  .dual-call-wrap{flex-direction:column;gap:6px;}
+  .dual-call-wrap > a{width:100%;}
+}
+
+.scw-nav-btn-current {
+  background: rgba(255,255,255,0.92) !important;
+  color: var(--orange, #c8622a) !important;
+  border-color: var(--orange, #c8622a) !important;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+  cursor: default;
+}
+.scw-nav-btn-current.scw-nav-btn-orange {
+  background: var(--orange-deep, #a14d1f) !important;
+  color: #fff !important;
+}
+.scw-nav-btn-current:hover {
+  transform: none !important;
+}</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City West",
+        "item": "https://hometownaz.com/sun-city-west/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Sun City West True Cost Calculator — Beyond the Mortgage",
+        "item": "https://hometownaz.com/sun-city-west/scw-cost-calculator.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sun City West True Cost Calculator — Beyond the Mortgage",
+    "description": "The real cost of owning a home in Sun City West, Arizona. Beyond mortgage — Asset Preservation Fee, recreation card, property tax, HOA, insurance, and ongoing maintenance. Free interactive calculator.",
+    "url": "https://hometownaz.com/sun-city-west/scw-cost-calculator.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City West, AZ"
+    }
+  }
+]</script>
+</head>
+<body><section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City West</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">💰</span>
+        LONA KING &amp; BILLY HEINZMAN · SUN CITY WEST EXPERTS
+      </div>
+      <h1 class="scw-headline">True Cost <span class="accent">Calculator</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="scw-events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="scw-community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="scw-golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="scw-buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="scw-things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="scw-solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="scw-rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+<section class="tc-section">
+  <div class="tc-inner">
+    <div class="tc-intro">
+      <div class="tc-eyebrow">💰 The Honest Math</div>
+      <h2 class="tc-title">What Sun City West homes <em>really</em> cost to own</h2>
+      <p class="tc-lede">Mortgage payment is only part of it. Plug in your numbers and see the full picture — Asset Preservation Fee, recreation card, property tax, HOA, insurance, and utilities — all in one place. Updated for 2026.</p>
+    </div>
+
+    <div class="tc-grid">
+      <!-- INPUT PANEL -->
+      <div class="tc-inputs">
+
+        <div class="tc-input-section">
+          <div class="tc-input-section-title"><span class="icon">🏡</span> The Home</div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Home price</span><span class="tc-field-hint" id="priceHint">$425,000</span></div>
+            <div class="tc-input-prefix-wrap" data-prefix="$">
+              <input type="number" id="price" class="tc-input" value="425000" min="100000" max="3000000" step="5000" oninput="tcCompute()">
+            </div>
+          </div>
+        </div>
+
+        <div class="tc-input-section">
+          <div class="tc-input-section-title"><span class="icon">💵</span> Financing</div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Down payment</span><span class="tc-field-hint" id="downHint">20%</span></div>
+            <div class="tc-field-slider-row">
+              <input type="range" id="downPct" min="0" max="100" value="20" step="5" oninput="tcCompute()">
+              <span class="tc-slider-val" id="downVal">20%</span>
+            </div>
+          </div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Interest rate</span><span class="tc-field-hint">30-yr fixed, today's rates</span></div>
+            <div class="tc-input-suffix-wrap" data-suffix="%">
+              <input type="number" id="rate" class="tc-input" value="6.5" min="1" max="15" step="0.125" oninput="tcCompute()">
+            </div>
+          </div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Loan term</span></div>
+            <select id="term" class="tc-input" onchange="tcCompute()" style="cursor:pointer;">
+              <option value="30">30 years</option>
+              <option value="20">20 years</option>
+              <option value="15">15 years</option>
+              <option value="0">Cash purchase (no loan)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tc-input-section">
+          <div class="tc-input-section-title"><span class="icon">📋</span> Sun City West Fees</div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>People on title (residents)</span><span class="tc-field-hint">$598/yr each for Rec Card</span></div>
+            <div class="tc-field-slider-row">
+              <input type="range" id="people" min="1" max="4" value="2" step="1" oninput="tcCompute()">
+              <span class="tc-slider-val" id="peopleVal">2 people</span>
+            </div>
+          </div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Sub-HOA fees</span><span class="tc-field-hint">$0 for most. Gemini/patio/garden apts pay extra.</span></div>
+            <div class="tc-input-suffix-wrap" data-suffix="/mo">
+              <input type="number" id="hoa" class="tc-input" value="0" min="0" max="800" step="10" oninput="tcCompute()">
+            </div>
+          </div>
+        </div>
+
+        <div class="tc-input-section">
+          <div class="tc-input-section-title"><span class="icon">🏛️</span> Taxes &amp; Insurance</div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Property tax rate</span><span class="tc-field-hint">~0.6% in Maricopa for 55+ owner-occupied</span></div>
+            <div class="tc-input-suffix-wrap" data-suffix="%">
+              <input type="number" id="taxRate" class="tc-input" value="0.6" min="0" max="3" step="0.1" oninput="tcCompute()">
+            </div>
+          </div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Home insurance</span><span class="tc-field-hint">SCW average: ~$900/year</span></div>
+            <div class="tc-input-suffix-wrap" data-suffix="/yr">
+              <input type="number" id="insurance" class="tc-input" value="900" min="0" max="5000" step="50" oninput="tcCompute()">
+            </div>
+          </div>
+        </div>
+
+        <div class="tc-input-section">
+          <div class="tc-input-section-title"><span class="icon">⚡</span> Living Costs (Estimates)</div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Utilities (electric/water/gas)</span><span class="tc-field-hint">Couple, average AZ home</span></div>
+            <div class="tc-input-suffix-wrap" data-suffix="/yr">
+              <input type="number" id="utilities" class="tc-input" value="2400" min="0" max="10000" step="100" oninput="tcCompute()">
+            </div>
+          </div>
+          <div class="tc-field">
+            <div class="tc-field-label"><span>Internet/cable/streaming</span></div>
+            <div class="tc-input-suffix-wrap" data-suffix="/yr">
+              <input type="number" id="internet" class="tc-input" value="1200" min="0" max="5000" step="100" oninput="tcCompute()">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RESULTS PANEL -->
+      <div class="tc-results">
+        <div class="tc-results-eyebrow">📊 Your Total Cost Breakdown</div>
+        <div class="tc-results-title">Sun City West, AZ</div>
+
+        <div class="tc-headline-stats">
+          <div class="tc-headline-stat">
+            <div class="tc-headline-stat-lbl">Cash to Close</div>
+            <div class="tc-headline-stat-val" id="rCash">$90,400</div>
+            <div class="tc-headline-stat-sub" id="rCashSub">Down payment + closing</div>
+          </div>
+          <div class="tc-headline-stat">
+            <div class="tc-headline-stat-lbl">Total Monthly</div>
+            <div class="tc-headline-stat-val" id="rMonthly">$2,773</div>
+            <div class="tc-headline-stat-sub" id="rMonthlySub">All-in carrying cost</div>
+          </div>
+        </div>
+
+        <div class="tc-breakdown-section">
+          <div class="tc-breakdown-title">One-Time at Closing</div>
+          <div class="tc-breakdown-row"><span class="lbl">Down payment</span><span class="val" id="rDown">$85,000</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Asset Preservation Fee (APF)</span><span class="val">$5,400</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Estimated closing costs</span><span class="val" id="rClosing">$2,000</span></div>
+          <div class="tc-breakdown-row total"><span class="lbl">Total cash to close</span><span class="val" id="rCashTotal">$92,400</span></div>
+        </div>
+
+        <div class="tc-breakdown-section">
+          <div class="tc-breakdown-title">Monthly Carrying Costs</div>
+          <div class="tc-breakdown-row" id="rMortgageRow"><span class="lbl">Mortgage (P&amp;I)</span><span class="val" id="rMortgage">$2,148</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Property tax</span><span class="val" id="rTax">$213</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Home insurance</span><span class="val" id="rIns">$75</span></div>
+          <div class="tc-breakdown-row" id="rHoaRow"><span class="lbl">Sub-HOA fees</span><span class="val" id="rHoa">$0</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Recreation Card</span><span class="val" id="rRec">$100</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Utilities</span><span class="val" id="rUtils">$200</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Internet/cable</span><span class="val" id="rNet">$100</span></div>
+          <div class="tc-breakdown-row total"><span class="lbl">Total per month</span><span class="val" id="rMonthlyTotal">$2,836</span></div>
+        </div>
+
+        <div class="tc-breakdown-section">
+          <div class="tc-breakdown-title">5-Year Outlook</div>
+          <div class="tc-breakdown-row"><span class="lbl">Total monthly costs over 5 years</span><span class="val" id="r5yr">$170,160</span></div>
+          <div class="tc-breakdown-row"><span class="lbl">Plus your initial cash</span><span class="val" id="r5yrCash">$92,400</span></div>
+          <div class="tc-breakdown-row total"><span class="lbl">5-year total invested</span><span class="val" id="r5yrTotal">$262,560</span></div>
+        </div>
+
+        <div class="tc-results-cta">
+          <div class="tc-results-cta-lbl">Want a personalized cost breakdown for a specific home?</div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="tc-results-cta-btn">📞 Call Lona — (623) 203-6271</a><a href="tel:+14802973830" class="tc-results-cta-btn">📞 Call Billy — (480) 297-3830</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tc-disclaimer">
+      <strong>Heads up:</strong> These are estimates based on Sun City West averages — your actual costs will vary based on the specific home, sub-community, lot size, and how the home is configured. Property tax depends on assessed value (not always sale price). HOA fees depend on the property type — most standalone single-family homes have $0, but Gemini twins, patio homes, and garden apartments do have additional dues. <strong>Use this calculator to ballpark your budget. Then call us to run the real numbers on a specific listing.</strong>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  function $(id) { return document.getElementById(id); }
+  function fmtMoney(n) {
+    return '$' + Math.round(n).toLocaleString();
+  }
+  function fmtMoneyK(n) {
+    if (Math.abs(n) >= 1000000) return '$' + (n/1000000).toFixed(2) + 'M';
+    return '$' + Math.round(n).toLocaleString();
+  }
+
+  window.tcCompute = function() {
+    var price = parseFloat($('price').value) || 0;
+    var downPct = parseFloat($('downPct').value) || 0;
+    var rate = parseFloat($('rate').value) || 0;
+    var term = parseInt($('term').value) || 0;
+    var people = parseInt($('people').value) || 1;
+    var hoa = parseFloat($('hoa').value) || 0;
+    var taxRate = parseFloat($('taxRate').value) || 0;
+    var insurance = parseFloat($('insurance').value) || 0;
+    var utilities = parseFloat($('utilities').value) || 0;
+    var internet = parseFloat($('internet').value) || 0;
+
+    // Update hint labels
+    $('priceHint').textContent = fmtMoney(price);
+    $('downVal').textContent = downPct + '%';
+    $('downHint').textContent = fmtMoney(price * downPct / 100);
+    $('peopleVal').textContent = people + (people === 1 ? ' person' : ' people');
+
+    // Calculate
+    var downAmount = price * (downPct / 100);
+    var loanAmount = price - downAmount;
+    var closingCosts = 2000; // simplified flat
+    var apf = 5400;
+    var totalCash = downAmount + closingCosts + apf;
+
+    // Monthly mortgage P&I
+    var monthlyPI = 0;
+    if (term > 0 && loanAmount > 0 && rate > 0) {
+      var r = (rate / 100) / 12;
+      var n = term * 12;
+      monthlyPI = loanAmount * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    } else if (term > 0 && loanAmount > 0 && rate === 0) {
+      monthlyPI = loanAmount / (term * 12);
+    }
+    // Cash purchase: monthlyPI = 0
+
+    var monthlyTax = (price * (taxRate / 100)) / 12;
+    var monthlyIns = insurance / 12;
+    var monthlyRec = (598 * people) / 12;
+    var monthlyUtils = utilities / 12;
+    var monthlyNet = internet / 12;
+    var monthlyHoa = hoa;
+
+    var totalMonthly = monthlyPI + monthlyTax + monthlyIns + monthlyRec + monthlyUtils + monthlyNet + monthlyHoa;
+
+    var fiveYrMonthly = totalMonthly * 60;
+    var fiveYrTotal = fiveYrMonthly + totalCash;
+
+    // Update display
+    $('rCash').textContent = fmtMoneyK(totalCash);
+    $('rCashSub').textContent = 'Down + APF + closing';
+    $('rMonthly').textContent = fmtMoneyK(totalMonthly);
+    $('rMonthlySub').textContent = term === 0 ? 'No mortgage included' : 'All-in carrying cost';
+
+    $('rDown').textContent = fmtMoney(downAmount);
+    $('rClosing').textContent = fmtMoney(closingCosts);
+    $('rCashTotal').textContent = fmtMoney(totalCash);
+
+    // Show/hide mortgage row based on whether there's a loan
+    if (term === 0 || loanAmount === 0) {
+      $('rMortgageRow').classList.add('zero');
+      $('rMortgage').textContent = '$0';
+    } else {
+      $('rMortgageRow').classList.remove('zero');
+      $('rMortgage').textContent = fmtMoney(monthlyPI);
+    }
+
+    $('rTax').textContent = fmtMoney(monthlyTax);
+    $('rIns').textContent = fmtMoney(monthlyIns);
+    if (monthlyHoa === 0) {
+      $('rHoaRow').classList.add('zero');
+      $('rHoa').textContent = '$0';
+    } else {
+      $('rHoaRow').classList.remove('zero');
+      $('rHoa').textContent = fmtMoney(monthlyHoa);
+    }
+    $('rRec').textContent = fmtMoney(monthlyRec);
+    $('rUtils').textContent = fmtMoney(monthlyUtils);
+    $('rNet').textContent = fmtMoney(monthlyNet);
+    $('rMonthlyTotal').textContent = fmtMoney(totalMonthly);
+
+    $('r5yr').textContent = fmtMoney(fiveYrMonthly);
+    $('r5yrCash').textContent = fmtMoney(totalCash);
+    $('r5yrTotal').textContent = fmtMoney(fiveYrTotal);
+  };
+
+  // Initial render
+  tcCompute();
+})();
+</script>
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Want the real numbers on a specific home?</div>
+  <div class="scw-footer-cta-sub">
+    Estimates only get you so far. We'll pull tax records, run actual HOA dues, and price it all out for any address you're looking at. <strong>478 career sales · 5.0★ on Zillow.</strong>
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap"><a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona &mdash; (623) 203-6271</a><a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy &mdash; (480) 297-3830</a></div>
+  </div>
+</section>
+</body>
+</html>

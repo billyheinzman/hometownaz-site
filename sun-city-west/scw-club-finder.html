@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun City West Club Finder — 100+ Chartered Clubs | Hometown AZ</title>
+<link rel="canonical" href="https://hometownaz.com/sun-city-west/scw-club-finder.html">
+<meta name="description" content="Searchable directory of all 103 clubs in Sun City West — chartered &amp; non-chartered. Filter by interest, sport, arts, social, or by which rec center they meet at.">
+<meta property="og:title" content="Sun City West Club Finder — 100+ Chartered Clubs">
+<meta property="og:description" content="Find the right club for you among 100+ Sun City West clubs. Search by interest, location, or activity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f1ea;
+    --cream-dark: #ebe5d8;
+    --green: #2d3d2e;
+    --green-dark: #1f2c1f;
+    --green-light: #4a7d5e;
+    --orange: #c8622a;
+    --orange-light: #3a5040;
+    --gold: #d4a52c;
+    --ink: #2a2118;
+    --ink-soft: #5a4f44;
+    --line: #d9d0bf;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: 'Merriweather', Georgia, serif; line-height: 1.2; color: var(--ink); }
+
+  /* HERO */
+  /* HERO + NAV — matches sun-city-west.html main page */
+  .scw-hero {
+    background: var(--green-dark);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0 0 18px;
+    color: #fff;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  .scw-subhead {
+    font-size: 17px; line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+    margin: 0; max-width: 620px;
+  }
+  .scw-subhead strong { font-weight: 700; color: #fff; }
+
+  /* Side nav button grid */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green-dark);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; justify-content: center; }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+  }
+  .scw-nav-btn-orange:hover {
+    background: var(--orange-light);
+    border-color: var(--orange-light);
+  }
+  .scw-nav-btn-gold {
+    background: var(--gold);
+    color: var(--green-dark);
+    border-color: var(--gold);
+  }
+  .scw-nav-btn-gold:hover {
+    background: #e0bb38;
+    border-color: #e0bb38;
+  }
+
+  /* Hero responsive */
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }  }
+  .scw-nav-btn-gold {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--green-dark);
+    font-weight: 700;
+  }
+  .scw-nav-btn-gold:hover {
+    background: #e2b941;
+    border-color: #e2b941;
+    transform: translateY(-1px);
+  }
+
+  /* STATS STRIP */
+  .stats-strip {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.75);
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* INTRO */
+  .intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1rem;
+    text-align: center;
+  }
+  .intro h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin-bottom: 1rem;
+    color: var(--green-dark);
+  }
+  .intro p {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 720px;
+    margin: 0 auto 0.75rem;
+  }
+
+  /* DATA-COMPLETENESS NOTICE */
+  .data-notice {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 1.5rem;
+  }
+  .data-notice-inner {
+    background: #fff4e0;
+    border: 1px solid #e8c068;
+    border-radius: 10px;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.88rem;
+    color: #6e4a0c;
+  }
+  .data-notice-inner strong { color: #8a5a08; }
+
+  /* CONTROLS */
+  .controls {
+    max-width: 1200px;
+    margin: 2rem auto 1.5rem;
+    padding: 0 1.5rem;
+  }
+  .controls-inner {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(42,33,24,0.04);
+  }
+
+  .search-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    align-items: stretch;
+  }
+  .search-box {
+    flex: 1;
+    position: relative;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: var(--cream);
+    color: var(--ink);
+    transition: all 0.18s ease;
+  }
+  .search-box input:focus {
+    outline: none;
+    border-color: var(--orange);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(42, 77, 143, 0.12);
+  }
+  .search-box::before {
+    content: '🔍';
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .clear-btn {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--line);
+    background: var(--white);
+    color: var(--ink-soft);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+  .clear-btn:hover {
+    background: var(--cream-dark);
+    color: var(--ink);
+  }
+
+  .filter-section { margin-bottom: 1rem; }
+  .filter-section:last-child { margin-bottom: 0; }
+  .filter-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--orange);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .chip {
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--line);
+    background: var(--white);
+    color: var(--ink-soft);
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.18s ease;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .chip:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+  .chip.active {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+  }
+  .chip.active:hover {
+    background: var(--green-dark);
+    color: var(--white);
+  }
+  .chip-count {
+    background: rgba(0,0,0,0.08);
+    color: inherit;
+    padding: 0.05rem 0.4rem;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .chip.active .chip-count { background: rgba(255,255,255,0.2); }
+
+  .toggle-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--line);
+    align-items: center;
+  }
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .toggle input { accent-color: var(--orange); cursor: pointer; }
+  .sort-select {
+    margin-left: auto;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+    font-family: inherit;
+    font-size: 0.88rem;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  /* RESULTS HEADER */
+  .results-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .results-count {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .results-count strong { color: var(--green-dark); font-size: 1.05rem; }
+
+  /* CLUB GRID */
+  .club-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1rem;
+  }
+  .club-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: 0 1px 3px rgba(42,33,24,0.04);
+    transition: all 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .club-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(42,33,24,0.1);
+    border-color: var(--orange);
+  }
+  .club-card.non-chartered {
+    background: linear-gradient(135deg, #f8f4ea 0%, #ffffff 100%);
+    border-color: var(--gold);
+  }
+
+  .club-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .club-name {
+    font-family: 'Merriweather', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .club-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .club-badge.chartered {
+    background: rgba(45, 61, 46, 0.1);
+    color: var(--green-dark);
+  }
+  .club-badge.non-chartered {
+    background: rgba(212, 165, 44, 0.18);
+    color: #7a5e09;
+  }
+
+  .club-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+  }
+  .meta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.55rem;
+    background: var(--cream);
+    color: var(--ink-soft);
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  .meta-tag.category {
+    background: rgba(42, 77, 143, 0.1);
+    color: var(--orange);
+  }
+
+  .club-note {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .club-link {
+    font-size: 0.8rem;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 600;
+    padding-top: 0.4rem;
+    border-top: 1px dashed var(--line);
+    margin-top: auto;
+  }
+  .club-link:hover { color: var(--orange); }
+  .club-link::after { content: ' →'; }
+
+  /* EMPTY STATE */
+  .empty-state {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: var(--ink-soft);
+  }
+  .empty-state h3 {
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  /* CTA FOOTER */
+  .cta-footer {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  .cta-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .cta-footer h2 {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .cta-footer p {
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1.5rem;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.4rem;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.18s ease;
+    border: 2px solid var(--orange);
+  }
+  .cta-btn:hover {
+    background: var(--orange-light);
+    border-color: var(--orange-light);
+    transform: translateY(-2px);
+  }
+  .cta-btn.secondary {
+    background: transparent;
+    border-color: rgba(255,255,255,0.4);
+  }
+  .cta-btn.secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--white);
+  }
+  .cta-contact {
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+  }
+  .cta-contact strong { color: var(--gold); }
+
+  @media (max-width: 860px) {    .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1rem 0.5rem; }
+    .search-row { flex-direction: column; }
+    .toggle-row { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+    .sort-select { margin-left: 0; width: 100%; }
+  }
+  @media (max-width: 520px) {    .club-grid { grid-template-columns: 1fr; }
+  }
+
+.scw-nav-btn-current {
+  background: rgba(255,255,255,0.92) !important;
+  color: var(--orange, #c8622a) !important;
+  border-color: var(--orange, #c8622a) !important;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+  cursor: default;
+}
+.scw-nav-btn-current.scw-nav-btn-orange {
+  background: var(--orange-deep, #a14d1f) !important;
+  color: #fff !important;
+}
+.scw-nav-btn-current:hover {
+  transform: none !important;
+}</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City West",
+        "item": "https://hometownaz.com/sun-city-west/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Sun City West Club Finder — 100+ Chartered Clubs",
+        "item": "https://hometownaz.com/sun-city-west/scw-club-finder.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sun City West Club Finder — 100+ Chartered Clubs",
+    "description": "Searchable directory of all 103 clubs in Sun City West — chartered & non-chartered. Filter by interest, sport, arts, social, or by which rec center they meet at.",
+    "url": "https://hometownaz.com/sun-city-west/scw-club-finder.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City West, AZ"
+    }
+  }
+]</script>
+</head>
+<body><section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City West</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">🤝</span>
+        LONA KING &amp; BILLY HEINZMAN · SCW CLUB DIRECTORY
+      </div>
+      <h1 class="scw-headline">Club <span class="accent">Finder</span></h1>
+      <p class="scw-subhead">100+ clubs across four rec centers — find one that fits your interests, your skill level, and the building closest to home.</p>
+    </div>
+
+    <!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="scw-events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="scw-community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="scw-golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="scw-buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="scw-things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="scw-solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="scw-rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="stats-inner">
+    <div><div class="stat-num">103</div><div class="stat-label">Total Clubs</div></div>
+    <div><div class="stat-num">90</div><div class="stat-label">Chartered</div></div>
+    <div><div class="stat-num">8</div><div class="stat-label">Categories</div></div>
+    <div><div class="stat-num">$598</div><div class="stat-label">Annual Rec Card</div></div>
+  </div>
+</section>
+
+<section class="intro">
+  <h2>Find Your People in Sun City West</h2>
+  <p>Sun City West has more than 100 chartered clubs — Del Webb&apos;s original "Something for Everyone!" promise. Whether you woodwork, quilt, golf, ride RVs, play bridge, brew beer, sing karaoke, or want to learn Spanish, there&apos;s a club for it. Use the filters below to find clubs by interest, by which rec center they meet at, or by name.</p>
+</section>
+
+<div class="data-notice">
+  <div class="data-notice-inner">
+    📋 <strong>About this directory:</strong> Cross-referenced from the official <a href="https://scwclubs.com/club-directory/" target="_blank" rel="noopener" style="color:#8a5a08; font-weight:600;">scwclubs.com/club-directory</a> (90 chartered clubs across 8 official categories) plus 13 non-chartered clubs and the 2024–25 New Member Packet for meeting locations. Some clubs may have moved or updated their hours since publication — always confirm with the rec center before your first visit. Call <a href="tel:+16235446120" style="color:#8a5a08; font-weight:600;">623-544-6120</a> for the latest.
+  </div>
+</div>
+
+<section class="controls">
+  <div class="controls-inner">
+    <div class="search-row">
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Search clubs by name, activity, or interest..." aria-label="Search clubs">
+      </div>
+      <button class="clear-btn" onclick="clearAll()">Reset All</button>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-label">Filter by interest</div>
+      <div class="filter-chips" id="category-chips"></div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-label">Filter by location</div>
+      <div class="filter-chips" id="location-chips"></div>
+    </div>
+
+    <div class="toggle-row">
+      <label class="toggle">
+        <input type="checkbox" id="chartered-only">
+        Chartered only
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="has-website">
+        Has website
+      </label>
+      <select class="sort-select" id="sort-by" aria-label="Sort clubs">
+        <option value="name-asc">Sort: Name (A–Z)</option>
+        <option value="name-desc">Sort: Name (Z–A)</option>
+        <option value="location">Sort: Location</option>
+        <option value="category">Sort: Category</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<div class="results-header">
+  <div class="results-count" id="results-count">Loading...</div>
+</div>
+
+<section class="club-grid" id="club-grid"></section>
+
+<section class="cta-footer">
+  <div class="cta-inner">
+    <h2>Want to tour Sun City West and meet a few clubs in person?</h2>
+    <p>We schedule club visits as part of every home-buying tour. See where you&apos;d fit before you choose a neighborhood.</p>
+    <div class="cta-buttons">
+      <a href="tel:+16232036271" class="cta-btn">📞 Call Lona · (623) 203-6271</a>
+      <a href="tel:+14802973830" class="cta-btn secondary">📞 Call Billy · (480) 297-3830</a>
+    </div>
+    <div class="cta-contact">
+      <strong>Lona King &amp; Billy Heinzman</strong> · HomeSmart · Sun City West specialists since 1993
+    </div>
+  </div>
+</section>
+
+<script>
+const CLUBS = [
+  {
+    "name": "Artistic Hand Lettering",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://artistichandlettering.scwclubs.com/",
+    "note": "Calligraphy classes, hands-on workshops, friendly instructors."
+  },
+  {
+    "name": "Basketeers",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://basketeers.scwclubs.com/",
+    "note": "Unique baskets with timeworn techniques \u2014 Cherokee, pine needle, hen, wine, even golf baskets."
+  },
+  {
+    "name": "Beaders Club",
+    "category": "Arts & Crafts",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://beaders.scwclubs.com/",
+    "note": "Beaded jewelry & embellishments \u2014 stringing, wire wrapping, stitching; classes & sales."
+  },
+  {
+    "name": "Ceramics West",
+    "category": "Arts & Crafts",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "http://ceramics.scwclubs.com/",
+    "note": "Novice to expert \u2014 facilities and instruction to hone ceramics skills."
+  },
+  {
+    "name": "Clay Club",
+    "category": "Arts & Crafts",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "http://clay.scwclubs.com/",
+    "note": "Whether pro or first-timer, an exciting place to work with clay."
+  },
+  {
+    "name": "Creative Stitchers",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://stitchers.scwclubs.com/",
+    "note": "Fine hand needlework \u2014 needlepoint, cross stitch, hardanger, Brazilian embroidery, silk ribbon, redwork, more."
+  },
+  {
+    "name": "Decorative Arts",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://decorative.scwclubs.com/",
+    "note": "Decorative painting with patterns & acrylics \u2014 step-by-step, no drawing required."
+  },
+  {
+    "name": "Encore Needle Craft",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://needlecraft.scwclubs.com",
+    "note": "Crochet, knit, embroidery, sewing \u2014 current crafters or new learners welcome."
+  },
+  {
+    "name": "Glass Fusing & Enameling",
+    "category": "Arts & Crafts",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "http://glassfusing.scwclubs.com/",
+    "note": "Copper enameling and fused glass at 1450\u20131650\u00b0F in kilns."
+  },
+  {
+    "name": "Lapidary",
+    "category": "Arts & Crafts",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://lapidary.scwclubs.com/",
+    "note": "Cutting, forming & polishing gemstones \u2014 beginner & advanced classes. Lapidary rocks!"
+  },
+  {
+    "name": "Leather Carvers",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://leather.scwclubs.com/",
+    "note": "Leather crafting \u2014 fun and rewards in this ancient craft."
+  },
+  {
+    "name": "Mac Cro Knit",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://knit.scwclubs.com/",
+    "note": "Knitting, macram\u00e9, and crocheting \u2014 develop and enjoy these crafts through participation."
+  },
+  {
+    "name": "Metal Shop",
+    "category": "Arts & Crafts",
+    "location": "Stand-alone (Camino del Sol)",
+    "chartered": true,
+    "website": "https://metal.scwclubs.com",
+    "note": "Social and metal club \u2014 metal cutting, welding. 13849 W. Camino del Sol."
+  },
+  {
+    "name": "Palo Verde Patchers",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://patchers.scwclubs.com/",
+    "note": "Fostering the art and social activity of quilting. 501(c)3 \u2014 annual quilt show."
+  },
+  {
+    "name": "Photography West",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://photography.scwclubs.com/",
+    "note": "The Camera Club of Sun City West \u2014 learn photography and share your photos."
+  },
+  {
+    "name": "Rip n Sew",
+    "category": "Arts & Crafts",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://ripsew.scwclubs.com/",
+    "note": "Janome machines, Bernette Sergers, Baby Lock Meridian embroidery, Sailrite heavy-duty machine, cutting tables, irons."
+  },
+  {
+    "name": "Scrapbooking, Papercrafts, and More",
+    "category": "Arts & Crafts",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "http://scrapbooking.scwclubs.com/",
+    "note": "Scrapbooking, card making, rubber stamping, origami, and more."
+  },
+  {
+    "name": "Stained Glass",
+    "category": "Arts & Crafts",
+    "location": "Palm Ridge",
+    "chartered": true,
+    "website": "https://stainedglass.scwclubs.com/",
+    "note": "Stained Glass Crafters \u2014 creates stained glass, fuses glass; community craft fairs; equipment available."
+  },
+  {
+    "name": "SW Art",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://art.scwclubs.com/",
+    "note": "Sun West Art Club \u2014 Acrylics, Oils, Water Colors, Pens, Mixed Media."
+  },
+  {
+    "name": "SilverCraft West",
+    "category": "Arts & Crafts",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://silvercraft.scwclubs.com/",
+    "note": "Unique one-of-a-kind jewelry and items made of silver, copper, brass, and gold."
+  },
+  {
+    "name": "Weavers West",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://weavers.scwclubs.com/",
+    "note": "Promoting the textile arts \u2014 handweavers and handspinners guild."
+  },
+  {
+    "name": "Woodworking",
+    "category": "Arts & Crafts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://woodshop.scwclubs.com/",
+    "note": "Useful & decorative wood items \u2014 professionally-equipped shop."
+  },
+  {
+    "name": "Zymurgy",
+    "category": "Arts & Crafts",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "http://zymurgy.scwclubs.com/",
+    "note": "Fermentation \u2014 beers, ales, wines, meads, ciders, and food pairings."
+  },
+  {
+    "name": "Bunco Club",
+    "category": "Cards & Games",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://bunco.scwclubs.com",
+    "note": "Old-fashioned dice game from the late 1800s \u2014 just add people."
+  },
+  {
+    "name": "Card Players of SCW",
+    "category": "Cards & Games",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://cardplayers.scwclubs.com/",
+    "note": "Combined Euchre, 500, Pan, and Sheepshead clubs into one."
+  },
+  {
+    "name": "Club 52",
+    "category": "Cards & Games",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://fiftytwocard.scwclubs.com/",
+    "note": "Poker club \u2014 nightly Limit Cash Games and No Limit Tournaments ($20 buy-in, $4900 in chips)."
+  },
+  {
+    "name": "Cribbage",
+    "category": "Cards & Games",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://cribbage.scwclubs.com/",
+    "note": "Weekly evening of cribbage in a friendly group."
+  },
+  {
+    "name": "Mah Jongg",
+    "category": "Cards & Games",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://mahjongg.scwclubs.com/",
+    "note": "Rummy-like game with tiles \u2014 American Mah Jongg with Jokers and Flowers."
+  },
+  {
+    "name": "Pinochle",
+    "category": "Cards & Games",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://pinochle.scwclubs.com/",
+    "note": "Single deck pinochle. Friendly group, snacks, and fellowship."
+  },
+  {
+    "name": "Saturday Night Gamesters",
+    "category": "Cards & Games",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://gamesters.scwclubs.com",
+    "note": "Poker, Pinochle, Pan, Bridge \u2014 comfortable environment to play."
+  },
+  {
+    "name": "SCW Contract Bridge",
+    "category": "Cards & Games",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://bridge.scwclubs.com/",
+    "note": "Contract Bridge every Wednesday evening. All skill levels welcome."
+  },
+  {
+    "name": "Aquacizers",
+    "category": "Fitness & Dance",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://aquacizers.scwclubs.com/",
+    "note": "Non-profit for residents with handicaps. Mon/Wed/Sat 9\u201310am, Beardsley indoor pool."
+  },
+  {
+    "name": "Arthritis Club",
+    "category": "Fitness & Dance",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://arthritis.scwclubs.com/",
+    "note": "Limbering and stretching in warm water \u2014 Beardsley indoor pool."
+  },
+  {
+    "name": "Country Western",
+    "category": "Fitness & Dance",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "http://countrywestern.scwclubs.com",
+    "note": "Country Western Dance Club. See you on the dance floor."
+  },
+  {
+    "name": "Energetic Exercisers",
+    "category": "Fitness & Dance",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://exercise.scwclubs.com/",
+    "note": "Low-impact range-of-motion exercises at RH Johnson Social Hall."
+  },
+  {
+    "name": "Fitness Club",
+    "category": "Fitness & Dance",
+    "location": "Multiple Centers",
+    "chartered": true,
+    "website": "https://fitness.scwclubs.com/",
+    "note": "Seven classes \u2014 land or water \u2014 taught by certified instructors across multiple rec centers."
+  },
+  {
+    "name": "Line Dancers",
+    "category": "Fitness & Dance",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://linedancers.scwclubs.com/",
+    "note": "One of the largest line dance clubs in the country. No partner needed."
+  },
+  {
+    "name": "Rock n Roll Dance Club",
+    "category": "Fitness & Dance",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "http://rocknroll.scwclubs.com",
+    "note": "Rock 'n' Roll dances, Dance Exercise Classes, Couples Dance Classes."
+  },
+  {
+    "name": "Water Fitness",
+    "category": "Fitness & Dance",
+    "location": "Multiple Centers",
+    "chartered": true,
+    "website": "https://waterfitness.scwclubs.com/",
+    "note": "Self-directed exercise in shallow end \u2014 meets at Beardsley, Palm Ridge & RHJ pools."
+  },
+  {
+    "name": "Yoga",
+    "category": "Fitness & Dance",
+    "location": "Multiple Centers",
+    "chartered": true,
+    "website": "http://yoga.scwclubs.com/",
+    "note": "Gentle stretching, breathing & relaxation. Discipline for body and mind."
+  },
+  {
+    "name": "Deer Valley Men's Golf",
+    "category": "Golf",
+    "location": "Deer Valley Course",
+    "chartered": true,
+    "website": "https://dvmensgolf.scwclubs.com/",
+    "note": "Plays every Wednesday at Deer Valley \u2014 friendly, competitive."
+  },
+  {
+    "name": "Deer Valley Women's Golf",
+    "category": "Golf",
+    "location": "Deer Valley Course",
+    "chartered": true,
+    "website": "https://dvwomensgolf.scwclubs.com/",
+    "note": "Largest golf group in SCW (~200 women). Plays every Tuesday."
+  },
+  {
+    "name": "Desert Trails Men's Golf",
+    "category": "Golf",
+    "location": "Desert Trails Course",
+    "chartered": true,
+    "website": "https://dtmensgolf.scwclubs.com",
+    "note": "Plays every Wednesday at Desert Trails Golf Course."
+  },
+  {
+    "name": "Desert Trails Women's Golf",
+    "category": "Golf",
+    "location": "Desert Trails Course",
+    "chartered": true,
+    "website": "https://dtwomensgolf.scwclubs.com/",
+    "note": "Executive course (3090 yards, par 61, rating 56.1, slope 78). Plays every Tuesday."
+  },
+  {
+    "name": "Echo Mesa Men's Golf",
+    "category": "Golf",
+    "location": "Echo Mesa Course",
+    "chartered": true,
+    "website": "https://emmensgolf.scwclubs.com/",
+    "note": "Sporty, fun executive course. Plays every Wednesday."
+  },
+  {
+    "name": "Echo Mesa Women's Golf",
+    "category": "Golf",
+    "location": "Echo Mesa Course",
+    "chartered": true,
+    "website": "https://emwomensgolf.scwclubs.com/",
+    "note": "Lakes, sand, grass bunkers & wildlife. 3,008 yards par 60. Plays every Tuesday."
+  },
+  {
+    "name": "Grandview Men's Golf",
+    "category": "Golf",
+    "location": "Grandview Course",
+    "chartered": true,
+    "website": "https://gvmensgolf.scwclubs.com/",
+    "note": "Plays every Wednesday at Grandview Golf Course."
+  },
+  {
+    "name": "Grandview Women's Golf",
+    "category": "Golf",
+    "location": "Grandview Course",
+    "chartered": true,
+    "website": "https://gvwomensgolf.scwclubs.com/",
+    "note": "Plays every Tuesday at Grandview Golf Course."
+  },
+  {
+    "name": "Lady Putters",
+    "category": "Golf",
+    "location": "Grandview Course",
+    "chartered": true,
+    "website": "https://ladyputters.scwclubs.com/",
+    "note": "18-hole, par 36 course at the Grandview large putting green. Wednesday mornings."
+  },
+  {
+    "name": "Men's Putting Club",
+    "category": "Golf",
+    "location": "Grandview Course",
+    "chartered": true,
+    "website": "https://mensputting.scwclubs.com/",
+    "note": "Weekly putting comps at Grandview practice green by the Crooked Putter Restaurant."
+  },
+  {
+    "name": "Pebblebrook Men's Golf",
+    "category": "Golf",
+    "location": "Pebblebrook Course",
+    "chartered": true,
+    "website": "https://pbmensgolf.scwclubs.com/",
+    "note": "Low Gross / Low Net every Wednesday; monthly tournaments."
+  },
+  {
+    "name": "Pebblebrook Women's 18 Hole Golf",
+    "category": "Golf",
+    "location": "Pebblebrook Course",
+    "chartered": true,
+    "website": "https://pbwomensgolf.scwclubs.com/",
+    "note": "Wide friendly fairways, mature trees, lakes & creeks. Plays every Tuesday."
+  },
+  {
+    "name": "Pebblebrook Women's Niner's Golf",
+    "category": "Golf",
+    "location": "Pebblebrook Course",
+    "chartered": true,
+    "website": "https://pbladies.scwclubs.com/",
+    "note": "9 holes at a time on the first course built in SCW. For all skill levels."
+  },
+  {
+    "name": "Stardust Ladies Golf",
+    "category": "Golf",
+    "location": "Stardust Course",
+    "chartered": true,
+    "website": "https://sdladiesgolf.scwclubs.com/",
+    "note": "Tuesday mornings \u2014 both 18 and 9 hole options."
+  },
+  {
+    "name": "Stardust Men's Golf",
+    "category": "Golf",
+    "location": "Stardust Course",
+    "chartered": true,
+    "website": "https://sdmensgolf.scwclubs.com/",
+    "note": "18 holes, par 60. Greg Nash design (1979) \u2014 back nine has water on four holes. Wednesdays."
+  },
+  {
+    "name": "Trail Ridge Men's Golf",
+    "category": "Golf",
+    "location": "Trail Ridge Course",
+    "chartered": true,
+    "website": "https://trmensgolf.scwclubs.com/",
+    "note": "Wednesday games \u2014 Crossover Double-Tees format, starting waves 6:30\u20137:30am and 11\u201312pm."
+  },
+  {
+    "name": "Trail Ridge Women's Golf",
+    "category": "Golf",
+    "location": "Trail Ridge Course",
+    "chartered": true,
+    "website": "https://trwomensgolf.scwclubs.com/",
+    "note": "18 holes, 5497 yards, women's rating 70.4/117. Mix of full-timers and snowbirds. Tuesdays."
+  },
+  {
+    "name": "Agriculture",
+    "category": "Hobbies",
+    "location": "Stand-alone (137th Drive)",
+    "chartered": true,
+    "website": "https://agriculture.scwclubs.com",
+    "note": "Vegetable gardening \u2014 connection with nature, home-grown food. 17800 N 137th Dr."
+  },
+  {
+    "name": "Automotive Restoration Club",
+    "category": "Hobbies",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "http://restoration.scwclubs.com/",
+    "note": "Vehicle enthusiasts \u2014 experienced and novice. Members work, learn, teach in the shop."
+  },
+  {
+    "name": "Broadcast Club",
+    "category": "Hobbies",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "http://broadcast.scwclubs.com/",
+    "note": "Helps SCW residents communicate. Runs Sun City West Radio."
+  },
+  {
+    "name": "Computers West",
+    "category": "Hobbies",
+    "location": "Palm Ridge",
+    "chartered": true,
+    "website": "https://computerswest.scwclubs.com/",
+    "note": "Parent of MacsWest and PC Group \u2014 share computer info and experiences."
+  },
+  {
+    "name": "Desert Garden Club",
+    "category": "Hobbies",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://garden.scwclubs.com/",
+    "note": "Gardening & horticulture \u2014 beautiful arrangements, share & learn."
+  },
+  {
+    "name": "Investments Club",
+    "category": "Hobbies",
+    "location": "Multiple Centers",
+    "chartered": true,
+    "website": "https://investment.scwclubs.com/",
+    "note": "Investments, insurance, taxes, legal, market activity. Meets at RHJ & Palm Ridge."
+  },
+  {
+    "name": "Model Railroad",
+    "category": "Hobbies",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://railroad.scwclubs.com/",
+    "note": "Model and prototype trains and landscapes. Serious, enjoyable hobby."
+  },
+  {
+    "name": "Music Club",
+    "category": "Hobbies",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://music.scwclubs.com/",
+    "note": "Great music and enjoyment \u2014 new friends with musical common interest."
+  },
+  {
+    "name": "Rockhounds West",
+    "category": "Hobbies",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://rockhounds.scwclubs.com/",
+    "note": "Geology club \u2014 mineralogy and earth sciences across Arizona and the Southwest."
+  },
+  {
+    "name": "DanceSensations",
+    "category": "Performing Arts",
+    "location": "Palm Ridge",
+    "chartered": true,
+    "website": "https://dancesensations.scwclubs.com/",
+    "note": "Committed to making dance a fun learning experience."
+  },
+  {
+    "name": "Theatre West",
+    "category": "Performing Arts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://theatrewest.scwclubs.com/",
+    "note": "All phases of theatre \u2014 acting, training, and producing plays/musicals at Stardust."
+  },
+  {
+    "name": "Westernaires",
+    "category": "Performing Arts",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://westernaires.scwclubs.com/",
+    "note": "Chorus of ~90 voices. One of the oldest SCW Charter Clubs (since 1980). Performs at Stardust."
+  },
+  {
+    "name": "Canine Companions",
+    "category": "Social",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://canine.scwclubs.com/",
+    "note": "Dog lovers \u2014 worked with Rec Center to build the two dog parks."
+  },
+  {
+    "name": "Karaoke",
+    "category": "Social",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://karaoke.scwclubs.com/",
+    "note": "Fridays 6pm in the Ocotillo Room at Beardsley Park \u2014 nightclub atmosphere, BYOB."
+  },
+  {
+    "name": "LGBT",
+    "category": "Social",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "http://scwlgbt.scwclubs.com/",
+    "note": "Welcoming group for LGBT friends and allies. Values privacy."
+  },
+  {
+    "name": "Mens Club",
+    "category": "Social",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://mensclub.scwclubs.com/",
+    "note": "Card club \u2014 Poker, Bridge, Gin Rummy and more. Honors Veterans and Sweethearts."
+  },
+  {
+    "name": "RV Club",
+    "category": "Social",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://rv.scwclubs.com/",
+    "note": "Recreational Vehicle Club of Sun City West, chartered 1981. RV adventures."
+  },
+  {
+    "name": "SCW Boomers",
+    "category": "Social",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://boomers.scwclubs.com/",
+    "note": "Boomers Club \u2014 opportunities to meet and socialize."
+  },
+  {
+    "name": "Singles Club",
+    "category": "Social",
+    "location": "Palm Ridge",
+    "chartered": true,
+    "website": "https://singles.scwclubs.com",
+    "note": "Active singles \u2014 parties, dinners, dances, Bocce, Mexican Train, Shuffleboard."
+  },
+  {
+    "name": "Spanish Club SCW",
+    "category": "Social",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://spanish.scwclubs.com/",
+    "note": "Club Espa\u00f1ol, organized 1980 \u2014 Spanish language and culture, classes and conversation groups."
+  },
+  {
+    "name": "Sunshine Animal Club",
+    "category": "Social",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://animalclub.scwclubs.com",
+    "note": "Animal lovers \u2014 education program, welfare advocacy."
+  },
+  {
+    "name": "Womens Social Club",
+    "category": "Social",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "http://womensclub.scwclubs.com/",
+    "note": "Cards, games, luncheons and other activities."
+  },
+  {
+    "name": "BASCW",
+    "category": "Sports",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://bascw.scwclubs.com/",
+    "note": "Bowlers Association of SCW \u2014 high-level fellowship and friendly competition at Johnson Lanes."
+  },
+  {
+    "name": "Bocce",
+    "category": "Sports",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://bocce.scwclubs.com/",
+    "note": "600+ SCW residents play this great game weekly. RHJ courts."
+  },
+  {
+    "name": "Horseshoe and CornHole",
+    "category": "Sports",
+    "location": "Beardsley",
+    "chartered": true,
+    "website": "https://horseshoes.scwclubs.com/",
+    "note": "Horseshoe pitching \u2014 social sport for men and women, fun with others."
+  },
+  {
+    "name": "Johnson Lawn Bowls",
+    "category": "Sports",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://lawnbowls.scwclubs.com/",
+    "note": "RH Johnson Lawn Bowling Club \u2014 That's the way we roll. Nicest setting, friendly people."
+  },
+  {
+    "name": "Mini Golf",
+    "category": "Sports",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://minigolf.scwclubs.com/",
+    "note": "Mini-Golfers of SCW \u2014 challenging courses for young and old. No windmills!"
+  },
+  {
+    "name": "Pickleball",
+    "category": "Sports",
+    "location": "Multiple Centers",
+    "chartered": true,
+    "website": "https://pickleball.scwclubs.com/",
+    "note": "Fastest growing sport in the nation. Meets at Palm Ridge (Liberty) and RHJ (Sands) courts."
+  },
+  {
+    "name": "Racquetball/Whisperball",
+    "category": "Sports",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://racquetball.scwclubs.com/",
+    "note": "Racquetball, Handball, and Whisperball \u2014 courts at RHJ Activity Center."
+  },
+  {
+    "name": "SCW Cyclists",
+    "category": "Sports",
+    "location": "Various",
+    "chartered": true,
+    "website": "https://bicycle.scwclubs.com/",
+    "note": "Bicycle rides through Sun City West \u2014 'On the Road Again' is a lifestyle."
+  },
+  {
+    "name": "Softball",
+    "category": "Sports",
+    "location": "Kuentz",
+    "chartered": true,
+    "website": "https://softball.scwclubs.com/",
+    "note": "Slow pitch with lots of action \u2014 friendly competition at Kuentz softball field."
+  },
+  {
+    "name": "Sportsmans Club",
+    "category": "Sports",
+    "location": "Various",
+    "chartered": true,
+    "website": "https://sportsman.scwclubs.com",
+    "note": "Outdoor enthusiasts \u2014 hiking, fishing, birding, geocaching, horseback, target shooting, rafting."
+  },
+  {
+    "name": "Tennis",
+    "category": "Sports",
+    "location": "R.H. Johnson",
+    "chartered": true,
+    "website": "https://tennis.scwclubs.com/",
+    "note": "Tennis, table tennis, platform tennis, volleyball \u2014 tournaments, drop-in events, socials."
+  },
+  {
+    "name": "Connections",
+    "category": "Social",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://scwconnections.com/",
+    "note": "Women's friendship & community support \u2014 meet other local women, form lasting friendships."
+  },
+  {
+    "name": "Friends of the R.H. Johnson Library",
+    "category": "Hobbies",
+    "location": "R.H. Johnson",
+    "chartered": false,
+    "website": "https://library.scwclubs.com/",
+    "note": "Supports the iconic RHJ Library with its clock tower and chimes \u2014 established 1979."
+  },
+  {
+    "name": "Kiva West Duplicate Bridge",
+    "category": "Cards & Games",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://kivabridgeclub.com/home.html",
+    "note": "Duplicate bridge \u2014 partners matched for newcomers. Lifelong enjoyment."
+  },
+  {
+    "name": "Nebraska Club",
+    "category": "Social",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://nebraskaclubsuncities.org/",
+    "note": "Open to all with an interest in Nebraska."
+  },
+  {
+    "name": "Northwest Valley Democrats",
+    "category": "Social",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://northwestvalleydemocrat.com/",
+    "note": "Progressive political club \u2014 monthly meetings and breakfast."
+  },
+  {
+    "name": "Sun Cities Saddle Club",
+    "category": "Sports",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://www.suncitiessaddleclub.com/",
+    "note": "45+ year social club \u2014 members enjoy trail rides."
+  },
+  {
+    "name": "Sun City West Republicans",
+    "category": "Social",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://scwrepublicans.com/",
+    "note": "Conservative political club \u2014 meetings and events."
+  },
+  {
+    "name": "Sun City West Witches Ride",
+    "category": "Social",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "https://sites.google.com/view/scwwitchesride/home",
+    "note": "Halloween parade fundraiser \u2014 witches on bikes and golf carts, post-parade picnic."
+  },
+  {
+    "name": "Valley of the Sun Ski Club",
+    "category": "Sports",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://vsscskiclub.com/",
+    "note": "Well-organized, reasonably-priced ski trips to top areas in the West."
+  },
+  {
+    "name": "Washington State Club",
+    "category": "Social",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "https://www.washstclub-scw.com/",
+    "note": "Open to all Washingtonians in SCW, Sun City, Sun City Grand or Corte Bella."
+  },
+  {
+    "name": "West Valley Astronomy Club",
+    "category": "Hobbies",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "https://wvac.net/",
+    "note": "Friendly West Valley astronomy community \u2014 telescopes, visual, EAA, astrophotography."
+  },
+  {
+    "name": "Wisconsin Club",
+    "category": "Social",
+    "location": "Off-site / Various",
+    "chartered": false,
+    "website": "http://wiclubscw.wordpress.com",
+    "note": "Social club for fellow Wisconsinites in their adopted Arizona."
+  },
+  {
+    "name": "Women's Social Golf",
+    "category": "Golf",
+    "location": "SCW Executive Courses",
+    "chartered": false,
+    "website": "https://womenssocialgolf.com/",
+    "note": "FUN women's golf \u2014 Mondays and/or Thursdays, 9 or 18 holes. Executive courses. All levels."
+  }
+];
+
+const CATEGORY_ICONS = {"Arts & Crafts": "\ud83c\udfa8", "Cards & Games": "\ud83c\udccf", "Fitness & Dance": "\ud83d\udc83", "Golf": "\u26f3", "Hobbies": "\ud83d\udee0\ufe0f", "Performing Arts": "\ud83c\udfad", "Social": "\ud83e\udd1d", "Sports": "\ud83c\udfc0"};
+
+// State
+let activeCategories = new Set();
+let activeLocations = new Set();
+let searchQuery = '';
+let charteredOnly = false;
+let hasWebsiteOnly = false;
+let sortBy = 'name-asc';
+
+// Get unique categories & locations with counts
+function getCategoryCounts() {
+  const counts = {};
+  CLUBS.forEach(c => {
+    counts[c.category] = (counts[c.category] || 0) + 1;
+  });
+  return counts;
+}
+function getLocationCounts() {
+  const counts = {};
+  CLUBS.forEach(c => {
+    counts[c.location] = (counts[c.location] || 0) + 1;
+  });
+  return counts;
+}
+
+// Build chips
+function buildChips() {
+  const catCounts = getCategoryCounts();
+  const catChips = document.getElementById('category-chips');
+  Object.keys(catCounts).sort().forEach(cat => {
+    const chip = document.createElement('div');
+    chip.className = 'chip';
+    chip.dataset.category = cat;
+    const icon = CATEGORY_ICONS[cat] || '•';
+    chip.innerHTML = `${icon} ${cat} <span class="chip-count">${catCounts[cat]}</span>`;
+    chip.onclick = () => {
+      if (activeCategories.has(cat)) {
+        activeCategories.delete(cat);
+        chip.classList.remove('active');
+      } else {
+        activeCategories.add(cat);
+        chip.classList.add('active');
+      }
+      render();
+    };
+    catChips.appendChild(chip);
+  });
+
+  const locCounts = getLocationCounts();
+  const locChips = document.getElementById('location-chips');
+  // Prioritize the 4 main rec centers
+  const priorityOrder = ['R.H. Johnson', 'Palm Ridge', 'Beardsley', 'Kuentz'];
+  const sortedLocs = Object.keys(locCounts).sort((a, b) => {
+    const aP = priorityOrder.indexOf(a);
+    const bP = priorityOrder.indexOf(b);
+    if (aP !== -1 && bP !== -1) return aP - bP;
+    if (aP !== -1) return -1;
+    if (bP !== -1) return 1;
+    return a.localeCompare(b);
+  });
+  sortedLocs.forEach(loc => {
+    const chip = document.createElement('div');
+    chip.className = 'chip';
+    chip.dataset.location = loc;
+    chip.innerHTML = `${loc} <span class="chip-count">${locCounts[loc]}</span>`;
+    chip.onclick = () => {
+      if (activeLocations.has(loc)) {
+        activeLocations.delete(loc);
+        chip.classList.remove('active');
+      } else {
+        activeLocations.add(loc);
+        chip.classList.add('active');
+      }
+      render();
+    };
+    locChips.appendChild(chip);
+  });
+}
+
+// Filter + sort
+function getFiltered() {
+  let filtered = CLUBS.filter(c => {
+    // Category filter
+    if (activeCategories.size > 0 && !activeCategories.has(c.category)) return false;
+    // Location filter
+    if (activeLocations.size > 0 && !activeLocations.has(c.location)) return false;
+    // Chartered filter
+    if (charteredOnly && !c.chartered) return false;
+    // Website filter
+    if (hasWebsiteOnly && !c.website) return false;
+    // Search filter
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      const hay = [c.name, c.category, c.location, c.tags || '', c.note || ''].join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // Sort
+  filtered.sort((a, b) => {
+    if (sortBy === 'name-asc') return a.name.localeCompare(b.name);
+    if (sortBy === 'name-desc') return b.name.localeCompare(a.name);
+    if (sortBy === 'location') return a.location.localeCompare(b.location) || a.name.localeCompare(b.name);
+    if (sortBy === 'category') return a.category.localeCompare(b.category) || a.name.localeCompare(b.name);
+    return 0;
+  });
+
+  return filtered;
+}
+
+// Render cards
+function render() {
+  const filtered = getFiltered();
+  const grid = document.getElementById('club-grid');
+  const countEl = document.getElementById('results-count');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <h3>No clubs match your filters</h3>
+        <p>Try removing a filter or clearing the search to see all ${CLUBS.length} clubs.</p>
+      </div>
+    `;
+    countEl.innerHTML = `<strong>0</strong> clubs match`;
+    return;
+  }
+
+  countEl.innerHTML = `Showing <strong>${filtered.length}</strong> of ${CLUBS.length} clubs`;
+
+  grid.innerHTML = filtered.map(c => {
+    const icon = CATEGORY_ICONS[c.category] || '•';
+    const badge = c.chartered
+      ? '<span class="club-badge chartered">⭐ Chartered</span>'
+      : '<span class="club-badge non-chartered">Non-Chartered</span>';
+    const website = c.website
+      ? `<a href="${c.website}" target="_blank" rel="noopener" class="club-link">Visit website</a>`
+      : '';
+    const note = c.note ? `<div class="club-note">${c.note}</div>` : '';
+    return `
+      <article class="club-card ${c.chartered ? '' : 'non-chartered'}">
+        <div class="club-header">
+          <div class="club-name">${c.name}</div>
+          ${badge}
+        </div>
+        <div class="club-meta">
+          <span class="meta-tag category">${icon} ${c.category}</span>
+          <span class="meta-tag">📍 ${c.location}</span>
+        </div>
+        ${note}
+        ${website}
+      </article>
+    `;
+  }).join('');
+}
+
+function clearAll() {
+  activeCategories.clear();
+  activeLocations.clear();
+  searchQuery = '';
+  charteredOnly = false;
+  hasWebsiteOnly = false;
+  sortBy = 'name-asc';
+  document.getElementById('search').value = '';
+  document.getElementById('chartered-only').checked = false;
+  document.getElementById('has-website').checked = false;
+  document.getElementById('sort-by').value = 'name-asc';
+  document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+  render();
+}
+
+// Wire up controls
+document.getElementById('search').addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  render();
+});
+document.getElementById('chartered-only').addEventListener('change', (e) => {
+  charteredOnly = e.target.checked;
+  render();
+});
+document.getElementById('has-website').addEventListener('change', (e) => {
+  hasWebsiteOnly = e.target.checked;
+  render();
+});
+document.getElementById('sort-by').addEventListener('change', (e) => {
+  sortBy = e.target.value;
+  render();
+});
+
+// Init
+buildChips();
+render();
+</script>
+</body>
+</html>

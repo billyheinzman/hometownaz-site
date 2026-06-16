@@ -1,0 +1,26 @@
+<!--
+  ===========================================================================
+  _nav.html — SINGLE SOURCE OF TRUTH for The Grand sub-page navigation
+  ===========================================================================
+  This is the canonical sub-nav for all The Grand pages, separate from
+  the Sun City West nav at /_nav.html.
+
+  HOW IT WORKS:
+    Running `python3 ../build-nav.py --community=sun-city-grand` reads this
+    file and stamps it into every HTML page in /sun-city-grand/ between:
+        <!-- NAV:START -->  ...  <!-- NAV:END -->
+
+  WHY A SEPARATE NAV:
+    The Grand and Sun City West have different sub-pages (different
+    fees structure, different rec centers, different clubs). Each community
+    gets its own nav so visitors only see what's relevant to where they are.
+-->
+<nav class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</nav>

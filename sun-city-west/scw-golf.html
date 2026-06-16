@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun City West Golf — All 7 Courses, Yardage, Ratings &amp; Reviews | Hometown AZ</title>
+<meta name="description" content="Complete guide to all 7 Sun City West golf courses — Pebblebrook, Grandview, Trail Ridge, Deer Valley (regulation 18s) plus Stardust, Echo Mesa, Desert Trails (executive). Yardage, USGA ratings, designer, addresses, and what makes each course unique.">
+<meta property="og:title" content="Sun City West Golf — Complete Course Guide">
+<meta property="og:description" content="All 7 RCSCW golf courses with yardage, USGA ratings, designers, and details. Designed by Greg Nash and Billy Casper.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hometownaz.com/sun-city-west/scw-golf.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --green: #2d3d2e;
+  --green-deep: #1f2c1f;
+  --green-soft: #3a5040;
+  --orange: #c8622a;
+  --orange-deep: #a14d1f;
+  --orange-light: #e8a040;
+  --sage: #4a7c59;
+  --cream: #f5f1ea;
+  --cream-warm: #ede8df;
+  --sand: #ede8df;
+  --border: #ddd6c8;
+  --border-soft: #e8e2d4;
+  --muted: #6b6354;
+  --text: #2a261e;
+  --radius: 6px;
+  --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--orange); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============ HERO (matches floor plans page) ============ */
+.scw-hero {
+  background: var(--green);
+  color: #fff;
+  padding: 24px 48px 40px;
+  position: relative;
+}
+
+.scw-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 14px; font-weight: 500; margin-bottom: 28px;
+  transition: color 0.15s;
+}
+.scw-back:hover { color: #fff; }
+
+.scw-hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.scw-tagline {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--orange);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 165, 0, 0.25);
+  border-radius: 100px;
+}
+.scw-tagline-icon {
+  width: 18px; height: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+.scw-headline {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 4rem; font-weight: 700;
+  line-height: 1.05; letter-spacing: -0.01em;
+  margin: 0;
+}
+.scw-headline .accent { color: var(--orange); }
+
+.scw-subhead {
+  font-size: 17px; line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  margin: 0 0 18px; max-width: 620px;
+}
+.scw-subhead strong { font-weight: 700; color: #fff; }
+
+.scw-note {
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px; line-height: 1.55;
+  max-width: 620px;
+}
+
+/* Side nav button grid */
+.scw-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-self: start;
+}
+.scw-nav-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  background: #fff; color: var(--green);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 28px;
+  font-family: inherit; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; justify-content: center; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+.scw-nav-btn.featured { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn.featured:hover { background: var(--orange-deep); }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+
+/* ============ STATS STRIP ============ */
+.scw-stats-strip {
+  background: var(--cream-warm);
+  padding: 28px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.scw-stats-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.scw-stat-num {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.9rem; font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.scw-stat-lbl {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ============ SECTION SHELL ============ */
+.scw-section {
+  padding: 72px 48px;
+  max-width: 100%;
+}
+.scw-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.scw-section-alt { background: var(--cream-warm); }
+.scw-section-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.scw-section h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 18px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.scw-section .lede {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 820px;
+  margin: 0 0 36px;
+  line-height: 1.6;
+}
+
+/* ============ ABOUT SECTION ============ */
+.scw-about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.scw-about-prose {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.scw-about-prose p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0 0 20px;
+  color: var(--text);
+}
+.scw-about-prose h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 32px 0 12px;
+  line-height: 1.25;
+}
+.scw-about-prose h3:first-child { margin-top: 0; }
+.scw-about-prose p:last-child { margin-bottom: 0; }
+.scw-about-prose strong { color: var(--green); }
+.scw-about-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+}
+.scw-about-card-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 16px;
+}
+.scw-about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.scw-about-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 14px;
+}
+.scw-about-list li:last-child { border-bottom: none; }
+.scw-about-list .lbl { color: var(--muted); }
+.scw-about-list .val { color: var(--green); font-weight: 700; }
+
+/* ============ TOOL CARDS ============ */
+.scw-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+.scw-tool-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.scw-tool-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--orange);
+  box-shadow: 0 12px 32px rgba(45, 61, 46, 0.12);
+  text-decoration: none;
+}
+.scw-tool-card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.scw-tool-card-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 8px;
+}
+.scw-tool-card-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex: 1;
+}
+.scw-tool-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.scw-tool-card-cta:after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.scw-tool-card:hover .scw-tool-card-cta:after { transform: translateX(3px); }
+.scw-tool-card.featured {
+  background: linear-gradient(135deg, #fff7ec 0%, #ffe9cc 100%);
+  border-color: var(--orange);
+}
+.scw-tool-card-badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ============ QUICK FACTS GRID ============ */
+.scw-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 56px;
+}
+.scw-fact h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--green);
+  margin: 0 0 8px;
+}
+.scw-fact p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ============ FAQ STYLES (port of original) ============ */
+.scw-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.scw-faq-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.scw-faq-item[open] { border-color: var(--orange); }
+.scw-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 24px;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background 0.15s;
+}
+.scw-faq-item summary:hover { background: var(--cream); }
+.scw-faq-item summary::-webkit-details-marker { display: none; }
+.scw-faq-item summary:after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--orange);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+.scw-faq-item[open] summary:after { transform: rotate(45deg); }
+.scw-faq-body {
+  padding: 4px 24px 22px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.scw-faq-body p { margin: 0 0 12px; }
+.scw-faq-body p:last-child { margin-bottom: 0; }
+.scw-faq-body strong { color: var(--green); }
+
+/* ============ FOOTER CTA ============ */
+.scw-footer-cta {
+  background: var(--green);
+  color: #fff;
+  padding: 56px 48px;
+  text-align: center;
+}
+.scw-footer-cta-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.8rem; font-weight: 700;
+  margin: 0 0 10px;
+}
+.scw-footer-cta-sub {
+  font-size: 16px; opacity: 0.85;
+  margin: 0 0 24px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scw-footer-cta-row {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+.scw-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px;
+  background: var(--orange); color: #fff;
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 15px; font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+.scw-cta-btn.outlined {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.scw-cta-btn.outlined:hover { background: rgba(255,255,255,0.18); }
+
+/* ============ MOBILE ============ */
+
+
+
+
+
+@media (max-width: 980px) {
+  .scw-hero { padding: 20px 20px 40px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .scw-headline { font-size: 2.5rem; }
+  .scw-stats-strip { padding: 24px 20px; }
+  .scw-stats-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .scw-section { padding: 48px 20px; }
+  .scw-section h2 { font-size: 1.8rem; }
+  .scw-about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .scw-tools-grid { grid-template-columns: 1fr; }
+  .scw-facts-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-faq-grid { grid-template-columns: 1fr; }
+  .scw-nav-grid { grid-template-columns: 1fr; }
+  .scw-footer-cta { padding: 40px 20px; }
+  .scw-footer-cta-title { font-size: 1.4rem; }
+}
+
+
+.gf-section { padding: 64px 48px; }
+.gf-section.alt { background: var(--cream-warm); }
+.gf-inner { max-width: 1200px; margin: 0 auto; }
+.gf-prose-inner { max-width: 760px; margin: 0 auto; }
+
+.gf-eyebrow { display: inline-block; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); font-weight: 700; margin-bottom: 14px; }
+.gf-h2 { font-family: 'Merriweather', Georgia, serif; font-size: 2.2rem; font-weight: 700; color: var(--green); margin: 0 0 18px; line-height: 1.18; letter-spacing: -0.01em; }
+.gf-lede { font-size: 17px; line-height: 1.7; color: var(--text); margin: 0 0 24px; }
+
+.gf-stats-strip { background: var(--cream-warm); padding: 36px 48px; border-bottom: 1px solid var(--border); }
+.gf-stats-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.gf-stat-num { font-family: 'Merriweather', Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 6px; }
+.gf-stat-lbl { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+
+.gf-courses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 28px;
+}
+.gf-course-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.gf-course-card.regulation { border-left: 4px solid var(--green); }
+.gf-course-card.executive { border-left: 4px solid var(--orange); }
+
+.gf-course-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 16px; margin-bottom: 16px;
+}
+.gf-course-title-block { flex: 1; min-width: 240px; }
+.gf-course-name {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--green); margin: 0 0 4px;
+  line-height: 1.2;
+}
+.gf-course-type-badge {
+  display: inline-block;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 700;
+  padding: 3px 10px; border-radius: 12px;
+  margin-top: 4px;
+}
+.gf-course-type-badge.reg { background: rgba(45, 61, 46, 0.1); color: var(--green); }
+.gf-course-type-badge.exec { background: rgba(42, 77, 143, 0.1); color: var(--orange-deep); }
+
+.gf-course-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 18px;
+  text-align: right;
+}
+.gf-quick-stat { display: flex; flex-direction: column; }
+.gf-quick-stat-lbl { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.gf-quick-stat-val { font-family: 'Merriweather', Georgia, serif; font-size: 1.05rem; font-weight: 700; color: var(--green); }
+
+.gf-course-desc { font-size: 15px; line-height: 1.65; color: var(--text); margin: 0 0 18px; }
+.gf-course-desc strong { color: var(--green); }
+
+.gf-course-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  padding-top: 16px; margin-top: 4px;
+  border-top: 1px solid var(--border-soft);
+}
+.gf-detail-item { font-size: 13px; }
+.gf-detail-item .lbl { color: var(--muted); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
+.gf-detail-item .val { color: var(--text); display: block; margin-top: 2px; font-weight: 500; }
+.gf-detail-item .val a { color: var(--orange); text-decoration: none; font-weight: 600; }
+.gf-detail-item .val a:hover { text-decoration: underline; }
+
+.gf-yardage-table {
+  margin-top: 18px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  border: 1px solid var(--border-soft);
+}
+.gf-yardage-title { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 8px; }
+.gf-yardage-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 12px;
+  font-size: 13px;
+  padding: 4px 0;
+}
+.gf-yardage-row.head {
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; color: var(--muted);
+  padding-bottom: 6px; margin-bottom: 4px;
+}
+.gf-yardage-row .tee-name { font-weight: 600; color: var(--text); }
+.gf-yardage-row .tee-num { color: var(--text); font-variant-numeric: tabular-nums; text-align: right; }
+
+.gf-policies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+.gf-policy-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+}
+.gf-policy-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.gf-policy-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.05rem; font-weight: 700; color: var(--green); margin: 0 0 8px; }
+.gf-policy-text { font-size: 13px; line-height: 1.55; color: var(--text); margin: 0; }
+
+.gf-cta-inline {
+  background: linear-gradient(135deg, #fff7ec 0%, #ffe9cc 100%);
+  border: 1px solid var(--orange);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin: 32px 0;
+  text-align: center;
+}
+.gf-cta-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.2rem; font-weight: 700; color: var(--green); margin: 0 0 10px; line-height: 1.3; }
+.gf-cta-sub { font-size: 14px; color: var(--text); margin: 0 0 16px; line-height: 1.55; }
+.gf-cta-row { display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.gf-cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; background: var(--orange); color: #fff; border-radius: var(--radius); font-family: inherit; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.15s; }
+.gf-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+.gf-cta-btn.outlined { background: transparent; color: var(--green); border: 1.5px solid var(--green); }
+.gf-cta-btn.outlined:hover { background: var(--green); color: #fff; }
+
+.gf-tt-table {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  max-width: 480px;
+  margin: 24px auto 0;
+}
+.gf-tt-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.1rem; font-weight: 700; color: var(--green); margin: 0 0 14px; text-align: center; }
+.gf-tt-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-soft); font-size: 14px; }
+.gf-tt-row:last-child { border-bottom: none; }
+.gf-tt-row .month { color: var(--muted); }
+.gf-tt-row .time { color: var(--green); font-weight: 700; }
+
+
+.gf-course-card.private { border-left: 4px solid var(--orange-deep); }
+.gf-course-card.public { border-left: 4px solid var(--sage); }
+.gf-course-type-badge.priv { background: rgba(161, 77, 31, 0.1); color: var(--orange-deep); }
+.gf-course-type-badge.pub { background: rgba(74, 124, 89, 0.12); color: #2d5a3d; }
+.gf-non-rcscw-note {
+  background: rgba(74, 124, 89, 0.06);
+  border: 1px solid rgba(74, 124, 89, 0.2);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.gf-non-rcscw-note strong { color: #2d5a3d; }
+
+
+.gf-course-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #2d3d2e 0%, #1f2c1f 100%);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -8px 0 18px;
+  overflow: hidden;
+}
+.gf-course-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), transparent 70%);
+  pointer-events: none;
+}
+.gf-course-photo-content {
+  text-align: center;
+  z-index: 1;
+}
+.gf-course-photo-icon {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  opacity: 0.4;
+}
+.gf-course-photo-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.gf-course-photo-name {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+}
+.gf-course-photo.has-image::before { display: none; }
+.gf-course-photo.has-image .gf-course-photo-content { display: none; }
+.gf-course-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.gf-course-photo.has-image img { display: block; }
+
+
+.gf-homes-callout {
+  background: linear-gradient(135deg, #fff7ec 0%, #ffe9cc 100%);
+  border: 1px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.gf-homes-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.gf-homes-text {
+  flex: 1;
+  min-width: 200px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text);
+}
+.gf-homes-text strong {
+  color: var(--green);
+  font-weight: 700;
+}
+.gf-homes-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--orange);
+  color: #fff !important;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.gf-homes-cta:hover {
+  background: var(--orange-deep);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .gf-homes-callout { flex-direction: column; align-items: stretch; text-align: center; }
+  .gf-homes-cta { justify-content: center; }
+}
+
+@media (max-width: 980px) {
+  .gf-section { padding: 44px 20px; }
+  .gf-stats-strip { padding: 28px 20px; }
+  .gf-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .gf-h2 { font-size: 1.7rem; }
+  .gf-course-card { padding: 22px 20px; }
+  .gf-course-header { flex-direction: column; }
+  .gf-course-quick-stats { text-align: left; grid-template-columns: repeat(3, 1fr); width: 100%; }
+  .gf-course-details { grid-template-columns: 1fr; }
+  .gf-policies-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ============ NAV BUTTON: WIDE ORANGE VARIANT ============ */
+.scw-nav-btn.scw-nav-btn-wide {
+  grid-column: 1 / -1;
+  justify-content: center;
+}
+.scw-nav-btn.scw-nav-btn-orange {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+  font-weight: 700;
+}
+.scw-nav-btn.scw-nav-btn-orange:hover {
+  background: var(--orange-deep);
+  border-color: var(--orange-deep);
+  color: #fff;
+}
+.scw-nav-btn.scw-nav-btn-orange .scw-nav-btn-icon {
+  filter: brightness(1.2);
+}
+
+
+/* === Dual phone CTA wrapper (Lona + Billy) — added 2026-05-11 === */
+.dual-call-wrap{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:stretch;}
+.dual-call-wrap > a{flex:1 1 auto;min-width:0;}
+@media (max-width:640px){
+  .dual-call-wrap{flex-direction:column;gap:6px;}
+  .dual-call-wrap > a{width:100%;}
+}
+
+.scw-nav-btn-current {
+  background: rgba(255,255,255,0.92) !important;
+  color: var(--orange, #c8622a) !important;
+  border-color: var(--orange, #c8622a) !important;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+  cursor: default;
+}
+.scw-nav-btn-current.scw-nav-btn-orange {
+  background: var(--orange-deep, #a14d1f) !important;
+  color: #fff !important;
+}
+.scw-nav-btn-current:hover {
+  transform: none !important;
+}</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hometownaz.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Sun City West", "item": "https://hometownaz.com/sun-city-west"},
+      {"@type": "ListItem", "position": 3, "name": "Golf", "item": "https://hometownaz.com/golf"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sun City West Golf — All 9 Courses Complete Guide",
+    "description": "Complete guide to all 9 Sun City West golf courses including 7 RCSCW courses (Pebblebrook, Grandview, Trail Ridge, Deer Valley, Stardust, Echo Mesa, Desert Trails) plus Briarwood Country Club and Hillcrest Golf Club.",
+    "url": "https://hometownaz.com/golf",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City West, AZ"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Pebblebrook Golf Course",
+    "description": "One of the original Sun City West golf courses. Parkland-style 18-hole regulation course with wide-open fairways bordered by mature trees and challenging approaches to large sloped greens.",
+    "url": "https://suncitywest.com/pebblebrookgolfcourse/",
+    "telephone": "+1-623-544-6010",
+    "address": {"@type": "PostalAddress", "streetAddress": "18836 N. 128 Ave", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "72"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "6410"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Regulation"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Grandview Golf Course",
+    "description": "The longest of the seven RCSCW courses at 6,775 yards. Hosted the LPGA Legends Tour for several years. Home to The Crooked Putter restaurant and the Golf Lab for instruction and custom club fitting.",
+    "url": "https://suncitywest.com/grandviewgolfcourse/",
+    "telephone": "+1-623-544-6013",
+    "address": {"@type": "PostalAddress", "streetAddress": "14260 Meeker Road", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "72"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "6775"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Regulation"},
+      {"@type": "LocationFeatureSpecification", "name": "Restaurant", "value": "The Crooked Putter"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Trail Ridge Golf Course",
+    "description": "Designed by Billy Casper. Target golf with unique desert landscapes, lakes and bunkers. Five tee placements provide a challenge level for everyone.",
+    "url": "https://suncitywest.com/trailridgegolfcourse/",
+    "telephone": "+1-623-544-6015",
+    "address": {"@type": "PostalAddress", "streetAddress": "21021 N. 151 Ave", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "72"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "6581"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Regulation"},
+      {"@type": "LocationFeatureSpecification", "name": "Designer", "value": "Billy Casper"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Deer Valley Golf Course",
+    "description": "Designed by Greg Nash and Billy Casper. The newest and most player-friendly regulation course in Sun City West. Wide fairways and large greens with water hazards and bunkers for challenge.",
+    "url": "https://suncitywest.com/deervalleygolfcourse/",
+    "telephone": "+1-623-544-6016",
+    "address": {"@type": "PostalAddress", "streetAddress": "13975 W Deer Valley Drive", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "72"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "6410"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Regulation"},
+      {"@type": "LocationFeatureSpecification", "name": "Designer", "value": "Greg Nash and Billy Casper"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Stardust Golf Course",
+    "description": "The original executive course in Sun City West. Traditional layout features tree-lined fairways, subtle greens and deep bunkers. Back nine is more difficult with water on four holes.",
+    "url": "https://suncitywest.com/stardustgolfcourse/",
+    "telephone": "+1-623-544-6012",
+    "address": {"@type": "PostalAddress", "streetAddress": "12702 Stardust Blvd", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "60"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "4267"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Executive"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Echo Mesa Golf Course",
+    "description": "Exceptionally demanding executive course featuring lakes, sand and grass bunkers. From the blue tees, considered one of the most challenging courses in Sun City West.",
+    "url": "https://suncitywest.com/echomesagolfcourse/",
+    "telephone": "+1-623-544-6014",
+    "address": {"@type": "PostalAddress", "streetAddress": "20349 N Echo Mesa Drive", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "60"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "4145"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Executive"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Desert Trails Golf Course",
+    "description": "Designed by Billy Casper. Unique executive course offering seven par 4 holes affording golfers the experience of using all clubs. Three different tees on each hole.",
+    "url": "https://suncitywest.com/deserttrailsgolfcourse/",
+    "telephone": "+1-623-544-6017",
+    "address": {"@type": "PostalAddress", "streetAddress": "22525 N Executive Way", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "61"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "4027"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Executive"},
+      {"@type": "LocationFeatureSpecification", "name": "Designer", "value": "Billy Casper"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Briarwood Country Club",
+    "description": "Sun City West's only private country club. Designed by Billy Casper and Greg H. Nash, ASGCA. Opened in 1982. Par 72 traditional course with tree-lined fairways. Holds the only full liquor license in Sun City West.",
+    "url": "https://www.briarwoodcc.com",
+    "telephone": "+1-623-584-5600",
+    "address": {"@type": "PostalAddress", "streetAddress": "20800 N 135th Ave", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "72"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "6576"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Private"},
+      {"@type": "LocationFeatureSpecification", "name": "Designer", "value": "Billy Casper and Greg H. Nash, ASGCA"},
+      {"@type": "LocationFeatureSpecification", "name": "Year Opened", "value": "1982"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "Hillcrest Golf Club",
+    "description": "Public daily-fee course managed by Scottsdale Golf Group. Designed by Greg H. Nash, ASGCA. Opened in 1978. The longest course in Sun City West at 7,002 yards. Five-time host of the Senior PGA Tour.",
+    "url": "https://www.hillcrestgolfclub.com",
+    "telephone": "+1-623-584-1500",
+    "address": {"@type": "PostalAddress", "streetAddress": "20002 N Star Ridge Dr", "addressLocality": "Sun City West", "addressRegion": "AZ", "postalCode": "85375", "addressCountry": "US"},
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Holes", "value": "18"},
+      {"@type": "LocationFeatureSpecification", "name": "Par", "value": "72"},
+      {"@type": "LocationFeatureSpecification", "name": "Yardage", "value": "7002"},
+      {"@type": "LocationFeatureSpecification", "name": "Course Type", "value": "Public"},
+      {"@type": "LocationFeatureSpecification", "name": "Designer", "value": "Greg H. Nash, ASGCA"},
+      {"@type": "LocationFeatureSpecification", "name": "Year Opened", "value": "1978"}
+    ]
+  }
+]</script>
+</head>
+<body><section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City West</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">⛳</span>
+        LONA KING &amp; BILLY HEINZMAN · SUN CITY WEST EXPERTS
+      </div>
+      <h1 class="scw-headline">Let&apos;s <span class="accent">Golf!</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="scw-events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="scw-community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="scw-golf.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="scw-buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="scw-things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="scw-solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="scw-rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+<section class="gf-stats-strip">
+  <div class="gf-stats-grid">
+    <div><div class="gf-stat-num">7</div><div class="gf-stat-lbl">Courses · Included with Rec Card</div></div>
+    <div><div class="gf-stat-num">4</div><div class="gf-stat-lbl">Regulation 18-Hole Courses</div></div>
+    <div><div class="gf-stat-num">3</div><div class="gf-stat-lbl">Executive Courses</div></div>
+    <div><div class="gf-stat-num">$598</div><div class="gf-stat-lbl">Annual Rec Card / Person on Title</div></div>
+  </div>
+</section>
+<section class="gf-section">
+  <div class="gf-prose-inner">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="gf-eyebrow">⛳ The Golf</div>
+      <h2 class="gf-h2">All 7 Sun City West golf courses, in one honest guide</h2>
+      <p class="gf-lede" style="text-align: left;">Sun City West has <strong>nine total golf courses</strong>: <strong>seven owned and operated by the Recreation Centers of Sun City West (RCSCW)</strong>, all included with the annual recreation card, plus <strong>two additional courses</strong> — Briarwood Country Club (private) and Hillcrest Golf Club (public daily-fee) — both worth knowing about whether you play them or live near them. <strong>Four are regulation 18-hole courses</strong> (Pebblebrook, Grandview, Trail Ridge, and Deer Valley). <strong>Three are executive courses</strong> (Stardust, Echo Mesa, and Desert Trails) — shorter and faster, ideal for daily play. Most were designed by golf legends Greg Nash and Billy Casper. Below: every course, every yardage, and what makes each one unique.</p>
+    </div>
+  </div>
+</section>
+<section class="gf-section">
+  <div class="gf-inner">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <div class="gf-eyebrow">⛳ The Big 4</div>
+      <h2 class="gf-h2">Regulation 18-hole courses</h2>
+      <p class="gf-lede">Four full-length 18-hole courses — all par 72, ranging from 6,410 to 6,775 yards from the back tees. Pebblebrook is the original. Grandview is the longest (and an LPGA Legends Tour host). Trail Ridge is desert-target golf. Deer Valley is the newest and most player-friendly.</p>
+    </div>
+    <div class="gf-courses-grid">
+<div class="gf-course-card regulation" id="pebblebrook">
+  <div class="gf-course-header">
+    <div class="gf-course-title-block">
+      <h3 class="gf-course-name">Pebblebrook</h3>
+      <span class="gf-course-type-badge reg">18-Hole Regulation · Par 72</span>
+    </div>
+    <div class="gf-course-quick-stats">
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Par</span>
+        <span class="gf-quick-stat-val">72</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Long Yards</span>
+        <span class="gf-quick-stat-val">6,410</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Holes</span>
+        <span class="gf-quick-stat-val">18</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-pebblebrook.jpg" alt="Pebblebrook Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Pebblebrook</div>
+          </div>
+        </div>
+
+  <p class="gf-course-desc">One of the first golf courses built in Sun City West, Pebblebrook features a parkland-style layout with wide-open fairways bordered by mature trees and challenging approaches to large sloped greens.</p>
+
+  <div class="gf-course-details">
+    <div class="gf-detail-item">
+      <span class="lbl">Address</span>
+      <span class="val">18836 N. 128 Ave<br>Sun City West, AZ 85375</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Pro Shop</span>
+      <span class="val"><a href="tel:+16235446010">623-544-6010</a></span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Designer / Notes</span>
+      <span class="val">Original SCW course (parkland-style)</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Official Page</span>
+      <span class="val"><a href="https://suncitywest.com/pebblebrookgolfcourse/" target="_blank" rel="noopener">View on suncitywest.com →</a></span>
+    </div>
+  </div>
+
+  <div class="gf-yardage-table">
+    <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+    <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+    <div class="gf-yardage-row"><span class="tee-name">Blue</span><span class="tee-num">6,410</span><span class="tee-num">70.0</span><span class="tee-num">120</span></div><div class="gf-yardage-row"><span class="tee-name">White (Men)</span><span class="tee-num">6,116</span><span class="tee-num">68.6</span><span class="tee-num">116</span></div><div class="gf-yardage-row"><span class="tee-name">Gold (Men)</span><span class="tee-num">5,883</span><span class="tee-num">67.4</span><span class="tee-num">111</span></div><div class="gf-yardage-row"><span class="tee-name">Red (Men)</span><span class="tee-num">5,709</span><span class="tee-num">66.5</span><span class="tee-num">109</span></div><div class="gf-yardage-row"><span class="tee-name">Green (Men)</span><span class="tee-num">4,411</span><span class="tee-num">61.0</span><span class="tee-num">97</span></div>
+  </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Pebblebrook?</strong> We track every listing on every course in real time. Call us for currently-available Pebblebrook fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+</div>
+<div class="gf-course-card regulation" id="grandview">
+  <div class="gf-course-header">
+    <div class="gf-course-title-block">
+      <h3 class="gf-course-name">Grandview</h3>
+      <span class="gf-course-type-badge reg">18-Hole Regulation · Par 72</span>
+    </div>
+    <div class="gf-course-quick-stats">
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Par</span>
+        <span class="gf-quick-stat-val">72</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Long Yards</span>
+        <span class="gf-quick-stat-val">6,775</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Holes</span>
+        <span class="gf-quick-stat-val">18</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-grandview.jpg" alt="Grandview Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Grandview</div>
+          </div>
+        </div>
+
+  <p class="gf-course-desc">The longest of the seven RCSCW courses, Grandview hosted the LPGA Legends Tour tournament for several years. The contoured fairways, lakes and bunkers place a premium on well-placed tee shots. Home to <strong>The Crooked Putter</strong> full-service restaurant and the Golf Lab (instruction, custom club fitting, club repair).</p>
+
+  <div class="gf-course-details">
+    <div class="gf-detail-item">
+      <span class="lbl">Address</span>
+      <span class="val">14260 Meeker Road<br>Sun City West, AZ 85375</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Pro Shop</span>
+      <span class="val"><a href="tel:+16235446013">623-544-6013</a></span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Designer / Notes</span>
+      <span class="val">LPGA Legends Tour host (multi-year)</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Official Page</span>
+      <span class="val"><a href="https://suncitywest.com/grandviewgolfcourse/" target="_blank" rel="noopener">View on suncitywest.com →</a></span>
+    </div>
+  </div>
+
+  <div class="gf-yardage-table">
+    <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+    <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+    <div class="gf-yardage-row"><span class="tee-name">Blue</span><span class="tee-num">6,775</span><span class="tee-num">71.6</span><span class="tee-num">126</span></div><div class="gf-yardage-row"><span class="tee-name">White (Men)</span><span class="tee-num">6,365</span><span class="tee-num">69.5</span><span class="tee-num">122</span></div><div class="gf-yardage-row"><span class="tee-name">Gold (Men)</span><span class="tee-num">5,805</span><span class="tee-num">66.4</span><span class="tee-num">116</span></div><div class="gf-yardage-row"><span class="tee-name">Red (Men)</span><span class="tee-num">5,621</span><span class="tee-num">65.4</span><span class="tee-num">114</span></div><div class="gf-yardage-row"><span class="tee-name">Green (Men)</span><span class="tee-num">4,330</span><span class="tee-num">60.4</span><span class="tee-num">105</span></div>
+  </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Grandview?</strong> We track every listing on every course in real time. Call us for currently-available Grandview fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+</div>
+<div class="gf-course-card regulation" id="trailridge">
+  <div class="gf-course-header">
+    <div class="gf-course-title-block">
+      <h3 class="gf-course-name">Trail Ridge</h3>
+      <span class="gf-course-type-badge reg">18-Hole Regulation · Par 72</span>
+    </div>
+    <div class="gf-course-quick-stats">
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Par</span>
+        <span class="gf-quick-stat-val">72</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Long Yards</span>
+        <span class="gf-quick-stat-val">6,581</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Holes</span>
+        <span class="gf-quick-stat-val">18</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-trailridge.jpg" alt="Trail Ridge Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Trail Ridge</div>
+          </div>
+        </div>
+
+  <p class="gf-course-desc">If target golf is your game, Trail Ridge is the course for you. This fun course offers unique desert landscapes, lakes and bunkers. Accurate tee shots and approaches are always rewarded, and five different tees provide a challenge level for everyone.</p>
+
+  <div class="gf-course-details">
+    <div class="gf-detail-item">
+      <span class="lbl">Address</span>
+      <span class="val">21021 N. 151 Ave<br>Sun City West, AZ 85375</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Pro Shop</span>
+      <span class="val"><a href="tel:+16235446015">623-544-6015</a></span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Designer / Notes</span>
+      <span class="val">Designed by Billy Casper</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Official Page</span>
+      <span class="val"><a href="https://suncitywest.com/trailridgegolfcourse/" target="_blank" rel="noopener">View on suncitywest.com →</a></span>
+    </div>
+  </div>
+
+  <div class="gf-yardage-table">
+    <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+    <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+    <div class="gf-yardage-row"><span class="tee-name">Blue</span><span class="tee-num">6,581</span><span class="tee-num">71.2</span><span class="tee-num">128</span></div><div class="gf-yardage-row"><span class="tee-name">White (Men)</span><span class="tee-num">6,119</span><span class="tee-num">69.6</span><span class="tee-num">122</span></div><div class="gf-yardage-row"><span class="tee-name">Gold (Men)</span><span class="tee-num">5,640</span><span class="tee-num">66.7</span><span class="tee-num">115</span></div><div class="gf-yardage-row"><span class="tee-name">Red (Men)</span><span class="tee-num">5,440</span><span class="tee-num">66.1</span><span class="tee-num">113</span></div><div class="gf-yardage-row"><span class="tee-name">Green (Men)</span><span class="tee-num">4,218</span><span class="tee-num">61.4</span><span class="tee-num">103</span></div>
+  </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Trail Ridge?</strong> We track every listing on every course in real time. Call us for currently-available Trail Ridge fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+</div>
+<div class="gf-course-card regulation" id="deervalley">
+  <div class="gf-course-header">
+    <div class="gf-course-title-block">
+      <h3 class="gf-course-name">Deer Valley</h3>
+      <span class="gf-course-type-badge reg">18-Hole Regulation · Par 72</span>
+    </div>
+    <div class="gf-course-quick-stats">
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Par</span>
+        <span class="gf-quick-stat-val">72</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Long Yards</span>
+        <span class="gf-quick-stat-val">6,410</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Holes</span>
+        <span class="gf-quick-stat-val">18</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-deervalley.jpg" alt="Deer Valley Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Deer Valley</div>
+          </div>
+        </div>
+
+  <p class="gf-course-desc">A design collaboration between Greg Nash and Billy Casper, Deer Valley is the <strong>newest and most player-friendly regulation course</strong> in Sun City West. Wide fairways and large greens provide a more relaxed golf experience. Water hazards and bunkers increase the challenge, but Deer Valley is an excellent course to try for your personal best.</p>
+
+  <div class="gf-course-details">
+    <div class="gf-detail-item">
+      <span class="lbl">Address</span>
+      <span class="val">13975 W Deer Valley Drive<br>Sun City West, AZ 85375</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Pro Shop</span>
+      <span class="val"><a href="tel:+16235446016">623-544-6016</a></span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Designer / Notes</span>
+      <span class="val">Designed by Greg Nash &amp; Billy Casper</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Official Page</span>
+      <span class="val"><a href="https://suncitywest.com/deervalleygolfcourse/" target="_blank" rel="noopener">View on suncitywest.com →</a></span>
+    </div>
+  </div>
+
+  <div class="gf-yardage-table">
+    <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+    <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+    <div class="gf-yardage-row"><span class="tee-name">Blue</span><span class="tee-num">6,410</span><span class="tee-num">70.0</span><span class="tee-num">120</span></div><div class="gf-yardage-row"><span class="tee-name">White (Men)</span><span class="tee-num">6,116</span><span class="tee-num">68.6</span><span class="tee-num">116</span></div><div class="gf-yardage-row"><span class="tee-name">Gold (Men)</span><span class="tee-num">5,883</span><span class="tee-num">67.4</span><span class="tee-num">111</span></div><div class="gf-yardage-row"><span class="tee-name">Red (Men)</span><span class="tee-num">5,709</span><span class="tee-num">66.5</span><span class="tee-num">109</span></div><div class="gf-yardage-row"><span class="tee-name">Green (Men)</span><span class="tee-num">4,411</span><span class="tee-num">61.0</span><span class="tee-num">97</span></div>
+  </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Deer Valley?</strong> We track every listing on every course in real time. Call us for currently-available Deer Valley fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+</div>
+    </div>
+  </div>
+</section>
+<section class="gf-section" style="padding-top: 0;">
+  <div class="gf-prose-inner">
+    <div class="gf-cta-inline">
+      <div class="gf-cta-title">Buying a home that backs to a specific course?</div>
+      <div class="gf-cta-sub">Many SCW buyers want golf-course frontage — different courses come with different premiums and quality of view. We can show you the homes currently for sale on each of the 7 courses, with honest takes on which views are worth the premium.</div>
+      <div class="gf-cta-row">
+        <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-cta-btn">📞 Call Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-cta-btn">📞 Call Billy — (480) 297-3830</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gf-section alt">
+  <div class="gf-inner">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <div class="gf-eyebrow">⛳ The Faster 3</div>
+      <h2 class="gf-h2">Executive courses</h2>
+      <p class="gf-lede">Three executive courses — shorter, faster, ideal for daily play, walking, or shaking off the rust. Don&apos;t be fooled by the short yardage: Echo Mesa from the blue tees is considered one of the most challenging courses in Sun City West.</p>
+    </div>
+    <div class="gf-courses-grid">
+<div class="gf-course-card executive" id="stardust">
+  <div class="gf-course-header">
+    <div class="gf-course-title-block">
+      <h3 class="gf-course-name">Stardust</h3>
+      <span class="gf-course-type-badge exec">Executive · Par 60</span>
+    </div>
+    <div class="gf-course-quick-stats">
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Par</span>
+        <span class="gf-quick-stat-val">60</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Long Yards</span>
+        <span class="gf-quick-stat-val">4,267</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Holes</span>
+        <span class="gf-quick-stat-val">18</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-stardust.jpg" alt="Stardust Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Stardust</div>
+          </div>
+        </div>
+
+  <p class="gf-course-desc">The <strong>original executive course</strong>, Stardust&apos;s traditional layout features tree-lined fairways, subtle greens and deep bunkers with three tees on each hole. The back nine is considered the more difficult, with water coming into play on four different holes.</p>
+
+  <div class="gf-course-details">
+    <div class="gf-detail-item">
+      <span class="lbl">Address</span>
+      <span class="val">12702 Stardust Blvd<br>Sun City West, AZ 85375</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Pro Shop</span>
+      <span class="val"><a href="tel:+16235446012">623-544-6012</a></span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Designer / Notes</span>
+      <span class="val">Original SCW executive course</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Official Page</span>
+      <span class="val"><a href="https://suncitywest.com/stardustgolfcourse/" target="_blank" rel="noopener">View on suncitywest.com →</a></span>
+    </div>
+  </div>
+
+  <div class="gf-yardage-table">
+    <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+    <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+    <div class="gf-yardage-row"><span class="tee-name">Blue (Men)</span><span class="tee-num">4,267</span><span class="tee-num">60.3</span><span class="tee-num">94</span></div><div class="gf-yardage-row"><span class="tee-name">White (Men)</span><span class="tee-num">3,954</span><span class="tee-num">59.2</span><span class="tee-num">91</span></div><div class="gf-yardage-row"><span class="tee-name">Red (Men)</span><span class="tee-num">3,489</span><span class="tee-num">57.4</span><span class="tee-num">84</span></div>
+  </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Stardust?</strong> We track every listing on every course in real time. Call us for currently-available Stardust fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+</div>
+<div class="gf-course-card executive" id="echomesa">
+  <div class="gf-course-header">
+    <div class="gf-course-title-block">
+      <h3 class="gf-course-name">Echo Mesa</h3>
+      <span class="gf-course-type-badge exec">Executive · Par 60</span>
+    </div>
+    <div class="gf-course-quick-stats">
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Par</span>
+        <span class="gf-quick-stat-val">60</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Long Yards</span>
+        <span class="gf-quick-stat-val">4,145</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Holes</span>
+        <span class="gf-quick-stat-val">18</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-echomesa.jpg" alt="Echo Mesa Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Echo Mesa</div>
+          </div>
+        </div>
+
+  <p class="gf-course-desc">Echo Mesa is an <strong>exceptionally demanding executive course</strong> featuring lakes, sand and grass bunkers. From the blue tees, it is considered <strong>one of the most challenging of all seven courses</strong> — short distance does not mean easy.</p>
+
+  <div class="gf-course-details">
+    <div class="gf-detail-item">
+      <span class="lbl">Address</span>
+      <span class="val">20349 N Echo Mesa Drive<br>Sun City West, AZ 85375</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Pro Shop</span>
+      <span class="val"><a href="tel:+16235446014">623-544-6014</a></span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Designer / Notes</span>
+      <span class="val">Demanding executive layout</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Official Page</span>
+      <span class="val"><a href="https://suncitywest.com/echomesagolfcourse/" target="_blank" rel="noopener">View on suncitywest.com →</a></span>
+    </div>
+  </div>
+
+  <div class="gf-yardage-table">
+    <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+    <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+    <div class="gf-yardage-row"><span class="tee-name">Blue (Men)</span><span class="tee-num">4,145</span><span class="tee-num">60.6</span><span class="tee-num">96</span></div><div class="gf-yardage-row"><span class="tee-name">White (Men)</span><span class="tee-num">3,513</span><span class="tee-num">58.5</span><span class="tee-num">90</span></div><div class="gf-yardage-row"><span class="tee-name">Red (Men)</span><span class="tee-num">2,973</span><span class="tee-num">55.0</span><span class="tee-num">83</span></div>
+  </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Echo Mesa?</strong> We track every listing on every course in real time. Call us for currently-available Echo Mesa fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+</div>
+<div class="gf-course-card executive" id="deserttrails">
+  <div class="gf-course-header">
+    <div class="gf-course-title-block">
+      <h3 class="gf-course-name">Desert Trails</h3>
+      <span class="gf-course-type-badge exec">Executive · Par 61</span>
+    </div>
+    <div class="gf-course-quick-stats">
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Par</span>
+        <span class="gf-quick-stat-val">61</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Long Yards</span>
+        <span class="gf-quick-stat-val">4,027</span>
+      </div>
+      <div class="gf-quick-stat">
+        <span class="gf-quick-stat-lbl">Holes</span>
+        <span class="gf-quick-stat-val">18</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-deserttrails.jpg" alt="Desert Trails Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Desert Trails</div>
+          </div>
+        </div>
+
+  <p class="gf-course-desc">A unique executive course offering <strong>seven par 4&apos;s</strong> — affording golfers the experience of using all clubs. The course provides three different tees on each hole.</p>
+
+  <div class="gf-course-details">
+    <div class="gf-detail-item">
+      <span class="lbl">Address</span>
+      <span class="val">22525 N Executive Way<br>Sun City West, AZ 85375</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Pro Shop</span>
+      <span class="val"><a href="tel:+16235446017">623-544-6017</a></span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Designer / Notes</span>
+      <span class="val">Designed by Billy Casper</span>
+    </div>
+    <div class="gf-detail-item">
+      <span class="lbl">Official Page</span>
+      <span class="val"><a href="https://suncitywest.com/deserttrailsgolfcourse/" target="_blank" rel="noopener">View on suncitywest.com →</a></span>
+    </div>
+  </div>
+
+  <div class="gf-yardage-table">
+    <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+    <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+    <div class="gf-yardage-row"><span class="tee-name">Blue (Men)</span><span class="tee-num">4,027</span><span class="tee-num">59.3</span><span class="tee-num">89</span></div><div class="gf-yardage-row"><span class="tee-name">White (Men)</span><span class="tee-num">3,696</span><span class="tee-num">58.2</span><span class="tee-num">86</span></div><div class="gf-yardage-row"><span class="tee-name">Red (Men)</span><span class="tee-num">3,090</span><span class="tee-num">56.2</span><span class="tee-num">80</span></div>
+  </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Desert Trails?</strong> We track every listing on every course in real time. Call us for currently-available Desert Trails fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="gf-section">
+  <div class="gf-inner">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <div class="gf-eyebrow">⛳ Beyond the Rec Card</div>
+      <h2 class="gf-h2">Two more SCW courses worth knowing about</h2>
+      <p class="gf-lede">Sun City West has two additional 18-hole courses that aren&apos;t part of RCSCW — meaning they&apos;re NOT included with your recreation card. <strong>Briarwood Country Club</strong> is the community&apos;s private (now hybrid) club, and <strong>Hillcrest Golf Club</strong> is a daily-fee public course that hosts professional tournaments. Both are within Sun City West and worth understanding if you&apos;re house-hunting around them.</p>
+    </div>
+
+    <div class="gf-non-rcscw-note">
+      <strong>Heads up:</strong> Briarwood and Hillcrest are <strong>NOT included with your $598 RCSCW Recreation Card.</strong> Briarwood requires its own membership; Hillcrest charges daily-fee greens fees (~$60-$85 typical). Homes that back to either course can still be excellent buys — but the cost-to-play math is different than the RCSCW courses.
+    </div>
+
+    <div class="gf-courses-grid">
+
+      <div class="gf-course-card private" id="briarwood">
+        <div class="gf-course-header">
+          <div class="gf-course-title-block">
+            <h3 class="gf-course-name">Briarwood Country Club</h3>
+            <span class="gf-course-type-badge priv">Private Club · Par 72</span>
+          </div>
+          <div class="gf-course-quick-stats">
+            <div class="gf-quick-stat">
+              <span class="gf-quick-stat-lbl">Par</span>
+              <span class="gf-quick-stat-val">72</span>
+            </div>
+            <div class="gf-quick-stat">
+              <span class="gf-quick-stat-lbl">Long Yards</span>
+              <span class="gf-quick-stat-val">6,576</span>
+            </div>
+            <div class="gf-quick-stat">
+              <span class="gf-quick-stat-lbl">Opened</span>
+              <span class="gf-quick-stat-val">1982</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-briarwood.jpg" alt="Briarwood Country Club Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Briarwood Country Club</div>
+          </div>
+        </div>
+
+        <p class="gf-course-desc">Sun City West&apos;s <strong>only private country club</strong>, designed by Billy Casper and Greg H. Nash, ASGCA. Traditional, uncrowded par 72 with tree-lined fairways and tees from 4,553 to 6,600 yards. <strong>In 2024, Swing First Golf took over operations</strong> and added pickleball, fitness classes, a creative studio, and the Briar Bean Coffee Shop. Notable: Briarwood holds <strong>the only full liquor license in Sun City West</strong>, hosts an under-4-hour pace of play, and named &quot;Best of the Desert&quot; West Valley Golf Course by AZCentral in 2023. <strong>No community residency required for membership.</strong></p>
+
+        <div class="gf-course-details">
+          <div class="gf-detail-item">
+            <span class="lbl">Address</span>
+            <span class="val">20800 N 135th Ave<br>Sun City West, AZ 85375</span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Phone</span>
+            <span class="val"><a href="tel:+16235845600">(623) 584-5600</a></span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Designer</span>
+            <span class="val">Billy Casper &amp; Greg H. Nash, ASGCA</span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Official Site</span>
+            <span class="val"><a href="https://www.briarwoodcc.com" target="_blank" rel="noopener">briarwoodcc.com →</a></span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Course Rating</span>
+            <span class="val">71.5 / 128 slope (Black tees)</span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Membership</span>
+            <span class="val">Private — contact club for current rates</span>
+          </div>
+        </div>
+
+        <div class="gf-yardage-table">
+          <div class="gf-yardage-title">Course Stats (Black Tees)</div>
+          <div class="gf-yardage-row head"><span class="tee-name">Tee Range</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+          <div class="gf-yardage-row"><span class="tee-name">Black (longest)</span><span class="tee-num">6,576</span><span class="tee-num">71.5</span><span class="tee-num">128</span></div>
+          <div class="gf-yardage-row"><span class="tee-name">Forward (shortest)</span><span class="tee-num">4,553</span><span class="tee-num">—</span><span class="tee-num">—</span></div>
+        </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Briarwood Country Club?</strong> We track every listing on every course in real time. Call us for currently-available Briarwood Country Club fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+      </div>
+
+      <div class="gf-course-card public" id="hillcrest">
+        <div class="gf-course-header">
+          <div class="gf-course-title-block">
+            <h3 class="gf-course-name">Hillcrest Golf Club</h3>
+            <span class="gf-course-type-badge pub">Public · Daily Fee · Par 72</span>
+          </div>
+          <div class="gf-course-quick-stats">
+            <div class="gf-quick-stat">
+              <span class="gf-quick-stat-lbl">Par</span>
+              <span class="gf-quick-stat-val">72</span>
+            </div>
+            <div class="gf-quick-stat">
+              <span class="gf-quick-stat-lbl">Long Yards</span>
+              <span class="gf-quick-stat-val">7,002</span>
+            </div>
+            <div class="gf-quick-stat">
+              <span class="gf-quick-stat-lbl">Opened</span>
+              <span class="gf-quick-stat-val">1978</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gf-course-photo">
+          <!-- To add a real photo: change class to "gf-course-photo has-image" and add <img src="../images/golf-hillcrest.jpg" alt="Hillcrest Golf Club Golf Course"> -->
+          <div class="gf-course-photo-content">
+            <div class="gf-course-photo-icon">⛳</div>
+            <div class="gf-course-photo-label">Photo Coming Soon</div>
+            <div class="gf-course-photo-name">Hillcrest Golf Club</div>
+          </div>
+        </div>
+
+        <p class="gf-course-desc">A <strong>public daily-fee course</strong> managed by Scottsdale Golf Group, Hillcrest is the longest course in Sun City West at 7,002 yards. Designed by Greg H. Nash, ASGCA, with championship-length pedigree — it has hosted the <strong>Senior PGA Tour five times</strong>, two LPGA competitions, and the Johnny Miller Pro-Am. Generous fairways with mature trees, palm-lined greens, and an absence of blind shots. The signature 13th hole — a 536-yard par 5 dogleg around a lake with an uphill approach to a green guarded by 8 bunkers — was rated by the Phoenix Gazette as one of the top 10 holes in the state.</p>
+
+        <div class="gf-course-details">
+          <div class="gf-detail-item">
+            <span class="lbl">Address</span>
+            <span class="val">20002 N Star Ridge Dr<br>Sun City West, AZ 85375</span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Phone</span>
+            <span class="val"><a href="tel:+16235841500">(623) 584-1500</a></span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Designer</span>
+            <span class="val">Greg H. Nash, ASGCA</span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Official Site</span>
+            <span class="val"><a href="https://www.hillcrestgolfclub.com" target="_blank" rel="noopener">hillcrestgolfclub.com →</a></span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Greens Fees</span>
+            <span class="val">~$60-$85 + cart (varies; book online)</span>
+          </div>
+          <div class="gf-detail-item">
+            <span class="lbl">Tournament History</span>
+            <span class="val">Senior PGA Tour (5x), LPGA, Johnny Miller Pro-Am</span>
+          </div>
+        </div>
+
+        <div class="gf-yardage-table">
+          <div class="gf-yardage-title">USGA Ratings &amp; Yardage</div>
+          <div class="gf-yardage-row head"><span class="tee-name">Tee</span><span class="tee-num">Yards</span><span class="tee-num">Rating</span><span class="tee-num">Slope</span></div>
+          <div class="gf-yardage-row"><span class="tee-name">Black</span><span class="tee-num">7,002</span><span class="tee-num">72.7</span><span class="tee-num">126</span></div>
+          <div class="gf-yardage-row"><span class="tee-name">Blue</span><span class="tee-num">6,574</span><span class="tee-num">70.3</span><span class="tee-num">123</span></div>
+          <div class="gf-yardage-row"><span class="tee-name">White</span><span class="tee-num">6,266</span><span class="tee-num">69.1</span><span class="tee-num">116</span></div>
+          <div class="gf-yardage-row"><span class="tee-name">Gold</span><span class="tee-num">5,864</span><span class="tee-num">67.3</span><span class="tee-num">113</span></div>
+          <div class="gf-yardage-row"><span class="tee-name">Red</span><span class="tee-num">5,512</span><span class="tee-num">70.7</span><span class="tee-num">120</span></div>
+        </div>
+        <div class="gf-homes-callout">
+          <div class="gf-homes-icon">🏡</div>
+          <div class="gf-homes-text">
+            <strong>Looking for a home on Hillcrest Golf Club?</strong> We track every listing on every course in real time. Call us for currently-available Hillcrest Golf Club fairway homes.
+          </div>
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="gf-homes-cta">📞 Lona — (623) 203-6271</a><a href="tel:+14802973830" class="gf-homes-cta">📞 Billy — (480) 297-3830</a></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="gf-section">
+  <div class="gf-prose-inner">
+    <div style="text-align: center;">
+      <div class="gf-eyebrow">🕐 Starting Times</div>
+      <h2 class="gf-h2">When the first tee opens</h2>
+      <p class="gf-lede" style="text-align: left;">All 7 RCSCW courses share the same starting tee time schedule, which adjusts seasonally to take advantage of cooler morning hours during the Arizona summer. <strong>Earliest tee times in summer (May–August) start at 6:00 AM</strong> — by the time it&apos;s 95° you can be at the 18th green.</p>
+    </div>
+    <div class="gf-tt-table">
+      <div class="gf-tt-title">First Tee Time by Month</div>
+      <div class="gf-tt-row"><span class="month">November–February</span><span class="time">7:30 AM</span></div>
+      <div class="gf-tt-row"><span class="month">March</span><span class="time">7:00 AM</span></div>
+      <div class="gf-tt-row"><span class="month">April</span><span class="time">6:30 AM</span></div>
+      <div class="gf-tt-row"><span class="month">May–August</span><span class="time">6:00 AM</span></div>
+      <div class="gf-tt-row"><span class="month">September</span><span class="time">6:30 AM</span></div>
+      <div class="gf-tt-row"><span class="month">October</span><span class="time">7:00 AM</span></div>
+    </div>
+  </div>
+</section>
+<section class="gf-section alt">
+  <div class="gf-inner">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <div class="gf-eyebrow">📋 The Rules</div>
+      <h2 class="gf-h2">What every player should know before showing up</h2>
+      <p class="gf-lede">A quick reference to RCSCW golf policies. Full rules at <a href="https://suncitywest.com/golfpolicies/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">suncitywest.com/golfpolicies</a>.</p>
+    </div>
+
+    <div class="gf-policies-grid">
+      <div class="gf-policy-card">
+        <div class="gf-policy-icon">📅</div>
+        <div class="gf-policy-title">Booking tee times</div>
+        <div class="gf-policy-text">RCSCW members can book online via the Web Portal, or by calling any pro shop. Single players can book in person or by phone <strong>6 days in advance</strong> (members) or <strong>4 days in advance</strong> (public). Pro shops have access to all 7 course tee sheets.</div>
+      </div>
+
+      <div class="gf-policy-card">
+        <div class="gf-policy-icon">👕</div>
+        <div class="gf-policy-title">Dress code</div>
+        <div class="gf-policy-text"><strong>Men:</strong> shirts with sleeves to mid-bicep, shorts mid-thigh or longer. No tank tops, sleeveless shirts, swimwear. <strong>Women:</strong> non-revealing tops (no spaghetti straps, halters, midriff), shorts/skirts mid-thigh or longer. <strong>Footwear:</strong> spikeless or soft-spike golf shoes, golf sandals, or flat-soled shoes.</div>
+      </div>
+
+      <div class="gf-policy-card">
+        <div class="gf-policy-icon">👥</div>
+        <div class="gf-policy-title">Guests &amp; non-residents</div>
+        <div class="gf-policy-text">Non-residents (public players) can play any RCSCW course at public rates. RCSCW member guests can play with a member or as public players. <strong>Children under 12</strong> may play if they understand the rules and don&apos;t disturb others — but not during weekly Club play or before 11 AM.</div>
+      </div>
+
+      <div class="gf-policy-card">
+        <div class="gf-policy-icon">🌧️</div>
+        <div class="gf-policy-title">Rain checks &amp; weather</div>
+        <div class="gf-policy-text">Rain checks given when rain lasts more than 1 hour, cart path restrictions are in effect, or specific holes flood. Prorated based on holes not completed. <strong>Weather hotline: 623-544-6175</strong> (1=Pebblebrook, 2=Trail Ridge, 3=Deer Valley, 4=Grandview, 5=Echo Mesa, 6=Stardust, 7=Desert Trails).</div>
+      </div>
+
+      <div class="gf-policy-card">
+        <div class="gf-policy-icon">🍺</div>
+        <div class="gf-policy-title">Alcoholic beverages</div>
+        <div class="gf-policy-text">No outside alcoholic beverages permitted. All alcohol must be purchased at the facility (pro shop or restaurant) — including The Crooked Putter at Grandview and snack bars at every course.</div>
+      </div>
+
+      <div class="gf-policy-card">
+        <div class="gf-policy-icon">👀</div>
+        <div class="gf-policy-title">Spectators</div>
+        <div class="gf-policy-text">All non-playing spectators on the course must register in advance with Golf Ops via the Spectator Registration Form. Forms must be submitted to the golf course prior to going on the course.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gf-section">
+  <div class="gf-prose-inner">
+    <div style="text-align: center;">
+      <div class="gf-eyebrow">🔗 Official Links</div>
+      <h2 class="gf-h2">Useful RCSCW golf resources</h2>
+    </div>
+    <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 24px;">
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="padding: 12px 0; border-bottom: 1px solid var(--border-soft); font-size: 14px;">⛳ <a href="https://suncitywest.totaleintegrated.net/web/tee-times" target="_blank" rel="noopener" style="color: var(--orange); font-weight: 700;">Book a Tee Time</a> — RCSCW Web Portal (member login)</li>
+        <li style="padding: 12px 0; border-bottom: 1px solid var(--border-soft); font-size: 14px;">📰 <a href="https://suncitywest.com/golfnews/" target="_blank" rel="noopener" style="color: var(--orange); font-weight: 700;">Golf News</a> — tournament results, course updates</li>
+        <li style="padding: 12px 0; border-bottom: 1px solid var(--border-soft); font-size: 14px;">📋 <a href="https://suncitywest.com/golfpolicies/" target="_blank" rel="noopener" style="color: var(--orange); font-weight: 700;">Rules &amp; Regulations</a> — complete RCSCW golf policies</li>
+        <li style="padding: 12px 0; border-bottom: 1px solid var(--border-soft); font-size: 14px;">🌧️ <strong>Weather Hotline</strong>: <a href="tel:+16235446175" style="color: var(--orange); font-weight: 700;">623-544-6175</a></li>
+        <li style="padding: 12px 0; border-bottom: 1px solid var(--border-soft); font-size: 14px;">🎓 <a href="https://suncitywest.com/lessonsclinics/" target="_blank" rel="noopener" style="color: var(--orange); font-weight: 700;">Lessons &amp; Clinics</a> — instruction at the Golf Lab (Grandview)</li>
+        <li style="padding: 12px 0; font-size: 14px;">🏌️ <a href="https://suncitywest.com/greenteam/" target="_blank" rel="noopener" style="color: var(--orange); font-weight: 700;">Green Team</a> — course maintenance schedule &amp; updates</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Ready to find your golf course home?</div>
+  <div class="scw-footer-cta-sub">
+    Whether you want a fairway view, a desert backdrop, or just walking distance to the first tee — we know which homes are coming up on every course. <strong>478 career sales · 5.0★ on Zillow.</strong>
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap"><a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona &mdash; (623) 203-6271</a><a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy &mdash; (480) 297-3830</a></div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📅 PebbleCreek Events Calendar — Annual Traditions & Weekly Activities | Hometown AZ</title>
+<meta name="description" content="Signature PebbleCreek events: Holiday Golf Cart Parade, Memorial Day Pool Party, Tour de PebbleCreek, Veterans Day Parade, Autofest. Plus weekly clubs and classes.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/events.html">
+<meta property="og:title" content="📅 PebbleCreek Events Calendar — Annual Traditions & Weekly Activities">
+<meta property="og:description" content="Signature PebbleCreek events: Holiday Golf Cart Parade, Memorial Day Pool Party, Tour de PebbleCreek, Veterans Day Parade, Autofest. Plus weekly clubs and classes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/events.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "📅 PebbleCreek Events Calendar — Annual Traditions & Weekly Activities",
+        "item": "https://hometownaz.com/pebblecreek/events.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "📅 PebbleCreek Events Calendar — Annual Traditions & Weekly Activities",
+    "description": "Signature PebbleCreek events: Holiday Golf Cart Parade, Memorial Day Pool Party, Tour de PebbleCreek, Veterans Day Parade, Autofest. Plus weekly clubs and classes.",
+    "url": "https://hometownaz.com/pebblecreek/events.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">📅</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline">Events <span class='accent'>Calendar</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">📅 Annual Calendar of Tradition</div>
+      <h2 class="pc-h2">PebbleCreek Events Calendar</h2>
+    </div>
+    <p class="pc-lede">PebbleCreek doesn't just host events — many have run for decades. The Holiday Golf Cart Parade, the Memorial Day Pool Party, Tour de PebbleCreek, the Veterans Day Parade — they're part of how the community marks the year together.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">SIGNATURE ANNUAL EVENTS</div>
+    <h2 class="pc-h2">Marquee community traditions</h2>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎄</div>
+        <h3 class="pc-grid-card-title">Holiday Golf Cart Parade</h3>
+        <p class="pc-grid-card-body">Annual December tradition. Residents deck out their golf carts in holiday-inspired decor — some dress to match. Featured by local news (Fox 10, ABC 15) most years.</p>
+        <div class="pc-grid-card-meta">DEC · WHOLE COMMUNITY</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏊</div>
+        <h3 class="pc-grid-card-title">Memorial Day Celebration Pool Party</h3>
+        <p class="pc-grid-card-body">The resort-style pool complex turns into an island paradise. Evening event with socializing, dancing, and full use of the Tuscany Sports &amp; Aquatics outdoor pool.</p>
+        <div class="pc-grid-card-meta">LATE MAY · TUSCANY POOL</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚴</div>
+        <h3 class="pc-grid-card-title">Tour de PebbleCreek</h3>
+        <p class="pc-grid-card-body">Coincides with the Tour de France. Cycling enthusiasts ride one mile for every ten in the actual Tour, logging <strong>206 miles total</strong> over 21 days. Multi-week event.</p>
+        <div class="pc-grid-card-meta">JUL · CYCLING CLUB</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🇺🇸</div>
+        <h3 class="pc-grid-card-title">Veterans Day Parade</h3>
+        <p class="pc-grid-card-body">Annual recognition of military personnel — special guests, speakers, patriotism, and gratitude. The Corvette Club leads an honor ride.</p>
+        <div class="pc-grid-card-meta">NOV 11 · COMMUNITY-WIDE</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚗</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Autofest</h3>
+        <p class="pc-grid-card-body">Annual classic car show run by the Classics Car Club. Donates food and money to the Agua Fria Food Bank and other local charities.</p>
+        <div class="pc-grid-card-meta">ANNUAL · CLASSICS CAR CLUB</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">⛳</div>
+        <h3 class="pc-grid-card-title">Golf Tournaments (Year-Round)</h3>
+        <p class="pc-grid-card-body">Multiple tournaments throughout the year hosted by the various golf associations and clubs. Some are association-internal, others are charity benefits.</p>
+        <div class="pc-grid-card-meta">YEAR-ROUND · ALL ASSOC.</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🔥</div>
+        <h3 class="pc-grid-card-title">Backyard BBQ Brawl</h3>
+        <p class="pc-grid-card-body">Cross-community Robson event. All five Robson Resort Communities compete for BBQ bragging rights. PebbleCreek hosts/competes annually.</p>
+        <div class="pc-grid-card-meta">FALL · MULTI-COMMUNITY</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎭</div>
+        <h3 class="pc-grid-card-title">PC Players Productions</h3>
+        <p class="pc-grid-card-body">Two major theater productions per year (Fall &amp; Spring). Recent shows include "The Sweet Delilah Swim Club." Renaissance Theater.</p>
+        <div class="pc-grid-card-meta">FALL &amp; SPRING · 332 SEATS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">WEEKLY &amp; MONTHLY EVENTS</div>
+    <h2 class="pc-h2">What's happening any given week</h2>
+    <p>Beyond the big annual traditions, PebbleCreek has a packed weekly calendar:</p>
+    <ul>
+      <li><strong>Bridge:</strong> 6 days a week (casual, marathon, sanctioned and non-sanctioned duplicate)</li>
+      <li><strong>Pickleball:</strong> Daily open play across 36 courts plus club tournaments</li>
+      <li><strong>Group fitness classes:</strong> Multiple daily at the Tuscany Fitness Studios (yoga, aqua, spin, line dancing, zumba, kettlebell, strength)</li>
+      <li><strong>Bocce:</strong> 3 seasonal sessions (Sept – mid-May)</li>
+      <li><strong>Open Beading Group:</strong> Mondays 1pm at Creative Arts Center</li>
+      <li><strong>Bingo:</strong> Weekly evening gatherings</li>
+      <li><strong>Tennis matches and clinics:</strong> Multiple weekly</li>
+      <li><strong>Camera Club, Art Club, Ceramics, Quilters, Sewing</strong> — most meet weekly at the Creative Arts Center</li>
+      <li><strong>Renaissance Theater:</strong> Concerts, plays, seminars, performances throughout the season</li>
+      <li><strong>Westwind Tavern:</strong> Live music, bar trivia, and other scheduled entertainment</li>
+    </ul>
+
+    <h2 class="pc-h2">Where to find the current schedule</h2>
+    <p>The community publishes its detailed calendar through several channels:</p>
+    <ul>
+      <li><strong>PebbleCreek Post Newspaper</strong> — monthly newspaper with all upcoming events. <a href="https://pebblecreekpost.com/" target="_blank" rel="noopener">pebblecreekpost.com →</a></li>
+      <li><strong>PebbleTV</strong> — community TV channel. <a href="http://pebbletv.org/" target="_blank" rel="noopener">pebbletv.org →</a></li>
+      <li><strong>Robson PebbleCreek Blog</strong> — news, event recaps, and updates. <a href="https://robson.com/category/pebblecreek-news/" target="_blank" rel="noopener">robson.com →</a></li>
+      <li><strong>Community bulletin boards</strong> — posted in each clubhouse and at the gates</li>
+      <li><strong>Club newsletters</strong> — each club publishes its own schedule</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">💡 Insider Tip</div>
+    <h2 class="pc-h2">When are buyers most likely to attend an event?</h2>
+    <p>If you're considering PebbleCreek, the <strong>Holiday Golf Cart Parade</strong> in December is a great event for prospective buyers — you'll see hundreds of residents out, get a feel for the community vibe, and walk through neighborhoods you might not otherwise visit. The Memorial Day Pool Party is similar in May.</p>
+    <p>Also: <strong>Preferred Guest Program visits</strong> from Robson are timed around busy event weeks — they want you to see the community at its liveliest. Call us if you'd like advice on which dates align best with seeing PebbleCreek in full swing.</p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📊 PebbleCreek Buyer Budget — Price Bands & Monthly Carry | Hometown AZ</title>
+<meta name="description" content="PebbleCreek pricing by series ($400K-$1M+). Sample monthly carry calculations (cash, mortgage, down payment scenarios). Builder incentives explained.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/buyer-budget.html">
+<meta property="og:title" content="📊 PebbleCreek Buyer Budget — Price Bands & Monthly Carry">
+<meta property="og:description" content="PebbleCreek pricing by series ($400K-$1M+). Sample monthly carry calculations (cash, mortgage, down payment scenarios). Builder incentives explained.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/buyer-budget.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "📊 PebbleCreek Buyer Budget — Price Bands & Monthly Carry",
+        "item": "https://hometownaz.com/pebblecreek/buyer-budget.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "📊 PebbleCreek Buyer Budget — Price Bands & Monthly Carry",
+    "description": "PebbleCreek pricing by series ($400K-$1M+). Sample monthly carry calculations (cash, mortgage, down payment scenarios). Builder incentives explained.",
+    "url": "https://hometownaz.com/pebblecreek/buyer-budget.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">📊</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline">Buyer <span class='accent'>Budget</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">📊 Buyer Budget Guide</div>
+      <h2 class="pc-h2">What does it really cost to buy in PebbleCreek?</h2>
+    </div>
+    <p class="pc-lede">PebbleCreek home prices range from the <strong>mid-$400Ks for older resales</strong> up to <strong>$1M+ for new-construction Estate models</strong>. Here's how to think about your real budget — not just the purchase price, but the all-in monthly cost.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">PRICE BANDS</div>
+    <h2 class="pc-h2">Pricing by series</h2>
+    <p>Based on recent sales and Robson's current builder pricing (Feb 2026):</p>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">🏠 Resales — Casita Series</h3>
+        <div class="pc-card-amount">$400K-$550K<span class="pc-card-amount-sub">Typical range</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>Smaller Casita models (Augusta, Doral, Greenbriar, Heritage) — 1,100-1,632 sqft. Resale-only — Robson is no longer building Casitas. Great entry point if you want PebbleCreek but don't need a large home.</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">🏠 Resales — Courtyard Villas &amp; Villas</h3>
+        <div class="pc-card-amount">$500K-$650K<span class="pc-card-amount-sub">Resale + new</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>Villas and Courtyard Villas — 1,400-1,915 sqft. <strong>Builder pricing for new Courtyard Villas starts at $502,900 (Napa) up to $539,900 (Terra)</strong>. Resales are often slightly less but vary by upgrades and location.</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">🏠 New Construction — Tradition Series</h3>
+        <div class="pc-card-amount">$522K-$601K<span class="pc-card-amount-sub">Builder pricing</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>Tradition Series new homes — 1,619-2,009 sqft. Includes Montecito ($522,900), Mandara ($578,900), Alora ($586,900), and the award-winning <strong>Fresco</strong> ($601,900).</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">🏠 New Construction — Premiere &amp; Golf Villa Series</h3>
+        <div class="pc-card-amount">$680K-$970K<span class="pc-card-amount-sub">Builder pricing</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>Premiere series: Solaris ($680,900), Mira ($697,900), Vienta ($717,900), Tesoro ($722,900). Golf Villa series (Final Opportunities — limited availability): Viera ($697,900), Talon ($713,900), Loma ($969,900).</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">🏠 New Construction — Estate Series</h3>
+        <div class="pc-card-amount">$795K-$864K+<span class="pc-card-amount-sub">Builder pricing</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>Largest new homes — 2,695-3,079 sqft. Avalon ($795,900, Award-Winning), Solstice ($813,900), Bacara ($863,900). Premium lots and customizations can push past $1M.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">MONTHLY CARRY</div>
+    <h2 class="pc-h2">Sample monthly cost calculations</h2>
+    <p>The purchase price is one thing. Your <strong>actual monthly carry</strong> includes mortgage (if any), property tax, HOA dues, insurance, and utilities. Here are sample calculations for typical purchase scenarios:</p>
+
+    <h3 class="pc-h3">Example 1: $550K cash purchase</h3>
+    <ul>
+      <li>Mortgage P&amp;I: $0 (cash)</li>
+      <li>Property tax: ~$385/mo (estimated 0.8% annually)</li>
+      <li>HOA dues: ~$214/mo</li>
+      <li>Homeowner's insurance: ~$130/mo</li>
+      <li>Utilities (estimated avg): ~$300/mo</li>
+      <li><strong>Total: ~$1,029/mo carrying cost</strong></li>
+    </ul>
+
+    <h3 class="pc-h3">Example 2: $700K with $200K down, 30-year mortgage</h3>
+    <ul>
+      <li>Mortgage P&amp;I (~6.5% rate): ~$3,160/mo</li>
+      <li>Property tax: ~$490/mo</li>
+      <li>HOA dues: ~$214/mo</li>
+      <li>Insurance: ~$165/mo</li>
+      <li>Utilities: ~$350/mo</li>
+      <li><strong>Total: ~$4,379/mo all-in</strong></li>
+    </ul>
+
+    <h3 class="pc-h3">Example 3: $863K Bacara new build with 50% down</h3>
+    <ul>
+      <li>Mortgage P&amp;I (~6.5% rate, $431K loan): ~$2,725/mo</li>
+      <li>Property tax: ~$605/mo</li>
+      <li>HOA dues: ~$214/mo</li>
+      <li>Insurance: ~$210/mo</li>
+      <li>Utilities (larger home): ~$425/mo</li>
+      <li><strong>Total: ~$4,179/mo all-in</strong></li>
+    </ul>
+
+    <p><strong>Important caveats:</strong> these are rough estimates for budgeting only. Mortgage rates change. Tax rates depend on assessed value and the year. HOA dues can change. Insurance depends on coverage levels. Use these for ballpark planning, not as quotes.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">💰 BUILDER INCENTIVES</div>
+    <h2 class="pc-h2">If you're buying new from Robson</h2>
+    <p>Robson runs current incentive programs that change quarterly. As of early 2026, the main programs are:</p>
+    <ul>
+      <li><strong>"Choose Your Way to Save"</strong> — up to <strong>$50,000</strong> on your new Build-to-Order home, applied toward mortgage closing costs/buy-down, design options, or lot premiums.</li>
+      <li><strong>7/6 ARM Rate Promotion</strong> — buy-down program that lowers your effective mortgage rate for the first seven years. Useful in the current rate environment.</li>
+      <li><strong>Move-In Ready home incentives</strong> — limited-time savings on completed inventory homes (the ones Robson built without a specific buyer).</li>
+    </ul>
+    <p>These change frequently — call Robson directly at <strong>800-795-4663</strong> for the current offer, or call us and we can pull the latest incentive sheet and walk through how it applies to a specific home.</p>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">📞 Want a precise number?</div>
+    <h2 class="pc-h2">Let's run your actual numbers</h2>
+    <p>The estimates above are useful for early planning. When you're ready to make an offer on a <strong>specific home</strong>, we pull the actual property tax assessment, current HOA dues, any active special assessments, the seller's disclosed utility costs, and prevailing insurance quotes — giving you a real all-in monthly carry number to compare against your budget.</p>
+    <p><strong>Call us</strong> with the address (or just the price range you're targeting) and we'll put together a budget worksheet for you. No charge for the service.</p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>

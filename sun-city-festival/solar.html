@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Pros &amp; Cons — Sun City Festival, Buckeye AZ | Hometown AZ</title>
+<meta name="description" content="Honest guide to solar in Sun City Festival — owned vs. leased systems, APS net-metering, CFD interaction, and what every buyer (and seller) needs to know before signing.">
+<link rel="canonical" href="https://hometownaz.com/sun-city-festival/solar.html">
+<meta property="og:title" content="Solar Pros &amp; Cons — Sun City Festival, Buckeye AZ">
+<meta property="og:description" content="Honest guide to solar in Sun City Festival — owned vs. leased systems, APS net-metering, CFD interaction, and what every buyer (and seller) needs to know before signing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/sun-city-festival/solar.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #2d3d2e;
+  --green-deep: #1f2c1f;
+  --orange: #c8622a;
+  --orange-deep: #a14d1f;
+  --sage: #4a7c59;
+  --gold: #d4a52c;
+  --cream: #f5f1ea;
+  --cream-warm: #faf5ec;
+  --sand: #ede8df;
+  --border: #ddd6c8;
+  --border-soft: #e8e0d0;
+  --text: #2a2a2a;
+  --muted: #7a6e60;
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
+
+/* SCW CANONICAL HERO */
+.scw-hero { background: var(--green); color: #fff; padding: 24px 48px 40px; position: relative; }
+.scw-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 14px; font-weight: 500; margin-bottom: 28px;
+  transition: color 0.15s;
+}
+.scw-back:hover { color: #fff; }
+.scw-hero-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px;
+  align-items: center; max-width: 1400px; margin: 0 auto;
+}
+.scw-tagline {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--orange);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin: 0 0 20px; padding: 7px 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,165,0,0.25);
+  border-radius: 100px;
+}
+.scw-tagline-icon { width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; }
+.scw-headline {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 4rem; font-weight: 700; line-height: 1.05;
+  letter-spacing: -0.01em; margin: 0 0 18px;
+}
+.scw-headline .accent { color: var(--orange); }
+.scw-subhead {
+  font-size: 17px; line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  margin: 0; max-width: 620px;
+}
+.scw-nav-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  align-self: start;
+}
+.scw-nav-btn { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #fff; color: var(--green); border: 1px solid rgba(255,255,255,0.25); border-radius: 28px; font-family: inherit; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.15s; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; justify-content: center; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); }
+.scw-nav-btn.scw-nav-btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn.scw-nav-btn-orange:hover { background: var(--orange-deep); color: #fff; }
+.scw-nav-btn.scw-nav-btn-wide { grid-column: span 2; justify-content: center; }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+.scw-nav-btn-current {
+  background: rgba(255,255,255,0.92) !important;
+  color: var(--orange) !important;
+  border-color: var(--orange) !important;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange);
+  cursor: default;
+}
+.scw-nav-btn-current.scw-nav-btn-orange { background: var(--orange-deep) !important; color: #fff !important; border-color: var(--orange-deep) !important; }
+.scw-nav-btn-current:hover { transform: none !important; }
+
+/* Solar body content (cg- classes from SCW) */
+.cg-section { padding: 48px 32px 60px; background: var(--cream); }
+.cg-prose-inner { max-width: 760px; margin: 0 auto; }
+.cg-eyebrow {
+  display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--orange);
+  font-weight: 700; margin-bottom: 14px;
+}
+.cg-h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.2rem; font-weight: 700; color: var(--green);
+  margin: 0 0 18px; line-height: 1.18; letter-spacing: -0.01em;
+}
+.cg-lede {
+  font-size: 17px; line-height: 1.7; color: var(--text);
+  margin: 0 0 24px;
+}
+.cg-prose p {
+  font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text);
+}
+.cg-prose strong { color: var(--green); }
+.cg-prose h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.35rem; font-weight: 700; color: var(--green);
+  margin: 32px 0 12px; line-height: 1.25;
+}
+.cg-prose h3:first-child { margin-top: 0; }
+.cg-prose a { color: var(--orange); text-decoration: underline; }
+.cg-prose ul { margin: 0 0 18px 24px; padding: 0; }
+.cg-prose li {
+  font-size: 16px; line-height: 1.75;
+  margin-bottom: 8px; color: var(--text);
+}
+.cg-prose li strong { color: var(--green); }
+
+.cg-pitfall {
+  background: #fff; border-left: 4px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 18px 22px; margin: 18px 0;
+}
+.cg-pitfall.green { border-left-color: var(--sage); }
+.cg-pitfall h4 {
+  font-size: 14px; font-weight: 700;
+  color: var(--orange-deep);
+  margin: 0 0 6px; letter-spacing: 0.01em;
+}
+.cg-pitfall.green h4 { color: var(--green); }
+.cg-pitfall p {
+  font-size: 14px; line-height: 1.6;
+  color: var(--text); margin: 0;
+}
+
+.cg-inline-cta {
+  background: linear-gradient(135deg, #fff7ec 0%, #ffe9cc 100%);
+  border: 1px solid var(--orange);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin: 32px 0; text-align: center;
+}
+.cg-inline-cta-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--green); margin: 0 0 10px; line-height: 1.3;
+}
+.cg-inline-cta-sub {
+  font-size: 14px; color: var(--text);
+  margin: 0 0 16px; line-height: 1.55;
+}
+.cg-inline-cta-row {
+  display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+}
+.cg-inline-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 20px;
+  background: var(--orange); color: #fff;
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 13px; font-weight: 700;
+  text-decoration: none; transition: background 0.15s;
+}
+.cg-inline-cta-btn:hover { background: var(--orange-deep); text-decoration: none; color: #fff; }
+.dual-call-wrap { display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+/* Footer CTA */
+.scw-footer-cta {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
+  color: #fff; padding: 36px 32px; text-align: center;
+}
+.scw-footer-cta-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.4rem; font-weight: 700; margin-bottom: 10px;
+}
+.scw-footer-cta-sub {
+  font-size: 15px; opacity: 0.94; line-height: 1.55;
+  margin-bottom: 22px; max-width: 600px; margin-left: auto; margin-right: auto;
+}
+.scw-footer-cta-sub strong { color: #fff; }
+.scw-footer-cta-row {
+  display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+}
+.scw-cta-btn {
+  background: #fff; color: var(--orange-deep);
+  padding: 13px 26px; border-radius: 999px;
+  text-decoration: none; font-weight: 700; font-size: 14px;
+  transition: transform .15s, box-shadow .15s;
+  display: inline-block;
+}
+.scw-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+@media (max-width: 900px) {
+  .scw-hero { padding: 20px 20px 28px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-headline { font-size: 2.4rem; }
+  .cg-section { padding: 28px 16px 40px; }
+  .cg-h2 { font-size: 1.7rem; }
+}
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City Festival",
+        "item": "https://hometownaz.com/sun-city-festival/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Solar Pros & Cons — Sun City Festival, Buckeye AZ",
+        "item": "https://hometownaz.com/sun-city-festival/solar.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Solar Pros & Cons — Sun City Festival, Buckeye AZ",
+    "description": "Honest guide to solar in Sun City Festival — owned vs. leased systems, APS net-metering, CFD interaction, and what every buyer (and seller) needs to know before signing.",
+    "url": "https://hometownaz.com/sun-city-festival/solar.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City Festival, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City Festival</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">⚡</span>
+        LONA KING &amp; BILLY HEINZMAN · FESTIVAL EXPERTS
+      </div>
+      <h1 class="scw-headline">Solar Pros &amp; <span class="accent">Cons</span></h1>
+      </div>
+    <div class="scw-nav-grid">
+      <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+      <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+      <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+      <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+      <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+      <a href="solar.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+      <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+    </div>
+  </div>
+</section>
+
+<section class="cg-section">
+  <div class="cg-prose-inner">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="cg-eyebrow">⚡ The Honest Take</div>
+      <h2 class="cg-h2">Solar in Sun City Festival — what every buyer (and seller) needs to know</h2>
+      <p class="cg-lede" style="text-align: left;">Solar comes up on almost every Sun City Festival showing. The Arizona sun is real, energy bills aren&apos;t small, and there are panels on a lot of roofs out here. Festival has a particularly high rate of solar adoption because the newer construction (2017+) often shipped with <strong>solar pre-wiring as a standard Del Webb option</strong>, making retrofits cheaper than at older Sun Cities. But there&apos;s a big difference between <strong>owned solar and leased solar</strong> — and that difference can derail an otherwise great deal at the closing table. Here&apos;s the honest breakdown.</p>
+    </div>
+
+    <div class="cg-prose">
+      <h3>Owned solar: usually a good thing on a Festival home</h3>
+      <p>If the seller <strong>owns the solar system outright</strong> (paid cash or paid off the loan), it&apos;s a real asset. The buyer takes over a system that&apos;s already paid for, and gets the lower APS bills going forward. Owned solar can <strong>add measurable value to a home&apos;s sale price</strong> — sometimes $10,000-$25,000 depending on system size and age. We see "PAID OFF SOLAR!" called out prominently in Festival listings for a reason.</p>
+      <p>What to verify with owned solar:</p>
+      <ul>
+        <li><strong>Age of the system.</strong> Panels typically last 20-25 years. A 15-year-old system is closer to replacement than a new one.</li>
+        <li><strong>Production records.</strong> Ask for past 12-24 months of production — does it match what the seller claims?</li>
+        <li><strong>Inverter age.</strong> Inverters often need replacement before panels do (around 10-15 years). Replacement is $2,000-$4,000.</li>
+        <li><strong>APS net-metering enrollment.</strong> Sun City Festival is in APS territory; the buyer needs to be transferred onto the existing solar interconnection agreement at closing.</li>
+        <li><strong>Roof condition.</strong> If the roof is near end-of-life, removing and reinstalling panels is $2,500+ added cost.</li>
+      </ul>
+
+      <h3>Leased solar: this is where deals fall apart</h3>
+      <p>This is where most of the trouble starts. <strong>If the seller has a solar lease</strong>, the buyer doesn&apos;t get the panels for free — they have to either:</p>
+      <ul>
+        <li><strong>Assume the remaining lease.</strong> Which means qualifying with the solar company AND paying the monthly lease payment for years to come (often 15-20 years remaining on a typical 25-year lease).</li>
+        <li><strong>Have the seller buy out the lease.</strong> Buyouts on solar leases are often $20,000-$40,000+ — and most sellers don&apos;t have that kind of cash sitting around.</li>
+        <li><strong>Walk away from the deal.</strong> This happens more than people realize.</li>
+      </ul>
+
+      <div class="cg-pitfall">
+        <h4>⚠️ The leased-solar lease-payment problem</h4>
+        <p>The lease payment is often <strong>higher than the energy savings</strong> on these older leases. So buyers are taking on a $150-$250/month obligation for the next 15+ years, just to keep panels on the roof. That&apos;s often a worse deal than just paying the APS bill outright. Always run the math before assuming a lease.</p>
+      </div>
+
+      <h3>The Festival-specific wrinkle: solar lease + CFD tax + HOA</h3>
+      <p>Festival buyers already have to think about the <strong>CFD tax balance</strong> (see our <a href="community-fees.html">community fees page</a>) on top of the standard property tax and HOA. Adding a leased solar payment on top of that can push monthly carrying costs $200+ higher than expected. Three Festival-specific costs that don&apos;t exist elsewhere:</p>
+      <ul>
+        <li><strong>CFD tax assumption</strong> — buyer inherits remaining balance if not paid off</li>
+        <li><strong>Solar lease assumption</strong> — buyer inherits 15-20 years of monthly payments</li>
+        <li><strong>$145/mo Master HOA</strong> — standard regardless</li>
+      </ul>
+      <p>If a Festival home has both an unpaid CFD <em>and</em> an active solar lease, our advice is usually: <strong>negotiate at least one of them off before close, or walk away.</strong> Carrying both for 20 years can quietly add $50,000+ to your real cost of ownership.</p>
+
+      <h3>What we always do when solar is involved</h3>
+      <p>For every Sun City Festival listing or showing involving solar, we ask the same questions <em>before</em> talking pricing:</p>
+      <ul>
+        <li><strong>Owned or leased?</strong> Get it in writing from the seller.</li>
+        <li><strong>If leased: who&apos;s the company and what are the payment, term, and buyout terms?</strong> Sunrun, Vivint, SunPower, Tesla — each has different rules. Some are reasonable. Others are nightmares.</li>
+        <li><strong>If owned: warranty status, age, recent maintenance?</strong></li>
+        <li><strong>Production data for the past year.</strong> Ideally with APS bills to compare.</li>
+        <li><strong>Roof condition.</strong> If the roof is near end-of-life, removing and reinstalling panels is $2,500+ added cost.</li>
+        <li><strong>Is the home solar pre-wired?</strong> Most post-2017 Festival builds came with the conduit and panel space pre-installed as a Del Webb option — adding panels later is significantly cheaper.</li>
+      </ul>
+
+      <div class="cg-inline-cta">
+        <div class="cg-inline-cta-title">Looking at a Festival home with solar?</div>
+        <div class="cg-inline-cta-sub">We&apos;ve negotiated dozens of these. Before you make an offer or accept one, let&apos;s review the lease/ownership documents and run the actual numbers. Half of solar deals can be salvaged with the right negotiation. The other half deserve a pass.</div>
+        <div class="cg-inline-cta-row">
+          <div class="dual-call-wrap">
+            <a href="tel:+16232036271" class="cg-inline-cta-btn">📞 Call Lona — (623) 203-6271</a>
+            <a href="tel:+14802973830" class="cg-inline-cta-btn">📞 Call Billy — (480) 297-3830</a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Should I add solar to my Festival home?</h3>
+      <p>This question comes from sellers preparing to list, and from buyers who just closed and want to lower their bills. The honest answer depends on your timeframe:</p>
+      <p><strong>If you&apos;re planning to stay 10+ years</strong> and you can pay cash or take a low-interest home equity loan to buy the system outright, solar can pay for itself and lower bills meaningfully. APS rate hikes only make this math better over time. <strong>Festival&apos;s favorable factor</strong>: many newer homes have solar pre-wiring, which can cut installation cost by $1,500-$3,000.</p>
+      <p><strong>If you&apos;re planning to sell in less than 5 years</strong>, don&apos;t add solar. The cost recovery on resale is usually less than the install cost, and a leased system will hurt resale more than a paid-off APS bill.</p>
+      <p><strong>Never sign a solar lease in Sun City Festival.</strong> Period. The 25-year obligation will outlive most retirees&apos; homeownership in the community, and the lease becomes a future seller&apos;s problem at resale. If you can&apos;t buy outright, don&apos;t do it. We&apos;ve seen too many deals fall apart because of an old solar lease.</p>
+
+      <h3>Why solar makes more sense here than in older communities</h3>
+      <p>Two reasons Festival is actually a better-than-average solar candidate:</p>
+      <ul>
+        <li><strong>Newer roofs.</strong> Most Festival homes are 2006 or later. Roofs have 10-25 years of useful life remaining, so panels can ride out their full 20-25 year warranty without an interruption for re-roofing.</li>
+        <li><strong>Solar pre-wiring on newer builds.</strong> Del Webb began offering solar pre-wiring as a standard option around 2017. If you&apos;re buying a post-2017 home, check the closing disclosure or call the original buyer — adding panels to a pre-wired roof is materially cheaper than retrofitting an older structure.</li>
+      </ul>
+
+      <div class="cg-pitfall green">
+        <h4>✓ Bottom-line summary</h4>
+        <p><strong>Owned solar</strong>: usually a small positive on resale. <strong>New solar lease</strong>: avoid in Festival. <strong>Inherited lease on a home you&apos;re buying</strong>: scrutinize every line — many can be negotiated away or bought out at closing if you spot it early. <strong>Adding solar to your own Festival home</strong>: yes if you&apos;re staying 10+ years and can pay cash; no otherwise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about a specific Festival home&apos;s solar?</div>
+  <div class="scw-footer-cta-sub">
+    Every home is different — owned vs. leased, panel age, inverter status, CFD interaction. Call us with an MLS number and we&apos;ll pull the disclosures and walk you through it. <strong>478 career sales · 5.0★ on Zillow.</strong>
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

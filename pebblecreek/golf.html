@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>⛳ Let's Golf! at PebbleCreek — 54 Holes of Championship Golf | Hometown AZ</title>
+<meta name="description" content="PebbleCreek golf: 54 holes across Tuscany Falls (36) and Eagle's Nest (18). Course details, pro shops, scorecards, golf associations, insider tips.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/golf.html">
+<meta property="og:title" content="⛳ Let's Golf! at PebbleCreek — 54 Holes of Championship Golf">
+<meta property="og:description" content="PebbleCreek golf: 54 holes across Tuscany Falls (36) and Eagle">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/golf.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "⛳ Let's Golf! at PebbleCreek — 54 Holes of Championship Golf",
+        "item": "https://hometownaz.com/pebblecreek/golf.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "⛳ Let's Golf! at PebbleCreek — 54 Holes of Championship Golf",
+    "description": "PebbleCreek golf: 54 holes across Tuscany Falls (36) and Eagle",
+    "url": "https://hometownaz.com/pebblecreek/golf.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">⛳</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline">Let&apos;s <span class='accent'>Golf!</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">⛳ 54 Holes of Championship Golf</div>
+      <h2 class="pc-h2">Golf at PebbleCreek — your complete guide</h2>
+    </div>
+    <p class="pc-lede">PebbleCreek has <strong>54 holes of championship golf</strong> across two clubs — <strong>Tuscany Falls</strong> (36 holes, East + West courses) and <strong>Eagle's Nest</strong> (18 holes). Both are owned by the community and managed by the HOA. Below: course details, tee times, the practice facility, dining, dress code, and how to play if you don't live here yet.</p>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">📞 Booking a Tee Time</h3>
+        <div class="pc-card-amount">Call<span class="pc-card-amount-sub">Pro shops</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>Both clubs use the pro shops for tee-time bookings. Residents get priority access to the tee sheets ahead of guests and outside play. Both pro shops also handle the practice range, lessons, equipment rentals, and golf apparel.</p>
+      </div>
+      <div class="pc-card-meta">
+        <div class="pc-card-meta-item"><span class="pc-card-meta-lbl">Tuscany Falls Pro Shop</span><span class="pc-card-meta-val">623-935-6757</span></div>
+        <div class="pc-card-meta-item"><span class="pc-card-meta-lbl">Eagle's Nest Pro Shop</span><span class="pc-card-meta-val">623-935-6761</span></div>
+        <div class="pc-card-meta-item"><span class="pc-card-meta-lbl">Hours</span><span class="pc-card-meta-val">Daily 6am – 3pm</span></div>
+      </div>
+    </div>
+
+    <h3 class="pc-h3">Tuscany Falls — 36 holes, two courses</h3>
+    <p>The <strong>Tuscany Falls</strong> golf complex is the larger of the two — a 36-hole layout split into the <strong>East</strong> and <strong>West</strong> courses, designed by <strong>Dick Bailey</strong>, a noted Arizona course architect. The layout is known for its dramatic mounding, rolling fairways, and strategically placed bunkering — visually demanding, but playable from the shorter tees for most handicaps.</p>
+    <p><strong>East course signature hole:</strong> the par-3 #13 requires a carry of more than 100 yards over water from the tee box to the green — short and intimidating. <strong>West course signature hole:</strong> #3, with stunning views of the White Tank Mountains framing the fairway.</p>
+
+    <div class="pc-table-wrap">
+      <table class="pc-table">
+        <thead>
+          <tr><th>Course</th><th>Tee</th><th>Par</th><th>Yards</th><th>Rating</th><th>Slope</th></tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="6"><strong>Tuscany Falls East</strong></td><td>Black</td><td>72</td><td>6,440</td><td>70.5</td><td>123</td></tr>
+          <tr><td>Blue</td><td>72</td><td>6,147</td><td>67.7</td><td>117</td></tr>
+          <tr><td>White (M)</td><td>72</td><td>5,453</td><td>65.0</td><td>103</td></tr>
+          <tr><td>White (W)</td><td>72</td><td>5,453</td><td>70.2</td><td>117</td></tr>
+          <tr><td>Red</td><td>72</td><td>4,688</td><td>65.9</td><td>103</td></tr>
+          <tr><td>Yellow</td><td>72</td><td>3,806</td><td>60.7</td><td>94</td></tr>
+          <tr><td rowspan="6"><strong>Tuscany Falls West</strong></td><td>Black</td><td>72</td><td>6,720</td><td>71.1</td><td>126</td></tr>
+          <tr><td>Blue</td><td>72</td><td>6,135</td><td>68.2</td><td>120</td></tr>
+          <tr><td>White (M)</td><td>72</td><td>5,585</td><td>66.3</td><td>112</td></tr>
+          <tr><td>White (W)</td><td>72</td><td>5,585</td><td>71.4</td><td>119</td></tr>
+          <tr><td>Red</td><td>72</td><td>4,890</td><td>67.2</td><td>113</td></tr>
+          <tr><td>Yellow</td><td>72</td><td>3,844</td><td>61.0</td><td>92</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="pc-h3">Eagle's Nest — 18 holes, lakes &amp; mountain views</h3>
+    <p>The <strong>Eagle's Nest</strong> course was the original PebbleCreek course and has been earning rave reviews since opening. <strong>Seven lakes</strong> come into play throughout the 18 holes, with several subtle but tricky elevation changes. Views of the commanding White Tank Mountains are visible from most of the back nine. Fun for beginners, demanding from the back tees — the kind of course locals say they'd play every day.</p>
+
+    <div class="pc-table-wrap">
+      <table class="pc-table">
+        <thead>
+          <tr><th>Tee</th><th>Par</th><th>Yards</th><th>Rating</th><th>Slope</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Black</td><td>72</td><td>6,790</td><td>72.5</td><td>129</td></tr>
+          <tr><td>Blue</td><td>72</td><td>6,150</td><td>69.6</td><td>123</td></tr>
+          <tr><td>White (M)</td><td>72</td><td>5,725</td><td>67.8</td><td>114</td></tr>
+          <tr><td>White (W)</td><td>72</td><td>5,725</td><td>73.1</td><td>133</td></tr>
+          <tr><td>Red</td><td>72</td><td>4,925</td><td>68.8</td><td>115</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="pc-h3">Golf Associations &amp; Clubs</h3>
+    <p>If you live here and want to play regularly with the same group, PebbleCreek has multiple golf associations open to homeowners — separate from green fees, these are social/competitive groups with weekly play, tournaments, and year-end events:</p>
+    <ul>
+      <li><strong>PebbleCreek Men's Association</strong> — main 18-hole men's group, weekly play and tournaments</li>
+      <li><strong>PebbleCreek Men's 9-Hole Association</strong> — same idea, 9-hole format</li>
+      <li><strong>PebbleCreek Ladies Association</strong> — main 18-hole women's group</li>
+      <li><strong>PebbleCreek Ladies 9-Hole Association</strong> — 9-hole women's group</li>
+      <li><strong>PC Putter's Club</strong> — putting-only group, low pressure, social</li>
+      <li><strong>Gimmee Girls</strong> — women's group founded 1999, celebrated 25 years in 2025</li>
+    </ul>
+    <p>For membership in any of these, contact the relevant pro shop directly — they'll connect you with the current association leadership.</p>
+
+    <div class="pc-cta-strip">
+      <div class="pc-cta-strip-title">Thinking about a home on the golf course?</div>
+      <div class="pc-cta-strip-sub">Tuscany Falls and Eagle's Nest both have homes lining the fairways. Some come with mountain views, some with water views, and they tend to hold value better than off-course homes. We can show you what's currently available and what just sold.</div>
+      <a href="floor-plans.html">📐 Browse Floor Plans</a>
+      <a href="monthly-closings.html">📊 See Recent Sales</a>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">📍 Pro Shops &amp; Clubhouses</div>
+    <h2 class="pc-h2">Where to find each course</h2>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">🏌️ Tuscany Falls Golf Club</h3>
+        <div class="pc-card-amount">36 holes<span class="pc-card-amount-sub">East + West</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p><strong>Address:</strong> 3645 Clubhouse Drive, Goodyear, AZ 85395<br>
+        <strong>Pro Shop:</strong> 623-935-6757<br>
+        <strong>Hours:</strong> Open every day 6am – 3pm<br>
+        <strong>Designer:</strong> Dick Bailey</p>
+        <p>Co-located with the <strong>Tuscany Clubhouse</strong> (Renaissance Theater, library, ballroom) and the Tuscany Sports &amp; Aquatics complex. After your round, the <strong>Portofino Coffee Bar &amp; Lounge</strong> is on-site for coffee and pastries, and the new <strong>Westwind Tavern</strong> handles full-service food and drinks.</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">🦅 Eagle's Nest Golf Club</h3>
+        <div class="pc-card-amount">18 holes<span class="pc-card-amount-sub">Original course</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p><strong>Address:</strong> 3645 Clubhouse Drive, Goodyear, AZ 85395<br>
+        <strong>Pro Shop:</strong> 623-935-6761<br>
+        <strong>Hours:</strong> Open every day 6am – 3pm</p>
+        <p>The <strong>Eagle's Nest Clubhouse</strong> is right next to the course — fully stocked pro shop, plus the <strong>Eagle's Nest Restaurant &amp; Lounge</strong> on-site for pre- or post-round meals (comfort food: pot roast, chicken parmesan, burgers, sandwiches).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">💡 Insider Tips</div>
+    <h2 class="pc-h2">What we tell every buyer about golf here</h2>
+    <p><strong>You don't need a separate golf membership.</strong> Unlike Corte Bella (which is semi-private) or PebbleCreek's neighbors at Sun City Grand, golf here is built into the community — you pay green fees per round at resident rates, but there's no required monthly golf membership fee on top of HOA dues. The economics are very different from private clubs, and most residents prefer it that way.</p>
+    <p><strong>54 holes is a lot.</strong> Most homeowners we work with rotate among Tuscany East, Tuscany West, and Eagle's Nest depending on the day. You almost never have to play the same hole twice in a week.</p>
+    <p><strong>Both clubs are 100% owned by the HOA.</strong> This is important: when you buy in PebbleCreek, you're buying into a community that owns its own golf operation. The clubs aren't going anywhere, the rates are stable, and the maintenance is funded by HOA reserves — not by a developer or third-party operator who might raise rates or sell the courses.</p>
+    <p><strong>The practice facilities are top-tier.</strong> Both clubs have driving ranges and putting greens, and the Tuscany practice area includes a short-game zone — plus pro instruction is available at resident rates.</p>
+    <p><strong>Tee-time priority for residents.</strong> If golf is a major part of why you're moving, that resident priority on the tee sheet is real value. Outside play and guests have to book later — locals get first crack.</p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>

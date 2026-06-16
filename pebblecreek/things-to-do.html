@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📍 Things to Do at PebbleCreek — 100+ Clubs & West Valley Attractions | Hometown AZ</title>
+<meta name="description" content="100+ clubs inside the gates: sports, performing arts, creative arts, social. Plus area attractions: shopping, hiking, pro sports, healthcare, education.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/things-to-do.html">
+<meta property="og:title" content="📍 Things to Do at PebbleCreek — 100+ Clubs & West Valley Attractions">
+<meta property="og:description" content="100+ clubs inside the gates: sports, performing arts, creative arts, social. Plus area attractions: shopping, hiking, pro sports, healthcare, education.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/things-to-do.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "📍 Things to Do at PebbleCreek — 100+ Clubs & West Valley Attractions",
+        "item": "https://hometownaz.com/pebblecreek/things-to-do.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "📍 Things to Do at PebbleCreek — 100+ Clubs & West Valley Attractions",
+    "description": "100+ clubs inside the gates: sports, performing arts, creative arts, social. Plus area attractions: shopping, hiking, pro sports, healthcare, education.",
+    "url": "https://hometownaz.com/pebblecreek/things-to-do.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">📍</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline">Fun Things <span class='accent'>Locally!</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">📍 Inside the Gates &amp; Around Goodyear</div>
+      <h2 class="pc-h2">Things to do — at PebbleCreek &amp; nearby</h2>
+    </div>
+    <p class="pc-lede">PebbleCreek has <strong>100+ clubs, classes, and organizations</strong> — plus the surrounding Goodyear/West Valley area offers world-class outdoor recreation, pro sports, dining, and culture. Here's a structured tour of both.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">INSIDE THE GATES · WELLNESS &amp; FITNESS</div>
+    <h2 class="pc-h2">Sports &amp; fitness clubs</h2>
+    <p class="pc-lede">If you want to stay active, PebbleCreek's wellness scene runs the gamut from yoga to softball to bocce.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏓</div>
+        <h3 class="pc-grid-card-title">Pickleball Club</h3>
+        <p class="pc-grid-card-body">36 courts (one of largest in Arizona for 55+). Social events, competitive play, instruction, and equipment provided by the club.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎾</div>
+        <h3 class="pc-grid-card-title">Tennis Club</h3>
+        <p class="pc-grid-card-body">All resident tennis players welcome. Mixers, leagues, and the annual Men's Doubles Championship. 7 courts at Tuscany + 6 lighted at Eagle's Nest.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎯</div>
+        <h3 class="pc-grid-card-title">Bocce Ball Association</h3>
+        <p class="pc-grid-card-body">3 seasons per year (Sept – mid-May). Easy to learn — all skill levels welcome. 12 courts.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">⚾</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Senior Softball Association</h3>
+        <p class="pc-grid-card-body">150+ players. Slow-pitch softball at the Robson Field of Dreams. 25+ years of competitive play in friendly, fellowship-driven games.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🥾</div>
+        <h3 class="pc-grid-card-title">Hiking Club</h3>
+        <p class="pc-grid-card-body">All skill levels. Hikes in the White Tanks, Superstition, Camelback, Estrellas, Chiricahuas, and Grand Canyon.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚴</div>
+        <h3 class="pc-grid-card-title">Arizona Flats / Tour de PebbleCreek</h3>
+        <p class="pc-grid-card-body">Cycling group. Annual 62-mile Metric Century &amp; 31-mile Half Metric Century rides. Plus the Tour de PebbleCreek (coincides with Tour de France, 206 miles total).</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🧘</div>
+        <h3 class="pc-grid-card-title">Hatha Yoga Club</h3>
+        <p class="pc-grid-card-body">One of the most popular forms of yoga. Increases strength, flexibility, balance, muscle tone — benefits tailored for active adults.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💃</div>
+        <h3 class="pc-grid-card-title">Line Dancing Club</h3>
+        <p class="pc-grid-card-body">Teaching residents Line Dancing since 1994. No partner required, no physical fitness threshold — just a sense of humor.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎶</div>
+        <h3 class="pc-grid-card-title">Ballroom Dance Club</h3>
+        <p class="pc-grid-card-body">Ballroom social dancing. Multiple dances per year — formal dinner dances and casual dances with instruction.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">⛳</div>
+        <h3 class="pc-grid-card-title">Golf Associations</h3>
+        <p class="pc-grid-card-body">Men's, Women's, Men's 9-Hole, Women's 9-Hole, Gimmee Girls (women's, est 1999), PC Putter's Club. See the <a href="golf.html">golf page</a> for details.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💪</div>
+        <h3 class="pc-grid-card-title">Group Fitness Classes</h3>
+        <p class="pc-grid-card-body">Aqua aerobics, classic aerobics, kettlebell, yoga, zumba, spin, strength. Schedule updated monthly — most classes free for residents.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏓</div>
+        <h3 class="pc-grid-card-title">Ping Pong Club</h3>
+        <p class="pc-grid-card-body">Table tennis doubles play. Competitive level for both exercise and enjoyment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">PERFORMING ARTS</div>
+    <h2 class="pc-h2">Stage, music &amp; performance clubs</h2>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎭</div>
+        <h3 class="pc-grid-card-title">PC Players / Community Players</h3>
+        <p class="pc-grid-card-body">Live theater at the Renaissance Theater. Comedy and drama productions — acting, behind-the-scenes, lighting, set design. Two major productions per year (Fall &amp; Spring).</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎵</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Musicians / Big Band</h3>
+        <p class="pc-grid-card-body">Musical groups for residents. Includes the <strong>PebbleCreek Big Band</strong> — an 18-piece swing band performing throughout the year.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎤</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Singers</h3>
+        <p class="pc-grid-card-body">Resident chorus. Music ranges from doo-wop to Broadway to classical. Two concert seasons: Spring &amp; Holiday.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💃</div>
+        <h3 class="pc-grid-card-title">Performing Student Dancers / Dance Fusion</h3>
+        <p class="pc-grid-card-body">Performance and instructional dance classes. All skill levels. Performances in community shows.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎬</div>
+        <h3 class="pc-grid-card-title">ShowTime Productions, Inc.</h3>
+        <p class="pc-grid-card-body">Full-scale Broadway productions and community variety shows. Casting calls open to all — no experience required. Consistently raises the bar for community entertainment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">CREATIVE ARTS</div>
+    <h2 class="pc-h2">Visual arts &amp; craft clubs</h2>
+    <p class="pc-lede">If your retirement involves making things, PebbleCreek's Creative Arts Center is purpose-built for it. The clubs below use the facility's studios.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎨</div>
+        <h3 class="pc-grid-card-title">Art Club (PCAC)</h3>
+        <p class="pc-grid-card-body">Meets in the Tuscany Falls Creative Arts Center, Sept through May. Open to all skill levels. Club dues fund supplies and guest instructors.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">📷</div>
+        <h3 class="pc-grid-card-title">Camera Club</h3>
+        <p class="pc-grid-card-body">From cell phones to professional cameras — no experience needed. Helps members improve their skills with their chosen equipment.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏺</div>
+        <h3 class="pc-grid-card-title">Ceramics Club</h3>
+        <p class="pc-grid-card-body">Classes and workshops with various techniques, paints, glazes. New sculpture classes added. Meets in the Gecko classroom.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🪡</div>
+        <h3 class="pc-grid-card-title">Knimble Kneedles (Knit/Crochet)</h3>
+        <p class="pc-grid-card-body">Knit and crochet — work on personal projects or items for local charities. Relaxed, social atmosphere.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">📿</div>
+        <h3 class="pc-grid-card-title">Open Beading Group</h3>
+        <p class="pc-grid-card-body">Mondays at 1pm in the Creative Arts Center. Beaded jewelry, clothing, accessories — all skill levels.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🌈</div>
+        <h3 class="pc-grid-card-title">Glass Art Club</h3>
+        <p class="pc-grid-card-body">Stained glass, fused glass, glass art projects. Outlet for residents who want to explore creative ideas in glass.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🪡</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Quilters</h3>
+        <p class="pc-grid-card-body">Programs and workshops. Inspire and share knowledge. Many items created go to local charities.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">✂️</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Sewing Club</h3>
+        <p class="pc-grid-card-body">Use sewing skills to make items for yourself, family, or community needs.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🧶</div>
+        <h3 class="pc-grid-card-title">Rug Hooking</h3>
+        <p class="pc-grid-card-body">Traditional rug hooking — wool strips pulled through linen/monks-cloth canvas. Rugs, mats, pillows, wall hangings.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">📸</div>
+        <h3 class="pc-grid-card-title">Scrapbooking Creatively Club</h3>
+        <p class="pc-grid-card-body">Bring your photos and memorabilia. Create lasting memory books in a fun, social setting.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🪵</div>
+        <h3 class="pc-grid-card-title">Woodcarvers Club</h3>
+        <p class="pc-grid-card-body">20-25 carving classes per October-April season. Birds, kachinas, caricatures, ornaments. Beginner through expert. World-class guest carver visits annually.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🖋️</div>
+        <h3 class="pc-grid-card-title">Stampers Club</h3>
+        <p class="pc-grid-card-body">Handmade greeting cards and gift items using rubber stamps, paper, ink. Weekly class sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">SOCIAL &amp; INTERESTS</div>
+    <h2 class="pc-h2">Cards, social, &amp; special-interest clubs</h2>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🃏</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Bridge Clubs</h3>
+        <p class="pc-grid-card-body">Games <strong>6 days a week</strong>. Casual, marathon, non-sanctioned Duplicate, and sanctioned Duplicate sessions. Lessons available for beginners.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎲</div>
+        <h3 class="pc-grid-card-title">Mah Jongg</h3>
+        <p class="pc-grid-card-body">Game of skill, wit, and fortune. Played with 152 tiles and a yearly hand card. Active group of players.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">♠️</div>
+        <h3 class="pc-grid-card-title">Poker Club</h3>
+        <p class="pc-grid-card-body">Weekly games for men and women. Small stakes, split pots — friendship-focused. No one gets hurt in the card games.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🃏</div>
+        <h3 class="pc-grid-card-title">Euchre Club</h3>
+        <p class="pc-grid-card-body">Quick trick-taking card game with 24 cards. Rotating partners, eight games per session.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🃏</div>
+        <h3 class="pc-grid-card-title">Ponytail Canasta &amp; Cribbage Club</h3>
+        <p class="pc-grid-card-body">Two long-running card clubs. Canasta played in 2-pair teams. Cribbage organized as monthly tournaments with prizes.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎰</div>
+        <h3 class="pc-grid-card-title">Bingo &amp; Bunco</h3>
+        <p class="pc-grid-card-body">Weekly bingo nights. Bunco for friendly evening dice game socials — rules explained each session.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🍷</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Wine Club</h3>
+        <p class="pc-grid-card-body">Wine enjoyment in a social/neighborly forum. Education-driven — broadens members' knowledge of wine through tastings and events.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🍽️</div>
+        <h3 class="pc-grid-card-title">Fine Dining Club</h3>
+        <p class="pc-grid-card-body">Appreciation of fine cuisine through preparation, presentation, and origin of recipes. Talented community chefs.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚗</div>
+        <h3 class="pc-grid-card-title">Classics Car Club</h3>
+        <p class="pc-grid-card-body">Auto enthusiasts share ideas and experiences. Annual <strong>PebbleCreek Autofest</strong> donates food and money to the Agua Fria Food Bank.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🐾</div>
+        <h3 class="pc-grid-card-title">Pet Companions Club</h3>
+        <p class="pc-grid-card-body">501(c)(3) non-profit. Safe environment for community pets and assists in rescue of strays in the community.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💻</div>
+        <h3 class="pc-grid-card-title">Computer Club</h3>
+        <p class="pc-grid-card-body">Volunteer-run support, training, hands-on classes. Weekly classes for beginners through advanced. Computer Lab on-site.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚐</div>
+        <h3 class="pc-grid-card-title">Rovin' Pebbles RV Club</h3>
+        <p class="pc-grid-card-body">Open to all PebbleCreek RV owners. Trip planning, tips sharing, and group travel.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🔫</div>
+        <h3 class="pc-grid-card-title">PebbleCreek Gun Club</h3>
+        <p class="pc-grid-card-body">Promotes participation in recreational shooting. Open to all interested residents.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">👯</div>
+        <h3 class="pc-grid-card-title">Good Time Gals &amp; FFF</h3>
+        <p class="pc-grid-card-body">Women's social club + the Flair Friendship Fun Club. Weekly/monthly games, dinners, trips, theme luncheons.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏛️</div>
+        <h3 class="pc-grid-card-title">Democratic Club &amp; Republican Club</h3>
+        <p class="pc-grid-card-body">Both political clubs are active. Forums for public affairs discussion and social camaraderie. Open to all homeowners on each side.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💍</div>
+        <h3 class="pc-grid-card-title">Singles Club</h3>
+        <p class="pc-grid-card-body">Diverse group of women and men who enjoy each other's company through wide variety of activities.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🩺</div>
+        <h3 class="pc-grid-card-title">Nurses Group</h3>
+        <p class="pc-grid-card-body">Retired and active nurses. Blood pressure clinics, breakfast discussions of medical topics, trips.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">GIVING BACK</div>
+    <h2 class="pc-h2">Volunteering &amp; community service</h2>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🐻</div>
+        <h3 class="pc-grid-card-title">Kare Bears</h3>
+        <p class="pc-grid-card-body">Non-profit "Neighbors Helping Neighbors" — Health &amp; Wellness resources for residents.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🐻</div>
+        <h3 class="pc-grid-card-title">Share Bears</h3>
+        <p class="pc-grid-card-body">Part of Kare Bears. Weekly social/bingo gatherings — Super Seniors of PebbleCreek.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎗️</div>
+        <h3 class="pc-grid-card-title">Breast Cancer Support Group</h3>
+        <p class="pc-grid-card-body">Residents who are survivors or currently undergoing treatment. Forum to share feelings, info, and support.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏕️</div>
+        <h3 class="pc-grid-card-title">T.T.T. (Time, Talent &amp; Treasure)</h3>
+        <p class="pc-grid-card-body">National non-profit. Sends girls to summer camp through philanthropic fundraising.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💝</div>
+        <h3 class="pc-grid-card-title">Women's Giving Circle</h3>
+        <p class="pc-grid-card-body">Continues to make a meaningful impact in the West Valley. 60+ women have assembled 1,500+ fabric bags of period products for charities.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎓</div>
+        <h3 class="pc-grid-card-title">LifeLong Learning at PebbleCreek</h3>
+        <p class="pc-grid-card-body">Award-winning continuing education program (NAHB Gold). Started 2004, now extensive course offerings. <a href="https://lifelonglearningatpc.org/" target="_blank" rel="noopener">lifelonglearningatpc.org →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">OUTSIDE THE GATES · NEARBY</div>
+    <h2 class="pc-h2">Things to do in Goodyear &amp; the West Valley</h2>
+    <p class="pc-lede">PebbleCreek's location is one of its strongest selling points. You're close to the booming Goodyear retail corridor, Phoenix's pro sports scene, beautiful regional parks, and Sky Harbor airport. Here's what's nearby.</p>
+  </div>
+
+  <div class="pc-inner">
+    <h3 class="pc-h3">🛍️ Shopping &amp; Dining</h3>
+    <p>PebbleCreek sits within minutes of multiple shopping centers — you almost never need to drive more than 15 minutes for retail, groceries, or restaurants.</p>
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <h3 class="pc-grid-card-title">PebbleCreek Marketplace</h3>
+        <p class="pc-grid-card-body">~2 mi from PebbleCreek. <strong>WinCo Foods, Panera Bread, Potato Barn</strong>, and additional retail under development.</p>
+      </div>
+      <div class="pc-grid-card">
+        <h3 class="pc-grid-card-title">CobbleStone Creek</h3>
+        <p class="pc-grid-card-body">Within 2 mi. <strong>Starbucks, Walgreens, Popeyes, Firestone Auto Care.</strong></p>
+      </div>
+      <div class="pc-grid-card">
+        <h3 class="pc-grid-card-title">Goodyear Centerpointe</h3>
+        <p class="pc-grid-card-body">At PebbleCreek Parkway &amp; McDowell Road. <strong>Hobby Lobby, EOS Fitness, Olive Garden, Texas Roadhouse, Conn's, Mattress Firm.</strong></p>
+      </div>
+      <div class="pc-grid-card">
+        <h3 class="pc-grid-card-title">The Market at Estrella Falls</h3>
+        <p class="pc-grid-card-body">Same intersection. <strong>Old Navy, Petco, Staples, HomeGoods, TJ Maxx, Dollar Tree, Oregano's Pizza Bistro, Chase Bank.</strong></p>
+      </div>
+      <div class="pc-grid-card">
+        <h3 class="pc-grid-card-title">Palm Valley Pavilions</h3>
+        <p class="pc-grid-card-body"><strong>Best Buy, Barnes &amp; Noble, Famous Footwear, Bath &amp; Body Works, Total Wine, Ulta, Macayo's Mexican, Wildflower, Chipotle.</strong></p>
+      </div>
+      <div class="pc-grid-card">
+        <h3 class="pc-grid-card-title">Westgate Entertainment District</h3>
+        <p class="pc-grid-card-body">A short drive. <strong>Yard House, Thirsty Lion, Kabuki, Johnny Rockets, Chicken N Pickle.</strong> Plus State Farm Stadium and Desert Diamond Arena.</p>
+      </div>
+    </div>
+
+    <h3 class="pc-h3">🌵 Outdoor Recreation &amp; Parks</h3>
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏔️</div>
+        <h3 class="pc-grid-card-title">White Tank Mountain Regional Park</h3>
+        <p class="pc-grid-card-body">~25 miles of shared-use trails (0.9 to 7.9 mi each). 2.5 miles of pedestrian-only trails including hard-surfaced barrier-free options. Stunning Valley views.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🌄</div>
+        <h3 class="pc-grid-card-title">Estrella Mountain Regional Park</h3>
+        <p class="pc-grid-card-body">19,840 acres of desert and mountains. First regional park in Maricopa County (1954). Large riparian wetland area, pristine desert.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">⛵</div>
+        <h3 class="pc-grid-card-title">Lake Pleasant</h3>
+        <p class="pc-grid-card-body">10,000-acre lake with two boat-launching areas. Fishing, sailing, tent camping, RV campsites. 15 miles west of I-17.</p>
+      </div>
+    </div>
+
+    <h3 class="pc-h3">🏈 Pro Sports &amp; Spring Training</h3>
+    <p>The West Valley is a sports town. Within easy driving distance:</p>
+    <ul>
+      <li><strong>Arizona Cardinals</strong> — State Farm Stadium (NFL)</li>
+      <li><strong>Cleveland Guardians &amp; Cincinnati Reds</strong> — spring training at Goodyear Ballpark</li>
+      <li><strong>Phoenix Suns</strong> — Footprint Center (NBA)</li>
+      <li><strong>Arizona Diamondbacks</strong> — Chase Field (MLB)</li>
+      <li><strong>NASCAR</strong> — Phoenix Raceway</li>
+      <li><strong>Ak-Chin Pavilion</strong> — 20,000-seat outdoor amphitheater for live music</li>
+      <li><strong>Harkins Movie Theatre</strong> — 20-screen complex within 6 miles</li>
+    </ul>
+
+    <h3 class="pc-h3">🏥 Healthcare</h3>
+    <p>Top-tier medical facilities serve PebbleCreek residents directly:</p>
+    <ul>
+      <li><strong>Abrazo Health West Campus</strong> — Level 1 Trauma Center, orthopedics, stroke care, women's health, surgical options</li>
+      <li><strong>Banner Estrella Medical Center</strong> — 300+ bed full-service hospital opened 2005, heart care, surgery</li>
+      <li><strong>Barrow Neurological Institute</strong> at St. Joseph's — world-renowned neurological care</li>
+      <li><strong>Mayo Clinic Phoenix</strong> — global leader in healthcare</li>
+      <li><strong>City of Hope Phoenix</strong> — comprehensive cancer treatment</li>
+      <li><strong>Banner Boswell Medical Center</strong> — cardiac, orthopedic, oncology specialties</li>
+      <li><strong>Southwest VA Clinic</strong> — primary care, mental health, pharmacy, lab services for veterans</li>
+    </ul>
+
+    <h3 class="pc-h3">🎓 Education &amp; Libraries</h3>
+    <ul>
+      <li><strong>ASU West Campus</strong> (Glendale) — business administration, education, interdisciplinary studies</li>
+      <li><strong>Estrella Mountain Community College</strong> — medical and nursing training, continuing education</li>
+      <li><strong>Glendale Community College</strong> — full degree and certificate programs</li>
+      <li><strong>Rio-Salado Community College</strong> Lifelong Learning Center (Surprise, ~30 min)</li>
+      <li><strong>Avondale Civic Center Library</strong>, <strong>Old Town Library</strong>, <strong>Sam Garcia Western Avenue Library</strong>, <strong>Litchfield Park Library</strong></li>
+    </ul>
+
+    <h3 class="pc-h3">✈️ Transportation</h3>
+    <p><strong>Phoenix Sky Harbor International Airport</strong> is about a 30-minute drive. ~20 airlines, 100+ daily non-stop flights to domestic destinations. One of the top 10 busiest airports in the country.</p>
+
+    <h3 class="pc-h3">🛡️ Luke Air Force Base</h3>
+    <p>Operational Air Force Base located in nearby Litchfield Park. Hosts <strong>Luke Days</strong> annually — aerial demonstrations, military aircraft displays. Active Retiree Activities Program for veterans.</p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>

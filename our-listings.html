@@ -1,0 +1,3580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Listings — Active, Pending &amp; Sold | Hometown AZ</title>
+<link rel="canonical" href="https://hometownaz.com/our-listings.html">
+<meta property="og:title" content="Our Listings — Active, Pending &amp; Sold">
+<meta property="og:description" content="Current and recent Sun City West and Del Webb listings represented by Lona King &amp; Billy Heinzman of HomeSmart. Filter by status, sort by price, sqft, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/our-listings.html">
+<meta name="description" content="Current and recent Sun City West and Del Webb listings represented by Lona King &amp; Billy Heinzman of HomeSmart. Filter by status, sort by price, sqft, and more.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #2d3d2e;
+  --green-deep: #1e2a1f;
+  --orange: #c8622a;
+  --orange-deep: #a14d1f;
+  --orange-light: #e8a040;
+  --sage: #4a7c59;
+  --cream: #f5f1ea;
+  --sand: #ede8df;
+  --border: #ddd6c8;
+  --border-soft: #e8e2d4;
+  --text: #2a2a2a;
+  --muted: #7a6e60;
+  --radius: 8px;
+  --white: #fff;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+a { color: var(--orange-deep); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== HERO ===== */
+.scw-hero {
+  background: var(--green);
+  color: #fff;
+  padding: 24px 48px 40px;
+  position: relative;
+}
+.scw-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 14px; font-weight: 500; margin-bottom: 28px;
+  transition: color 0.15s;
+}
+.scw-back:hover { color: #fff; }
+.scw-hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.scw-tagline {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--orange);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,165,0,0.25);
+  border-radius: 100px;
+}
+.scw-headline {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 4rem; font-weight: 700;
+  line-height: 1.05; letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+.scw-headline .accent { color: var(--orange); }
+.scw-subhead {
+  font-size: 17px; line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  margin: 0; max-width: 620px;
+}
+.scw-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-self: start;
+}
+.scw-nav-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  background: #fff; color: var(--green);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 28px;
+  font-family: inherit; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s;
+  cursor: pointer; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; justify-content: center; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+.scw-nav-btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn-orange:hover { background: var(--orange-deep); }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+
+/* ===== STATS BANNER ===== */
+.stats-banner {
+  background: linear-gradient(135deg, #1e2a1f 0%, #2d3d2e 60%, #3a5040 100%);
+  color: #fff;
+  padding: 26px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.stats-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 90% 30%, rgba(232,160,64,0.18), transparent 60%);
+  pointer-events: none;
+}
+.stats-banner-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  gap: 32px;
+  align-items: center;
+  position: relative;
+}
+.stats-banner-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.stats-banner-title .accent { color: var(--orange-light); }
+.stats-banner-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+.stats-banner-mls-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 14px;
+  background: rgba(232, 160, 64, 0.18);
+  border: 1px solid rgba(232, 160, 64, 0.45);
+  border-radius: 20px;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+.stats-banner-mls-link:hover {
+  background: rgba(232, 160, 64, 0.35);
+  border-color: rgba(232, 160, 64, 0.8);
+  text-decoration: none;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.stat-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.stat-card-val {
+  font-family: 'Merriweather', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--orange-light);
+  line-height: 1.05;
+}
+.stat-card-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-top: 4px;
+}
+.stat-card-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 2px;
+}
+@media (max-width: 900px) {
+  .stats-banner-inner { grid-template-columns: 1fr; gap: 18px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .stats-banner { padding: 20px 16px; }
+  .stat-card-val { font-size: 1.25rem; }
+}
+
+/* ===== FILTER CHIPS + VIEW TOGGLE ===== */
+.filter-bar {
+  background: #ede8df;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 32px;
+}
+.filter-bar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.filter-group-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 4px;
+}
+.filter-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.filter-chip:hover { border-color: var(--orange); color: var(--orange-deep); }
+.filter-chip.active {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+.filter-clear {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--orange-deep);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.filter-clear:hover { text-decoration: underline; }
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+}
+.view-toggle-btn {
+  padding: 7px 14px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.view-toggle-btn:hover { color: var(--text); }
+.view-toggle-btn.active {
+  background: var(--green);
+  color: #fff;
+}
+
+/* ===== MAP VIEW ===== */
+.map-view {
+  display: none;
+  height: 640px;
+  position: relative;
+  background: var(--sand);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.map-view.active { display: block; }
+.listings-grid.hidden { display: none; }
+#leafletMap { width: 100%; height: 100%; }
+.map-legend {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  z-index: 500;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  font-size: 11px;
+}
+.map-legend-title {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 6px;
+  font-size: 10px;
+}
+.map-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 3px;
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 600;
+}
+.map-legend-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.map-legend-dot.active { background: #4a7c59; }
+.map-legend-dot.pending { background: #c8a232; }
+.map-legend-dot.sold { background: #c8622a; }
+.map-marker-icon {
+  background: var(--green);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 11px;
+  width: 36px !important;
+  height: 36px !important;
+  margin-left: -18px !important;
+  margin-top: -18px !important;
+}
+.map-marker-icon.active { background: #4a7c59; }
+.map-marker-icon.pending { background: #c8a232; }
+.map-marker-icon.sold { background: #c8622a; }
+.leaflet-popup-content { margin: 10px 12px; min-width: 180px; }
+.popup-addr {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+.popup-price {
+  color: var(--orange-deep);
+  font-weight: 700;
+  font-size: 14px;
+}
+.popup-meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+.popup-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--orange);
+  color: #fff !important;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.popup-btn:hover { background: var(--orange-deep); text-decoration: none; }
+
+/* ===== FAVORITE / COMPARE ===== */
+.fav-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--muted);
+  transition: all 0.15s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+.fav-btn:hover { transform: scale(1.1); }
+.fav-btn.active {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+}
+.compare-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--green);
+  color: #fff;
+  padding: 14px 24px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.25);
+  z-index: 80;
+}
+.compare-bar.active { display: flex; }
+.compare-bar-label {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.compare-bar-count {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+  font-size: 12px;
+}
+.compare-bar-actions { display: flex; gap: 10px; }
+.compare-bar-btn {
+  padding: 8px 16px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.compare-bar-btn:hover { background: var(--orange-deep); text-decoration: none; }
+.compare-bar-btn.outline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+.compare-bar-btn.outline:hover { background: rgba(255,255,255,0.1); }
+.compare-modal {
+  background: var(--white);
+  border-radius: 12px;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+.compare-modal-header {
+  background: var(--green);
+  color: #fff;
+  padding: 18px 28px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.compare-modal-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.compare-table-wrap {
+  padding: 20px 28px 28px;
+  overflow-x: auto;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+.compare-table th, .compare-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+  font-size: 13px;
+}
+.compare-table th {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  width: 130px;
+  background: var(--cream);
+}
+.cmp-photo {
+  width: 100%;
+  height: 110px;
+  background: var(--sand);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.cmp-photo img { width: 100%; height: 100%; object-fit: cover; }
+.cmp-addr {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--green);
+}
+.cmp-price {
+  font-family: 'Merriweather', serif;
+  color: var(--orange-deep);
+  font-weight: 700;
+  font-size: 18px;
+}
+.cmp-best {
+  background: rgba(74,124,89,0.12);
+  font-weight: 700;
+  color: #2d5d3e;
+}
+
+/* ===== ALERTS SIGNUP CARD ===== */
+.alerts-card {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
+  color: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  margin: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 18px rgba(200,98,42,0.25);
+}
+.alerts-card-text { flex: 1; min-width: 260px; }
+.alerts-card-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.alerts-card-sub {
+  font-size: 13px;
+  opacity: 0.92;
+  line-height: 1.5;
+}
+.alerts-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.alerts-input {
+  padding: 11px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  min-width: 220px;
+}
+.alerts-input::placeholder { color: rgba(255,255,255,0.7); }
+.alerts-input:focus { outline: 2px solid rgba(255,255,255,0.6); background: rgba(255,255,255,0.25); }
+.alerts-btn {
+  padding: 11px 22px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.alerts-btn:hover { background: #1e2a1f; }
+.alerts-success {
+  display: none;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+}
+.alerts-success.show { display: block; }
+
+/* ===== EMPTY-FILTER NOTE ===== */
+.no-results-note {
+  background: rgba(200,98,42,0.08);
+  border-left: 3px solid var(--orange);
+  padding: 14px 18px;
+  border-radius: 6px;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: none;
+}
+.no-results-note.show { display: block; }
+
+/* ===== STATUS TAB CONTROLS ===== */
+.listings-controls {
+  background: linear-gradient(135deg, var(--green) 0%, #3a5040 100%);
+  color: #fff;
+  padding: 18px 32px;
+  border-bottom: 4px solid var(--orange);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+.listings-controls-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.status-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 30px;
+  padding: 3px;
+  background: rgba(0,0,0,0.22);
+}
+.status-tab {
+  padding: 8px 22px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.6);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.status-tab:hover { color: #fff; }
+.status-tab.active {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.4);
+}
+.status-tab .count {
+  margin-left: 6px;
+  opacity: 0.8;
+  font-weight: 700;
+}
+.sort-group {
+  display: flex; align-items: center; gap: 10px;
+  color: rgba(255,255,255,0.85);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+.sort-select {
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sort-select:focus { outline: 2px solid var(--orange); }
+
+/* ===== MAIN ===== */
+.listings-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--orange);
+}
+.section-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.section-title .count-badge {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--orange);
+  background: rgba(200,98,42,0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+}
+.section-sub {
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ===== LISTING CARDS ===== */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
+}
+.listing-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: default;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.listing-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--orange);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.listing-status-stripe {
+  height: 4px;
+  background: var(--green);
+}
+.listing-status-stripe.active { background: linear-gradient(90deg, #4a7c59 0%, #6a9c79 100%); }
+.listing-status-stripe.pending { background: linear-gradient(90deg, #c8a232 0%, #e8c252 100%); }
+.listing-status-stripe.sold { background: linear-gradient(90deg, #c8622a 0%, #e8a040 100%); }
+
+.listing-photo-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* 3:2 aspect — matches MLS photo native ratio */
+  background: linear-gradient(135deg, var(--sand) 0%, var(--cream-deep, #e3dccd) 100%);
+  overflow: hidden;
+}
+.listing-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  image-rendering: auto;
+}
+.listing-card:hover .listing-photo {
+  transform: scale(1.04);
+}
+.listing-photo-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: var(--muted);
+  opacity: 0.4;
+}
+.listing-marketing-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 14px 10px;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%);
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+.listing-marketing-overlay .model-line {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange-light);
+  margin-top: 3px;
+}
+
+.listing-card-inner {
+  padding: 18px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.listing-status-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.listing-status-badge.active {
+  background: rgba(74,124,89,0.12);
+  color: #2d5d3e;
+}
+.listing-status-badge.pending {
+  background: rgba(200,162,50,0.15);
+  color: #8a6f00;
+}
+.listing-status-badge.backups {
+  background: rgba(200,98,42,0.15);
+  color: var(--orange-deep);
+  margin-left: 6px;
+}
+.listing-status-badge.sold {
+  background: rgba(200,98,42,0.12);
+  color: var(--orange-deep);
+}
+.listing-addr {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.listing-price {
+  font-family: 'Merriweather', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--orange-deep);
+  margin-bottom: 6px;
+}
+.listing-price-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.listing-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  margin-bottom: 12px;
+}
+.listing-spec {
+  text-align: center;
+}
+.listing-spec-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Merriweather', serif;
+}
+.listing-spec-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+.listing-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.listing-meta-row .pill {
+  background: var(--sand);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+}
+.listing-actions {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.listing-actions-row {
+  display: contents;
+}
+.listing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 10px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.listing-btn:hover { background: var(--orange); text-decoration: none; }
+.listing-btn.primary { background: var(--orange); }
+.listing-btn.primary:hover { background: var(--orange-deep); }
+.listing-btn.outline {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--border);
+}
+.listing-btn.outline:hover {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+/* ===== DETAILS MODAL ===== */
+.detail-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 22, 0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 20px;
+}
+.detail-modal-backdrop.active {
+  display: flex;
+}
+.detail-modal {
+  background: var(--white);
+  border-radius: 12px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+.detail-modal-header {
+  background: var(--green);
+  color: #fff;
+  padding: 22px 28px 20px;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+/* ===== PHOTO CAROUSEL IN DETAILS MODAL ===== */
+.detail-gallery {
+  position: relative;
+  width: 100%;
+  background: #000;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+.detail-gallery-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.22,0.61,0.36,1);
+  will-change: transform;
+}
+.detail-gallery-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+.detail-gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.detail-gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  font-size: 22px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  transition: background 0.15s, transform 0.15s;
+}
+.detail-gallery-btn:hover { background: rgba(0,0,0,0.85); transform: translateY(-50%) scale(1.08); }
+.detail-gallery-btn.prev { left: 12px; }
+.detail-gallery-btn.next { right: 12px; }
+.detail-gallery-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  z-index: 4;
+}
+.detail-gallery-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 4;
+}
+.detail-gallery-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+  border: none;
+  padding: 0;
+}
+.detail-gallery-dot.active {
+  background: var(--orange);
+  transform: scale(1.3);
+}
+.detail-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.detail-modal-close:hover { background: rgba(255,255,255,0.22); }
+.detail-modal-status {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: var(--orange);
+  color: #fff;
+  margin-bottom: 10px;
+}
+.detail-modal-status.pending { background: #c8a232; }
+.detail-modal-status.sold { background: var(--orange-deep); }
+.detail-modal-addr {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+.detail-modal-marketing {
+  font-size: 14px;
+  color: var(--orange-light);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.detail-modal-body {
+  padding: 22px 28px 24px;
+}
+.detail-modal-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.detail-modal-price {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--orange-deep);
+}
+.detail-modal-price-meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+.detail-modal-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.detail-modal-spec {
+  text-align: center;
+  padding: 10px 6px;
+  background: var(--sand);
+  border-radius: 8px;
+}
+.detail-modal-spec-val {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.detail-modal-spec-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.detail-modal-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.detail-modal-pill {
+  background: var(--cream);
+  border: 1px solid var(--border-soft);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.detail-modal-remarks-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-deep);
+  margin-bottom: 6px;
+}
+.detail-modal-remarks {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 22px;
+  background: var(--cream);
+  padding: 14px 16px;
+  border-radius: 8px;
+  border-left: 3px solid var(--orange-light);
+}
+.detail-modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.detail-modal-actions .listing-btn {
+  flex: 1;
+  min-width: 130px;
+  padding: 11px 14px;
+}
+body.modal-open { overflow: hidden; }
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+}
+.empty-state-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+.empty-state-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  color: var(--green);
+  margin-bottom: 6px;
+}
+.empty-state-body { font-size: 13px; line-height: 1.6; max-width: 480px; margin: 0 auto; }
+
+/* ===== FOOTER CTA ===== */
+.contact-cta {
+  background: linear-gradient(135deg, var(--green) 0%, #3a5040 100%);
+  color: #fff;
+  padding: 40px 32px;
+  margin-top: 50px;
+  text-align: center;
+}
+.contact-cta-inner { max-width: 760px; margin: 0 auto; }
+.contact-cta h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+}
+.contact-cta h2 .accent { color: var(--orange-light); }
+.contact-cta p { font-size: 15px; opacity: 0.9; margin-bottom: 22px; line-height: 1.6; }
+.contact-cta-buttons {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.cta-btn-primary { background: var(--orange); color: #fff; }
+.cta-btn-primary:hover { background: var(--orange-deep); }
+.cta-btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.cta-btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .scw-hero { padding: 20px 20px 32px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-headline { font-size: 2.6rem; }
+  .listings-controls-inner { flex-direction: column; align-items: stretch; gap: 10px; }
+  .status-tabs { overflow-x: auto; }
+  .sort-group { justify-content: space-between; }
+  .listings-main { padding: 22px 16px 50px; }
+  .section-title { font-size: 1.4rem; }
+}
+@media (max-width: 480px) {
+  .listings-grid { grid-template-columns: 1fr; }
+  .scw-headline { font-size: 2.1rem; }
+  .listings-controls { padding: 14px 16px; }
+  .status-tab { padding: 7px 14px; font-size: 11px; }
+}
+
+/* ===== FULLSCREEN PHOTO REEL ===== */
+.photo-reel {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.photo-reel.open { display: flex; }
+.photo-reel-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.photo-reel-slide {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+.photo-reel-slide.active { opacity: 1; }
+.photo-reel-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  max-width: 80vw;
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.photo-reel-counter {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.photo-reel-close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.15s;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.photo-reel-close:hover { background: rgba(0,0,0,0.9); transform: scale(1.06); }
+.photo-reel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.16);
+  font-size: 26px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.15s, opacity 0.2s;
+  opacity: 0.7;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.photo-reel-nav:hover { background: rgba(0,0,0,0.85); opacity: 1; transform: translateY(-50%) scale(1.06); }
+.photo-reel-nav.prev { left: 24px; }
+.photo-reel-nav.next { right: 24px; }
+.photo-reel-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 999px;
+  padding: 8px 14px;
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.photo-reel-playpause {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.photo-reel-playpause:hover { background: rgba(255,255,255,0.12); }
+.photo-reel-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.photo-reel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.photo-reel-dot.active {
+  background: #fff;
+  transform: scale(1.4);
+}
+.photo-reel-dot:hover { background: rgba(255,255,255,0.7); }
+@media (max-width: 600px) {
+  .photo-reel-close, .photo-reel-nav { width: 40px; height: 40px; font-size: 18px; }
+  .photo-reel-close { right: 12px; top: 12px; }
+  .photo-reel-nav.prev { left: 8px; }
+  .photo-reel-nav.next { right: 8px; }
+  .photo-reel-counter { left: 12px; top: 12px; font-size: 11px; padding: 6px 10px; }
+  .photo-reel-controls { bottom: 12px; padding: 6px 10px; gap: 12px; }
+  .photo-reel-caption { bottom: 64px; font-size: 12px; padding: 6px 14px; }
+}
+body.reel-open { overflow: hidden; }
+
+/* ===== FLOOR PLAN LIGHTBOX (with furnish overlay) ===== */
+.fp-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+}
+.fp-lightbox.open { display: flex; }
+.fp-lightbox-inner {
+  position: relative;
+  width: min(95vw, 1200px);
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: transparent;
+}
+.fp-lightbox-stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 12px 60px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+/* The image frame shrink-wraps the rendered floor plan, so the room overlay
+   and furniture canvas position themselves against the image, not the stage */
+.fp-image-frame {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 70vh;
+  line-height: 0;
+}
+.fp-lightbox-img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+.fp-lightbox-caption {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.fp-lightbox-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.15s;
+}
+.fp-lightbox-close:hover { background: rgba(0,0,0,0.95); transform: scale(1.08); }
+body.fp-open { overflow: hidden; }
+
+/* ----- Furnish + Rooms toolbar (POP styling) ----- */
+.fp-tool-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #f4ede0 0%, #ebe3d0 100%);
+  border: 1px solid var(--border, #d8cfba);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.fp-tool-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.fp-tool-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.fp-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all .18s cubic-bezier(.2,.7,.2,1);
+  color: #fff;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+.fp-tool-btn-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+.fp-tool-btn-label { line-height: 1; }
+/* Furnish button — green, with pulsing glow when inactive */
+.fp-tool-btn-furnish {
+  background: linear-gradient(135deg, #4a7c59 0%, #5d9270 100%);
+}
+.fp-tool-btn-furnish:not(.active) {
+  animation: fpPulse 2.4s ease-in-out infinite;
+}
+.fp-tool-btn-furnish:hover {
+  background: linear-gradient(135deg, #c8622a 0%, #e07a3e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  animation: none;
+}
+.fp-tool-btn-furnish.active {
+  background: linear-gradient(135deg, #c8622a 0%, #e07a3e 100%);
+}
+.fp-tool-btn-furnish.active::before {
+  content: "✓ ";
+  font-size: 14px;
+  margin-right: -3px;
+}
+/* Rooms button — warm gold/orange */
+.fp-tool-btn-rooms {
+  background: linear-gradient(135deg, #c8a232 0%, #e8c252 100%);
+  color: #2a2a1f;
+}
+.fp-tool-btn-rooms:hover {
+  background: linear-gradient(135deg, #c8622a 0%, #e07a3e 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.fp-tool-btn-rooms.active {
+  background: linear-gradient(135deg, #c8622a 0%, #e07a3e 100%);
+  color: #fff;
+}
+.fp-tool-btn-rooms.active::before {
+  content: "✓ ";
+  font-size: 14px;
+  margin-right: -3px;
+}
+@keyframes fpPulse {
+  0%, 100% { box-shadow: 0 4px 14px rgba(74, 124, 89, 0.4), 0 0 0 0 rgba(74, 124, 89, 0); }
+  50%      { box-shadow: 0 4px 18px rgba(74, 124, 89, 0.55), 0 0 0 6px rgba(74, 124, 89, 0.18); }
+}
+.fp-tool-hint {
+  font-size: 12px;
+  color: #5a5040;
+  font-style: italic;
+  margin-left: 4px;
+}
+/* Action buttons (Save PDF, Clear) — secondary */
+.fp-furnish-save {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--green, #4a7c59);
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .15s;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.fp-furnish-save:hover { background: var(--orange, #c8622a); transform: translateY(-1px); }
+.fp-furnish-save:disabled { opacity: 0.6; cursor: wait; transform: none; }
+.fp-furnish-clear {
+  background: #fff;
+  border: 1.5px solid #c0b8a5;
+  color: #5a5040;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .15s;
+}
+.fp-furnish-clear:hover { color: #c8622a; border-color: #c8622a; }
+
+/* ----- Furniture palette (unchanged structure, refined) ----- */
+.fp-furniture-palette {
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #4a7c59 0%, #5d9270 100%);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.fp-furniture-palette.active { display: flex; }
+.fp-furn-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: grab;
+  user-select: none;
+  transition: all .12s;
+}
+.fp-furn-item:hover { background: var(--orange, #c8622a); border-color: var(--orange, #c8622a); transform: scale(1.05); }
+.fp-furn-item:active { cursor: grabbing; }
+.fp-furn-item-icon { font-size: 13px; }
+
+/* ----- Room overlay ----- */
+.fp-room-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+  z-index: 6;
+}
+.fp-room-overlay.active { display: block; }
+.fp-room-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: rgba(74, 124, 89, 0.95);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  border: 1.5px solid rgba(255,255,255,0.7);
+  line-height: 1.25;
+  pointer-events: none;
+}
+.fp-room-label-name {
+  display: block;
+  font-size: 11px;
+}
+.fp-room-label-dim {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 600;
+  opacity: 0.92;
+  margin-top: 1px;
+}
+@media (max-width: 600px) {
+  .fp-room-label { font-size: 9px; padding: 3px 6px; }
+  .fp-room-label-name { font-size: 9px; }
+  .fp-room-label-dim { font-size: 8px; }
+}
+
+/* ----- Furniture canvas + placed items (unchanged) ----- */
+.fp-furn-canvas {
+  position: absolute;
+  inset: 16px;
+  pointer-events: none;
+}
+.fp-furn-canvas.active { pointer-events: auto; }
+.fp-furn-placed {
+  position: absolute;
+  background: rgba(200, 98, 42, 0.55);
+  border: 2px solid var(--orange, #c8622a);
+  border-radius: 4px;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.4);
+  user-select: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 2px 4px;
+  text-align: center;
+  line-height: 1.05;
+  touch-action: none;
+  transition: box-shadow .12s;
+}
+.fp-furn-placed:hover { box-shadow: 0 4px 10px rgba(0,0,0,.3); z-index: 5; }
+.fp-furn-placed.selected {
+  background: rgba(200, 98, 42, 0.75);
+  z-index: 10;
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+}
+.fp-furn-rotate {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  background: var(--green, #4a7c59);
+  color: #fff;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+.fp-furn-placed.selected .fp-furn-rotate { display: flex; }
+.fp-furn-delete {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 22px;
+  height: 22px;
+  background: #c83a2a;
+  color: #fff;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #fff;
+  line-height: 1;
+}
+.fp-furn-placed.selected .fp-furn-delete { display: flex; }
+.fp-furnish-disclaimer,
+.fp-rooms-disclaimer {
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  font-style: italic;
+  text-align: center;
+  padding: 8px 12px 0;
+}
+.fp-rooms-disclaimer strong { color: rgba(255, 220, 130, 1); font-style: normal; }
+
+.scw-nav-btn-current {
+  background: rgba(255,255,255,0.92) !important;
+  color: var(--orange, #c8622a) !important;
+  border-color: var(--orange, #c8622a) !important;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+  cursor: default;
+}
+.scw-nav-btn-current.scw-nav-btn-orange {
+  background: var(--orange-deep, #a14d1f) !important;
+  color: #fff !important;
+}
+.scw-nav-btn-current:hover {
+  transform: none !important;
+}</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Our Listings — Active, Pending & Sold",
+        "item": "https://hometownaz.com/our-listings.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Our Listings — Active, Pending & Sold",
+    "description": "Current and recent Sun City West and Del Webb listings represented by Lona King & Billy Heinzman of HomeSmart. Filter by status, sort by price, sqft, and more.",
+    "url": "https://hometownaz.com/our-listings.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "West Valley, AZ"
+    }
+  }
+]</script>
+</head>
+<body><!-- ===== FLOOR PLAN LIGHTBOX (hidden until openFloorPlan called) ===== -->
+<div id="fpLightbox" class="fp-lightbox" role="dialog" aria-modal="true" aria-label="Floor plan" onclick="closeFloorPlan(event)">
+  <button class="fp-lightbox-close" onclick="closeFloorPlan()" aria-label="Close floor plan">✕</button>
+  <div class="fp-lightbox-inner" onclick="event.stopPropagation()">
+    <div class="fp-tool-bar" id="lpFurnishBar">
+      <div class="fp-tool-left">
+        <button class="fp-tool-btn fp-tool-btn-furnish" id="lpFurnishToggle" onclick="lpToggleFurnish()">
+          <span class="fp-tool-btn-icon">🛋️</span>
+          <span class="fp-tool-btn-label">Furnish This Plan</span>
+        </button>
+        <button class="fp-tool-btn fp-tool-btn-rooms" id="lpRoomsToggle" onclick="lpToggleRooms()">
+          <span class="fp-tool-btn-icon">📏</span>
+          <span class="fp-tool-btn-label">Show Room Sizes</span>
+        </button>
+        <span class="fp-tool-hint" id="lpFurnishHint">Visualize your furniture or see room dimensions</span>
+      </div>
+      <div class="fp-tool-right">
+        <button class="fp-furnish-save" id="lpFurnishSave" onclick="lpSavePlanAsPDF()" style="display:none">📄 Save as PDF</button>
+        <button class="fp-furnish-clear" id="lpFurnishClear" onclick="lpClearFurniture()" style="display:none">Clear All</button>
+      </div>
+    </div>
+    <div class="fp-furniture-palette" id="lpFurniturePalette"></div>
+    <div class="fp-lightbox-stage" id="lpStage">
+      <div class="fp-image-frame" id="lpImageFrame">
+        <img id="fpLightboxImg" class="fp-lightbox-img" src="" alt="Floor plan">
+        <div class="fp-room-overlay" id="lpRoomOverlay"></div>
+        <div class="fp-furn-canvas" id="lpFurnCanvas"></div>
+      </div>
+    </div>
+    <div class="fp-furnish-disclaimer" id="lpFurnishDisclaimer" style="display:none">
+      Furniture sizes are approximate. Call Lona at (623) 203-6271 or Billy at (480) 297-3830 to confirm fit for your specific pieces.
+    </div>
+    <div class="fp-rooms-disclaimer" id="lpRoomsDisclaimer" style="display:none">
+      Room dimensions are <strong>approximate estimates</strong> derived from the floor plan. Confirm exact dimensions during your showing.
+    </div>
+    <div class="fp-lightbox-caption" id="fpLightboxCaption"></div>
+  </div>
+</div>
+
+<!-- ===== FULLSCREEN PHOTO REEL (hidden until openPhotoReel called) ===== -->
+<div id="photoReel" class="photo-reel" role="dialog" aria-modal="true" aria-label="Photo gallery" onclick="closePhotoReel(event)">
+  <div class="photo-reel-stage" id="photoReelStage" onclick="event.stopPropagation()">
+    <!-- slides injected here -->
+  </div>
+  <div class="photo-reel-counter" id="photoReelCounter">1 / 12</div>
+  <button class="photo-reel-close" onclick="closePhotoReel()" aria-label="Close photo reel">✕</button>
+  <button class="photo-reel-nav prev" onclick="photoReelStep(-1)" aria-label="Previous photo">‹</button>
+  <button class="photo-reel-nav next" onclick="photoReelStep(1)" aria-label="Next photo">›</button>
+  <div class="photo-reel-caption" id="photoReelCaption"></div>
+  <div class="photo-reel-controls">
+    <button class="photo-reel-playpause" id="photoReelPlayPause" onclick="photoReelTogglePlay()" aria-label="Pause">⏸ Pause</button>
+    <div class="photo-reel-dots" id="photoReelDots"></div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Home</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">🏡</span>
+        LONA KING &amp; BILLY HEINZMAN · OUR LISTINGS
+      </div>
+      <h1 class="scw-headline">Active, Pending <span class="accent">&amp; Sold</span></h1>
+      <p class="scw-subhead">Every Sun City West and Del Webb property we currently represent — plus our recent closings. Filter by status, sort to compare, and reach out anytime.</p>
+    </div>
+    <!-- NAV:START -->
+<nav class="scw-nav-grid" aria-label="Sun City West resources">
+  <a href="sun-city-west/scw-events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="sun-city-west/scw-community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="sun-city-west/scw-golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="sun-city-west/scw-buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="sun-city-west/scw-things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="sun-city-west/scw-solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="sun-city-west/scw-rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</nav>
+<!-- NAV:END -->
+  </div>
+</section>
+
+<!-- ===== STATS BANNER (track record) ===== -->
+<div class="stats-banner" aria-label="Our team's recent track record">
+  <div class="stats-banner-inner">
+    <div>
+      <div class="stats-banner-title">Our <span class="accent">Track Record</span></div>
+      <div class="stats-banner-sub">Live data from our active &amp; recent closings</div>
+      <a id="flexmlsBannerLink" href="" target="_blank" rel="noopener" class="stats-banner-mls-link">📑 View on the Official MLS &nbsp;→</a>
+    </div>
+    <div class="stats-grid" id="statsGrid"></div>
+  </div>
+</div>
+
+<!-- ===== STATUS TABS + SORT ===== -->
+<div class="listings-controls">
+  <div class="listings-controls-inner">
+    <div class="status-tabs" role="tablist">
+      <button class="status-tab active" data-status="active" onclick="setStatus('active')">Active <span class="count" id="countActive">—</span></button>
+      <button class="status-tab" data-status="pending" onclick="setStatus('pending')">Pending <span class="count" id="countPending">—</span></button>
+      <button class="status-tab" data-status="sold" onclick="setStatus('sold')">Sold <span class="count" id="countSold">—</span></button>
+      <button class="status-tab" data-status="all" onclick="setStatus('all')">All <span class="count" id="countAll">—</span></button>
+    </div>
+    <div class="sort-group">
+      <label for="sortBy">Sort:</label>
+      <select id="sortBy" class="sort-select" onchange="renderListings()">
+        <option value="price-desc">Price (High → Low)</option>
+        <option value="price-asc">Price (Low → High)</option>
+        <option value="sqft-desc">Sq Ft (Large → Small)</option>
+        <option value="sqft-asc">Sq Ft (Small → Large)</option>
+        <option value="dom-asc">Days on Market (Low → High)</option>
+        <option value="dom-desc">Days on Market (High → Low)</option>
+        <option value="psf-desc">$/sqft (High → Low)</option>
+        <option value="psf-asc">$/sqft (Low → High)</option>
+        <option value="addr-asc">Address (A → Z)</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FILTER CHIPS + VIEW TOGGLE ===== -->
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+    <div class="filter-group">
+      <span class="filter-group-label">Beds:</span>
+      <button class="filter-chip active" data-filter="beds" data-value="">Any</button>
+      <button class="filter-chip" data-filter="beds" data-value="1">1+</button>
+      <button class="filter-chip" data-filter="beds" data-value="2">2+</button>
+      <button class="filter-chip" data-filter="beds" data-value="3">3+</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-group-label">Price:</span>
+      <button class="filter-chip active" data-filter="price" data-value="">Any</button>
+      <button class="filter-chip" data-filter="price" data-value="0-300000">Under $300K</button>
+      <button class="filter-chip" data-filter="price" data-value="300000-450000">$300–450K</button>
+      <button class="filter-chip" data-filter="price" data-value="450000-550000">$450–550K</button>
+      <button class="filter-chip" data-filter="price" data-value="550000-9999999">$550K+</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-group-label">Built:</span>
+      <button class="filter-chip active" data-filter="year" data-value="">Any</button>
+      <button class="filter-chip" data-filter="year" data-value="1980-1989">1980s</button>
+      <button class="filter-chip" data-filter="year" data-value="1990-1999">1990s</button>
+      <button class="filter-chip" data-filter="year" data-value="2000-2999">2000+</button>
+    </div>
+    <div class="filter-group">
+      <button class="filter-clear" onclick="clearFilters()">↺ Clear All</button>
+    </div>
+    <div class="filter-group">
+      <div class="view-toggle" role="tablist" aria-label="Switch between grid and map view">
+        <button class="view-toggle-btn active" id="viewToggleGrid" onclick="setView('grid')">▦ Grid</button>
+        <button class="view-toggle-btn" id="viewToggleMap" onclick="setView('map')">📍 Map</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<main class="listings-main">
+  <div class="section-header">
+    <div>
+      <h2 class="section-title" id="sectionTitle">Active Listings <span class="count-badge" id="sectionCount">—</span></h2>
+      <div class="section-sub" id="sectionSub">Currently on the MLS, represented by Lona King &amp; Billy Heinzman.</div>
+    </div>
+  </div>
+  <div class="no-results-note" id="noResultsNote"></div>
+  <div id="listingsGrid" class="listings-grid"></div>
+  <div id="mapView" class="map-view">
+    <div id="leafletMap"></div>
+    <div class="map-legend">
+      <div class="map-legend-title">Status</div>
+      <div class="map-legend-row"><span class="map-legend-dot active"></span> Active</div>
+      <div class="map-legend-row"><span class="map-legend-dot pending"></span> Pending</div>
+      <div class="map-legend-row"><span class="map-legend-dot sold"></span> Sold</div>
+    </div>
+  </div>
+
+  <!-- ===== ALERTS SIGNUP ===== -->
+  <div class="alerts-card" aria-label="Sign up for new listing alerts">
+    <div class="alerts-card-text">
+      <div class="alerts-card-title">🔔 Be First to Know</div>
+      <div class="alerts-card-sub">Get an email the moment a new Sun City West listing matches what you're looking for. No spam, no resale of your info — just listings.</div>
+    </div>
+    <form class="alerts-form" id="alertsForm" onsubmit="submitAlerts(event)">
+      <input type="email" class="alerts-input" id="alertsEmail" placeholder="your@email.com" required>
+      <button type="submit" class="alerts-btn">Sign Me Up</button>
+    </form>
+    <div class="alerts-success" id="alertsSuccess">✓ You're on the list! Lona will reach out shortly to set up your criteria.</div>
+  </div>
+</main>
+
+<!-- ===== COMPARE BAR ===== -->
+<div class="compare-bar" id="compareBar" aria-label="Compare your favorite listings">
+  <div class="compare-bar-label">
+    Favorites <span class="compare-bar-count" id="compareCount">0</span>
+  </div>
+  <div class="compare-bar-actions">
+    <button class="compare-bar-btn outline" onclick="clearFavorites()">Clear</button>
+    <button class="compare-bar-btn" onclick="openCompare()">Compare Side-by-Side →</button>
+  </div>
+</div>
+
+<!-- ===== CONTACT CTA ===== -->
+<section class="contact-cta">
+  <div class="contact-cta-inner">
+    <h2>Looking for <span class="accent">your next home</span> in Sun City West?</h2>
+    <p>Whether you're buying, selling, or just exploring the area, we'd love to help. Two decades of Del Webb experience and 478+ career sales — we know these communities inside and out.</p>
+    <div class="contact-cta-buttons">
+      <a href="tel:+16232036271" class="cta-btn cta-btn-primary">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="cta-btn cta-btn-secondary">📞 Call Billy — (480) 297-3830</a>
+      <a href="mailto:azlonaking@gmail.com" class="cta-btn cta-btn-secondary">✉️ Email Lona</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DETAILS MODAL ===== -->
+<div class="detail-modal-backdrop" id="detailModalBackdrop" onclick="closeDetails()"></div>
+
+<script src="data-listings.js"></script>
+<script src="listings-data-patch.js"></script>
+<script>
+// ============================================
+// OUR LISTINGS — Active / Pending / Sold viewer
+// Pulls from ACTIVE_LISTINGS.active, .pending, .recentClosings
+// Filters by isOurListing === true
+// ============================================
+
+// Public flexmls report URL — shows all our listings with full-res photos & virtual tours
+// To update: regenerate the public link from flexmls and paste here
+var FLEXMLS_PUBLIC_REPORT = 'https://www.flexmls.com/cgi-bin/mainmenu.cgi?cmd=url+other/run_public_link.html&public_link_tech_id=1z959t388gtd&s=12&id=1&san=12307&cid=1';
+
+var STATE = {
+  status: 'active',
+  view: 'grid', // 'grid' or 'map'
+  filters: { beds: '', price: '', year: '' },
+  favorites: [] // array of MLS#s
+};
+// Load favorites from localStorage if available (graceful fallback if blocked)
+try { var stored = localStorage.getItem('ourListingsFavorites'); if(stored) STATE.favorites = JSON.parse(stored) || []; } catch(e) {}
+
+function saveFavorites(){
+  try { localStorage.setItem('ourListingsFavorites', JSON.stringify(STATE.favorites)); } catch(e) {}
+}
+
+function getOurActive() {
+  if (typeof ACTIVE_LISTINGS === 'undefined' || !ACTIVE_LISTINGS.active) return [];
+  return ACTIVE_LISTINGS.active.filter(function(l){ return l.isOurListing === true; });
+}
+function getOurPending() {
+  if (typeof ACTIVE_LISTINGS === 'undefined' || !ACTIVE_LISTINGS.pending) return [];
+  return ACTIVE_LISTINGS.pending.filter(function(l){ return l.isOurListing === true; });
+}
+function getOurSold() {
+  if (typeof ACTIVE_LISTINGS === 'undefined' || !ACTIVE_LISTINGS.recentClosings) return [];
+  return ACTIVE_LISTINGS.recentClosings.filter(function(l){ return l.isOurListing === true; });
+}
+
+function getListingsForStatus(status) {
+  var raw;
+  if (status === 'active')  raw = getOurActive().map(function(l){ return Object.assign({}, l, {_status:'active'}); });
+  else if (status === 'pending') raw = getOurPending().map(function(l){ return Object.assign({}, l, {_status:'pending'}); });
+  else if (status === 'sold')    raw = getOurSold().map(function(l){
+    return Object.assign({}, l, {_status:'sold', price: l.soldPrice || l.price});
+  });
+  else if (status === 'all') {
+    raw = [].concat(
+      getOurActive().map(function(l){ return Object.assign({}, l, {_status:'active'}); }),
+      getOurPending().map(function(l){ return Object.assign({}, l, {_status:'pending'}); }),
+      getOurSold().map(function(l){ return Object.assign({}, l, {_status:'sold', price: l.soldPrice || l.price}); })
+    );
+  } else {
+    return [];
+  }
+  // Dedupe: if the same MLS# shows up more than once in a status (or across statuses
+  // in "all"), keep the first occurrence. Status priority for "all": active > pending > sold.
+  // Fallback key when MLS is missing: normalized address.
+  var seen = {};
+  var out = [];
+  raw.forEach(function(l){
+    var key = (l.mls && String(l.mls).trim()) || (l.addr ? String(l.addr).toUpperCase().replace(/\s+/g,' ').trim() : null);
+    if (!key) { out.push(l); return; }
+    if (seen[key]) return;
+    seen[key] = true;
+    out.push(l);
+  });
+  return out;
+}
+
+function applyFilters(list) {
+  var f = STATE.filters;
+  return list.filter(function(l){
+    // Beds filter (minimum)
+    if (f.beds) {
+      var minBeds = parseInt(f.beds, 10);
+      if ((l.beds || 0) < minBeds) return false;
+    }
+    // Price range filter
+    if (f.price) {
+      var range = f.price.split('-').map(function(n){ return parseInt(n,10); });
+      var p = l.price || l.soldPrice || 0;
+      if (p < range[0] || p > range[1]) return false;
+    }
+    // Year built filter
+    if (f.year) {
+      var yrRange = f.year.split('-').map(function(n){ return parseInt(n,10); });
+      var y = l.yr || 0;
+      if (y < yrRange[0] || y > yrRange[1]) return false;
+    }
+    return true;
+  });
+}
+
+function sortListings(list, sortKey) {
+  var sorted = list.slice();
+  var statusOrder = { active: 0, pending: 1, sold: 2 };
+  if (sortKey === 'price-desc') sorted.sort(function(a,b){ return (b.price||0) - (a.price||0); });
+  else if (sortKey === 'price-asc') sorted.sort(function(a,b){ return (a.price||0) - (b.price||0); });
+  else if (sortKey === 'sqft-desc') sorted.sort(function(a,b){ return (b.sqft||0) - (a.sqft||0); });
+  else if (sortKey === 'sqft-asc') sorted.sort(function(a,b){ return (a.sqft||0) - (b.sqft||0); });
+  else if (sortKey === 'dom-desc') sorted.sort(function(a,b){ return (b.dom||0) - (a.dom||0); });
+  else if (sortKey === 'dom-asc') sorted.sort(function(a,b){ return (a.dom||0) - (b.dom||0); });
+  else if (sortKey === 'psf-desc') sorted.sort(function(a,b){ return (b.psf||0) - (a.psf||0); });
+  else if (sortKey === 'psf-asc') sorted.sort(function(a,b){ return (a.psf||0) - (b.psf||0); });
+  else if (sortKey === 'addr-asc') sorted.sort(function(a,b){ return String(a.addr||'').localeCompare(String(b.addr||'')); });
+  // When viewing "all", sub-sort by status within the chosen order
+  if (STATE.status === 'all') {
+    sorted.sort(function(a,b){
+      var sa = statusOrder[a._status] || 9;
+      var sb = statusOrder[b._status] || 9;
+      if (sa !== sb) return sa - sb;
+      return 0;
+    });
+  }
+  return sorted;
+}
+
+// Prefer locally-hosted gallery photo over Spark CDN URL (which is often unreliable)
+function primaryPhoto(l) {
+  if (l && l.gallery && l.gallery.length > 0) return l.gallery[0];
+  if (l && l.photo) return l.photo.replace(/^http:\/\//, 'https://');
+  return '';
+}
+
+// Get the full photo list for a listing, falling back to single photo
+function allPhotos(l) {
+  if (l && l.gallery && l.gallery.length > 0) return l.gallery.slice();
+  if (l && l.photo) return [l.photo.replace(/^http:\/\//, 'https://')];
+  return [];
+}
+
+// Check if we have a watermarked floor plan for this listing
+// Files are stored at images/listings-floorplans/<MLS>.jpg
+var LISTINGS_WITH_FLOORPLAN = {
+  '6995008': 1, '6908216': 1, '6970611': 1, '6945254': 1,
+  '7015019': 1, '7027759': 1, '7012683': 1, '6980826': 1
+  // Missing: 6949374 (19511 N 143rd Dr — no floor plan in MLS upload)
+};
+function floorPlanUrl(l) {
+  if (l && l.mls && LISTINGS_WITH_FLOORPLAN[l.mls]) {
+    return 'images/listings-floorplans/' + l.mls + '.jpg';
+  }
+  return null;
+}
+
+// Per-listing room data — positions are % of floor plan image (x, y)
+// Dimensions are APPROXIMATE estimates from the floor plan. Confirm at showing.
+// Format: {n: name, w: width_ft, l: length_ft, sq: sqft, x: percent_x, y: percent_y}
+var LP_ROOM_DATA = {
+  "6995008": [
+    {n:"Bedroom", w:13, l:13, sq:169, x:56, y:20},
+    {n:"Living Room", w:13, l:16, sq:208, x:33, y:45},
+    {n:"Bath", w:8, l:9, sq:72, x:51, y:60},
+    {n:"Bath", w:8, l:9, sq:72, x:60, y:60},
+    {n:"Kitchen", w:9, l:11, sq:99, x:58, y:80},
+    {n:"Dining", w:8, l:11, sq:88, x:41, y:80},
+  ],
+  "7027759": [
+    {n:"Primary Bedroom", w:14, l:16, sq:224, x:15, y:35},
+    {n:"Bath", w:7, l:8, sq:56, x:28, y:36},
+    {n:"Dining Room", w:12, l:13, sq:156, x:47, y:18},
+    {n:"Breakfast Nook", w:10, l:10, sq:100, x:40, y:38},
+    {n:"Kitchen", w:11, l:13, sq:143, x:55, y:38},
+    {n:"Office", w:9, l:10, sq:90, x:68, y:36},
+    {n:"Laundry", w:7, l:8, sq:56, x:83, y:36},
+    {n:"Living Room", w:14, l:18, sq:252, x:49, y:63},
+    {n:"Bedroom", w:11, l:13, sq:143, x:11, y:75},
+    {n:"Bath", w:7, l:8, sq:56, x:24, y:75},
+    {n:"Garage", w:21, l:24, sq:504, x:79, y:67},
+  ],
+  "6908216": [
+    {n:"Master Bedroom", w:14, l:16, sq:224, x:27, y:28},
+    {n:"Family Room", w:14, l:16, sq:224, x:43, y:16},
+    {n:"Sitting Room", w:10, l:12, sq:120, x:58, y:24},
+    {n:"Breakfast Nook", w:10, l:11, sq:110, x:70, y:24},
+    {n:"Living Room", w:13, l:16, sq:208, x:45, y:39},
+    {n:"Kitchen", w:11, l:14, sq:154, x:68, y:40},
+    {n:"Master Bath", w:9, l:11, sq:99, x:21, y:50},
+    {n:"Bath", w:8, l:9, sq:72, x:17, y:47},
+    {n:"Bath", w:7, l:8, sq:56, x:22, y:65},
+    {n:"Dining Area", w:10, l:11, sq:110, x:51, y:61},
+    {n:"Laundry", w:8, l:10, sq:80, x:74, y:56},
+    {n:"Bedroom", w:12, l:14, sq:168, x:26, y:82},
+    {n:"Garage", w:22, l:22, sq:484, x:75, y:78},
+  ],
+  "6970611": [
+    {n:"Breakfast Nook", w:10, l:11, sq:110, x:19, y:22},
+    {n:"Kitchen", w:11, l:13, sq:143, x:33, y:28},
+    {n:"Dining Area", w:11, l:13, sq:143, x:46, y:27},
+    {n:"Living Room", w:13, l:14, sq:182, x:60, y:27},
+    {n:"Primary Bedroom", w:14, l:16, sq:224, x:77, y:19},
+    {n:"Laundry", w:8, l:11, sq:88, x:19, y:50},
+    {n:"Bath", w:7, l:8, sq:56, x:34, y:49},
+    {n:"Bonus Room", w:11, l:12, sq:132, x:45, y:50},
+    {n:"Primary Bath", w:9, l:11, sq:99, x:79, y:46},
+    {n:"Bath", w:7, l:8, sq:56, x:70, y:49},
+    {n:"Bath", w:6, l:7, sq:42, x:68, y:67},
+    {n:"Bedroom", w:12, l:13, sq:156, x:78, y:78},
+    {n:"Garage", w:22, l:22, sq:484, x:32, y:75},
+  ],
+  "6945254": [
+    {n:"Bedroom", w:11, l:13, sq:143, x:27, y:14},
+    {n:"Dining Area", w:10, l:12, sq:120, x:41, y:22},
+    {n:"Living Room", w:14, l:16, sq:224, x:52, y:24},
+    {n:"Primary Bedroom", w:13, l:16, sq:208, x:73, y:21},
+    {n:"Bath", w:7, l:8, sq:56, x:27, y:35},
+    {n:"Kitchen", w:10, l:13, sq:130, x:40, y:41},
+    {n:"Bath", w:9, l:12, sq:108, x:74, y:40},
+    {n:"Bedroom 3", w:11, l:13, sq:143, x:27, y:53},
+    {n:"Laundry", w:7, l:9, sq:63, x:58, y:53},
+    {n:"Bath", w:6, l:7, sq:42, x:73, y:56},
+    {n:"Breakfast Nook", w:9, l:11, sq:99, x:40, y:62},
+    {n:"Garage (Extended)", w:23, l:24, sq:552, x:75, y:75},
+  ],
+  "7015019": [
+    {n:"Family Room", w:14, l:17, sq:238, x:50, y:18},
+    {n:"Primary Bedroom", w:13, l:15, sq:195, x:64, y:37},
+    {n:"Kitchen", w:10, l:12, sq:120, x:28, y:47},
+    {n:"Breakfast Nook", w:9, l:11, sq:99, x:41, y:47},
+    {n:"Living Room", w:13, l:15, sq:195, x:53, y:47},
+    {n:"Bath", w:7, l:9, sq:63, x:64, y:53},
+    {n:"Bath", w:6, l:7, sq:42, x:60, y:60},
+    {n:"Dining Area", w:10, l:11, sq:110, x:50, y:67},
+    {n:"Bedroom", w:12, l:14, sq:168, x:68, y:83},
+    {n:"Garage", w:21, l:22, sq:462, x:30, y:75},
+  ],
+  "7012683": [
+    {n:"Bedroom", w:13, l:15, sq:195, x:19, y:18},
+    {n:"Breakfast Nook", w:10, l:11, sq:110, x:70, y:19},
+    {n:"Living Room", w:13, l:16, sq:208, x:32, y:27},
+    {n:"Dining Area", w:11, l:13, sq:143, x:43, y:27},
+    {n:"Kitchen", w:12, l:14, sq:168, x:57, y:27},
+    {n:"Family Room", w:15, l:17, sq:255, x:75, y:28},
+    {n:"Office", w:11, l:13, sq:143, x:19, y:50},
+    {n:"Bath", w:7, l:9, sq:63, x:70, y:41},
+    {n:"Primary Bedroom", w:14, l:16, sq:224, x:46, y:56},
+    {n:"Primary Bath", w:10, l:12, sq:120, x:58, y:53},
+    {n:"Laundry", w:8, l:9, sq:72, x:68, y:53},
+    {n:"Garage + Golf Cart", w:28, l:22, sq:616, x:70, y:80},
+  ],
+  "6980826": [
+    {n:"Primary Bedroom", w:14, l:17, sq:238, x:30, y:22},
+    {n:"Dining Area", w:12, l:14, sq:168, x:70, y:14},
+    {n:"Living Room", w:14, l:16, sq:224, x:51, y:36},
+    {n:"Kitchen", w:12, l:14, sq:168, x:73, y:33},
+    {n:"Primary Bath", w:8, l:10, sq:80, x:27, y:48},
+    {n:"Bath", w:6, l:8, sq:48, x:22, y:49},
+    {n:"Laundry", w:8, l:9, sq:72, x:38, y:53},
+    {n:"Bath", w:6, l:8, sq:48, x:60, y:53},
+    {n:"Bedroom 2", w:11, l:13, sq:143, x:75, y:50},
+    {n:"Bedroom 3", w:11, l:13, sq:143, x:75, y:73},
+    {n:"Garage", w:22, l:24, sq:528, x:32, y:75},
+    {n:"Storage", w:11, l:10, sq:110, x:48, y:65},
+  ],
+};
+
+// ============ FLOOR PLAN LIGHTBOX (with Furnish overlay) ============
+// Furniture catalog — same dimensions as scw-floor-plans.html
+var LP_FURNITURE = [
+  { icon: '🛏️', label: 'King Bed',     w: 6.3, d: 6.7 },
+  { icon: '🛏️', label: 'Queen Bed',    w: 5.0, d: 6.7 },
+  { icon: '🛏️', label: 'Twin Bed',     w: 3.3, d: 6.3 },
+  { icon: '🛋️', label: 'Sectional',    w: 9.0, d: 7.0 },
+  { icon: '🛋️', label: 'Sofa',         w: 7.0, d: 3.0 },
+  { icon: '🪑', label: 'Loveseat',     w: 5.0, d: 3.0 },
+  { icon: '🪑', label: 'Recliner',     w: 3.0, d: 3.5 },
+  { icon: '🍽️', label: 'Dining (6)',   w: 6.0, d: 3.5 },
+  { icon: '🍽️', label: 'Dining (4)',   w: 4.0, d: 3.0 },
+  { icon: '🪑', label: 'Coffee Table', w: 4.0, d: 2.0 },
+  { icon: '🗄️', label: 'Dresser',      w: 5.0, d: 1.7 },
+  { icon: '🛏️', label: 'Nightstand',   w: 2.0, d: 1.5 },
+  { icon: '🪞', label: 'Desk',         w: 5.0, d: 2.0 },
+  { icon: '📺', label: 'TV Stand',     w: 5.0, d: 1.5 },
+];
+
+var LP_FURN = {
+  active: false,
+  pxPerFoot: 6,
+  currentListing: null,
+  placed: [],
+  nextId: 1,
+  selected: null,
+  paletteBuilt: false,
+};
+
+// State for the Room Sizes overlay
+var LP_ROOMS = { active: false };
+
+function lpRenderRoomOverlay(){
+  var l = LP_FURN.currentListing;
+  var overlay = document.getElementById('lpRoomOverlay');
+  overlay.innerHTML = '';
+  if (!l || !l.mls) return;
+  var rooms = LP_ROOM_DATA[l.mls];
+  if (!rooms) return;
+  rooms.forEach(function(r){
+    var div = document.createElement('div');
+    div.className = 'fp-room-label';
+    div.style.left = r.x + '%';
+    div.style.top = r.y + '%';
+    div.innerHTML =
+      '<span class="fp-room-label-name">' + r.n + '</span>' +
+      '<span class="fp-room-label-dim">~' + r.w + '\u2032 \u00d7 ' + r.l + '\u2032  ·  ' + r.sq + ' sqft</span>';
+    overlay.appendChild(div);
+  });
+}
+
+function lpToggleRooms(){
+  var l = LP_FURN.currentListing;
+  if (!l || !l.mls || !LP_ROOM_DATA[l.mls]) {
+    // No room data for this listing — soft-fail
+    document.getElementById('lpFurnishHint').textContent = 'Room dimensions not available for this floor plan yet.';
+    return;
+  }
+  LP_ROOMS.active = !LP_ROOMS.active;
+  document.getElementById('lpRoomsToggle').classList.toggle('active', LP_ROOMS.active);
+  document.getElementById('lpRoomOverlay').classList.toggle('active', LP_ROOMS.active);
+  document.getElementById('lpRoomsDisclaimer').style.display = LP_ROOMS.active ? 'block' : 'none';
+  if (LP_ROOMS.active) {
+    lpRenderRoomOverlay();
+    document.getElementById('lpFurnishHint').textContent = 'Approximate room dimensions shown — click button again to hide.';
+  } else {
+    document.getElementById('lpFurnishHint').textContent = 'Visualize your furniture or see room dimensions';
+  }
+}
+
+function lpResetRoomsState(){
+  LP_ROOMS.active = false;
+  document.getElementById('lpRoomsToggle').classList.remove('active');
+  document.getElementById('lpRoomOverlay').classList.remove('active');
+  document.getElementById('lpRoomOverlay').innerHTML = '';
+  document.getElementById('lpRoomsDisclaimer').style.display = 'none';
+}
+
+function lpBuildPalette(){
+  if (LP_FURN.paletteBuilt) return;
+  var pal = document.getElementById('lpFurniturePalette');
+  pal.innerHTML = LP_FURNITURE.map(function(f, i){
+    return '<div class="fp-furn-item" draggable="true" data-furn-idx="' + i + '" ondragstart="lpFurnDragStart(event,' + i + ')" onclick="lpFurnAddCenter(' + i + ')">' +
+      '<span class="fp-furn-item-icon">' + f.icon + '</span>' +
+      f.label + ' <span style="opacity:.7;font-size:10px">(' + f.w + '\u2032\u00d7' + f.d + '\u2032)</span>' +
+      '</div>';
+  }).join('');
+  LP_FURN.paletteBuilt = true;
+  // Wire up canvas drop handler once
+  var canvas = document.getElementById('lpFurnCanvas');
+  canvas.addEventListener('dragover', function(e){
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'copy';
+  });
+  canvas.addEventListener('drop', function(e){
+    e.preventDefault();
+    if(!LP_FURN.active) return;
+    var idx = parseInt(e.dataTransfer.getData('text/plain'), 10);
+    if(isNaN(idx)) return;
+    var rect = canvas.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
+    lpFurnPlace(idx, x, y);
+  });
+  canvas.addEventListener('click', function(e){
+    if(e.target === canvas){
+      LP_FURN.placed.forEach(function(p){ p.el.classList.remove('selected'); });
+      LP_FURN.selected = null;
+    }
+  });
+}
+
+function lpComputePxPerFoot(){
+  var img = document.getElementById('fpLightboxImg');
+  var canvas = document.getElementById('lpFurnCanvas');
+  if (!img.naturalWidth || !LP_FURN.currentListing) return 6;
+  if (!canvas.clientWidth || !canvas.clientHeight) return 6;
+  var sq = LP_FURN.currentListing.sqft || 1800;
+  // Same heuristic as scw-floor-plans.html: house footprint fills ~55% of visible canvas
+  var pxPerFt = Math.sqrt((canvas.clientWidth * canvas.clientHeight * 0.55) / sq);
+  return Math.max(3, Math.min(15, pxPerFt));
+}
+
+function openFloorPlan(key) {
+  var l = LISTING_BY_KEY[key];
+  if (!l) return;
+  var url = floorPlanUrl(l);
+  if (!url) return;
+
+  LP_FURN.currentListing = l;
+  // Reset state when opening a new listing
+  lpResetFurnishState();
+  lpResetRoomsState();
+
+  var img = document.getElementById('fpLightboxImg');
+  img.onload = function(){
+    if (LP_FURN.active) LP_FURN.pxPerFoot = lpComputePxPerFoot();
+  };
+  img.src = url;
+  document.getElementById('fpLightboxCaption').textContent =
+    titleCaseAddr(l.addr || '') + (l.model ? '  ·  Model ' + l.model : '') + (l.sqft ? '  ·  ' + fmtSqft(l.sqft) + ' sq ft' : '');
+  document.getElementById('fpLightbox').classList.add('open');
+  document.body.classList.add('fp-open');
+
+  lpBuildPalette();
+}
+
+function lpResetFurnishState(){
+  // Clear placed items
+  var canvas = document.getElementById('lpFurnCanvas');
+  canvas.innerHTML = '';
+  LP_FURN.placed = [];
+  LP_FURN.selected = null;
+  LP_FURN.active = false;
+  document.getElementById('lpFurnishToggle').classList.remove('active');
+  document.getElementById('lpFurniturePalette').classList.remove('active');
+  canvas.classList.remove('active');
+  document.getElementById('lpFurnishDisclaimer').style.display = 'none';
+  document.getElementById('lpFurnishHint').textContent = 'Visualize your furniture in this floor plan';
+  document.getElementById('lpFurnishClear').style.display = 'none';
+  document.getElementById('lpFurnishSave').style.display = 'none';
+}
+
+function closeFloorPlan(ev) {
+  if (ev && ev.target && ev.target.closest && ev.target.closest('.fp-lightbox-inner')) return;
+  document.getElementById('fpLightbox').classList.remove('open');
+  document.body.classList.remove('fp-open');
+  lpResetFurnishState();
+  lpResetRoomsState();
+}
+
+function lpToggleFurnish(){
+  LP_FURN.active = !LP_FURN.active;
+  document.getElementById('lpFurnishToggle').classList.toggle('active', LP_FURN.active);
+  document.getElementById('lpFurniturePalette').classList.toggle('active', LP_FURN.active);
+  document.getElementById('lpFurnCanvas').classList.toggle('active', LP_FURN.active);
+  document.getElementById('lpFurnishDisclaimer').style.display = LP_FURN.active ? 'block' : 'none';
+  document.getElementById('lpFurnishHint').textContent = LP_FURN.active
+    ? 'Drag items below onto the floor plan • Click a placed item to rotate or delete'
+    : 'Visualize your furniture in this floor plan';
+  if (LP_FURN.active) LP_FURN.pxPerFoot = lpComputePxPerFoot();
+}
+
+function lpClearFurniture(){
+  document.getElementById('lpFurnCanvas').innerHTML = '';
+  LP_FURN.placed = [];
+  LP_FURN.selected = null;
+  document.getElementById('lpFurnishClear').style.display = 'none';
+  document.getElementById('lpFurnishSave').style.display = 'none';
+}
+
+function lpFurnDragStart(e, idx){
+  e.dataTransfer.setData('text/plain', idx);
+  e.dataTransfer.effectAllowed = 'copy';
+}
+
+function lpFurnAddCenter(idx){
+  if(!LP_FURN.active) return;
+  var canvas = document.getElementById('lpFurnCanvas');
+  var x = canvas.clientWidth/2;
+  var y = canvas.clientHeight/2;
+  lpFurnPlace(idx, x, y);
+}
+
+function lpFurnPlace(idx, x, y){
+  var f = LP_FURNITURE[idx];
+  var ppf = LP_FURN.pxPerFoot;
+  var widthPx = Math.max(28, f.w * ppf);
+  var depthPx = Math.max(20, f.d * ppf);
+
+  var canvas = document.getElementById('lpFurnCanvas');
+  var el = document.createElement('div');
+  var id = LP_FURN.nextId++;
+  el.className = 'fp-furn-placed';
+  el.style.left = (x - widthPx/2) + 'px';
+  el.style.top = (y - depthPx/2) + 'px';
+  el.style.width = widthPx + 'px';
+  el.style.height = depthPx + 'px';
+  el.dataset.id = id;
+  el.dataset.rot = '0';
+  el.innerHTML = f.label +
+    '<div class="fp-furn-rotate" onclick="event.stopPropagation();lpFurnRotate(' + id + ')">↻</div>' +
+    '<div class="fp-furn-delete" onclick="event.stopPropagation();lpFurnDelete(' + id + ')">×</div>';
+  el.onmousedown = function(ev){ lpFurnStartDrag(ev, id); };
+  el.ontouchstart = function(ev){ lpFurnStartDrag(ev, id); };
+  el.onclick = function(ev){ ev.stopPropagation(); lpFurnSelect(id); };
+  canvas.appendChild(el);
+
+  LP_FURN.placed.push({ id: id, type: idx, w: widthPx, h: depthPx, rot: 0, el: el });
+  document.getElementById('lpFurnishClear').style.display = 'inline-flex';
+  document.getElementById('lpFurnishSave').style.display = 'inline-flex';
+  lpFurnSelect(id);
+}
+
+function lpFurnSelect(id){
+  LP_FURN.placed.forEach(function(p){ p.el.classList.remove('selected'); });
+  var item = LP_FURN.placed.find(function(p){return p.id === id;});
+  if(item){ item.el.classList.add('selected'); LP_FURN.selected = id; }
+}
+
+function lpFurnRotate(id){
+  var item = LP_FURN.placed.find(function(p){return p.id === id;});
+  if(!item) return;
+  item.rot = (item.rot + 90) % 360;
+  item.el.style.transform = 'rotate(' + item.rot + 'deg)';
+}
+
+function lpFurnDelete(id){
+  var idx = LP_FURN.placed.findIndex(function(p){return p.id === id;});
+  if(idx < 0) return;
+  LP_FURN.placed[idx].el.remove();
+  LP_FURN.placed.splice(idx, 1);
+  if(LP_FURN.placed.length === 0){
+    document.getElementById('lpFurnishClear').style.display = 'none';
+    document.getElementById('lpFurnishSave').style.display = 'none';
+  }
+}
+
+function lpFurnStartDrag(ev, id){
+  ev.preventDefault();
+  var item = LP_FURN.placed.find(function(p){return p.id === id;});
+  if(!item) return;
+  lpFurnSelect(id);
+  var startX = ev.type === 'touchstart' ? ev.touches[0].clientX : ev.clientX;
+  var startY = ev.type === 'touchstart' ? ev.touches[0].clientY : ev.clientY;
+  var origLeft = parseInt(item.el.style.left, 10);
+  var origTop = parseInt(item.el.style.top, 10);
+  function move(e){
+    e.preventDefault();
+    var cx = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+    var cy = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+    item.el.style.left = (origLeft + cx - startX) + 'px';
+    item.el.style.top = (origTop + cy - startY) + 'px';
+  }
+  function up(){
+    document.removeEventListener('mousemove', move);
+    document.removeEventListener('mouseup', up);
+    document.removeEventListener('touchmove', move);
+    document.removeEventListener('touchend', up);
+  }
+  document.addEventListener('mousemove', move);
+  document.addEventListener('mouseup', up);
+  document.addEventListener('touchmove', move, {passive: false});
+  document.addEventListener('touchend', up);
+}
+
+function lpSavePlanAsPDF(){
+  var l = LP_FURN.currentListing;
+  if(!l) return;
+  var saveBtn = document.getElementById('lpFurnishSave');
+  var originalText = saveBtn.innerHTML;
+  saveBtn.disabled = true;
+  saveBtn.innerHTML = '⏳ Generating...';
+
+  if (typeof html2canvas === 'undefined' || typeof window.jspdf === 'undefined') {
+    saveBtn.disabled = false;
+    saveBtn.innerHTML = originalText;
+    alert('PDF library not loaded. Please refresh and try again.');
+    return;
+  }
+
+  var stage = document.getElementById('lpStage');
+  // Briefly hide selection rings during snapshot
+  var prevSelected = LP_FURN.placed.find(function(p){ return p.el.classList.contains('selected'); });
+  if (prevSelected) prevSelected.el.classList.remove('selected');
+
+  html2canvas(stage, { backgroundColor: '#fff', scale: 2, useCORS: true }).then(function(canvas){
+    if (prevSelected) prevSelected.el.classList.add('selected');
+    var imgData = canvas.toDataURL('image/jpeg', 0.92);
+    var pdf = new window.jspdf.jsPDF({ orientation: 'landscape', unit: 'pt', format: 'letter' });
+    var pageW = pdf.internal.pageSize.getWidth();
+    var pageH = pdf.internal.pageSize.getHeight();
+    var margin = 36;
+    var availW = pageW - margin*2;
+    var availH = pageH - margin*2 - 60;  // leave room for title
+    // Fit image within available area, preserving aspect
+    var imgRatio = canvas.width / canvas.height;
+    var availRatio = availW / availH;
+    var drawW, drawH;
+    if (imgRatio > availRatio) { drawW = availW; drawH = availW / imgRatio; }
+    else { drawH = availH; drawW = availH * imgRatio; }
+    var x = (pageW - drawW) / 2;
+    var y = margin + 56;
+
+    // Title
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(16);
+    pdf.text(titleCaseAddr(l.addr || 'Floor Plan'), margin, margin + 18);
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(10);
+    var sub = (l.model ? 'Model ' + l.model : '') + (l.sqft ? '  ·  ' + l.sqft + ' sq ft' : '') + '  ·  Furnished Layout';
+    pdf.text(sub, margin, margin + 36);
+
+    pdf.addImage(imgData, 'JPEG', x, y, drawW, drawH);
+
+    // Footer
+    pdf.setFontSize(8);
+    pdf.setTextColor(120);
+    pdf.text('Lona King & Billy Heinzman · REALTORS® · (623) 203-6271 · Furniture sizes are approximate.', margin, pageH - 18);
+
+    var safeAddr = (l.addr || 'floorplan').replace(/[^a-z0-9]+/gi,'_').replace(/^_|_$/g,'');
+    pdf.save(safeAddr + '_furnished.pdf');
+    saveBtn.disabled = false;
+    saveBtn.innerHTML = originalText;
+  }).catch(function(err){
+    console.error(err);
+    if (prevSelected) prevSelected.el.classList.add('selected');
+    saveBtn.disabled = false;
+    saveBtn.innerHTML = originalText;
+    alert('Sorry — PDF generation failed. Please try again.');
+  });
+}
+
+// ============ FULLSCREEN PHOTO REEL ============
+var REEL = {
+  photos: [],
+  idx: 0,
+  timer: null,
+  playing: true,
+  addr: '',
+  INTERVAL: 4000  // ms between auto-advances
+};
+
+function openPhotoReel(key) {
+  var l = LISTING_BY_KEY[key];
+  if (!l) return;
+  var photos = allPhotos(l);
+  if (photos.length === 0) return;
+
+  REEL.photos = photos;
+  REEL.idx = 0;
+  REEL.playing = true;
+  REEL.addr = titleCaseAddr(l.addr || '');
+
+  // Build slides (each is a div with background-image; opacity transitions handle the crossfade)
+  var stage = document.getElementById('photoReelStage');
+  stage.innerHTML = '';
+  photos.forEach(function(src, i){
+    var slide = document.createElement('div');
+    slide.className = 'photo-reel-slide' + (i === 0 ? ' active' : '');
+    slide.style.backgroundImage = 'url(' + src + ')';
+    stage.appendChild(slide);
+  });
+
+  // Build dots
+  var dotsEl = document.getElementById('photoReelDots');
+  dotsEl.innerHTML = '';
+  photos.forEach(function(_, i){
+    var dot = document.createElement('button');
+    dot.className = 'photo-reel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Photo ' + (i+1));
+    dot.onclick = function(){ photoReelGoto(i); };
+    dotsEl.appendChild(dot);
+  });
+
+  // Show
+  document.getElementById('photoReel').classList.add('open');
+  document.body.classList.add('reel-open');
+  updateReelUI();
+  startReelTimer();
+}
+
+function closePhotoReel(ev) {
+  // If click came from inside the stage (image area), don't close
+  if (ev && ev.target && ev.target.closest && ev.target.closest('.photo-reel-stage')) return;
+  document.getElementById('photoReel').classList.remove('open');
+  document.body.classList.remove('reel-open');
+  stopReelTimer();
+}
+
+function photoReelStep(delta) {
+  REEL.idx = (REEL.idx + delta + REEL.photos.length) % REEL.photos.length;
+  applyReelSlide();
+  // User interaction restarts the timer if playing
+  if (REEL.playing) restartReelTimer();
+}
+
+function photoReelGoto(i) {
+  REEL.idx = i;
+  applyReelSlide();
+  if (REEL.playing) restartReelTimer();
+}
+
+function applyReelSlide() {
+  var slides = document.querySelectorAll('#photoReelStage .photo-reel-slide');
+  slides.forEach(function(s, i){
+    s.classList.toggle('active', i === REEL.idx);
+  });
+  updateReelUI();
+}
+
+function updateReelUI() {
+  var n = REEL.photos.length;
+  document.getElementById('photoReelCounter').textContent = (REEL.idx + 1) + ' / ' + n;
+  document.getElementById('photoReelCaption').textContent = REEL.addr;
+  var dots = document.querySelectorAll('#photoReelDots .photo-reel-dot');
+  dots.forEach(function(d, i){ d.classList.toggle('active', i === REEL.idx); });
+  var pp = document.getElementById('photoReelPlayPause');
+  pp.textContent = REEL.playing ? '⏸ Pause' : '▶ Play';
+}
+
+function startReelTimer() {
+  stopReelTimer();
+  if (!REEL.playing || REEL.photos.length < 2) return;
+  REEL.timer = setInterval(function(){
+    REEL.idx = (REEL.idx + 1) % REEL.photos.length;
+    applyReelSlide();
+  }, REEL.INTERVAL);
+}
+function stopReelTimer() {
+  if (REEL.timer) { clearInterval(REEL.timer); REEL.timer = null; }
+}
+function restartReelTimer() { startReelTimer(); }
+
+function photoReelTogglePlay() {
+  REEL.playing = !REEL.playing;
+  if (REEL.playing) startReelTimer(); else stopReelTimer();
+  updateReelUI();
+}
+
+// Keyboard: arrows navigate, Esc closes, space toggles play
+document.addEventListener('keydown', function(e){
+  // Floor plan lightbox
+  if (document.getElementById('fpLightbox').classList.contains('open')) {
+    if (e.key === 'Escape') { closeFloorPlan(); }
+    return;
+  }
+  if (!document.getElementById('photoReel').classList.contains('open')) return;
+  if (e.key === 'Escape') { closePhotoReel(); }
+  else if (e.key === 'ArrowLeft') { photoReelStep(-1); }
+  else if (e.key === 'ArrowRight') { photoReelStep(1); }
+  else if (e.key === ' ') { e.preventDefault(); photoReelTogglePlay(); }
+});
+
+function fmtPrice(n) {
+  if (!n && n !== 0) return '—';
+  if (n >= 1000000) return '$' + (n/1000000).toFixed(2) + 'M';
+  if (n >= 1000) return '$' + Math.round(n/1000) + 'K';
+  return '$' + n;
+}
+function fmtSqft(n) {
+  if (!n && n !== 0) return '—';
+  return n.toLocaleString();
+}
+function titleCaseAddr(addr) {
+  if (!addr) return '';
+  return addr.replace(/\s+--\s*$/, '').split(' ').map(function(w){
+    if (w.length === 0) return '';
+    // Keep abbreviations like N/S/E/W and DR/LN/CT all-caps if short
+    if (/^[NSEW]$/i.test(w)) return w.toUpperCase();
+    if (w.length <= 3 && /^[A-Z]+$/.test(w)) return w.toUpperCase();
+    return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+  }).join(' ');
+}
+
+function statusBadge(l) {
+  var status = l._status;
+  if (status === 'active') return '<span class="listing-status-badge active">● Active</span>';
+  if (status === 'pending') {
+    var s = '<span class="listing-status-badge pending">◐ Pending</span>';
+    if (l.acceptingBackups) {
+      s += '<span class="listing-status-badge backups">Accepting Backups</span>';
+    }
+    return s;
+  }
+  if (status === 'sold') return '<span class="listing-status-badge sold">✓ Sold</span>';
+  return '';
+}
+
+// Store listings by index so the details modal can look them up
+var LISTING_BY_KEY = {};
+
+function buildListingCard(l, idx) {
+  var key = (l.mls || '') + '_' + l._status + '_' + idx;
+  LISTING_BY_KEY[key] = l;
+  var addr = titleCaseAddr(l.addr || '');
+  var addrEsc = encodeURIComponent(addr + ' Sun City West AZ');
+  var price = fmtPrice(l.price);
+  var priceMeta = '';
+  if (l._status === 'sold' && l.soldRatio) {
+    var ratioPct = Math.round(l.soldRatio * 100);
+    priceMeta = 'Sold ' + ratioPct + '% of list';
+    if (l.closeDate) priceMeta += ' · Closed ' + l.closeDate;
+  } else if (l.psf) {
+    priceMeta = '$' + l.psf.toFixed(0) + '/sqft';
+    if (l.dom !== undefined && l.dom !== null) priceMeta += ' · ' + l.dom + ' days on market';
+  }
+  var model = l.model || '';
+  var marketing = l.marketing || '';
+  // Display: "Marketing Name · Model#" or just Model# if no marketing name
+  var modelDisplay = '';
+  if (marketing && model) modelDisplay = marketing + ' · ' + model;
+  else if (marketing) modelDisplay = marketing;
+  else if (model) modelDisplay = model;
+  else modelDisplay = 'Model not assigned';
+
+  var beds = l.beds || '—';
+  var baths = l.baths || '—';
+  var sqft = fmtSqft(l.sqft);
+  var yearBuilt = l.yr || '—';
+  var typeMap = { SF: 'Single Family', TH: 'Townhouse', PH: 'Patio Home', GT: 'Gemini/Twin', VA: 'Vacation Apt' };
+  var typeLabel = typeMap[l.type] || l.type || '';
+
+  // Photo: convert http -> https so it doesn't get blocked on the site
+  var photoUrl = primaryPhoto(l);
+  var photoHtml = '';
+  if (photoUrl) {
+    photoHtml =
+      '<div class="listing-photo-wrap">' +
+        '<img class="listing-photo" src="' + photoUrl + '" alt="' + addr + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\';">' +
+        '<div class="listing-photo-fallback" style="display:none">🏡</div>' +
+        '<div class="listing-marketing-overlay">' +
+          (marketing || addr) +
+          (model ? '<span class="model-line">Model ' + model + '</span>' : '') +
+        '</div>' +
+      '</div>';
+  } else {
+    photoHtml =
+      '<div class="listing-photo-wrap">' +
+        '<div class="listing-photo-fallback">🏡</div>' +
+        '<div class="listing-marketing-overlay">' +
+          (marketing || addr) +
+          (model ? '<span class="model-line">Model ' + model + '</span>' : '') +
+        '</div>' +
+      '</div>';
+  }
+
+  var favKey = l.mls || addr;
+  var isFav = STATE.favorites.indexOf(favKey) !== -1;
+
+  return '' +
+    '<div class="listing-card">' +
+      '<button class="fav-btn ' + (isFav ? 'active' : '') + '" onclick="toggleFavorite(event, \'' + favKey + '\')" aria-label="' + (isFav ? 'Remove from favorites' : 'Add to favorites') + '"></button>' +
+      '<div class="listing-status-stripe ' + l._status + '"></div>' +
+      photoHtml +
+      '<div class="listing-card-inner">' +
+        statusBadge(l) +
+        '<div class="listing-addr">' + addr + '</div>' +
+        '<div class="listing-price">' + price + '</div>' +
+        (priceMeta ? '<div class="listing-price-meta">' + priceMeta + '</div>' : '') +
+        '<div class="listing-specs">' +
+          '<div class="listing-spec"><div class="listing-spec-val">' + beds + '</div><div class="listing-spec-lbl">Beds</div></div>' +
+          '<div class="listing-spec"><div class="listing-spec-val">' + baths + '</div><div class="listing-spec-lbl">Baths</div></div>' +
+          '<div class="listing-spec"><div class="listing-spec-val">' + sqft + '</div><div class="listing-spec-lbl">Sq Ft</div></div>' +
+        '</div>' +
+        '<div class="listing-meta-row">' +
+          (typeLabel ? '<span class="pill">' + typeLabel + '</span>' : '') +
+          '<span class="pill">' + modelDisplay + '</span>' +
+          (yearBuilt !== '—' ? '<span class="pill">Built ' + yearBuilt + '</span>' : '') +
+          (l.mls ? '<span class="pill">MLS ' + l.mls + '</span>' : '') +
+        '</div>' +
+        '<div class="listing-actions">' +
+          '<button class="listing-btn primary" onclick="openDetails(\'' + key + '\')">📋 Details</button>' +
+          (function(){
+            var fp = floorPlanUrl(l);
+            if (fp) return '<button class="listing-btn outline" onclick="openFloorPlan(\'' + key + '\')">📐 Floor Plan</button>';
+            if (l.model) return '<a href="sun-city-west/scw-floor-plans.html?model=' + encodeURIComponent(l.model) + '" class="listing-btn outline">📐 Floor Plan</a>';
+            return '<a class="listing-btn outline" style="opacity:0.4;pointer-events:none">📐 No Plan</a>';
+          })() +
+          (photoUrl ? '<button class="listing-btn outline" onclick="openPhotoReel(\'' + key + '\')">📷 Photos</button>' : '<a class="listing-btn outline" style="opacity:0.4;pointer-events:none">📷 No Photo</a>') +
+          ((l.lat && l.lon) ? '<button class="listing-btn outline" onclick="mapMe(\'' + key + '\')">📍 Map Me</button>' : '<a class="listing-btn outline" style="opacity:0.4;pointer-events:none">📍 No Map</a>') +
+        '</div>' +
+      '</div>' +
+    '</div>';
+}
+
+// ============ DETAILS MODAL ============
+function openDetails(key) {
+  var l = LISTING_BY_KEY[key];
+  if (!l) return;
+  var addr = titleCaseAddr(l.addr || '');
+  var addrEsc = encodeURIComponent(addr + ' Sun City West AZ');
+  var photoUrl = primaryPhoto(l);
+  var price = fmtPrice(l.price);
+  var priceMeta = '';
+  if (l._status === 'sold' && l.soldRatio) {
+    priceMeta = 'Sold ' + Math.round(l.soldRatio * 100) + '% of original list';
+    if (l.origPrice && l.origPrice !== l.soldPrice) priceMeta += ' (orig. $' + (l.origPrice/1000).toFixed(0) + 'K)';
+    if (l.closeDate) priceMeta += ' · Closed ' + l.closeDate;
+  } else if (l.psf) {
+    priceMeta = '$' + l.psf.toFixed(0) + '/sqft';
+    if (l.dom !== undefined && l.dom !== null) priceMeta += ' · ' + l.dom + ' days on market';
+  }
+  var typeMap = { SF: 'Single Family', TH: 'Townhouse', PH: 'Patio Home', GT: 'Gemini/Twin', VA: 'Vacation Apt' };
+  var typeLabel = typeMap[l.type] || l.type || '';
+
+  var statusLabel = { active:'● Active', pending:'◐ Pending', sold:'✓ Sold' }[l._status] || '';
+  if (l._status === 'pending' && l.acceptingBackups) statusLabel += ' · Accepting Backups';
+
+  var pills = [];
+  if (typeLabel) pills.push(typeLabel);
+  if (l.model) pills.push('Model ' + l.model);
+  if (l.marketing) pills.push('"' + l.marketing + '"');
+  if (l.yr) pills.push('Built ' + l.yr);
+  if (l.mls) pills.push('MLS ' + l.mls);
+
+  // Build gallery slides — dedupe photo-2 which is just the cover thumbnail repeated
+  var galleryUrls = [];
+  if (l.gallery && l.gallery.length > 0) {
+    // photo-1 and photo-2 are typically duplicates from MLS export — keep only one
+    galleryUrls = [l.gallery[0]].concat(l.gallery.slice(2));
+  } else if (photoUrl) {
+    galleryUrls = [photoUrl];
+  }
+  var galleryHtml = '';
+  if (galleryUrls.length > 0) {
+    var slides = galleryUrls.map(function(u){
+      return '<div class="detail-gallery-slide"><img src="' + u + '" alt="' + addr + '" loading="lazy"></div>';
+    }).join('');
+    var dots = '';
+    if (galleryUrls.length > 1) {
+      dots = '<div class="detail-gallery-dots">' +
+        galleryUrls.map(function(_, i){
+          return '<button class="detail-gallery-dot' + (i === 0 ? ' active' : '') + '" onclick="galleryGoTo(' + i + ')" aria-label="Photo ' + (i+1) + '"></button>';
+        }).join('') +
+      '</div>';
+    }
+    var nav = galleryUrls.length > 1 ?
+      '<button class="detail-gallery-btn prev" onclick="galleryPrev()" aria-label="Previous photo">‹</button>' +
+      '<button class="detail-gallery-btn next" onclick="galleryNext()" aria-label="Next photo">›</button>' : '';
+    var counter = galleryUrls.length > 1 ?
+      '<div class="detail-gallery-counter"><span id="galleryCounterNow">1</span> / ' + galleryUrls.length + '</div>' : '';
+    galleryHtml = '<div class="detail-gallery" id="detailGallery">' +
+      '<div class="detail-gallery-track" id="detailGalleryTrack">' + slides + '</div>' +
+      nav + counter + dots +
+    '</div>';
+  }
+
+  var html = '' +
+    '<div class="detail-modal" role="dialog" aria-modal="true" onclick="event.stopPropagation()">' +
+      '<div class="detail-modal-header">' +
+        '<button class="detail-modal-close" onclick="closeDetails()" aria-label="Close">×</button>' +
+        '<span class="detail-modal-status ' + l._status + '">' + statusLabel + '</span>' +
+        '<div class="detail-modal-addr">' + addr + '</div>' +
+        (l.marketing ? '<div class="detail-modal-marketing">' + l.marketing + (l.model ? ' · Model ' + l.model : '') + '</div>' : '') +
+      '</div>' +
+      galleryHtml +
+      '<div class="detail-modal-body">' +
+        '<div class="detail-modal-price-row">' +
+          '<div class="detail-modal-price">' + price + '</div>' +
+          (priceMeta ? '<div class="detail-modal-price-meta">' + priceMeta + '</div>' : '') +
+        '</div>' +
+        '<div class="detail-modal-specs">' +
+          '<div class="detail-modal-spec"><div class="detail-modal-spec-val">' + (l.beds || '—') + '</div><div class="detail-modal-spec-lbl">Beds</div></div>' +
+          '<div class="detail-modal-spec"><div class="detail-modal-spec-val">' + (l.baths || '—') + '</div><div class="detail-modal-spec-lbl">Baths</div></div>' +
+          '<div class="detail-modal-spec"><div class="detail-modal-spec-val">' + fmtSqft(l.sqft) + '</div><div class="detail-modal-spec-lbl">Sq Ft</div></div>' +
+          '<div class="detail-modal-spec"><div class="detail-modal-spec-val">' + (l.yr || '—') + '</div><div class="detail-modal-spec-lbl">Year Built</div></div>' +
+        '</div>' +
+        '<div class="detail-modal-pills">' +
+          pills.map(function(p){ return '<span class="detail-modal-pill">' + p + '</span>'; }).join('') +
+        '</div>' +
+        (l.remarks ? '<div class="detail-modal-remarks-title">Property Description</div><div class="detail-modal-remarks">' + escapeHtml(l.remarks) + '</div>' : '') +
+        '<div class="detail-modal-actions">' +
+          '<a href="' + FLEXMLS_PUBLIC_REPORT + '" target="_blank" rel="noopener" class="listing-btn primary">📑 Full MLS Report</a>' +
+          (function(){
+            var fp = floorPlanUrl(l);
+            if (fp) return '<button class="listing-btn outline" onclick="openFloorPlan(\'' + key + '\')">📐 See Floor Plan</button>';
+            if (l.model) return '<a href="sun-city-west/scw-floor-plans.html?model=' + encodeURIComponent(l.model) + '" class="listing-btn outline">📐 See Floor Plan</a>';
+            return '';
+          })() +
+          '<button class="listing-btn outline" onclick="generateFlyer(\'' + key + '\')">📄 Print Flyer</button>' +
+          '<a href="https://www.zillow.com/homes/' + addrEsc + '_rb/" target="_blank" rel="noopener" class="listing-btn outline">🏠 On Zillow</a>' +
+          '<a href="tel:+16232036271" class="listing-btn">📞 Call Lona</a>' +
+          '<a href="mailto:azlonaking@gmail.com?subject=' + encodeURIComponent('Question about ' + addr) + '" class="listing-btn">✉️ Email</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  var backdrop = document.getElementById('detailModalBackdrop');
+  backdrop.innerHTML = html;
+  backdrop.classList.add('active');
+  document.body.classList.add('modal-open');
+}
+function closeDetails() {
+  var backdrop = document.getElementById('detailModalBackdrop');
+  backdrop.classList.remove('active');
+  backdrop.innerHTML = '';
+  document.body.classList.remove('modal-open');
+  GALLERY_STATE.idx = 0;
+  GALLERY_STATE.count = 0;
+}
+
+// Photo gallery navigation inside the details modal
+var GALLERY_STATE = { idx: 0, count: 0 };
+function galleryGoTo(i) {
+  var track = document.getElementById('detailGalleryTrack');
+  if (!track) return;
+  var slides = track.children;
+  GALLERY_STATE.count = slides.length;
+  GALLERY_STATE.idx = Math.max(0, Math.min(i, slides.length - 1));
+  track.style.transform = 'translateX(-' + (GALLERY_STATE.idx * 100) + '%)';
+  var ctr = document.getElementById('galleryCounterNow');
+  if (ctr) ctr.textContent = (GALLERY_STATE.idx + 1);
+  document.querySelectorAll('.detail-gallery-dot').forEach(function(d, j){
+    d.classList.toggle('active', j === GALLERY_STATE.idx);
+  });
+}
+function galleryNext() {
+  var track = document.getElementById('detailGalleryTrack');
+  if (!track) return;
+  var count = track.children.length;
+  galleryGoTo((GALLERY_STATE.idx + 1) % count);
+}
+function galleryPrev() {
+  var track = document.getElementById('detailGalleryTrack');
+  if (!track) return;
+  var count = track.children.length;
+  galleryGoTo((GALLERY_STATE.idx - 1 + count) % count);
+}
+function escapeHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') closeDetails();
+  // Arrow keys navigate gallery when modal is open
+  if (document.body.classList.contains('modal-open') && document.getElementById('detailGalleryTrack')) {
+    if (e.key === 'ArrowRight') galleryNext();
+    else if (e.key === 'ArrowLeft') galleryPrev();
+  }
+});
+
+function renderListings() {
+  var status = STATE.status;
+  var sortKey = document.getElementById('sortBy').value;
+  var list = getListingsForStatus(status);
+  var preFilterCount = list.length;
+  list = applyFilters(list);
+  list = sortListings(list, sortKey);
+
+  var grid = document.getElementById('listingsGrid');
+  var titleEl = document.getElementById('sectionTitle');
+  var subEl = document.getElementById('sectionSub');
+  var noteEl = document.getElementById('noResultsNote');
+
+  var labels = {
+    active: { title: 'Active Listings', sub: 'Currently on the MLS, represented by Lona King &amp; Billy Heinzman.' },
+    pending: { title: 'Pending Listings', sub: 'Under contract — including Under Contract Accepting Backups (UCB). Still ask about these.' },
+    sold: { title: 'Recently Sold', sub: 'Closings represented by our team — see how we priced and how we performed.' },
+    all: { title: 'All Our Listings', sub: 'Every active, pending, and sold property we represent — grouped by status, then sorted.' }
+  };
+  titleEl.innerHTML = labels[status].title + ' <span class="count-badge">' + list.length + '</span>';
+  subEl.innerHTML = labels[status].sub;
+
+  // Filter feedback note
+  var hasFilters = STATE.filters.beds || STATE.filters.price || STATE.filters.year;
+  if (hasFilters && list.length < preFilterCount) {
+    noteEl.classList.add('show');
+    noteEl.innerHTML = '🔍 Showing <strong>' + list.length + '</strong> of <strong>' + preFilterCount + '</strong> ' + status + ' listings (filters applied). <button onclick="clearFilters()" style="background:none;border:none;color:var(--orange-deep);font-weight:700;cursor:pointer;text-decoration:underline;">Clear filters</button>';
+  } else {
+    noteEl.classList.remove('show');
+  }
+
+  LISTING_BY_KEY = {};
+  if (list.length === 0) {
+    var emptyMsgs = {
+      active: { title: 'No matching listings', body: 'Try adjusting filters above, or call Lona at (623) 203-6271 to be the first to know when a new property hits the market.' },
+      pending: { title: 'Nothing pending matches', body: 'No pending listings match your filters. Clear filters to see all pending properties, including those accepting backups.' },
+      sold: { title: 'No matching closings', body: 'No sold properties match the current filter criteria. Adjust filters above or contact our team for a custom search of our full closing history.' },
+      all: { title: 'No listings match', body: 'Try clearing filters above to see all our listings.' }
+    };
+    var msg = emptyMsgs[status];
+    grid.innerHTML = '<div class="empty-state" style="grid-column: 1 / -1;">' +
+      '<div class="empty-state-icon">🏡</div>' +
+      '<div class="empty-state-title">' + msg.title + '</div>' +
+      '<div class="empty-state-body">' + msg.body + '</div>' +
+    '</div>';
+    renderMap([]); // clear map too
+    updateCompareBar();
+    return;
+  }
+
+  grid.innerHTML = list.map(function(l, i){ return buildListingCard(l, i); }).join('');
+  renderMap(list);
+  updateCompareBar();
+}
+
+function setStatus(status) {
+  STATE.status = status;
+  document.querySelectorAll('.status-tab').forEach(function(t){
+    t.classList.toggle('active', t.getAttribute('data-status') === status);
+  });
+  renderListings();
+}
+
+function updateCounts() {
+  document.getElementById('countActive').textContent = '(' + getListingsForStatus('active').length + ')';
+  document.getElementById('countPending').textContent = '(' + getListingsForStatus('pending').length + ')';
+  document.getElementById('countSold').textContent = '(' + getListingsForStatus('sold').length + ')';
+  document.getElementById('countAll').textContent = '(' + getListingsForStatus('all').length + ')';
+}
+
+// ============================================
+// STATS BANNER — Track Record
+// ============================================
+function renderStatsBanner() {
+  var active = getOurActive();
+  var pending = getOurPending();
+  var sold = getOurSold();
+
+  // Active stats
+  var activeCount = active.length + pending.length;
+  var activeVolume = 0;
+  active.forEach(function(l){ activeVolume += (l.price || 0); });
+  pending.forEach(function(l){ activeVolume += (l.price || 0); });
+
+  // Sold stats
+  var soldCount = sold.length;
+  var soldVolume = 0;
+  var totalRatio = 0;
+  var totalDom = 0;
+  var domCount = 0;
+  var ratioCount = 0;
+  sold.forEach(function(l){
+    soldVolume += (l.soldPrice || 0);
+    if (l.soldRatio) { totalRatio += l.soldRatio; ratioCount++; }
+    if (l.dom !== undefined && l.dom !== null) { totalDom += l.dom; domCount++; }
+  });
+  var avgRatio = ratioCount ? Math.round((totalRatio/ratioCount) * 1000) / 10 : null; // 0.962 -> 96.2
+  var avgDom = domCount ? Math.round(totalDom / domCount) : null;
+  var totalVolume = soldVolume + activeVolume;
+
+  function fmtVol(n) {
+    if (n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
+    if (n >= 1000) return '$' + Math.round(n/1000) + 'K';
+    return '$' + n;
+  }
+
+  var html = '';
+  html += '<div class="stat-card"><div class="stat-card-val">' + soldCount + '</div><div class="stat-card-lbl">Sold</div><div class="stat-card-sub">Recent closings</div></div>';
+  html += '<div class="stat-card"><div class="stat-card-val">' + (avgRatio !== null ? avgRatio.toFixed(1) + '%' : '—') + '</div><div class="stat-card-lbl">Avg of List</div><div class="stat-card-sub">Sold-to-original ratio</div></div>';
+  html += '<div class="stat-card"><div class="stat-card-val">' + (avgDom !== null ? avgDom : '—') + '</div><div class="stat-card-lbl">Avg Days</div><div class="stat-card-sub">On market to close</div></div>';
+  html += '<div class="stat-card"><div class="stat-card-val">' + fmtVol(totalVolume) + '</div><div class="stat-card-lbl">Total Volume</div><div class="stat-card-sub">Active + Sold</div></div>';
+  html += '<div class="stat-card"><div class="stat-card-val">' + activeCount + '</div><div class="stat-card-lbl">Live Now</div><div class="stat-card-sub">Active &amp; pending</div></div>';
+
+  document.getElementById('statsGrid').innerHTML = html;
+}
+
+// ============================================
+// FILTERS
+// ============================================
+function setFilter(filterName, value) {
+  STATE.filters[filterName] = value;
+  // Update chip UI
+  document.querySelectorAll('.filter-chip[data-filter="' + filterName + '"]').forEach(function(chip){
+    chip.classList.toggle('active', chip.getAttribute('data-value') === value);
+  });
+  renderListings();
+}
+function clearFilters() {
+  STATE.filters = { beds: '', price: '', year: '' };
+  document.querySelectorAll('.filter-chip').forEach(function(chip){
+    chip.classList.toggle('active', chip.getAttribute('data-value') === '');
+  });
+  renderListings();
+}
+
+// Map "Map Me" button: switches to map view and zooms/pans to a specific listing
+function mapMe(key) {
+  var l = LISTING_BY_KEY[key];
+  if (!l || !l.lat || !l.lon) return;
+  // Switch to map view if not already
+  if (STATE.view !== 'map') {
+    setView('map');
+  }
+  // After Leaflet is ready, pan + zoom + open popup
+  setTimeout(function(){
+    if (!LEAFLET_MAP) return;
+    LEAFLET_MAP.setView([l.lat, l.lon], 16, { animate: true });
+    // Find the marker for this key and open its popup
+    var marker = MARKER_BY_KEY[key];
+    if (marker) {
+      setTimeout(function(){ marker.openPopup(); }, 350);
+    }
+    // Scroll the map into view
+    var mapEl = document.getElementById('mapView');
+    if (mapEl && mapEl.scrollIntoView) mapEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 200);
+}
+
+// ============================================
+// VIEW TOGGLE (Grid vs Map)
+// ============================================
+function setView(view) {
+  STATE.view = view;
+  var grid = document.getElementById('listingsGrid');
+  var map = document.getElementById('mapView');
+  document.getElementById('viewToggleGrid').classList.toggle('active', view === 'grid');
+  document.getElementById('viewToggleMap').classList.toggle('active', view === 'map');
+  if (view === 'map') {
+    grid.classList.add('hidden');
+    map.classList.add('active');
+    setTimeout(initOrUpdateMap, 60); // let layout settle so Leaflet sizes correctly
+  } else {
+    grid.classList.remove('hidden');
+    map.classList.remove('active');
+  }
+}
+
+// ============================================
+// MAP (Leaflet)
+// ============================================
+var LEAFLET_MAP = null;
+var MAP_MARKERS = [];
+var MARKER_BY_KEY = {};
+function initOrUpdateMap() {
+  if (typeof L === 'undefined') {
+    document.getElementById('leafletMap').innerHTML = '<div style="padding:60px;text-align:center;color:var(--muted)">Map library could not be loaded. Please check your connection and refresh.</div>';
+    return;
+  }
+  if (!LEAFLET_MAP) {
+    LEAFLET_MAP = L.map('leafletMap', { scrollWheelZoom: true, zoomControl: true });
+    // Sun City West center
+    LEAFLET_MAP.setView([33.679, -112.375], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(LEAFLET_MAP);
+  }
+  renderMap(currentDisplayedList());
+}
+function currentDisplayedList() {
+  var list = getListingsForStatus(STATE.status);
+  list = applyFilters(list);
+  return sortListings(list, document.getElementById('sortBy').value);
+}
+function renderMap(list) {
+  if (!LEAFLET_MAP) return;
+  // Clear previous markers
+  MAP_MARKERS.forEach(function(m){ LEAFLET_MAP.removeLayer(m); });
+  MAP_MARKERS = [];
+  MARKER_BY_KEY = {};
+  if (!list || list.length === 0) return;
+
+  var bounds = [];
+  list.forEach(function(l, idx){
+    if (!l.lat || !l.lon) return;
+    var key = (l.mls || '') + '_' + l._status + '_' + idx;
+    LISTING_BY_KEY[key] = l;
+    var price = fmtPrice(l.price || l.soldPrice);
+    var icon = L.divIcon({
+      className: 'map-marker-icon ' + l._status,
+      html: price.replace('$', '').replace('K', 'K').replace('M', 'M'),
+      iconSize: [36, 36],
+      iconAnchor: [18, 18]
+    });
+    var marker = L.marker([l.lat, l.lon], { icon: icon }).addTo(LEAFLET_MAP);
+    var addr = titleCaseAddr(l.addr);
+    var photoUrl = primaryPhoto(l);
+    var photoTag = photoUrl ? '<div style="margin-bottom:6px"><img src="' + photoUrl + '" style="width:200px;height:110px;object-fit:cover;border-radius:4px" alt="' + addr + '"></div>' : '';
+    var popup = photoTag +
+      '<div class="popup-addr">' + addr + '</div>' +
+      '<div class="popup-price">' + price + '</div>' +
+      '<div class="popup-meta">' + (l.beds || '?') + ' bd · ' + (l.baths || '?') + ' ba · ' + fmtSqft(l.sqft) + ' sqft</div>' +
+      '<button class="popup-btn" onclick="openDetails(\'' + key + '\')">View Details →</button>';
+    marker.bindPopup(popup);
+    MAP_MARKERS.push(marker);
+    MARKER_BY_KEY[key] = marker;
+    bounds.push([l.lat, l.lon]);
+  });
+  if (bounds.length > 0) {
+    LEAFLET_MAP.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+  }
+  setTimeout(function(){ LEAFLET_MAP.invalidateSize(); }, 100);
+}
+
+// ============================================
+// FAVORITES + COMPARE
+// ============================================
+function toggleFavorite(e, key) {
+  e.stopPropagation();
+  var idx = STATE.favorites.indexOf(key);
+  if (idx === -1) {
+    if (STATE.favorites.length >= 4) {
+      alert('You can compare up to 4 listings at once. Remove a favorite first.');
+      return;
+    }
+    STATE.favorites.push(key);
+  } else {
+    STATE.favorites.splice(idx, 1);
+  }
+  saveFavorites();
+  e.currentTarget.classList.toggle('active');
+  updateCompareBar();
+}
+function clearFavorites() {
+  STATE.favorites = [];
+  saveFavorites();
+  document.querySelectorAll('.fav-btn.active').forEach(function(b){ b.classList.remove('active'); });
+  updateCompareBar();
+}
+function updateCompareBar() {
+  var bar = document.getElementById('compareBar');
+  var count = STATE.favorites.length;
+  document.getElementById('compareCount').textContent = count;
+  bar.classList.toggle('active', count >= 1);
+}
+function findListingByFavKey(key) {
+  var all = [].concat(
+    getOurActive().map(function(l){ return Object.assign({}, l, {_status:'active'}); }),
+    getOurPending().map(function(l){ return Object.assign({}, l, {_status:'pending'}); }),
+    getOurSold().map(function(l){ return Object.assign({}, l, {_status:'sold', price: l.soldPrice || l.price}); })
+  );
+  for (var i = 0; i < all.length; i++) {
+    var k = all[i].mls || all[i].addr;
+    if (k === key) return all[i];
+  }
+  return null;
+}
+function openCompare() {
+  var listings = STATE.favorites.map(findListingByFavKey).filter(Boolean);
+  if (listings.length === 0) return;
+  var backdrop = document.getElementById('detailModalBackdrop');
+
+  // Find best per row (lowest price, lowest $/sqft, lowest DOM, largest sqft)
+  var prices = listings.map(function(l){ return l.price || l.soldPrice || 0; });
+  var psfs = listings.map(function(l){ return l.psf || 0; });
+  var sqfts = listings.map(function(l){ return l.sqft || 0; });
+  var doms = listings.map(function(l){ return l.dom === undefined ? 99999 : l.dom; });
+  var minPrice = Math.min.apply(null, prices.filter(function(p){return p>0;}));
+  var minPsf = Math.min.apply(null, psfs.filter(function(p){return p>0;}));
+  var maxSqft = Math.max.apply(null, sqfts);
+  var minDom = Math.min.apply(null, doms);
+
+  var rows = [
+    { label: 'Photo', render: function(l){
+      var p = l.photo ? l.photo.replace(/^http:\/\//, 'https://') : '';
+      return '<div class="cmp-photo">' + (p ? '<img src="' + p + '" alt="">' : '🏡') + '</div>';
+    }, best: function(){ return false; }},
+    { label: 'Address', render: function(l){ return '<div class="cmp-addr">' + titleCaseAddr(l.addr) + '</div>'; }, best: function(){ return false; }},
+    { label: 'Status', render: function(l){
+      var s = { active:'● Active', pending:'◐ Pending', sold:'✓ Sold' }[l._status] || '';
+      return '<strong>' + s + '</strong>';
+    }, best: function(){ return false; }},
+    { label: 'Price', render: function(l){ return '<div class="cmp-price">' + fmtPrice(l.price || l.soldPrice) + '</div>'; },
+      best: function(l){ return (l.price || l.soldPrice) === minPrice; }},
+    { label: 'Marketing', render: function(l){ return (l.marketing || '—') + (l.model ? '<br><small style="color:var(--muted)">Model ' + l.model + '</small>' : ''); }, best: function(){ return false; }},
+    { label: 'Beds / Baths', render: function(l){ return (l.beds || '—') + ' / ' + (l.baths || '—'); }, best: function(){ return false; }},
+    { label: 'Sq Ft', render: function(l){ return fmtSqft(l.sqft); },
+      best: function(l){ return l.sqft === maxSqft && maxSqft > 0; }},
+    { label: '$/Sq Ft', render: function(l){ return l.psf ? '$' + l.psf.toFixed(0) : '—'; },
+      best: function(l){ return l.psf === minPsf && minPsf > 0; }},
+    { label: 'Year Built', render: function(l){ return l.yr || '—'; }, best: function(){ return false; }},
+    { label: 'Days on Market', render: function(l){ return l.dom !== undefined && l.dom !== null ? l.dom + ' days' : '—'; },
+      best: function(l){ return l.dom === minDom && l._status !== 'sold'; }},
+    { label: 'Type', render: function(l){
+      var typeMap = { SF: 'Single Family', TH: 'Townhouse', PH: 'Patio Home', GT: 'Gemini/Twin', VA: 'Vacation Apt' };
+      return typeMap[l.type] || l.type || '—';
+    }, best: function(){ return false; }},
+    { label: 'MLS#', render: function(l){ return l.mls || '—'; }, best: function(){ return false; }},
+  ];
+
+  var html = '<div class="compare-modal" onclick="event.stopPropagation()">' +
+    '<div class="compare-modal-header">' +
+      '<div class="compare-modal-title">Side-by-Side Comparison</div>' +
+      '<button class="detail-modal-close" onclick="closeDetails()" aria-label="Close">×</button>' +
+    '</div>' +
+    '<div class="compare-table-wrap">' +
+      '<table class="compare-table"><tbody>';
+  rows.forEach(function(row){
+    html += '<tr><th>' + row.label + '</th>';
+    listings.forEach(function(l){
+      var isBest = row.best(l);
+      html += '<td' + (isBest ? ' class="cmp-best"' : '') + '>' + row.render(l) + (isBest ? ' ★' : '') + '</td>';
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table></div></div>';
+
+  backdrop.innerHTML = html;
+  backdrop.classList.add('active');
+  document.body.classList.add('modal-open');
+}
+
+// ============================================
+// FLYER PDF
+// ============================================
+function generateFlyer(key) {
+  var l = LISTING_BY_KEY[key];
+  if (!l) return;
+  var addr = titleCaseAddr(l.addr);
+  var price = fmtPrice(l.price || l.soldPrice);
+  var photoUrl = primaryPhoto(l);
+  var statusLabel = { active:'ACTIVE', pending:'PENDING', sold:'SOLD' }[l._status] || '';
+  var typeMap = { SF: 'Single Family', TH: 'Townhouse', PH: 'Patio Home', GT: 'Gemini/Twin', VA: 'Vacation Apt' };
+  var typeLabel = typeMap[l.type] || l.type || '';
+
+  var w = window.open('', '_blank');
+  if (!w) { alert('Pop-up blocker prevented the flyer from opening. Allow pop-ups for this site.'); return; }
+  var doc = w.document;
+  doc.open();
+  doc.write('<!DOCTYPE html><html><head><title>Flyer — ' + addr + '</title>' +
+    '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">' +
+    '<style>' +
+    '* { box-sizing: border-box; margin: 0; padding: 0; }' +
+    'body { font-family: "Inter", sans-serif; color: #2a2a2a; background: #f5f1ea; padding: 28px; }' +
+    '.flyer { max-width: 800px; margin: 0 auto; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }' +
+    '.flyer-hero { background: #2d3d2e; color: #fff; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; }' +
+    '.flyer-status { background: #c8622a; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; }' +
+    '.flyer-brand { font-family: "Merriweather", serif; font-size: 18px; }' +
+    '.flyer-photo { width: 100%; height: 360px; background: #ede8df; object-fit: cover; display: block; }' +
+    '.flyer-body { padding: 28px; }' +
+    '.flyer-addr { font-family: "Merriweather", serif; font-size: 28px; color: #2d3d2e; margin-bottom: 6px; }' +
+    '.flyer-marketing { color: #c8622a; font-weight: 700; font-size: 16px; margin-bottom: 18px; letter-spacing: 0.04em; }' +
+    '.flyer-price { font-family: "Merriweather", serif; font-size: 42px; color: #a14d1f; margin-bottom: 8px; }' +
+    '.flyer-pricemeta { color: #7a6e60; margin-bottom: 22px; font-size: 14px; }' +
+    '.flyer-specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 22px; padding: 16px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }' +
+    '.flyer-spec { text-align: center; }' +
+    '.flyer-spec-val { font-family: "Merriweather", serif; font-size: 22px; color: #2d3d2e; }' +
+    '.flyer-spec-lbl { font-size: 11px; color: #7a6e60; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }' +
+    '.flyer-remarks { line-height: 1.7; font-size: 13.5px; color: #444; margin-bottom: 22px; }' +
+    '.flyer-footer { background: #2d3d2e; color: #fff; padding: 18px 28px; text-align: center; font-size: 13px; line-height: 1.6; }' +
+    '.flyer-footer strong { color: #e8a040; }' +
+    '.print-btn { position: fixed; top: 14px; right: 14px; background: #c8622a; color: #fff; border: none; padding: 10px 22px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 14px; }' +
+    '@media print { body { background: #fff; padding: 0; } .flyer { box-shadow: none; max-width: 100%; } .print-btn { display: none; } }' +
+    '</style></head><body>' +
+    '<button class="print-btn" onclick="window.print()">📄 Print / Save as PDF</button>' +
+    '<div class="flyer">' +
+      '<div class="flyer-hero">' +
+        '<div class="flyer-brand">Lona King &amp; Billy Heinzman · HomeSmart</div>' +
+        '<div class="flyer-status">' + statusLabel + '</div>' +
+      '</div>' +
+      (photoUrl ? '<img class="flyer-photo" src="' + photoUrl + '" alt="' + addr + '">' : '<div class="flyer-photo"></div>') +
+      '<div class="flyer-body">' +
+        '<div class="flyer-addr">' + addr + '</div>' +
+        '<div class="flyer-marketing">' + (l.marketing || typeLabel) + (l.model ? ' · Model ' + l.model : '') + '</div>' +
+        '<div class="flyer-price">' + price + '</div>' +
+        '<div class="flyer-pricemeta">' + (l.psf ? '$' + l.psf.toFixed(0) + '/sqft' : '') + (l.dom !== undefined && l.dom !== null ? ' · ' + l.dom + ' days on market' : '') + '</div>' +
+        '<div class="flyer-specs">' +
+          '<div class="flyer-spec"><div class="flyer-spec-val">' + (l.beds || '—') + '</div><div class="flyer-spec-lbl">Beds</div></div>' +
+          '<div class="flyer-spec"><div class="flyer-spec-val">' + (l.baths || '—') + '</div><div class="flyer-spec-lbl">Baths</div></div>' +
+          '<div class="flyer-spec"><div class="flyer-spec-val">' + fmtSqft(l.sqft) + '</div><div class="flyer-spec-lbl">Sq Ft</div></div>' +
+          '<div class="flyer-spec"><div class="flyer-spec-val">' + (l.yr || '—') + '</div><div class="flyer-spec-lbl">Year Built</div></div>' +
+        '</div>' +
+        (l.remarks ? '<div class="flyer-remarks">' + escapeHtml(l.remarks) + '</div>' : '') +
+      '</div>' +
+      '<div class="flyer-footer">' +
+        '<strong>Lona King</strong> (623) 203-6271 &nbsp;·&nbsp; <strong>Billy Heinzman</strong> (480) 297-3830<br>' +
+        'azlonaking@gmail.com &nbsp;·&nbsp; HomeSmart, 13551 W. Camino Del Sol, Sun City West, AZ 85375<br>' +
+        '<span style="opacity:0.6">' + (l.mls ? 'MLS ' + l.mls + ' · ' : '') + 'Information deemed reliable but not guaranteed.</span>' +
+      '</div>' +
+    '</div>' +
+    '</body></html>');
+  doc.close();
+}
+
+// ============================================
+// EMAIL ALERTS SIGNUP
+// ============================================
+function submitAlerts(e) {
+  e.preventDefault();
+  var email = document.getElementById('alertsEmail').value.trim();
+  if (!email) return;
+  // Open mailto so Lona gets the request directly. No backend needed.
+  var subject = encodeURIComponent('New Listing Alerts Signup');
+  var body = encodeURIComponent('Please add me to your Sun City West new-listing alerts list.\n\nMy email: ' + email + '\n\nWhat I\'m looking for: \n');
+  var mailto = 'mailto:azlonaking@gmail.com?subject=' + subject + '&body=' + body;
+  window.location.href = mailto;
+  document.getElementById('alertsForm').style.display = 'none';
+  document.getElementById('alertsSuccess').classList.add('show');
+}
+
+// ============================================
+// WIRE FILTER CHIPS
+// ============================================
+function wireFilterChips() {
+  document.querySelectorAll('.filter-chip[data-filter]').forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var f = chip.getAttribute('data-filter');
+      var v = chip.getAttribute('data-value');
+      setFilter(f, v);
+    });
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', function(){
+  // Wire MLS report link
+  var mlsLink = document.getElementById('flexmlsBannerLink');
+  if (mlsLink) mlsLink.href = FLEXMLS_PUBLIC_REPORT;
+  renderStatsBanner();
+  wireFilterChips();
+  updateCounts();
+  renderListings();
+  updateCompareBar();
+});
+</script>
+</body>
+</html>

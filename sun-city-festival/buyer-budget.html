@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Budget Calculator — Sun City Festival, Buckeye AZ | Hometown AZ</title>
+<meta name="description" content="Reverse calculator: tell us your monthly budget and cash, and we'll show you the max home price your budget supports in Sun City Festival — including CFD tax, HOA, and all Festival-specific fees.">
+<link rel="canonical" href="https://hometownaz.com/sun-city-festival/buyer-budget.html">
+<meta property="og:title" content="Buyer Budget Calculator — Sun City Festival, Buckeye AZ">
+<meta property="og:description" content="Reverse calculator: tell us your monthly budget and cash, and we">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/sun-city-festival/buyer-budget.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #2d3d2e;
+  --green-deep: #1f2c1f;
+  --orange: #c8622a;
+  --orange-deep: #a14d1f;
+  --gold: #d4a52c;
+  --cream: #f5f1ea;
+  --cream-warm: #faf5ec;
+  --sand: #ede8df;
+  --border: #ddd6c8;
+  --border-soft: #e8e0d0;
+  --text: #2a2a2a;
+  --muted: #7a6e60;
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
+
+/* ===== SCW CANONICAL HERO ===== */
+.scw-hero { background: var(--green); color: #fff; padding: 24px 48px 40px; position: relative; }
+.scw-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 14px; font-weight: 500; margin-bottom: 28px;
+  transition: color 0.15s;
+}
+.scw-back:hover { color: #fff; }
+.scw-hero-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px;
+  align-items: center; max-width: 1400px; margin: 0 auto;
+}
+.scw-tagline {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--orange);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin: 0 0 20px; padding: 7px 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,165,0,0.25);
+  border-radius: 100px;
+}
+.scw-tagline-icon { width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; }
+.scw-headline {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 4rem; font-weight: 700; line-height: 1.05;
+  letter-spacing: -0.01em; margin: 0 0 18px;
+}
+.scw-headline .accent { color: var(--orange); }
+.scw-subhead {
+  font-size: 17px; line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  margin: 0; max-width: 620px;
+}
+.scw-nav-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  align-self: start;
+}
+.scw-nav-btn { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #fff; color: var(--green); border: 1px solid rgba(255,255,255,0.25); border-radius: 28px; font-family: inherit; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.15s; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; justify-content: center; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); }
+.scw-nav-btn.scw-nav-btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn.scw-nav-btn-orange:hover { background: var(--orange-deep); color: #fff; }
+.scw-nav-btn.scw-nav-btn-wide { grid-column: span 2; justify-content: center; }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+.scw-nav-btn-current {
+  background: rgba(255,255,255,0.92) !important;
+  color: var(--orange) !important;
+  border-color: var(--orange) !important;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange);
+  cursor: default;
+}
+.scw-nav-btn-current.scw-nav-btn-orange { background: var(--orange-deep) !important; color: #fff !important; border-color: var(--orange-deep) !important; }
+.scw-nav-btn-current:hover { transform: none !important; }
+
+/* ===== CALCULATOR SECTION ===== */
+.bb-section {
+  background: var(--cream);
+  padding: 40px 32px 60px;
+}
+.bb-inner { max-width: 1100px; margin: 0 auto; }
+.bb-intro { margin-bottom: 24px; max-width: 800px; }
+.bb-eyebrow {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 8px;
+}
+.bb-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.8rem; color: var(--green);
+  font-weight: 700; line-height: 1.2; margin-bottom: 10px;
+}
+.bb-lede {
+  font-size: 15px; color: var(--text); line-height: 1.6;
+}
+
+.bb-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  align-items: start;
+}
+.bb-inputs {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.bb-input-section {
+  padding-bottom: 18px; margin-bottom: 18px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.bb-input-section:last-child {
+  border-bottom: none; margin-bottom: 0; padding-bottom: 0;
+}
+.bb-input-section-title {
+  font-size: 13px; font-weight: 700;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+.bb-field { margin-bottom: 14px; }
+.bb-field:last-child { margin-bottom: 0; }
+.bb-field-label {
+  display: flex; justify-content: space-between;
+  font-size: 12px; margin-bottom: 6px;
+  color: var(--text); font-weight: 500;
+}
+.bb-field-hint {
+  color: var(--muted);
+  font-size: 11px; font-style: italic;
+}
+.bb-input-prefix-wrap, .bb-input-suffix-wrap {
+  position: relative;
+}
+.bb-input-prefix-wrap::before {
+  content: attr(data-prefix);
+  position: absolute; left: 12px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted); font-weight: 600;
+  font-size: 14px; pointer-events: none;
+}
+.bb-input-prefix-wrap .bb-input { padding-left: 28px; }
+.bb-input-suffix-wrap::after {
+  content: attr(data-suffix);
+  position: absolute; right: 12px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted); font-weight: 600;
+  font-size: 13px; pointer-events: none;
+}
+.bb-input-suffix-wrap .bb-input { padding-right: 50px; }
+.bb-input {
+  width: 100%; padding: 9px 12px;
+  border: 1px solid var(--border); border-radius: 6px;
+  font-family: inherit; font-size: 14px;
+  color: var(--text); background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+}
+.bb-input:focus {
+  outline: none; border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(200,98,42,0.12);
+}
+.bb-field-slider-row {
+  display: flex; align-items: center; gap: 14px;
+}
+.bb-field-slider-row input[type="range"] {
+  flex: 1; height: 6px;
+  background: var(--sand);
+  border-radius: 3px;
+  outline: none; cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+}
+.bb-field-slider-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 20px; height: 20px;
+  border-radius: 50%; background: var(--orange);
+  cursor: pointer; border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.bb-field-slider-row input[type="range"]::-moz-range-thumb {
+  width: 20px; height: 20px;
+  border-radius: 50%; background: var(--orange);
+  cursor: pointer; border: 2px solid #fff;
+}
+.bb-slider-val {
+  min-width: 80px; text-align: right;
+  font-weight: 700; color: var(--green); font-size: 13px;
+}
+
+/* RESULTS PANEL */
+.bb-results {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-deep) 100%);
+  color: #fff; border-radius: var(--radius-lg);
+  padding: 28px; position: sticky; top: 20px;
+}
+.bb-results-eyebrow {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.bb-results-title {
+  font-size: 13px; color: rgba(255,255,255,0.7);
+  margin-bottom: 18px;
+}
+.bb-headline {
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 20px; margin-bottom: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.bb-headline-lbl {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7); margin-bottom: 6px;
+}
+.bb-headline-val {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.5rem; font-weight: 800;
+  color: var(--gold); line-height: 1;
+}
+.bb-headline-sub {
+  font-size: 12px; color: rgba(255,255,255,0.7);
+  margin-top: 6px;
+}
+.bb-breakdown-section { margin-bottom: 18px; }
+.bb-breakdown-title {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 10px;
+}
+.bb-breakdown-row {
+  display: flex; justify-content: space-between;
+  padding: 7px 0;
+  font-size: 13px;
+}
+.bb-breakdown-row .lbl { color: rgba(255,255,255,0.85); }
+.bb-breakdown-row .val {
+  font-weight: 700; color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.bb-disclaimer {
+  margin-top: 24px; padding: 16px 20px;
+  background: #fff; border: 1px dashed var(--border);
+  border-radius: 10px;
+  font-size: 13px; color: var(--text); line-height: 1.6;
+}
+.bb-disclaimer strong { color: var(--green); }
+
+/* FOOTER CTA */
+.scw-footer-cta {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
+  color: #fff; padding: 36px 32px; text-align: center;
+}
+.scw-footer-cta-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.4rem; font-weight: 700; margin-bottom: 10px;
+}
+.scw-footer-cta-sub {
+  font-size: 15px; opacity: 0.94; line-height: 1.55;
+  margin-bottom: 22px; max-width: 600px; margin-left: auto; margin-right: auto;
+}
+.scw-footer-cta-sub strong { color: #fff; }
+.scw-footer-cta-row {
+  display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+}
+.scw-cta-btn {
+  background: #fff; color: var(--orange-deep);
+  padding: 13px 26px; border-radius: 999px;
+  text-decoration: none; font-weight: 700; font-size: 14px;
+  transition: transform .15s, box-shadow .15s;
+  display: inline-block;
+}
+.scw-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.dual-call-wrap { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 900px) {
+  .scw-hero { padding: 20px 20px 28px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-headline { font-size: 2.4rem; }
+  .bb-section { padding: 28px 16px 40px; }
+  .bb-grid { grid-template-columns: 1fr; }
+  .bb-results { position: static; }
+  .bb-headline-val { font-size: 2rem; }
+}
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City Festival",
+        "item": "https://hometownaz.com/sun-city-festival/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Buyer Budget Calculator — Sun City Festival, Buckeye AZ",
+        "item": "https://hometownaz.com/sun-city-festival/buyer-budget.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Buyer Budget Calculator — Sun City Festival, Buckeye AZ",
+    "description": "Reverse calculator: tell us your monthly budget and cash, and we",
+    "url": "https://hometownaz.com/sun-city-festival/buyer-budget.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City Festival, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City Festival</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">📊</span>
+        LONA KING &amp; BILLY HEINZMAN · FESTIVAL EXPERTS
+      </div>
+      <h1 class="scw-headline">Buyer <span class="accent">Budget</span></h1>
+      </div>
+    <div class="scw-nav-grid">
+      <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+      <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+      <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+      <a href="buyer-budget.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+      <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+      <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+      <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+    </div>
+  </div>
+</section>
+
+<section class="bb-section">
+  <div class="bb-inner">
+    <div class="bb-intro">
+      <div class="bb-eyebrow">📊 Reverse Calculator · Festival-Specific</div>
+      <h2 class="bb-title">What home price can my budget afford in Sun City Festival?</h2>
+      <p class="bb-lede">Festival has a unique cost structure compared to other Del Webb communities — including a <strong>CFD tax</strong> (Community Facilities District infrastructure assessment unique to Festival Ranch) and a lower base HOA. This calculator builds it all in.</p>
+    </div>
+
+    <div class="bb-grid">
+      <div class="bb-inputs">
+
+        <div class="bb-input-section">
+          <div class="bb-input-section-title">📋 Your Budget</div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Comfortable monthly housing budget</span><span class="bb-field-hint">All-in</span></div>
+            <div class="bb-input-prefix-wrap" data-prefix="$">
+              <input type="number" id="budgetMonthly" class="bb-input" value="2500" min="500" max="20000" step="100" oninput="bbCompute()">
+            </div>
+          </div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Cash available for down payment</span><span class="bb-field-hint">Doesn&apos;t include closing</span></div>
+            <div class="bb-input-prefix-wrap" data-prefix="$">
+              <input type="number" id="cashAvailable" class="bb-input" value="100000" min="0" max="2000000" step="5000" oninput="bbCompute()">
+            </div>
+          </div>
+        </div>
+
+        <div class="bb-input-section">
+          <div class="bb-input-section-title">💵 Loan Assumptions</div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Interest rate</span><span class="bb-field-hint">30-yr fixed, today&apos;s rates</span></div>
+            <div class="bb-input-suffix-wrap" data-suffix="%">
+              <input type="number" id="rate" class="bb-input" value="6.5" min="1" max="15" step="0.125" oninput="bbCompute()">
+            </div>
+          </div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Loan term</span></div>
+            <select id="term" class="bb-input" onchange="bbCompute()" style="cursor:pointer;">
+              <option value="30">30 years</option>
+              <option value="20">20 years</option>
+              <option value="15">15 years</option>
+              <option value="0">Cash purchase (no loan)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bb-input-section">
+          <div class="bb-input-section-title">🏘️ Sun City Festival Costs</div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Master HOA</span><span class="bb-field-hint">$145/mo is current Festival rate</span></div>
+            <div class="bb-input-suffix-wrap" data-suffix="/mo">
+              <input type="number" id="hoa" class="bb-input" value="145" min="0" max="500" step="5" oninput="bbCompute()">
+            </div>
+          </div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>CFD tax (amortized)</span><span class="bb-field-hint">$3,500–$4,000 lot fee over 20 years</span></div>
+            <div class="bb-input-suffix-wrap" data-suffix="/yr">
+              <input type="number" id="cfd" class="bb-input" value="195" min="0" max="1000" step="5" oninput="bbCompute()">
+            </div>
+          </div>
+        </div>
+
+        <div class="bb-input-section">
+          <div class="bb-input-section-title">⚙️ Other Monthly Costs</div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Property tax rate</span><span class="bb-field-hint">Maricopa County avg ~0.6%</span></div>
+            <div class="bb-input-suffix-wrap" data-suffix="%">
+              <input type="number" id="taxRate" class="bb-input" value="0.6" min="0" max="3" step="0.05" oninput="bbCompute()">
+            </div>
+          </div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Home insurance</span></div>
+            <div class="bb-input-suffix-wrap" data-suffix="/yr">
+              <input type="number" id="insurance" class="bb-input" value="1100" min="0" max="5000" step="50" oninput="bbCompute()">
+            </div>
+          </div>
+          <div class="bb-field">
+            <div class="bb-field-label"><span>Utilities + internet</span></div>
+            <div class="bb-input-suffix-wrap" data-suffix="/mo">
+              <input type="number" id="otherMonthly" class="bb-input" value="300" min="0" max="2000" step="25" oninput="bbCompute()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bb-results">
+        <div class="bb-results-eyebrow">📊 Your Maximum Affordable Price</div>
+        <div class="bb-results-title">Sun City Festival, Buckeye AZ</div>
+
+        <div class="bb-headline">
+          <div class="bb-headline-lbl">Max Home Price</div>
+          <div class="bb-headline-val" id="rMaxPrice">$425,000</div>
+          <div class="bb-headline-sub" id="rPriceNote">Based on your budget &amp; cash</div>
+        </div>
+
+        <div class="bb-breakdown-section">
+          <div class="bb-breakdown-title">How Your Cash Splits</div>
+          <div class="bb-breakdown-row"><span class="lbl">Available cash</span><span class="val" id="rCashIn">$100,000</span></div>
+          <div class="bb-breakdown-row"><span class="lbl">− Closing costs (est.)</span><span class="val">$2,500</span></div>
+          <div class="bb-breakdown-row"><span class="lbl">− Capital/Transfer fees</span><span class="val">$1,300</span></div>
+          <div class="bb-breakdown-row" style="border-top: 1px solid rgba(255,255,255,0.15); margin-top: 4px; padding-top: 8px; font-weight: 700;"><span class="lbl">Cash for down payment</span><span class="val" id="rDownAvail">$96,200</span></div>
+        </div>
+
+        <div class="bb-breakdown-section">
+          <div class="bb-breakdown-title">Where Your Monthly Goes</div>
+          <div class="bb-breakdown-row"><span class="lbl">Mortgage P&amp;I (max)</span><span class="val" id="rMaxPI">$2,148</span></div>
+          <div class="bb-breakdown-row"><span class="lbl">Property tax</span><span class="val" id="rMaxTax">$213</span></div>
+          <div class="bb-breakdown-row"><span class="lbl">Home insurance</span><span class="val" id="rMaxIns">$92</span></div>
+          <div class="bb-breakdown-row"><span class="lbl">Master HOA</span><span class="val" id="rMaxHoa">$145</span></div>
+          <div class="bb-breakdown-row"><span class="lbl">CFD tax (monthly equiv.)</span><span class="val" id="rMaxCfd">$16</span></div>
+          <div class="bb-breakdown-row"><span class="lbl">Utilities + internet</span><span class="val" id="rMaxOther">$300</span></div>
+          <div class="bb-breakdown-row" style="border-top: 1px solid rgba(255,255,255,0.15); margin-top: 4px; padding-top: 8px; font-weight: 700;"><span class="lbl">Total monthly</span><span class="val" id="rMaxTotal">$2,914</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bb-disclaimer">
+      <strong>Heads up:</strong> This is a starting estimate based on Sun City Festival averages. Your actual mortgage qualification depends on income, debts, credit, and lender underwriting — not just monthly cash flow. The CFD tax is amortized through your property tax bill over ~20 years; on resale, the remaining balance can be paid off or assumed by the buyer (negotiable). <strong>Use this to ballpark, then call us — we&apos;ll walk you through every Festival-specific cost and connect you with lenders familiar with the community.</strong>
+    </div>
+  </div>
+</section>
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about Sun City Festival?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute phone call. <strong>478 career sales · 5.0★ on Zillow.</strong>
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  function $(id) { return document.getElementById(id); }
+  function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+
+  window.bbCompute = function() {
+    var budget = parseFloat($('budgetMonthly').value) || 0;
+    var cash = parseFloat($('cashAvailable').value) || 0;
+    var rate = parseFloat($('rate').value) || 0;
+    var term = parseInt($('term').value) || 0;
+    var hoa = parseFloat($('hoa').value) || 0;
+    var cfdAnnual = parseFloat($('cfd').value) || 0;
+    var taxRate = parseFloat($('taxRate').value) || 0;
+    var insurance = parseFloat($('insurance').value) || 0;
+    var otherMonthly = parseFloat($('otherMonthly').value) || 0;
+
+    // Festival-specific upfront fees (avg estimate)
+    var capitalFees = 1300;  // capital working fund + transfer fee (Del Webb typical)
+    var closing = 2500;
+    var downAvail = Math.max(0, cash - capitalFees - closing);
+
+    var monthlyCfd = cfdAnnual / 12;
+    var monthlyIns = insurance / 12;
+    var fixedMonthly = hoa + monthlyCfd + monthlyIns + otherMonthly;
+    var mortgageBudget = budget - fixedMonthly;
+
+    var maxPrice = 0;
+    if (term === 0) {
+      if (taxRate > 0) {
+        var maxByTax = mortgageBudget * 1200 / taxRate;
+        maxPrice = Math.min(maxByTax, downAvail);
+      } else {
+        maxPrice = downAvail;
+      }
+    } else {
+      var r = (rate / 100) / 12;
+      var n = term * 12;
+      function monthlyAt(price) {
+        var down = Math.min(downAvail, price);
+        var loan = price - down;
+        var pi = 0;
+        if (loan > 0 && r > 0) {
+          pi = loan * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        } else if (loan > 0 && r === 0) {
+          pi = loan / n;
+        }
+        var tax = price * (taxRate / 100) / 12;
+        return pi + tax;
+      }
+      var lo = 0, hi = 5000000;
+      for (var i = 0; i < 50; i++) {
+        var mid = (lo + hi) / 2;
+        if (monthlyAt(mid) > mortgageBudget) hi = mid;
+        else lo = mid;
+      }
+      maxPrice = Math.floor(lo / 1000) * 1000;
+    }
+
+    if (maxPrice < 0) maxPrice = 0;
+    var down = Math.min(downAvail, maxPrice);
+    var loan = maxPrice - down;
+    var pi = 0;
+    if (term > 0 && loan > 0 && rate > 0) {
+      var r2 = (rate / 100) / 12;
+      var n2 = term * 12;
+      pi = loan * (r2 * Math.pow(1 + r2, n2)) / (Math.pow(1 + r2, n2) - 1);
+    } else if (term > 0 && loan > 0 && rate === 0) {
+      pi = loan / (term * 12);
+    }
+    var monthlyTax = maxPrice * (taxRate / 100) / 12;
+    var totalMo = pi + monthlyTax + monthlyIns + hoa + monthlyCfd + otherMonthly;
+
+    $('rMaxPrice').textContent = fmt(maxPrice);
+    if (maxPrice <= 0) $('rPriceNote').textContent = 'Increase your budget or down payment';
+    else if (term === 0) $('rPriceNote').textContent = 'Cash purchase — limited by cash on hand';
+    else $('rPriceNote').textContent = 'Based on your monthly budget & cash';
+
+    $('rCashIn').textContent = fmt(cash);
+    $('rDownAvail').textContent = fmt(downAvail);
+    $('rMaxPI').textContent = fmt(pi);
+    $('rMaxTax').textContent = fmt(monthlyTax);
+    $('rMaxIns').textContent = fmt(monthlyIns);
+    $('rMaxHoa').textContent = fmt(hoa);
+    $('rMaxCfd').textContent = fmt(monthlyCfd);
+    $('rMaxOther').textContent = fmt(otherMonthly);
+    $('rMaxTotal').textContent = fmt(totalMo);
+  };
+
+  bbCompute();
+})();
+</script>
+
+</body>
+</html>

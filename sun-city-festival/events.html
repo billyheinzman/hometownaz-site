@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun City Festival Events Calendar — Concerts, Clubs &amp; Activities | Hometown AZ</title>
+<meta name="description" content="Sun City Festival events calendar — concerts, club meetings, golf tournaments, dances, and community activities. Plus the official HOA calendar and where to find current schedules.">
+<meta property="og:title" content="Sun City Festival Events Calendar">
+<meta property="og:description" content="The events, concerts, club meetings, and activities that make Sun City Festival's lifestyle.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hometownaz.com/sun-city-festival/events.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #2d3d2e; --green-deep: #1f2c1f;
+  --orange: #c8622a; --orange-deep: #a14d1f;
+  --gold: #d4a52c; --sage: #4a7c59;
+  --cream: #f5f1ea; --cream-warm: #faf5ec; --sand: #ede8df;
+  --border: #ddd6c8; --border-soft: #e8e0d0;
+  --text: #2a2a2a; --muted: #7a6e60;
+  --radius: 8px; --radius-lg: 12px;
+}
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
+
+.scw-hero { background: var(--green); color: #fff; padding: 24px 48px 40px; position: relative; }
+.scw-back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 28px; transition: color 0.15s; }
+.scw-back:hover { color: #fff; }
+.scw-hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: center; max-width: 1400px; margin: 0 auto; }
+.scw-tagline { display: inline-flex; align-items: center; gap: 10px; color: var(--orange); font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 20px; padding: 7px 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,165,0,0.25); border-radius: 100px; }
+.scw-headline { font-family: 'Merriweather', Georgia, serif; font-size: 4rem; font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 18px; }
+.scw-headline .accent { color: var(--orange); }
+.scw-subhead { font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.92); margin: 0; max-width: 620px; }
+.scw-nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-self: start; }
+.scw-nav-btn { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #fff; color: var(--green); border: 1px solid rgba(255,255,255,0.25); border-radius: 28px; font-family: inherit; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.15s; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; justify-content: center; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); }
+.scw-nav-btn.scw-nav-btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn.scw-nav-btn-orange:hover { background: var(--orange-deep); color: #fff; }
+.scw-nav-btn.scw-nav-btn-wide { grid-column: span 2; justify-content: center; }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+.scw-nav-btn-current { background: rgba(255,255,255,0.92) !important; color: var(--orange) !important; border-color: var(--orange) !important; box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange); cursor: default; }
+.scw-nav-btn-current.scw-nav-btn-orange { background: var(--orange-deep) !important; color: #fff !important; border-color: var(--orange-deep) !important; }
+.scw-nav-btn-current:hover { transform: none !important; }
+
+.ev-section { padding: 40px 32px 60px; background: var(--cream); }
+.ev-inner { max-width: 1100px; margin: 0 auto; }
+.ev-intro { margin-bottom: 32px; max-width: 800px; }
+.ev-eyebrow { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
+.ev-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.9rem; color: var(--green); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+.ev-lede { font-size: 16px; color: var(--text); line-height: 1.65; }
+.ev-lede strong { color: var(--green); }
+
+.ev-hero-card { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 4px 14px rgba(200,98,42,0.2); }
+.ev-hero-card-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.ev-hero-card-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+.ev-hero-card-sub { font-size: 15px; line-height: 1.6; opacity: 0.95; margin-bottom: 18px; }
+.ev-hero-card-cta { display: inline-block; background: #fff; color: var(--orange-deep); padding: 11px 22px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; transition: transform .15s, box-shadow .15s; }
+.ev-hero-card-cta:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.2); }
+
+.ev-types-title { font-family: 'Merriweather', Georgia, serif; color: var(--green); font-size: 1.5rem; font-weight: 700; padding-bottom: 12px; border-bottom: 2px solid var(--green); margin: 36px 0 18px; }
+.ev-types-intro { font-size: 14.5px; color: var(--text); margin-bottom: 22px; max-width: 760px; line-height: 1.65; }
+.ev-types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.ev-type-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 22px; transition: border-color .15s, transform .15s; }
+.ev-type-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+.ev-type-icon { font-size: 1.9rem; margin-bottom: 10px; }
+.ev-type-name { font-family: 'Merriweather', Georgia, serif; color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+.ev-type-desc { font-size: 13.5px; color: var(--text); line-height: 1.55; }
+.ev-type-desc strong { color: var(--green); }
+
+.ev-sources { margin-top: 40px; }
+.ev-sources-title { font-family: 'Merriweather', Georgia, serif; color: var(--green); font-size: 1.4rem; font-weight: 700; padding-bottom: 12px; border-bottom: 2px solid var(--green); margin-bottom: 18px; }
+.ev-sources-list { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 0; overflow: hidden; }
+.ev-source-row { display: flex; align-items: center; gap: 14px; padding: 16px 22px; border-bottom: 1px solid var(--border-soft); }
+.ev-source-row:last-child { border-bottom: none; }
+.ev-source-icon { font-size: 1.5rem; flex-shrink: 0; }
+.ev-source-content { flex: 1; }
+.ev-source-name { font-weight: 700; color: var(--green); margin-bottom: 2px; }
+.ev-source-name a { color: var(--orange); text-decoration: none; }
+.ev-source-name a:hover { text-decoration: underline; }
+.ev-source-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+.ev-cta-section { background: linear-gradient(135deg, var(--green) 0%, var(--green-deep) 100%); color: #fff; border-radius: var(--radius-lg); padding: 32px; margin-top: 36px; text-align: center; }
+.ev-cta-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+.ev-cta-sub { font-size: 15px; opacity: 0.95; line-height: 1.6; margin-bottom: 20px; max-width: 580px; margin-left: auto; margin-right: auto; }
+.ev-cta-sub strong { color: var(--gold); }
+.ev-cta-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.ev-cta-btn { background: var(--orange); color: #fff; padding: 12px 24px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; transition: all .15s; }
+.ev-cta-btn:hover { background: var(--orange-deep); transform: translateY(-1px); }
+
+.scw-footer-cta { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%); color: #fff; padding: 36px 32px; text-align: center; }
+.scw-footer-cta-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; }
+.scw-footer-cta-sub { font-size: 15px; opacity: 0.94; line-height: 1.55; margin-bottom: 22px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.scw-footer-cta-sub strong { color: #fff; }
+.scw-footer-cta-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.scw-cta-btn { background: #fff; color: var(--orange-deep); padding: 13px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; transition: transform .15s, box-shadow .15s; display: inline-block; }
+.scw-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.dual-call-wrap { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 900px) {
+  .scw-hero { padding: 20px 20px 28px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-headline { font-size: 2.4rem; }
+  .ev-section { padding: 28px 16px 40px; }
+  .ev-hero-card { padding: 22px 20px; }
+  .ev-types-grid { grid-template-columns: 1fr; }
+  .ev-source-row { padding: 14px 16px; }
+}
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City Festival",
+        "item": "https://hometownaz.com/sun-city-festival/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Sun City Festival Events Calendar — Concerts, Clubs & Activities",
+        "item": "https://hometownaz.com/sun-city-festival/events.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sun City Festival Events Calendar — Concerts, Clubs & Activities",
+    "description": "Sun City Festival events calendar — concerts, club meetings, golf tournaments, dances, and community activities. Plus the official HOA calendar and where to find current schedules.",
+    "url": "https://hometownaz.com/sun-city-festival/events.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City Festival, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City Festival</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline"><span>📅</span>LONA KING &amp; BILLY HEINZMAN · FESTIVAL EXPERTS</div>
+      <h1 class="scw-headline">Events <span class="accent">Calendar</span></h1>
+      </div>
+    <div class="scw-nav-grid">
+      <a href="events.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+      <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+      <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let's Golf!</a>
+      <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+      <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+      <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+      <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+    </div>
+  </div>
+</section>
+
+<section class="ev-section">
+  <div class="ev-inner">
+
+    <div class="ev-intro">
+      <div class="ev-eyebrow">📅 What's happening</div>
+      <h2 class="ev-title">A community calendar with something almost every day</h2>
+      <p class="ev-lede">Between the <strong>Sage Recreation Center</strong>, the <strong>Saguaro Recreation Center</strong>, the <strong>Copper Canyon golf clubhouse</strong>, and dozens of chartered clubs, Sun City Festival residents have access to a packed activity schedule covered by the master HOA. The full current calendar lives on the official HOA site — and we've curated the categories below so you know what kinds of things to expect.</p>
+    </div>
+
+    <!-- HERO CARD - OFFICIAL CALENDAR -->
+    <div class="ev-hero-card">
+      <div class="ev-hero-card-eyebrow">⭐ Official source · Always current</div>
+      <div class="ev-hero-card-title">Sun City Festival Community Association Calendar</div>
+      <div class="ev-hero-card-sub">The HOA maintains the master calendar of events at <strong>oursuncityfestival.net</strong> — including dated events, club meetings, fitness classes, and tournaments. This is the single source of truth for what's happening this week and this month.</div>
+      <a href="https://www.oursuncityfestival.net/" target="_blank" rel="noopener" class="ev-hero-card-cta">📅 Open HOA Events Calendar →</a>
+    </div>
+
+    <!-- WHAT KINDS OF EVENTS -->
+    <h3 class="ev-types-title">What kinds of events happen here?</h3>
+    <p class="ev-types-intro">Festival's event mix runs from quiet morning yoga to community-wide concerts in the Sage ballroom. Here are the categories you'll see on any given month's calendar:</p>
+
+    <div class="ev-types-grid">
+      <div class="ev-type-card">
+        <div class="ev-type-icon">🎵</div>
+        <div class="ev-type-name">Concerts &amp; Performances</div>
+        <div class="ev-type-desc">Live music, tribute acts, and community concerts in the <strong>Sage Center ballroom</strong>. Holiday concerts, summer pool-deck music, and seasonal special events.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">💃</div>
+        <div class="ev-type-name">Dances &amp; Social Events</div>
+        <div class="ev-type-desc">Ballroom dances, line dancing nights, themed parties, and casual mixers. Held in the ballroom or by individual chartered clubs.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">⛳</div>
+        <div class="ev-type-name">Golf Tournaments</div>
+        <div class="ev-type-desc">Regular member tournaments at <strong>Copper Canyon Golf Club</strong> — scrambles, leagues, charity events. Plus public-play tournament events open to all golfers.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">💪</div>
+        <div class="ev-type-name">Fitness Classes</div>
+        <div class="ev-type-desc">Daily group fitness — yoga, water aerobics, strength training, low-impact cardio, Pilates. Most classes are included; a few specialty instructors have a nominal per-class fee.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">👥</div>
+        <div class="ev-type-name">Chartered Club Meetings</div>
+        <div class="ev-type-desc">Festival has dozens of resident-run chartered clubs — quilting, woodworking, billiards, photography, book clubs, investment, RV travel, and more. Each has its own meeting schedule.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">🎨</div>
+        <div class="ev-type-name">Craft Workshops &amp; Classes</div>
+        <div class="ev-type-desc">Held mainly at the <strong>Saguaro Center</strong> — ceramics studio sessions, painting classes, jewelry-making, scrapbooking. Materials fees may apply for consumables.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">🎓</div>
+        <div class="ev-type-name">Lectures &amp; Speakers</div>
+        <div class="ev-type-desc">Travel talks, financial planning seminars, health &amp; wellness lectures, history presentations — typically free for residents.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">🍳</div>
+        <div class="ev-type-name">Restaurant Events</div>
+        <div class="ev-type-desc">Special menus, happy hours, and themed nights at <strong>Indigo Grille at the Falls</strong> (the Copper Canyon clubhouse restaurant). Open to the general public.</div>
+      </div>
+
+      <div class="ev-type-card">
+        <div class="ev-type-icon">🎄</div>
+        <div class="ev-type-name">Seasonal &amp; Holiday Events</div>
+        <div class="ev-type-desc">Halloween parties, Veterans Day ceremonies, Thanksgiving dinners, December holiday celebrations, New Year's Eve dances, July 4th cookouts.</div>
+      </div>
+    </div>
+
+    <!-- OFFICIAL SOURCES -->
+    <div class="ev-sources">
+      <h3 class="ev-sources-title">Where to find current event info</h3>
+      <div class="ev-sources-list">
+        <div class="ev-source-row">
+          <div class="ev-source-icon">📅</div>
+          <div class="ev-source-content">
+            <div class="ev-source-name"><a href="https://www.oursuncityfestival.net/" target="_blank" rel="noopener">Sun City Festival HOA Official Site</a></div>
+            <div class="ev-source-desc">The master calendar maintained by the HOA — community events, dance schedules, fitness classes, and club meetings. Login required for some pages.</div>
+          </div>
+        </div>
+        <div class="ev-source-row">
+          <div class="ev-source-icon">⛳</div>
+          <div class="ev-source-content">
+            <div class="ev-source-name"><a href="https://www.coppercanyongolfclub.com/" target="_blank" rel="noopener">Copper Canyon Golf Club</a></div>
+            <div class="ev-source-desc">Tournament schedule, league sign-ups, men's and women's club events. Also has the current Indigo Grille restaurant hours and special events.</div>
+          </div>
+        </div>
+        <div class="ev-source-row">
+          <div class="ev-source-icon">📞</div>
+          <div class="ev-source-content">
+            <div class="ev-source-name">Sage Recreation Center · 928-252-2114</div>
+            <div class="ev-source-desc">Call the Sage lifestyle desk for the current event calendar, class schedule, or to register for a specific event. Walk-in copies of the monthly calendar are also available at the front desk.</div>
+          </div>
+        </div>
+        <div class="ev-source-row">
+          <div class="ev-source-icon">📞</div>
+          <div class="ev-source-content">
+            <div class="ev-source-name">Saguaro Recreation Center · 928-252-1464</div>
+            <div class="ev-source-desc">For craft workshop schedules, smaller group activities, and Saguaro-specific events.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ev-cta-section">
+      <div class="ev-cta-title">Want to time your community tour with a real event?</div>
+      <div class="ev-cta-sub">We've coordinated dozens of buyer tours around concerts, club open houses, and tournaments so prospective residents can see Sun City Festival's social life firsthand. <strong>Tell us your visit window</strong> and we'll match it to what's happening that week.</div>
+      <div class="ev-cta-row">
+        <a href="tel:+16232036271" class="ev-cta-btn">📞 Lona — (623) 203-6271</a>
+        <a href="tel:+14802973830" class="ev-cta-btn">📞 Billy — (480) 297-3830</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Curious which events match what you're into?</div>
+  <div class="scw-footer-cta-sub">
+    We help buyers pick the right home location based on which clubs and events they want to be near. Walking distance to the ballroom dances? Close to the golf clubhouse? Near the dog park? Let's match the home to your lifestyle.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

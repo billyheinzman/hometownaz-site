@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🏊 Rec Centers at PebbleCreek — All 6 Amenity Facilities | Hometown AZ</title>
+<meta name="description" content="Tour all 6 PebbleCreek amenity facilities: Tuscany Sports & Aquatics, Fitness Studios, Tuscany Clubhouse, Oasis Pool, Creative Arts Center, Eagle's Nest Clubhouse.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/rec-centers.html">
+<meta property="og:title" content="🏊 Rec Centers at PebbleCreek — All 6 Amenity Facilities">
+<meta property="og:description" content="Tour all 6 PebbleCreek amenity facilities: Tuscany Sports & Aquatics, Fitness Studios, Tuscany Clubhouse, Oasis Pool, Creative Arts Center, Eagle">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/rec-centers.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "🏊 Rec Centers at PebbleCreek — All 6 Amenity Facilities",
+        "item": "https://hometownaz.com/pebblecreek/rec-centers.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "🏊 Rec Centers at PebbleCreek — All 6 Amenity Facilities",
+    "description": "Tour all 6 PebbleCreek amenity facilities: Tuscany Sports & Aquatics, Fitness Studios, Tuscany Clubhouse, Oasis Pool, Creative Arts Center, Eagle",
+    "url": "https://hometownaz.com/pebblecreek/rec-centers.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">🏊</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline"><span class='accent'>Rec Centers</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange scw-nav-btn-current"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">🏊 Multi-Million Dollar Amenity Complex</div>
+      <h2 class="pc-h2">Recreation Centers at PebbleCreek</h2>
+    </div>
+    <p class="pc-lede">PebbleCreek's amenities aren't a single clubhouse — they're spread across <strong>six major facilities</strong> covering 100+ activities. Two clubhouses, three pool complexes, three fitness studios, a creative arts center, and an event theater. Here's what each facility houses and where to find it inside the gates.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">FACILITY #1</div>
+    <h2 class="pc-h2">Tuscany Sports &amp; Aquatics Complex</h2>
+    <p class="pc-lede">The flagship facility, centrally located. This is where most residents spend the bulk of their amenity time — fitness, pools, racquet sports, all in one connected complex.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏊</div>
+        <h3 class="pc-grid-card-title">Indoor Lap Pool</h3>
+        <p class="pc-grid-card-body">Heated indoor pool with lap lanes. Year-round swimming — especially valuable in winter when outdoor pools aren't as comfortable.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏖️</div>
+        <h3 class="pc-grid-card-title">Outdoor Resort-Style Pool</h3>
+        <p class="pc-grid-card-body">Beach-entry access, in-pool seating, plus a <strong>resistance walking channel</strong>. Covered shaded areas for the Arizona afternoon sun.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏊‍♂️</div>
+        <h3 class="pc-grid-card-title">Outdoor Lap Pool &amp; Whirlpool</h3>
+        <p class="pc-grid-card-body">Lap pool for fitness swimming plus a whirlpool spa for relaxation/recovery.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">👶</div>
+        <h3 class="pc-grid-card-title">Grandkids Pool</h3>
+        <p class="pc-grid-card-body">Designed specifically for small children. Visiting grandkids stay nearby while you're poolside.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💆</div>
+        <h3 class="pc-grid-card-title">Massage Rooms</h3>
+        <p class="pc-grid-card-body">On-site therapeutic massage treatments — you don't need to leave the community for a massage appointment.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏓</div>
+        <h3 class="pc-grid-card-title">Pickleball Complex</h3>
+        <p class="pc-grid-card-body"><strong>36 courts</strong> — one of the largest pickleball complexes in Arizona. Recent 16-court expansion completed in 2022.</p>
+        <div class="pc-grid-card-meta">Largest in AZ for 55+</div>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎾</div>
+        <h3 class="pc-grid-card-title">Tennis Courts</h3>
+        <p class="pc-grid-card-body"><strong>7 tennis courts</strong> available for residents at Tuscany. (Eagle's Nest has 6 additional lighted courts.)</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎯</div>
+        <h3 class="pc-grid-card-title">Bocce Courts</h3>
+        <p class="pc-grid-card-body"><strong>12 bocce courts</strong>. The Bocce Ball Association runs 3 sessions a year (September through mid-May), all skill levels welcome.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💪</div>
+        <h3 class="pc-grid-card-title">State-of-the-Art Fitness Center</h3>
+        <p class="pc-grid-card-body">Separate cardio and weight rooms. Cardio equipment with internet/cable connectivity, full free weights, LifeFitness machines.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">☕</div>
+        <h3 class="pc-grid-card-title">Cool Down Café</h3>
+        <p class="pc-grid-card-body">Inside the fitness center. Smoothies, energy drinks, fresh fruit, power bars — for after a workout or round of golf.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">FACILITY #2</div>
+    <h2 class="pc-h2">Tuscany Fitness Studios</h2>
+    <p class="pc-lede">Three dedicated studios for instructor-led classes, separate from the main fitness center floor.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🧘</div>
+        <h3 class="pc-grid-card-title">Studio #1 — The Main Room</h3>
+        <p class="pc-grid-card-body">2,500 sq ft. Instructor-led group classes up to 50 students. Includes <strong>WellBeats</strong> virtual fitness on demand (kickboxing, vibe, definitions, stomp, etc.).</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💃</div>
+        <h3 class="pc-grid-card-title">Studio #2 — Group &amp; Dance</h3>
+        <p class="pc-grid-card-body">1,500 sq ft. Group exercise (up to 30 students). Doubles as dance studio for the Dance Fusion performance group and ShowTime theater group rehearsals.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚴</div>
+        <h3 class="pc-grid-card-title">Studio #3 — Spin &amp; Yoga</h3>
+        <p class="pc-grid-card-body">900 sq ft. 12 spin bikes, 60" TV/DVD system. Also used for stretching and yoga.</p>
+      </div>
+    </div>
+
+    <p>The studios are scheduled with a published group fitness calendar — kettlebell, yoga, strength, aqua, classic aerobics, spin, zumba, line dancing, and others. The schedule rotates seasonally and the community publishes it monthly. <strong>Most classes are no extra fee</strong> — included with your HOA dues.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">FACILITY #3</div>
+    <h2 class="pc-h2">Tuscany Clubhouse</h2>
+    <p class="pc-lede">The community's social and event hub. Rustic-elegant design, hosts special events, performances, and the daily social activity calendar.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎭</div>
+        <h3 class="pc-grid-card-title">Renaissance Theater</h3>
+        <p class="pc-grid-card-body"><strong>332 seats.</strong> Plays, musicals, seminars, comedy, variety shows, lectures. Home to the Community Players, PebbleCreek Singers, and ShowTime Productions.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💃</div>
+        <h3 class="pc-grid-card-title">Ballroom / Auditorium</h3>
+        <p class="pc-grid-card-body">Large ballroom with stage for dinner-dance events, dance club socials, expo-style club showcases, and formal/casual private events.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎱</div>
+        <h3 class="pc-grid-card-title">Billiards Room</h3>
+        <p class="pc-grid-card-body">Refined and elegant setting for a friendly game of pool. Open to all residents.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">📚</div>
+        <h3 class="pc-grid-card-title">Library</h3>
+        <p class="pc-grid-card-body">Grand fireplace at center, comfy chairs, surrounding bookcases — a warm, quiet space to read or work.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚪</div>
+        <h3 class="pc-grid-card-title">Multi-Purpose Activity Rooms</h3>
+        <p class="pc-grid-card-body">Smaller, more intimate rooms for club meetings, classes, board games, and special-interest groups.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">☕</div>
+        <h3 class="pc-grid-card-title">Portofino Coffee Bar &amp; Lounge</h3>
+        <p class="pc-grid-card-body">In the Tuscany Clubhouse. Regular and specialty coffee, lattes, freshly baked warm pastries. The morning gathering spot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">FACILITY #4</div>
+    <h2 class="pc-h2">Oasis Pool Complex</h2>
+    <p class="pc-lede">A second resort-style pool complex on the <strong>southwest side</strong> of the community. Quieter than Tuscany, more park-like with stately palms and lush landscaping.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏊</div>
+        <h3 class="pc-grid-card-title">Resort-Style Pool</h3>
+        <p class="pc-grid-card-body">Sparkling resort-style pool with in-pool seating and shaded chaise lounge areas.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">⛺</div>
+        <h3 class="pc-grid-card-title">Covered Ramada</h3>
+        <p class="pc-grid-card-body">Seats up to 36 people. Reservable in advance for private parties and gatherings.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🔥</div>
+        <h3 class="pc-grid-card-title">BBQ Grills</h3>
+        <p class="pc-grid-card-body">Gas grills available for poolside BBQ — bring your own food or grab takeout from Ed's Dogs.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">♿</div>
+        <h3 class="pc-grid-card-title">Accessibility</h3>
+        <p class="pc-grid-card-body">Disability chair lift, 2 outdoor shower stalls (one handicap-equipped), accessible restrooms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">FACILITY #5</div>
+    <h2 class="pc-h2">Creative Arts Center</h2>
+    <p class="pc-lede">Dedicated building for the visual and hand-craft clubs. Equipped studios — not just rooms, but actual purpose-built workshops.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏺</div>
+        <h3 class="pc-grid-card-title">Ceramics Studio</h3>
+        <p class="pc-grid-card-body">On-site <strong>kiln</strong> for pottery and sculpture firing. Equipped for creating, designing, and firing in one space.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎨</div>
+        <h3 class="pc-grid-card-title">Painting Studio</h3>
+        <p class="pc-grid-card-body">Easels, tables, supplies — dedicated to painting. Home to the Art Club (PCAC).</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🧵</div>
+        <h3 class="pc-grid-card-title">Sewing, Quilting &amp; Crafts</h3>
+        <p class="pc-grid-card-body">Multi-room area for fiber arts, sewing, stitching, beading, quilting, stained glass, fused glass.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🪵</div>
+        <h3 class="pc-grid-card-title">Woodcarving Studio</h3>
+        <p class="pc-grid-card-body">Fully outfitted with carving tools and equipment. Home to the Woodcarvers Club (20-25 classes per October-April season).</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🖼️</div>
+        <h3 class="pc-grid-card-title">Expressions Gallery</h3>
+        <p class="pc-grid-card-body"><strong>Consignment outlet</strong> for resident artisans — sketching, painting, ceramics, glasswork, jewelry. Sell what you create here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">FACILITY #6</div>
+    <h2 class="pc-h2">Eagle's Nest Clubhouse</h2>
+    <p class="pc-lede">The original community clubhouse, co-located with Eagle's Nest Golf Course. Smaller than Tuscany but full-featured — and home to the second fitness center, the third pool, and the lighted tennis courts.</p>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🏊</div>
+        <h3 class="pc-grid-card-title">Resort-Style Pool &amp; Whirlpool</h3>
+        <p class="pc-grid-card-body">Third pool complex in the community. Outdoor resort-style — the relaxed alternative to Tuscany's busier scene.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎾</div>
+        <h3 class="pc-grid-card-title">Six Lighted Tennis Courts</h3>
+        <p class="pc-grid-card-body">Lighted for night play — important during Arizona summers when daytime tennis is too hot. These are in addition to the 7 Tuscany courts.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">💪</div>
+        <h3 class="pc-grid-card-title">Fitness Center</h3>
+        <p class="pc-grid-card-body">Cardio and weight machines. Smaller than the main Tuscany center but typically less crowded.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🎭</div>
+        <h3 class="pc-grid-card-title">Grand Ballroom &amp; Auditorium</h3>
+        <p class="pc-grid-card-body">Hosts large-scale dinner/dance events, expos, and club activities. Alternate event venue to Tuscany.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">📚</div>
+        <h3 class="pc-grid-card-title">Library &amp; Billiards Room</h3>
+        <p class="pc-grid-card-body">Library with grand fireplace, comfy chairs, bookcases. Fully stocked billiards room (pool cues, balls).</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🍔</div>
+        <h3 class="pc-grid-card-title">Eagle's Nest Restaurant &amp; Lounge</h3>
+        <p class="pc-grid-card-body">Comfort foods: pot roast, chicken parmesan, burgers, sandwiches, wraps. The casual dining alternative to Westwind Tavern.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-inner">
+    <div class="pc-eyebrow">PLUS</div>
+    <h2 class="pc-h2">Additional amenities &amp; features</h2>
+
+    <div class="pc-grid">
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🐕</div>
+        <h3 class="pc-grid-card-title">Dog Park</h3>
+        <p class="pc-grid-card-body">Open dawn to dusk. Fenced, friendly, residents-only — your four-legged friends get social time too.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">⚾</div>
+        <h3 class="pc-grid-card-title">Robson Field of Dreams (Softball)</h3>
+        <p class="pc-grid-card-body">Dedicated softball field. The PebbleCreek Senior Softball Association has <strong>150+ players</strong>, celebrated 25 years in 2024.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚐</div>
+        <h3 class="pc-grid-card-title">RV Parking</h3>
+        <p class="pc-grid-card-body">Lease parking in a nearby offsite overflow lot. You don't need extended driveway depth at home — and the lot is close enough for easy trips.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🚒</div>
+        <h3 class="pc-grid-card-title">Fire Station 185</h3>
+        <p class="pc-grid-card-body">Goodyear Fire Department station serving PebbleCreek directly. Emergency response times are excellent.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🛡️</div>
+        <h3 class="pc-grid-card-title">Gated Entry</h3>
+        <p class="pc-grid-card-body">24-hour gated entry at the main gate (15872 W Clubhouse Dr) and additional access points. Visitor passes required.</p>
+      </div>
+      <div class="pc-grid-card">
+        <div class="pc-grid-card-icon">🌭</div>
+        <h3 class="pc-grid-card-title">Ed's Dogs (Snack Bar)</h3>
+        <p class="pc-grid-card-body">Poolside walk-up snack bar at the NW corner of the Tuscany Falls outdoor pool. Burgers, hot dogs, beverages — grab and go.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">💡 Insider Tip</div>
+    <h2 class="pc-h2">Which side of the community fits you?</h2>
+    <p>PebbleCreek is large enough that location within the community matters. Here's how we coach buyers:</p>
+    <p><strong>If you want to be near Tuscany action:</strong> Look at homes closer to the center of the community. You'll walk to Tuscany Sports &amp; Aquatics, the Tuscany Clubhouse, the Renaissance Theater, the new Westwind Tavern, and the Creative Arts Center. Most clubs meet here.</p>
+    <p><strong>If you want quieter and Eagle's Nest-centered:</strong> Homes on the Eagle's Nest side are more residential, less event-driven. You're still 5 minutes from Tuscany by golf cart, but daily life is calmer. The Eagle's Nest fitness center and pool are less crowded.</p>
+    <p><strong>If you want the Oasis Pool vibe:</strong> Homes in the southwest area are closest to the Oasis Pool Complex — quieter, more park-like, with the BBQ ramada nearby.</p>
+    <p>Most residents keep a golf cart to get between facilities — and around the community generally. The streets are golf-cart friendly and it's the dominant way locals move.</p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>

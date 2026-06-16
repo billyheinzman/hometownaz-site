@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trusted Vendors — Sun City Festival | Hometown AZ</title>
+<meta name="description" content="Our curated list of local contractors, inspectors, lenders, title companies, and service providers we trust.">
+<link rel="canonical" href="https://hometownaz.com/sun-city-festival/vendors.html">
+<meta property="og:title" content="Trusted Vendors — Sun City Festival">
+<meta property="og:description" content="Our curated list of local contractors, inspectors, lenders, title companies, and service providers we trust.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/sun-city-festival/vendors.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green: #2d3d2e; --green-deep: #1f2c1f;
+  --orange: #c8622a; --orange-deep: #a14d1f;
+  --gold: #d4a52c;
+  --cream: #f5f1ea; --cream-warm: #faf5ec; --sand: #ede8df;
+  --border: #ddd6c8; --border-soft: #e8e0d0;
+  --text: #2a2a2a; --muted: #7a6e60;
+  --radius: 8px; --radius-lg: 12px;
+}
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
+
+/* SCW CANONICAL HERO */
+.scw-hero { background: var(--green); color: #fff; padding: 24px 48px 40px; position: relative; }
+.scw-back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 28px; transition: color 0.15s; }
+.scw-back:hover { color: #fff; }
+.scw-hero-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px;
+  align-items: center; max-width: 1400px; margin: 0 auto;
+}
+.scw-tagline { display: inline-flex; align-items: center; gap: 10px; color: var(--orange); font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 20px; padding: 7px 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,165,0,0.25); border-radius: 100px; }
+.scw-tagline-icon { width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; }
+.scw-headline { font-family: 'Merriweather', Georgia, serif; font-size: 4rem; font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 18px; }
+.scw-headline .accent { color: var(--orange); }
+.scw-subhead { font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.92); margin: 0; max-width: 620px; }
+.scw-nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-self: start; }
+.scw-nav-btn { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #fff; color: var(--green); border: 1px solid rgba(255,255,255,0.25); border-radius: 28px; font-family: inherit; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.15s; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; justify-content: center; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); }
+.scw-nav-btn.scw-nav-btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn.scw-nav-btn-orange:hover { background: var(--orange-deep); color: #fff; }
+.scw-nav-btn.scw-nav-btn-wide { grid-column: span 2; justify-content: center; }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+.scw-nav-btn-current { background: rgba(255,255,255,0.92) !important; color: var(--orange) !important; border-color: var(--orange) !important; box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange); cursor: default; }
+.scw-nav-btn-current.scw-nav-btn-orange { background: var(--orange-deep) !important; color: #fff !important; border-color: var(--orange-deep) !important; }
+.scw-nav-btn-current:hover { transform: none !important; }
+
+/* Stub page content */
+.stub-section { padding: 60px 32px; background: var(--cream); }
+.stub-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+.stub-icon { font-size: 4rem; margin-bottom: 16px; }
+.stub-title { font-family: 'Merriweather', Georgia, serif; color: var(--green); font-size: 2rem; margin-bottom: 12px; }
+.stub-desc { font-size: 16px; color: var(--text); line-height: 1.6; margin-bottom: 24px; }
+.scw-footer-cta { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%); color: #fff; padding: 36px 32px; text-align: center; }
+.scw-footer-cta-title { font-family: 'Merriweather', Georgia, serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; }
+.scw-footer-cta-sub { font-size: 15px; opacity: 0.94; line-height: 1.55; margin-bottom: 22px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.scw-footer-cta-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.scw-cta-btn { background: #fff; color: var(--orange-deep); padding: 13px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; transition: transform .15s, box-shadow .15s; display: inline-block; }
+.scw-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.dual-call-wrap { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 900px) {
+  .scw-hero { padding: 20px 20px 28px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-headline { font-size: 2.4rem; }
+  .stub-section { padding: 40px 16px; }
+}
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City Festival",
+        "item": "https://hometownaz.com/sun-city-festival/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Trusted Vendors — Sun City Festival",
+        "item": "https://hometownaz.com/sun-city-festival/vendors.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Trusted Vendors — Sun City Festival",
+    "description": "Our curated list of local contractors, inspectors, lenders, title companies, and service providers we trust.",
+    "url": "https://hometownaz.com/sun-city-festival/vendors.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City Festival, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City Festival</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">🔧</span>
+        LONA KING &amp; BILLY HEINZMAN · FESTIVAL EXPERTS
+      </div>
+      <h1 class="scw-headline">Trusted <span class="accent">Vendors</span></h1>
+      <p class="scw-subhead">Our curated list of local contractors, inspectors, lenders, title companies, and service providers we trust.</p>
+    </div>
+    <div class="scw-nav-grid">
+      <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+      <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+      <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+      <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+      <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+      <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+      <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+    </div>
+  </div>
+</section>
+
+<section class="stub-section">
+  <div class="stub-inner">
+    <div class="stub-icon">🔧</div>
+    <h2 class="stub-title">Trusted Vendors</h2>
+    <p class="stub-desc">Our curated list of local contractors, inspectors, lenders, title companies, and service providers we trust.</p>
+    <p class="stub-desc"><strong>Page in development.</strong> Call us anytime for help.</p>
+  </div>
+</section>
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about Sun City Festival?</div>
+  <div class="scw-footer-cta-sub">
+    Lona has 20+ years of Sun City experience plus 10 years as Del Webb's Senior Contract Director. <strong>478 career sales · 5.0★ on Zillow.</strong>
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

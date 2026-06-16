@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>❓ Ask Anything About PebbleCreek — Buyer FAQs | Hometown AZ</title>
+<meta name="description" content="Most common PebbleCreek buyer questions answered: age restrictions, monthly costs, golf memberships, resale vs new, pets, RVs, weather, water, and more.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/ask-anything.html">
+<meta property="og:title" content="❓ Ask Anything About PebbleCreek — Buyer FAQs">
+<meta property="og:description" content="Most common PebbleCreek buyer questions answered: age restrictions, monthly costs, golf memberships, resale vs new, pets, RVs, weather, water, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/ask-anything.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "❓ Ask Anything About PebbleCreek — Buyer FAQs",
+        "item": "https://hometownaz.com/pebblecreek/ask-anything.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "❓ Ask Anything About PebbleCreek — Buyer FAQs",
+    "description": "Most common PebbleCreek buyer questions answered: age restrictions, monthly costs, golf memberships, resale vs new, pets, RVs, weather, water, and more.",
+    "url": "https://hometownaz.com/pebblecreek/ask-anything.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">❓</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline">Ask <span class='accent'>Anything</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">❓ Common PebbleCreek Questions</div>
+      <h2 class="pc-h2">Ask Anything About PebbleCreek</h2>
+    </div>
+    <p class="pc-lede">The most common questions we get from buyers. If yours isn't here, just call.</p>
+  </div>
+
+  <div class="pc-prose">
+    <h3 class="pc-h3">🏘️ Q: Is PebbleCreek a 55+ community?</h3>
+    <p><strong>Yes.</strong> At least one occupant of a household must be 55 or older. Some exceptions for surviving spouses and special circumstances — but the community is firmly 55+. Younger family members can visit, but not live full-time.</p>
+
+    <h3 class="pc-h3">💰 Q: What does it cost monthly to live in PebbleCreek?</h3>
+    <p>For a typical PebbleCreek home, expect <strong>$1,000-$5,000/mo all-in</strong> depending on whether you have a mortgage:</p>
+    <ul>
+      <li>Cash buyer: ~$1,000-$1,500/mo (HOA + tax + insurance + utilities)</li>
+      <li>30-year mortgage at current rates: $4,000-$5,500/mo for a $700K home</li>
+    </ul>
+    <p>See our detailed <a href="buyer-budget.html">Buyer Budget</a> and <a href="community-fees.html">Community Fees</a> pages for breakdowns.</p>
+
+    <h3 class="pc-h3">⛳ Q: Do I have to pay a separate golf membership?</h3>
+    <p><strong>No.</strong> PebbleCreek operates on a pay-per-round model for residents. There's no required golf membership on top of HOA dues. You pay green fees only when you play. This is a key differentiator from semi-private clubs like Corte Bella.</p>
+
+    <h3 class="pc-h3">🏠 Q: Can I buy resale, or do I have to buy new from Robson?</h3>
+    <p><strong>Either works.</strong> About 60-70% of our PebbleCreek transactions are resales. The community is mature enough that there's always plenty of resale inventory. New-construction homes from Robson are also available — current pricing $502K-$970K+ depending on series.</p>
+
+    <h3 class="pc-h3">🐕 Q: Are pets allowed?</h3>
+    <p><strong>Yes.</strong> PebbleCreek is pet-friendly. There's a dedicated dog park and the community has an active Pet Companions Club. CC&amp;Rs apply — number/breed/size restrictions, leash rules in common areas, etc. The full pet policy is in the HOA documents.</p>
+
+    <h3 class="pc-h3">🚐 Q: Can I park my RV at home?</h3>
+    <p><strong>Generally no.</strong> CC&amp;Rs restrict RV parking on residential lots. But PebbleCreek offers <strong>off-site RV parking</strong> for lease at a community lot. Many RV owners use this and find it convenient — easier ingress/egress for the larger rigs than residential streets.</p>
+
+    <h3 class="pc-h3">📍 Q: Where exactly is PebbleCreek?</h3>
+    <p>PebbleCreek is at <strong>15872 W. Clubhouse Dr., Goodyear, AZ 85395</strong>. It's about 30 minutes west of downtown Phoenix and Phoenix Sky Harbor Airport. The community sits between Goodyear and Litchfield Park, with the White Tank Mountains directly to the north.</p>
+
+    <h3 class="pc-h3">🏥 Q: Is healthcare nearby?</h3>
+    <p><strong>Yes, excellent.</strong> Abrazo Health West Campus (Level 1 trauma) and Banner Estrella Medical Center are both within a short drive. Mayo Clinic Phoenix, Barrow Neurological Institute, and City of Hope are all in the broader metro Phoenix area. The Southwest VA Clinic serves veterans. See <a href="things-to-do.html">Things to Do</a> for the full list.</p>
+
+    <h3 class="pc-h3">🛒 Q: What about shopping and groceries?</h3>
+    <p>Within 2-3 miles you'll find <strong>WinCo Foods, Walmart, Target, Costco, Sam's Club, Albertson's, Fry's, Sprouts</strong>, plus shopping centers with HomeGoods, TJ Maxx, Hobby Lobby, Best Buy, Barnes &amp; Noble, etc. You don't need to drive far for daily needs.</p>
+
+    <h3 class="pc-h3">✈️ Q: Is it convenient for travel?</h3>
+    <p>Phoenix Sky Harbor International is about 30 minutes away — one of the top 10 busiest airports in the country with 100+ daily non-stop flights to domestic destinations. Easy for snowbird travel.</p>
+
+    <h3 class="pc-h3">🌡️ Q: How hot does it really get in summer?</h3>
+    <p>Honest answer: <strong>hot.</strong> June through August routinely hits 100-115°F. The dry heat is more tolerable than humid heat, but it's real heat. Most full-time residents stay indoors during midday and use the indoor pool, fitness studios, and clubhouse activities. Many snowbird north for the summer months.</p>
+
+    <h3 class="pc-h3">❄️ Q: Is the community quieter in summer?</h3>
+    <p><strong>Yes</strong>, noticeably. Many snowbird residents leave June-August. Restaurants, classes, and clubs operate with reduced schedules. You can usually get tee times same-day. Pickleball courts have plenty of openings. It's a great time to live here if you don't mind the heat.</p>
+
+    <h3 class="pc-h3">💧 Q: Is water a concern in Arizona?</h3>
+    <p>Phoenix-area water has been managed carefully — the metro is generally well-supplied through CAP (Central Arizona Project) and groundwater. PebbleCreek uses recycled water for golf course irrigation, which is the right model. Long-term concerns exist for Arizona water resources broadly, but PebbleCreek is on solid ground compared to many newer developments further west.</p>
+
+    <h3 class="pc-h3">🚗 Q: Do I need a golf cart?</h3>
+    <p><strong>Highly recommended.</strong> Even if you don't golf, golf carts are the dominant way residents move around the community. Streets are golf-cart friendly, and many homes have golf-cart garages. Used carts run $4,000-$8,000; new can be $10,000-$15,000+. It's the #1 thing residents say new neighbors should buy.</p>
+
+    <h3 class="pc-h3">📊 Q: How's the resale market?</h3>
+    <p>PebbleCreek has held value well over the long term. The 2010-2026 dataset shows steady appreciation with periodic acceleration (2020-2021 pandemic boom). Current median sale prices are around $500K-$560K depending on month. Inventory runs 2-4 months of supply — balanced market. See our <a href="market-intel.html">Market Intel</a> page.</p>
+
+    <h3 class="pc-h3">📞 Q: How do I get more info?</h3>
+    <p><strong>Call us.</strong> The fastest way to get an answer specific to your situation is a 5-minute phone call. We've sold homes in PebbleCreek for years and know the community well — including the parts you can't see from a website. <strong>Lona: (623) 203-6271 · Billy: (480) 297-3830.</strong></p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>

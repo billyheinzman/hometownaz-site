@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask Me Anything — Sun City West AI Assistant Coming Soon | Hometown AZ</title>
+<meta name="description" content="Sun City West's first AI-powered real estate assistant — coming soon. Ask anything about floor plans, fees, HOAs, sales history, and more. In the meantime, call Lona or Billy for direct answers.">
+<meta property="og:title" content="Ask Me Anything — Sun City West AI Assistant">
+<meta property="og:description" content="A real-time AI assistant trained on Lona's 30 years of Sun City West expertise. Coming soon.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hometownaz.com/sun-city-west/scw-ask-anything.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --green: #2d3d2e;
+  --green-deep: #1f2c1f;
+  --green-soft: #3a5040;
+  --orange: #c8622a;
+  --orange-deep: #a14d1f;
+  --orange-light: #e8a040;
+  --sage: #4a7c59;
+  --cream: #f5f1ea;
+  --cream-warm: #ede8df;
+  --sand: #ede8df;
+  --border: #ddd6c8;
+  --border-soft: #e8e2d4;
+  --muted: #6b6354;
+  --text: #2a261e;
+  --radius: 6px;
+  --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--orange); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============ HERO (matches floor plans page) ============ */
+.scw-hero {
+  background: var(--green);
+  color: #fff;
+  padding: 24px 48px 40px;
+  position: relative;
+}
+
+.scw-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 14px; font-weight: 500; margin-bottom: 28px;
+  transition: color 0.15s;
+}
+.scw-back:hover { color: #fff; }
+
+.scw-hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.scw-tagline {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--orange);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 165, 0, 0.25);
+  border-radius: 100px;
+}
+.scw-tagline-icon {
+  width: 18px; height: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+.scw-headline {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 4rem; font-weight: 700;
+  line-height: 1.05; letter-spacing: -0.01em;
+  margin: 0;
+}
+.scw-headline .accent { color: var(--orange); }
+
+.scw-subhead {
+  font-size: 17px; line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  margin: 0 0 18px; max-width: 620px;
+}
+.scw-subhead strong { font-weight: 700; color: #fff; }
+
+.scw-note {
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px; line-height: 1.55;
+  max-width: 620px;
+}
+
+/* Side nav button grid */
+.scw-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-self: start;
+}
+.scw-nav-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  background: #fff; color: var(--green);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 28px;
+  font-family: inherit; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; width: 100%; box-sizing: border-box; min-width: 0; min-height: 42px; justify-content: center; }
+.scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+.scw-nav-btn.featured { background: var(--orange); color: #fff; border-color: var(--orange); }
+.scw-nav-btn.featured:hover { background: var(--orange-deep); }
+.scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+
+/* ============ STATS STRIP ============ */
+.scw-stats-strip {
+  background: var(--cream-warm);
+  padding: 28px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.scw-stats-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.scw-stat-num {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.9rem; font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.scw-stat-lbl {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ============ SECTION SHELL ============ */
+.scw-section {
+  padding: 72px 48px;
+  max-width: 100%;
+}
+.scw-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.scw-section-alt { background: var(--cream-warm); }
+.scw-section-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.scw-section h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 18px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.scw-section .lede {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 820px;
+  margin: 0 0 36px;
+  line-height: 1.6;
+}
+
+/* ============ ABOUT SECTION ============ */
+.scw-about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.scw-about-prose {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.scw-about-prose p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0 0 20px;
+  color: var(--text);
+}
+.scw-about-prose h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 32px 0 12px;
+  line-height: 1.25;
+}
+.scw-about-prose h3:first-child { margin-top: 0; }
+.scw-about-prose p:last-child { margin-bottom: 0; }
+.scw-about-prose strong { color: var(--green); }
+.scw-about-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+}
+.scw-about-card-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 16px;
+}
+.scw-about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.scw-about-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 14px;
+}
+.scw-about-list li:last-child { border-bottom: none; }
+.scw-about-list .lbl { color: var(--muted); }
+.scw-about-list .val { color: var(--green); font-weight: 700; }
+
+/* ============ TOOL CARDS ============ */
+.scw-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+.scw-tool-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.scw-tool-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--orange);
+  box-shadow: 0 12px 32px rgba(45, 61, 46, 0.12);
+  text-decoration: none;
+}
+.scw-tool-card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.scw-tool-card-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 8px;
+}
+.scw-tool-card-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex: 1;
+}
+.scw-tool-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.scw-tool-card-cta:after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.scw-tool-card:hover .scw-tool-card-cta:after { transform: translateX(3px); }
+.scw-tool-card.featured {
+  background: linear-gradient(135deg, #fff7ec 0%, #ffe9cc 100%);
+  border-color: var(--orange);
+}
+.scw-tool-card-badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ============ QUICK FACTS GRID ============ */
+.scw-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 56px;
+}
+.scw-fact h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--green);
+  margin: 0 0 8px;
+}
+.scw-fact p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ============ FAQ STYLES (port of original) ============ */
+.scw-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.scw-faq-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.scw-faq-item[open] { border-color: var(--orange); }
+.scw-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 24px;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background 0.15s;
+}
+.scw-faq-item summary:hover { background: var(--cream); }
+.scw-faq-item summary::-webkit-details-marker { display: none; }
+.scw-faq-item summary:after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--orange);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+.scw-faq-item[open] summary:after { transform: rotate(45deg); }
+.scw-faq-body {
+  padding: 4px 24px 22px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.scw-faq-body p { margin: 0 0 12px; }
+.scw-faq-body p:last-child { margin-bottom: 0; }
+.scw-faq-body strong { color: var(--green); }
+
+/* ============ FOOTER CTA ============ */
+.scw-footer-cta {
+  background: var(--green);
+  color: #fff;
+  padding: 56px 48px;
+  text-align: center;
+}
+.scw-footer-cta-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.8rem; font-weight: 700;
+  margin: 0 0 10px;
+}
+.scw-footer-cta-sub {
+  font-size: 16px; opacity: 0.85;
+  margin: 0 0 24px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scw-footer-cta-row {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+.scw-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px;
+  background: var(--orange); color: #fff;
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 15px; font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+.scw-cta-btn.outlined {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.scw-cta-btn.outlined:hover { background: rgba(255,255,255,0.18); }
+
+/* ============ MOBILE ============ */
+
+
+
+
+
+@media (max-width: 980px) {
+  .scw-hero { padding: 20px 20px 40px; }
+  .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .scw-headline { font-size: 2.5rem; }
+  .scw-stats-strip { padding: 24px 20px; }
+  .scw-stats-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .scw-section { padding: 48px 20px; }
+  .scw-section h2 { font-size: 1.8rem; }
+  .scw-about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .scw-tools-grid { grid-template-columns: 1fr; }
+  .scw-facts-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scw-faq-grid { grid-template-columns: 1fr; }
+  .scw-nav-grid { grid-template-columns: 1fr; }
+  .scw-footer-cta { padding: 40px 20px; }
+  .scw-footer-cta-title { font-size: 1.4rem; }
+}
+
+
+/* ============ ASK ME ANYTHING PAGE ============ */
+.ama-section { padding: 64px 48px 48px; }
+.ama-inner { max-width: 1100px; margin: 0 auto; }
+
+.ama-hero-block {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.ama-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--orange); font-weight: 700; margin-bottom: 14px;
+}
+.ama-eyebrow .pulse-dot {
+  width: 8px; height: 8px; background: var(--orange); border-radius: 50%;
+  animation: ama-pulse 2s infinite;
+}
+@keyframes ama-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(42, 77, 143, 0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(42, 77, 143, 0); }
+}
+.ama-headline {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.8rem; font-weight: 700;
+  color: var(--green); margin: 0 0 18px;
+  line-height: 1.15; letter-spacing: -0.01em;
+}
+.ama-headline .accent { color: var(--orange); }
+.ama-lede {
+  font-size: 17px; line-height: 1.7;
+  color: var(--text); margin: 0 0 24px;
+}
+.ama-lede strong { color: var(--green); }
+.ama-status {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(42, 77, 143, 0.08);
+  color: var(--orange-deep);
+  font-size: 13px; font-weight: 700;
+  padding: 10px 18px; border-radius: 24px;
+  border: 1px solid rgba(42, 77, 143, 0.25);
+  margin-bottom: 28px;
+}
+
+.ama-cta-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.ama-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 22px;
+  background: var(--orange); color: #fff;
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 15px; font-weight: 700;
+  text-decoration: none; cursor: pointer;
+  border: none;
+  transition: background 0.15s;
+}
+.ama-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+.ama-cta-btn.outlined {
+  background: transparent;
+  color: var(--green);
+  border: 1.5px solid var(--green);
+}
+.ama-cta-btn.outlined:hover { background: var(--green); color: #fff; }
+.ama-cta-note { font-size: 13px; color: var(--muted); margin: 0; }
+
+/* Avatar preview placeholder */
+.ama-avatar-frame {
+  position: relative;
+  background: linear-gradient(135deg, #2d3d2e 0%, #1f2c1f 100%);
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 5;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(45, 61, 46, 0.18);
+}
+.ama-avatar-frame::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), transparent 70%);
+  pointer-events: none;
+}
+.ama-avatar-content {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 32px;
+  z-index: 1;
+}
+.ama-avatar-icon {
+  width: 96px; height: 96px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.6rem; margin: 0 auto 24px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.ama-avatar-label {
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5); font-weight: 700;
+  margin-bottom: 10px;
+}
+.ama-avatar-name {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: #fff; margin: 0 0 6px;
+}
+.ama-avatar-tagline {
+  font-size: 13px; color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+.ama-avatar-badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: rgba(42, 77, 143, 0.95);
+  color: #fff; font-size: 10px; font-weight: 800;
+  padding: 5px 11px; border-radius: 14px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  z-index: 2;
+}
+
+/* What it can do section */
+.ama-feature-section {
+  background: var(--cream-warm);
+  padding: 64px 48px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.ama-feature-inner { max-width: 1100px; margin: 0 auto; }
+.ama-feature-header { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+.ama-feature-eyebrow {
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--orange); font-weight: 700; margin-bottom: 12px;
+}
+.ama-feature-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--green); margin: 0 0 14px;
+  line-height: 1.2;
+}
+.ama-feature-lede {
+  font-size: 16px; color: var(--muted); margin: 0; line-height: 1.6;
+}
+.ama-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 920px; margin: 0 auto;
+}
+.ama-question-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  display: flex; align-items: center; gap: 14px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.ama-question-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+.ama-question-icon {
+  font-size: 1.6rem; flex-shrink: 0;
+  width: 44px; height: 44px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.ama-question-text {
+  font-size: 14px; line-height: 1.45;
+  color: var(--text); font-style: italic;
+}
+
+/* Email signup */
+.ama-signup-section {
+  padding: 56px 48px;
+  text-align: center;
+}
+.ama-signup-inner {
+  max-width: 540px; margin: 0 auto;
+}
+.ama-signup-eyebrow {
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--orange); font-weight: 700; margin-bottom: 12px;
+}
+.ama-signup-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.7rem; font-weight: 700;
+  color: var(--green); margin: 0 0 12px;
+  line-height: 1.2;
+}
+.ama-signup-sub {
+  font-size: 15px; color: var(--muted);
+  margin: 0 0 24px; line-height: 1.6;
+}
+.ama-signup-form {
+  display: flex; gap: 8px; max-width: 460px; margin: 0 auto;
+}
+.ama-signup-form input {
+  flex: 1;
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit; font-size: 14px;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+.ama-signup-form input:focus {
+  outline: none; border-color: var(--orange);
+}
+.ama-signup-form button {
+  padding: 13px 24px;
+  background: var(--green); color: #fff;
+  border: none; border-radius: var(--radius);
+  font-family: inherit; font-size: 14px; font-weight: 700;
+  cursor: pointer; transition: background 0.15s;
+  white-space: nowrap;
+}
+.ama-signup-form button:hover { background: var(--green-soft); }
+.ama-signup-success {
+  display: none;
+  background: rgba(74, 124, 89, 0.1);
+  color: #2d5a3d;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+}
+.ama-signup-success.show { display: block; }
+.ama-signup-fineprint {
+  font-size: 12px; color: var(--muted);
+  margin: 12px 0 0;
+}
+
+@media (max-width: 980px) {
+  .ama-section { padding: 40px 20px 32px; }
+  .ama-hero-block { grid-template-columns: 1fr; gap: 32px; margin-bottom: 40px; }
+  .ama-headline { font-size: 2rem; }
+  .ama-avatar-frame { aspect-ratio: 5 / 4; max-width: 320px; margin: 0 auto; }
+  .ama-feature-section { padding: 48px 20px; }
+  .ama-feature-title { font-size: 1.6rem; }
+  .ama-questions-grid { grid-template-columns: 1fr; }
+  .ama-signup-section { padding: 40px 20px; }
+  .ama-signup-form { flex-direction: column; }
+}
+
+
+/* ============ NAV BUTTON: WIDE ORANGE VARIANT ============ */
+.scw-nav-btn.scw-nav-btn-wide {
+  grid-column: 1 / -1;
+  justify-content: center;
+}
+.scw-nav-btn.scw-nav-btn-orange {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+  font-weight: 700;
+}
+.scw-nav-btn.scw-nav-btn-orange:hover {
+  background: var(--orange-deep);
+  border-color: var(--orange-deep);
+  color: #fff;
+}
+.scw-nav-btn.scw-nav-btn-orange .scw-nav-btn-icon {
+  filter: brightness(1.2);
+}
+
+
+/* === Dual phone CTA wrapper (Lona + Billy) — added 2026-05-11 === */
+.dual-call-wrap{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:stretch;}
+.dual-call-wrap > a{flex:1 1 auto;min-width:0;}
+@media (max-width:640px){
+  .dual-call-wrap{flex-direction:column;gap:6px;}
+  .dual-call-wrap > a{width:100%;}
+}
+
+.scw-nav-btn-current {
+  background: rgba(255,255,255,0.92) !important;
+  color: var(--orange, #c8622a) !important;
+  border-color: var(--orange, #c8622a) !important;
+  box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+  cursor: default;
+}
+.scw-nav-btn-current.scw-nav-btn-orange {
+  background: var(--orange-deep, #a14d1f) !important;
+  color: #fff !important;
+}
+.scw-nav-btn-current:hover {
+  transform: none !important;
+}</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sun City West",
+        "item": "https://hometownaz.com/sun-city-west/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ask Me Anything — Sun City West AI Assistant Coming Soon",
+        "item": "https://hometownaz.com/sun-city-west/scw-ask-anything.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Ask Me Anything — Sun City West AI Assistant Coming Soon",
+    "description": "Sun City West",
+    "url": "https://hometownaz.com/sun-city-west/scw-ask-anything.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "Sun City West, AZ"
+    }
+  }
+]</script>
+</head>
+<body><section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to Sun City West</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">✨</span>
+        LONA KING &amp; BILLY HEINZMAN · SUN CITY WEST EXPERTS
+      </div>
+      <h1 class="scw-headline">Ask Me <span class="accent">Anything</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="scw-events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="scw-community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="scw-golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="scw-buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="scw-things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="scw-solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="scw-rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+<section class="ama-section">
+  <div class="ama-inner">
+    <div class="ama-hero-block">
+      <div class="ama-hero-text">
+        <div class="ama-eyebrow"><span class="pulse-dot"></span> AI Avatar — In Development</div>
+        <h2 class="ama-headline">A 24/7 AI assistant <span class="accent">trained on the SCW expertise</span> nobody else has</h2>
+        <p class="ama-lede">
+          Soon you'll be able to ask <strong>anything</strong> about Sun City West and get instant, accurate answers — voiced by Billy Heinzman, trained on Lona King's 30 years of insider knowledge, and connected to the same live data that powers this site.
+        </p>
+        <div class="ama-status">🚧 Currently Training — Launching 2026</div>
+        <div class="ama-cta-row">
+          <div class="dual-call-wrap"><a href="tel:+16232036271" class="ama-cta-btn">📞 Call Lona Now — (623) 203-6271</a><a href="tel:+14802973830" class="ama-cta-btn">📞 Call Billy Now — (480) 297-3830</a></div>
+        </div>
+        <p class="ama-cta-note">In the meantime, call us directly. Real humans, real answers, no wait.</p>
+      </div>
+
+      <div class="ama-avatar-preview">
+        <div class="ama-avatar-frame">
+          <span class="ama-avatar-badge">Coming Soon</span>
+          <div class="ama-avatar-content">
+            <div class="ama-avatar-icon">🤖</div>
+            <div class="ama-avatar-label">AI Real Estate Assistant</div>
+            <div class="ama-avatar-name">Billy Heinzman</div>
+            <div class="ama-avatar-tagline">"Trained on 30 years of Sun City West expertise"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ama-feature-section">
+  <div class="ama-feature-inner">
+    <div class="ama-feature-header">
+      <div class="ama-feature-eyebrow">💬 What You'll Be Able to Ask</div>
+      <h2 class="ama-feature-title">Real questions from real Sun City West buyers</h2>
+      <p class="ama-feature-lede">When the AI launches, you'll be able to ask any of these — and hundreds more — and get an instant answer trained on Lona's 30 years of experience and our live SCW database.</p>
+    </div>
+
+    <div class="ama-questions-grid">
+      <div class="ama-question-card">
+        <div class="ama-question-icon">📐</div>
+        <div class="ama-question-text">"What does a Cromwell typically sell for in Sun City West?"</div>
+      </div>
+      <div class="ama-question-card">
+        <div class="ama-question-icon">💰</div>
+        <div class="ama-question-text">"What's the current Asset Preservation Fee at SCW?"</div>
+      </div>
+      <div class="ama-question-card">
+        <div class="ama-question-icon">🏡</div>
+        <div class="ama-question-text">"Which floor plans have the most resale value?"</div>
+      </div>
+      <div class="ama-question-card">
+        <div class="ama-question-icon">🐕</div>
+        <div class="ama-question-text">"Are pets allowed in the Gemini twin homes?"</div>
+      </div>
+      <div class="ama-question-card">
+        <div class="ama-question-icon">⛳</div>
+        <div class="ama-question-text">"What's included with the Recreation Card?"</div>
+      </div>
+      <div class="ama-question-card">
+        <div class="ama-question-icon">📊</div>
+        <div class="ama-question-text">"What did homes on Heritage Drive sell for last year?"</div>
+      </div>
+      <div class="ama-question-card">
+        <div class="ama-question-icon">🛋️</div>
+        <div class="ama-question-text">"Is an Arizona Room counted as livable square footage?"</div>
+      </div>
+      <div class="ama-question-card">
+        <div class="ama-question-icon">🚗</div>
+        <div class="ama-question-text">"Which models have garages vs. carports?"</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ama-signup-section">
+  <div class="ama-signup-inner">
+    <div class="ama-signup-eyebrow">🔔 Be First to Try It</div>
+    <h2 class="ama-signup-title">Get notified the moment it launches</h2>
+    <p class="ama-signup-sub">Drop your email below and we'll let you know the day Billy's AI avatar goes live. No spam — just the launch announcement.</p>
+    <form class="ama-signup-form" onsubmit="return amaSignup(event)">
+      <input type="email" id="amaEmail" placeholder="your@email.com" required>
+      <button type="submit">Notify Me</button>
+    </form>
+    <div class="ama-signup-success" id="amaSuccess">
+      ✓ You're on the list. We'll email you the day it goes live.
+    </div>
+    <p class="ama-signup-fineprint">We'll only use this to email you about the AI launch. No newsletters, no resale.</p>
+  </div>
+</section>
+
+<script>
+function amaSignup(e) {
+  e.preventDefault();
+  // Placeholder — when ready, wire this up to Mailchimp / Klaviyo / form service
+  var email = document.getElementById('amaEmail').value;
+  // For now, just show the success message and log
+  console.log('Email signup:', email);
+  document.querySelector('.ama-signup-form').style.display = 'none';
+  document.getElementById('amaSuccess').classList.add('show');
+  return false;
+}
+</script>
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Have a question that can't wait?</div>
+  <div class="scw-footer-cta-sub">
+    Until the AI launches, you've still got the originals — Billy and Lona, by phone, email, or text. <strong>478 career sales · 5.0★ on Zillow.</strong>
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap"><a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona &mdash; (623) 203-6271</a><a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy &mdash; (480) 297-3830</a></div>
+  </div>
+</section>
+</body>
+</html>

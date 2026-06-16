@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>⚡ Solar at PebbleCreek — Owned, Leased, PPA Explained | Hometown AZ</title>
+<meta name="description" content="How to evaluate solar on a PebbleCreek home: owned vs leased vs PPA, HOA approval, tile roof considerations. We review lease docs before you make an offer.">
+<link rel="canonical" href="https://hometownaz.com/pebblecreek/solar.html">
+<meta property="og:title" content="⚡ Solar at PebbleCreek — Owned, Leased, PPA Explained">
+<meta property="og:description" content="How to evaluate solar on a PebbleCreek home: owned vs leased vs PPA, HOA approval, tile roof considerations. We review lease docs before you make an offer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hometownaz.com/pebblecreek/solar.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d3d2e;
+    --green-deep: #1d2e22;
+    --orange: #c8622a;
+    --orange-deep: #a14d1f;
+    --gold: #f5cf80;
+    --cream: #f5f1ea;
+    --cream-warm: #ede7d6;
+    --beige: #ddd6c8;
+    --text: #2d3d2e;
+    --muted: #7a6e60;
+    --border: #ddd6c8;
+    --border-soft: #e8e2d4;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .scw-hero {
+    background: var(--green);
+    color: #fff;
+    padding: 24px 48px 40px;
+    position: relative;
+  }
+  .scw-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .scw-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 14px; font-weight: 500; margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .scw-back:hover { color: #fff; }
+  .scw-tagline {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--orange);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 165, 0, 0.25);
+    border-radius: 100px;
+  }
+  .scw-tagline-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .scw-headline {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 4rem; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .scw-headline .accent { color: var(--orange); }
+  @media (max-width: 900px) {
+    .scw-hero { padding: 20px 20px 40px; }
+    .scw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .scw-headline { font-size: 2.5rem; }
+  }
+
+  /* NAV */
+  .scw-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-self: start;
+  }
+  .scw-nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: #fff; color: var(--green);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+  }
+  .scw-nav-btn:hover { background: var(--cream); transform: translateY(-1px); text-decoration: none; }
+  .scw-nav-btn-icon { font-size: 14px; flex-shrink: 0; }
+  .scw-nav-btn.scw-nav-btn-wide {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .scw-nav-btn.scw-nav-btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+    font-weight: 700;
+  }
+  .scw-nav-btn.scw-nav-btn-orange:hover {
+    background: var(--orange-deep);
+    border-color: var(--orange-deep);
+    color: #fff;
+  }
+  .scw-nav-btn-current {
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--orange, #c8622a) !important;
+    border-color: var(--orange, #c8622a) !important;
+    box-shadow: 0 2px 8px rgba(200,98,42,0.25), inset 0 0 0 1.5px var(--orange, #c8622a);
+    cursor: default;
+  }
+  .scw-nav-btn-current.scw-nav-btn-orange {
+    background: var(--orange-deep, #a14d1f) !important;
+    color: #fff !important;
+  }
+  .scw-nav-btn-current:hover {
+    transform: none !important;
+  }
+  @media (max-width: 700px) {
+    .scw-nav-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CONTENT SECTIONS */
+  .pc-section { padding: 56px 20px; }
+  .pc-section.alt { background: var(--cream-warm); }
+  .pc-inner { max-width: 1100px; margin: 0 auto; }
+  .pc-prose { max-width: 760px; margin: 0 auto; }
+  .pc-eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    font-weight: 700; margin-bottom: 14px;
+  }
+  .pc-h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; color: var(--green);
+    margin: 0 0 18px; line-height: 1.18;
+  }
+  .pc-h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.35rem; font-weight: 600; color: var(--green);
+    margin: 28px 0 12px;
+  }
+  .pc-lede { font-size: 17px; line-height: 1.75; color: var(--text); margin: 0 0 24px; }
+  .pc-prose p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; color: var(--text); }
+  .pc-prose strong { color: var(--green); }
+  .pc-prose ul, .pc-prose ol { line-height: 1.75; margin: 12px 0 22px; padding-left: 22px; }
+  .pc-prose li { margin-bottom: 6px; }
+
+  /* CARDS */
+  .pc-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px; margin-bottom: 16px;
+  }
+  .pc-card-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 12px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--green); margin: 0;
+  }
+  .pc-card-amount {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--orange);
+  }
+  .pc-card-amount-sub {
+    display: block; font-size: 11px; color: var(--muted);
+    font-weight: 400; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px;
+  }
+  .pc-card-body { font-size: 15px; line-height: 1.65; color: var(--text); }
+  .pc-card-body strong { color: var(--green); }
+  .pc-card-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border-soft); font-size: 12px;
+  }
+  .pc-card-meta-item { display: flex; flex-direction: column; }
+  .pc-card-meta-lbl {
+    color: var(--muted); font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 2px;
+  }
+  .pc-card-meta-val { color: var(--green); font-weight: 700; font-size: 13px; }
+  @media (max-width: 600px) {
+    .pc-card-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* GRID OF CARDS */
+  .pc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .pc-grid-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+  .pc-grid-card-icon {
+    font-size: 28px; margin-bottom: 10px;
+  }
+  .pc-grid-card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem; color: var(--green);
+    margin: 0 0 8px; font-weight: 600;
+  }
+  .pc-grid-card-body { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .pc-grid-card-meta { font-size: 12px; color: var(--muted); margin-top: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* TABLES */
+  .pc-table-wrap { overflow-x: auto; margin: 22px 0; }
+  .pc-table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    font-size: 14px;
+  }
+  .pc-table th, .pc-table td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pc-table thead th {
+    background: var(--green); color: #fff;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pc-table tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* CTA STRIP */
+  .pc-cta-strip {
+    background: var(--green); color: #fff;
+    padding: 32px 24px; border-radius: 12px;
+    text-align: center; margin: 32px 0;
+  }
+  .pc-cta-strip-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem; margin: 0 0 8px;
+  }
+  .pc-cta-strip-sub { font-size: 14px; opacity: 0.9; margin: 0 0 18px; }
+  .pc-cta-strip a {
+    display: inline-block; padding: 12px 22px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px; font-weight: 700; text-decoration: none;
+    margin: 4px;
+  }
+  .pc-cta-strip a:hover { background: var(--orange-deep); text-decoration: none; }
+
+  /* FOOTER CTA */
+  .scw-footer-cta {
+    background: var(--green); color: #fff;
+    padding: 50px 24px; text-align: center;
+  }
+  .scw-footer-cta-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.6rem; font-weight: 700; margin: 0 0 10px;
+  }
+  .scw-footer-cta-sub {
+    font-size: 15px; opacity: 0.85; margin: 0 auto 22px; max-width: 560px;
+  }
+  .scw-footer-cta-row {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .scw-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px;
+    background: var(--orange); color: #fff;
+    border-radius: 6px;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+  .scw-cta-btn:hover { background: var(--orange-deep); text-decoration: none; }
+  .dual-call-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .dual-call-wrap > a { flex: 1 1 auto; min-width: 0; }
+  @media (max-width: 640px) {
+    .dual-call-wrap { flex-direction: column; gap: 6px; }
+    .dual-call-wrap > a { width: 100%; }
+  }
+
+  /* SITE FOOTER */
+  footer.site-footer {
+    text-align: center; padding: 30px 20px;
+    font-size: 13px; color: var(--muted);
+    background: #fff; border-top: 1px solid var(--beige);
+  }
+</style>
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hometownaz.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PebbleCreek",
+        "item": "https://hometownaz.com/pebblecreek/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "⚡ Solar at PebbleCreek — Owned, Leased, PPA Explained",
+        "item": "https://hometownaz.com/pebblecreek/solar.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "⚡ Solar at PebbleCreek — Owned, Leased, PPA Explained",
+    "description": "How to evaluate solar on a PebbleCreek home: owned vs leased vs PPA, HOA approval, tile roof considerations. We review lease docs before you make an offer.",
+    "url": "https://hometownaz.com/pebblecreek/solar.html",
+    "publisher": {
+      "@type": "RealEstateAgent",
+      "name": "Lona King & Billy Heinzman",
+      "url": "https://hometownaz.com",
+      "telephone": "+1-623-203-6271",
+      "areaServed": "PebbleCreek, AZ"
+    }
+  }
+]</script>
+</head>
+<body>
+
+<section class="scw-hero">
+  <a href="index.html" class="scw-back">← Back to PebbleCreek</a>
+  <div class="scw-hero-grid">
+    <div class="scw-hero-left">
+      <div class="scw-tagline">
+        <span class="scw-tagline-icon">⚡</span>
+        LONA KING &amp; BILLY HEINZMAN · PEBBLECREEK EXPERTS
+      </div>
+      <h1 class="scw-headline">Solar Pros <span class='accent'>&amp; Cons</span></h1>
+    </div>
+
+<!-- NAV:START -->
+<div class="scw-nav-grid">
+  <a href="events.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📅</span> Events Calendar</a>
+  <a href="community-fees.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">$</span> Community Fees</a>
+  <a href="golf.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⛳</span> Let&apos;s Golf!</a>
+  <a href="buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
+  <a href="things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
+  <a href="solar.html" class="scw-nav-btn scw-nav-btn-current"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
+</div>
+<!-- NAV:END -->
+  </div>
+</section>
+
+
+<section class="pc-section">
+  <div class="pc-prose">
+    <div style="text-align: center; margin-bottom: 28px;">
+      <div class="pc-eyebrow">⚡ Solar in PebbleCreek</div>
+      <h2 class="pc-h2">Solar pros &amp; cons for PebbleCreek buyers</h2>
+    </div>
+    <p class="pc-lede">Solar is common across Arizona retirement communities, and PebbleCreek is no exception. If you're buying here, you'll often encounter homes with existing solar — either owned outright by the seller, or under an active lease/PPA. Here's how to think about it.</p>
+  </div>
+
+  <div class="pc-prose">
+    <h3 class="pc-h3">Why solar makes sense in Phoenix</h3>
+    <p>Arizona gets <strong>300+ sunny days a year</strong> — among the highest solar resource in the country. A west-facing or south-facing roof in PebbleCreek can typically generate enough electricity to cover most of a home's needs, especially in spring and fall when AC demand is lower.</p>
+    <p>Phoenix electricity rates have climbed steadily over the past decade. APS (Arizona Public Service) is the local utility; their standard rates are time-of-use, with peak afternoon hours costing meaningfully more. A well-sized solar system reduces or eliminates the most expensive afternoon kWh.</p>
+  </div>
+
+  <div class="pc-prose">
+    <h3 class="pc-h3">The three ways homes have solar</h3>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">1. Owned outright (best case)</h3>
+        <div class="pc-card-amount">No transfer<span class="pc-card-amount-sub">Adds resale value</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>The seller paid cash for the panels (or paid off a loan) and owns them. <strong>This is the best scenario for a buyer.</strong> The system simply conveys with the home, the electricity savings are immediate, and you have no monthly solar payment.</p>
+        <p>Owned systems generally add to resale value — though not dollar-for-dollar with installed cost, the consensus among Arizona appraisers is that a well-maintained owned solar system adds tangible value.</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">2. Active solar lease (most common)</h3>
+        <div class="pc-card-amount">Requires assumption<span class="pc-card-amount-sub">20-25 yr terms</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>The seller is in year 4 of a 20-year lease with SunRun, Tesla Energy, Sunnova, or another provider. <strong>You as the buyer typically assume the lease</strong>, which means qualifying with the leasing company and signing the lease transfer paperwork at or before closing.</p>
+        <p><strong>What to watch for:</strong></p>
+        <ul>
+          <li>Monthly lease payment — often $80-$200/mo</li>
+          <li>Annual escalator clause — rate typically goes up 2-3% per year</li>
+          <li>Years remaining on the lease</li>
+          <li>Buyout option at end-of-lease — fair market value or set price?</li>
+          <li>Production guarantee — is the system performing to spec?</li>
+        </ul>
+        <p>We can pull the lease documents pre-offer and review them with you — important to understand the math before you commit.</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">3. Power Purchase Agreement (PPA)</h3>
+        <div class="pc-card-amount">Per-kWh<span class="pc-card-amount-sub">Production-based</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>Less common but still seen. Instead of a flat monthly lease payment, you pay the provider for the actual kWh produced — at a rate usually below APS's retail rate. Same transfer-and-assume mechanics as a lease.</p>
+      </div>
+    </div>
+
+    <div class="pc-card">
+      <div class="pc-card-header">
+        <h3 class="pc-card-title">4. Owned with a solar loan</h3>
+        <div class="pc-card-amount">Payoff at sale<span class="pc-card-amount-sub">Or buyer assumes</span></div>
+      </div>
+      <div class="pc-card-body">
+        <p>The seller took out a loan to buy the panels. At sale, the loan is typically <strong>paid off from sale proceeds</strong> — and then the panels convey free and clear. You can also negotiate for the buyer to assume the loan, but that's rare and complicated.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pc-prose">
+    <h3 class="pc-h3">PebbleCreek-specific considerations</h3>
+    <ul>
+      <li><strong>HOA architectural approval:</strong> The PebbleCreek HOA requires architectural approval for new solar installations. Existing systems were approved when installed — but if you want to add or modify panels, plan for the approval process.</li>
+      <li><strong>Tile roofs:</strong> Many PebbleCreek homes have concrete tile roofs. Installation on tile is more expensive and requires specialized installers — important to know if you're considering adding solar post-purchase.</li>
+      <li><strong>Roof condition:</strong> If the home's roof is older, you may want to factor in re-roofing before adding solar (or having the seller deal with this).</li>
+    </ul>
+
+    <h3 class="pc-h3">Our honest take</h3>
+    <p><strong>For buyers:</strong> A home with owned solar is a positive. A home with a leased system is neutral-to-slightly-negative — not a deal-breaker, but a complexity. We always read the lease before recommending you make an offer.</p>
+    <p><strong>For new construction (Robson builds):</strong> Robson typically offers solar as an option, not standard. Whether to add solar at build-time depends on your timeline (you'll see the breakeven in 8-12 years for owned systems), expected length of ownership, and your overall AC usage patterns.</p>
+    <p><strong>For existing homes without solar:</strong> Adding panels post-purchase is fine — but get multiple quotes, verify installer reputation, and budget for the architectural approval process.</p>
+  </div>
+</section>
+
+<section class="pc-section alt">
+  <div class="pc-prose">
+    <div class="pc-eyebrow">📞 We've Done This Many Times</div>
+    <h2 class="pc-h2">Need help evaluating a specific home's solar?</h2>
+    <p>If you've identified a PebbleCreek home with solar — owned or leased — call us before you make an offer. We'll review the lease/contract/loan documents, run the math against your expected APS bills, and help you decide whether to assume, negotiate buyout, or walk.</p>
+    <p>We've reviewed dozens of solar leases in this market — including a Sun City West property with two stacked leases (SunRun and Tesla). The seller had to pay off ~$35K combined to deliver clean title. Don't be that buyer surprised at closing — get the analysis up front.</p>
+  </div>
+</section>
+
+
+<section class="scw-footer-cta">
+  <div class="scw-footer-cta-title">Questions about PebbleCreek?</div>
+  <div class="scw-footer-cta-sub">
+    The fastest way to a clear answer is a 5-minute call. We sell PebbleCreek homes and know the community inside out — call us with any question.
+  </div>
+  <div class="scw-footer-cta-row">
+    <div class="dual-call-wrap">
+      <a href="tel:+16232036271" class="scw-cta-btn">📞 Call Lona — (623) 203-6271</a>
+      <a href="tel:+14802973830" class="scw-cta-btn">📞 Call Billy — (480) 297-3830</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lona King &amp; Billy Heinzman · HomeSmart · lonajking.com<br>
+  <a href="index.html" style="color: var(--muted);">← Back to PebbleCreek</a>
+</footer>
+
+</body>
+</html>
