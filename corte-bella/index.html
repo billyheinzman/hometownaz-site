@@ -938,8 +938,8 @@ a:hover { text-decoration: underline; }
 .hf-detail-photo{position:relative;width:100%;aspect-ratio:3/2;background:#e6dcc6;overflow:hidden;}
 .hf-detail-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .hf-detail-photo.clickable{cursor:pointer;}
-.hf-detail-photo-cue{position:absolute;left:12px;bottom:12px;background:rgba(35,41,31,.82);color:#fff;font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:20px;pointer-events:none;opacity:0;transition:opacity .15s;}
-.hf-detail-photo.clickable:hover .hf-detail-photo-cue,.hf-detail-photo.clickable:focus .hf-detail-photo-cue{opacity:1;}
+.hf-detail-photo-cue{position:absolute;right:12px;bottom:12px;background:rgba(35,41,31,.88);color:#fff;font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:20px;pointer-events:none;opacity:1;transition:opacity .15s;box-shadow:0 1px 6px rgba(0,0,0,.3);}
+.hf-detail-photo.clickable:hover .hf-detail-photo-cue,.hf-detail-photo.clickable:focus .hf-detail-photo-cue{opacity:1;background:var(--hf-gold-deep);}
 .hf-glow-ring{filter:drop-shadow(0 0 6px #fff) drop-shadow(0 0 12px #fff);animation:hfGlowPulse 1.4s ease-in-out infinite;}
 @keyframes hfGlowPulse{0%,100%{opacity:1;}50%{opacity:.45;}}
 @media(prefers-reduced-motion:reduce){.hf-glow-ring{animation:none;}}
