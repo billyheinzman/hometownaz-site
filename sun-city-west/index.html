@@ -911,6 +911,7 @@ a:hover { text-decoration: underline; }
   <a href="scw-buyer-budget.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📊</span> Buyer Budget</a>
   <a href="scw-things-to-do.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">📍</span> Fun Things Locally!</a>
   <a href="scw-solar.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">⚡</span> Solar Pros &amp; Cons</a>
+  <a href="scw-community-resources.html" class="scw-nav-btn"><span class="scw-nav-btn-icon">☎</span> Community Resources</a>
   <a href="scw-rec-centers.html" class="scw-nav-btn scw-nav-btn-wide scw-nav-btn-orange"><span class="scw-nav-btn-icon">🏊</span> Rec Centers</a>
 </div>
 <!-- NAV:END -->
@@ -1206,6 +1207,14 @@ a:hover { text-decoration: underline; }
 .hf-idx-hint{margin:0;padding:11px 16px;background:#fbf3e3;border-bottom:1px solid var(--hf-line);color:var(--hf-gold-deep);font-size:.85rem;font-weight:600;}
 .hf-idx-hint[hidden]{display:none;}
 .hf-idx-mls{background:#fff;border:1px solid var(--hf-gold);border-radius:4px;padding:1px 7px;color:var(--hf-gold-deep);font-weight:700;user-select:all;cursor:text;}
+/* Photo lightbox (click-to-enlarge) */
+.hf-lightbox{position:fixed;inset:0;z-index:9999;background:rgba(20,17,12,.92);display:flex;align-items:center;justify-content:center;padding:24px;}
+.hf-lightbox[hidden]{display:none;}
+.hf-lightbox img{max-width:96vw;max-height:92vh;width:auto;height:auto;border-radius:6px;box-shadow:0 12px 48px rgba(0,0,0,.5);}
+.hf-lightbox-close{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;}
+.hf-lightbox-close:hover{background:rgba(255,255,255,.28);}
+.hf-detail-photo.clickable{cursor:zoom-in;}
+.hf-detail-zoomcue{position:absolute;right:12px;bottom:12px;background:rgba(20,17,12,.72);color:#fff;font-size:.78rem;font-weight:600;padding:5px 11px;border-radius:20px;pointer-events:none;display:flex;align-items:center;gap:5px;}
 .hf-detail-btn.save.saved{background:#c0392b;color:#fff;border-color:#c0392b;}
 @media(max-width:680px){.hf-detail{width:100%;}}
 .hf-legend-item{display:inline-flex;align-items:center;gap:7px;font-family:inherit;font-size:.82rem;font-weight:600;color:var(--hf-ink);background:#f3efe6;border:1px solid var(--hf-line);border-radius:999px;padding:6px 13px;cursor:pointer;transition:all .15s;}
@@ -1405,6 +1414,10 @@ END HIDDEN VENDOR NETWORK -->
       <p id="hf-idx-hint" class="hf-idx-hint" hidden></p>
       <iframe id="hf-idx-frame" data-src="https://link.flexmls.com/1za2ydsj27ug,12" frameborder="0" width="100%" height="850" title="Sun City West homes for sale — live MLS listings" loading="lazy"></iframe>
       <p class="hf-disclaimer">Listing data © ARMLS, displayed via Flexmls IDX. Information deemed reliable but not guaranteed.</p>
+    </div>
+    <div id="hf-lightbox" class="hf-lightbox" hidden onclick="window.hfCloseLightbox()">
+      <button type="button" class="hf-lightbox-close" aria-label="Close photo" onclick="window.hfCloseLightbox()">✕</button>
+      <img id="hf-lightbox-img" src="" alt="">
     </div>
 
     <!-- Sortable list overlay (opened from the stat boxes) -->
@@ -2312,8 +2325,8 @@ document.addEventListener('keydown', function(e){
       var subj = encodeURIComponent('Interested in '+x.addr+' (MLS '+x.mls+')');
       var bodyTxt = encodeURIComponent("Hi Lona,\n\nI saw "+x.addr+" (MLS "+x.mls+", "+fmt(x.price)+") on your Sun City West map and would like to know more.\n\nThanks!");
       panel.innerHTML =
-        '<div class="hf-detail-photo'+(x.mls?' clickable':'')+'"'+(x.mls?' onclick="window.hfOpenListingPhotos(\''+x.mls+'\')" title="View all photos on MLS" role="button" tabindex="0"':'')+'>'+photo
-        + (x.mls ? '<span class="hf-detail-photo-cue">📷 View all photos</span>' : '')
+        '<div class="hf-detail-photo'+(x.photo?' clickable':'')+'"'+(x.photo?' onclick="window.hfZoomPhoto(\''+encodeURIComponent(x.photo)+'\')" title="Click to enlarge" role="button" tabindex="0"':'')+'>'+photo
+        + (x.photo ? '<span class="hf-detail-zoomcue">🔍 Click to enlarge</span>' : '')
         + '<button type="button" class="hf-detail-close" onclick="window.hfHideDetail()" aria-label="Close details">✕</button>'
         + '<span class="hf-detail-status" style="background:'+meta.color+'">'+meta.label+'</span>'
         + '</div>'
@@ -2485,6 +2498,35 @@ document.addEventListener('keydown', function(e){
       $('hf-idx-panel').hidden=false;
       $('hf-idx-panel').scrollIntoView({behavior:'smooth',block:'start'});
     }
+    window.hfZoomPhoto = function(encUrl){
+      var url = decodeURIComponent(encUrl);
+      var box=$('hf-lightbox'), img=$('hf-lightbox-img');
+      if(!box||!img||!url){ return; }
+      // Spark CDN serves a larger "-o" (original) version of the same photo.
+      // Try it first; if it 404s, fall back to the stored URL.
+      var hires = url.replace(/(\/[^\/.]+)(\.jpg)(\?.*)?$/i, '$1-o$2$3');
+      img.onerror = function(){ img.onerror=null; img.src = url; };
+      img.src = (hires && hires !== url) ? hires : url;
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+    };
+    window.hfCloseLightbox = function(){
+      var box=$('hf-lightbox'), img=$('hf-lightbox-img');
+      if(!box){ return; }
+      box.hidden = true;
+      if(img){ img.src=''; }
+      document.body.style.overflow = '';
+    };
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Escape' && !$('hf-lightbox').hidden){ window.hfCloseLightbox(); }
+    });
+    window.hfCopyMls = function(mls, btn){
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(mls).then(function(){
+          if(btn){ var o=btn.innerHTML; btn.innerHTML='\u2705 Copied!'; setTimeout(function(){ btn.innerHTML=o; },1400); }
+        }).catch(function(){});
+      }
+    };
     window.hfOpenListingPhotos = function(mls){
       if(window.hfHideDetail) window.hfHideDetail();
       if(window.hfSetView){ window.hfSetView('grid'); }
@@ -2493,8 +2535,16 @@ document.addEventListener('keydown', function(e){
       if(!bar){ return; }
       if(!mls){ bar.hidden=true; return; }
       function showHint(copied){
-        bar.innerHTML = (copied ? '✅ MLS# <b class="hf-idx-mls">'+mls+'</b> copied. ' : 'To see all photos of this home: ')
-          + 'Paste (or type) <b class="hf-idx-mls">'+mls+'</b> into the “Find an Address or MLS #” box above and press Enter.';
+        bar.innerHTML =
+          '<div class="hf-hint-top">'
+          +   '<span>'+(copied?'<span class="hf-hint-copied">\u2705 MLS# copied!</span> ':'')+'See all photos of this home:</span>'
+          +   '<button type="button" class="hf-hint-copy" onclick="window.hfCopyMls(\''+mls+'\',this)">\ud83d\udccb '+mls+'</button>'
+          + '</div>'
+          + '<ol class="hf-hint-steps">'
+          +   '<li><b>1.</b> Click the \u201cFind an Address or MLS #\u201d box at the top of the search below.</li>'
+          +   '<li><b>2.</b> Paste the number (Ctrl+V) \u2014 it\u2019s already copied for you.</li>'
+          +   '<li><b>3.</b> Press Enter to open the full photo gallery.</li>'
+          + '</ol>';
         bar.hidden=false;
       }
       if(mls && navigator.clipboard && navigator.clipboard.writeText){
