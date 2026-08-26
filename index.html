@@ -2771,107 +2771,9 @@
     <span class="ticker-label-text">Our Listings</span>
     <span class="ticker-label-arrow">→</span>
   </a>
-  <div class="ticker-track">
-    <!-- First pass — listings in order -->
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">19511 N 143rd Dr</span>
-      <span class="ticker-price">$299,000</span>
-      <span class="ticker-meta">2bd · 2ba · 1,866 sq ft</span>
-      <span class="ticker-model">D8523</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-sold">Sold</span>
-      <span class="ticker-addr">14418 W Gunsight Dr</span>
-      <span class="ticker-price">$430,000</span>
-      <span class="ticker-meta">2bd · 2ba · 2,039 sq ft</span>
-      <span class="ticker-model">Closed 2026-06-02</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">15808 W Heritage Dr</span>
-      <span class="ticker-price">$439,000</span>
-      <span class="ticker-meta">2bd · 3ba · 1,900 sq ft</span>
-      <span class="ticker-model">P2605</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">15119 W Las Brizas Ln</span>
-      <span class="ticker-price">$429,900</span>
-      <span class="ticker-meta">3bd · 2ba · 1,893 sq ft</span>
-      <span class="ticker-model">P2619</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">14029 W Rico Dr</span>
-      <span class="ticker-price">$469,000</span>
-      <span class="ticker-meta">2bd · 2ba · 1,792 sq ft</span>
-      <span class="ticker-model">Custom Remodel</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-sold">Sold</span>
-      <span class="ticker-addr">14141 W Robertson Dr</span>
-      <span class="ticker-price">$539,900</span>
-      <span class="ticker-meta">2bd · 2ba · 2,197 sq ft</span>
-      <span class="ticker-model">Closed 2026-05-27</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-pending">Pending</span>
-      <span class="ticker-addr">12429 W Eveningside Dr</span>
-      <span class="ticker-price">$379,000</span>
-      <span class="ticker-meta">2bd · 2ba · 1,600 sq ft</span>
-      <span class="ticker-model">H832</span>
-    </span>
-    <!-- Duplicate pass for seamless infinite scroll -->
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">19511 N 143rd Dr</span>
-      <span class="ticker-price">$299,000</span>
-      <span class="ticker-meta">2bd · 2ba · 1,866 sq ft</span>
-      <span class="ticker-model">D8523</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-sold">Sold</span>
-      <span class="ticker-addr">14418 W Gunsight Dr</span>
-      <span class="ticker-price">$430,000</span>
-      <span class="ticker-meta">2bd · 2ba · 2,039 sq ft</span>
-      <span class="ticker-model">Closed 2026-06-02</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">15808 W Heritage Dr</span>
-      <span class="ticker-price">$439,000</span>
-      <span class="ticker-meta">2bd · 3ba · 1,900 sq ft</span>
-      <span class="ticker-model">P2605</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">15119 W Las Brizas Ln</span>
-      <span class="ticker-price">$429,900</span>
-      <span class="ticker-meta">3bd · 2ba · 1,893 sq ft</span>
-      <span class="ticker-model">P2619</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-active">Active</span>
-      <span class="ticker-addr">14029 W Rico Dr</span>
-      <span class="ticker-price">$469,000</span>
-      <span class="ticker-meta">2bd · 2ba · 1,792 sq ft</span>
-      <span class="ticker-model">Custom Remodel</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-sold">Sold</span>
-      <span class="ticker-addr">14141 W Robertson Dr</span>
-      <span class="ticker-price">$539,900</span>
-      <span class="ticker-meta">2bd · 2ba · 2,197 sq ft</span>
-      <span class="ticker-model">Closed 2026-05-27</span>
-    </span>
-    <span class="ticker-item">
-      <span class="ticker-status ticker-status-pending">Pending</span>
-      <span class="ticker-addr">12429 W Eveningside Dr</span>
-      <span class="ticker-price">$379,000</span>
-      <span class="ticker-meta">2bd · 2ba · 1,600 sq ft</span>
-      <span class="ticker-model">H832</span>
-    </span>
+  <div class="ticker-track" id="tickerTrack">
+    <!-- Built at runtime from ACTIVE_LISTINGS (data-listings.js + listings-data-patch.js).
+         Do not hand-edit listings here — they go stale. See buildTicker() below. -->
   </div>
 </div>
 
@@ -3629,5 +3531,74 @@ function showHuntHint(ev){
     }).catch(function () { /* leave existing value */ });
 })();
 </script>
+
+
+<!-- Listings ticker data + renderer -->
+<script src="data-listings.js?v=20260825"></script>
+<script src="listings-data-patch.js?v=20260825"></script>
+<script>
+(function buildTicker(){
+  var track = document.getElementById('tickerTrack');
+  var bar = document.querySelector('.ticker-bar');
+  if (!track) return;
+  if (typeof ACTIVE_LISTINGS === 'undefined' || !ACTIVE_LISTINGS) {
+    if (bar) bar.style.display = 'none';
+    return;
+  }
+
+  var MAX_SOLD = 6;
+  function ours(arr){ return (arr || []).filter(function(l){ return l.isOurListing === true; }); }
+
+  function money(n){ return '$' + Number(n || 0).toLocaleString('en-US'); }
+
+  function titleCase(a){
+    return String(a || '').toLowerCase().replace(/\b([a-z])/g, function(m,c){ return c.toUpperCase(); })
+      .replace(/\b(N|S|E|W|Ne|Nw|Se|Sw)\b/g, function(m){ return m.toUpperCase(); })
+      .replace(/(\d+)(St|Nd|Rd|Th)\b/g, function(m,d,sfx){ return d + sfx.toLowerCase(); });
+  }
+
+  function prettyDate(iso){
+    if (!iso) return '';
+    var p = String(iso).split('-');
+    if (p.length !== 3) return iso;
+    return Number(p[1]) + '/' + Number(p[2]) + '/' + p[0];
+  }
+
+  function meta(l){
+    var bits = [];
+    if (l.beds) bits.push(l.beds + 'bd');
+    if (l.baths) bits.push(l.baths + 'ba');
+    if (l.sqft) bits.push(Number(l.sqft).toLocaleString('en-US') + ' sq ft');
+    return bits.join(' \u00b7 ');
+  }
+
+  var sold = ours(ACTIVE_LISTINGS.recentClosings)
+    .slice()
+    .sort(function(a,b){ return String(b.closeDate||'').localeCompare(String(a.closeDate||'')); })
+    .slice(0, MAX_SOLD);
+
+  var items = []
+    .concat(ours(ACTIVE_LISTINGS.active).map(function(l){ return {l:l, label:'Active', cls:'active', price:l.price, tail:l.model || ''}; }))
+    .concat(ours(ACTIVE_LISTINGS.ucb).map(function(l){ return {l:l, label:'Accepting Backups', cls:'pending', price:l.price, tail:l.model || ''}; }))
+    .concat(ours(ACTIVE_LISTINGS.pending).map(function(l){ return {l:l, label:'Pending', cls:'pending', price:l.price, tail:l.model || ''}; }))
+    .concat(sold.map(function(l){ return {l:l, label:'Sold', cls:'sold', price:l.soldPrice || l.price, tail:'Closed ' + prettyDate(l.closeDate)}; }));
+
+  if (!items.length) { if (bar) bar.style.display = 'none'; return; }
+
+  function html(it){
+    return '<span class="ticker-item">'
+      + '<span class="ticker-status ticker-status-' + it.cls + '">' + it.label + '</span>'
+      + '<span class="ticker-addr">' + titleCase(it.l.addr) + '</span>'
+      + '<span class="ticker-price">' + money(it.price) + '</span>'
+      + '<span class="ticker-meta">' + meta(it.l) + '</span>'
+      + (it.tail ? '<span class="ticker-model">' + it.tail + '</span>' : '')
+      + '</span>';
+  }
+
+  var pass = items.map(html).join('');
+  track.innerHTML = pass + pass;   // duplicated for the seamless scroll loop
+})();
+</script>
+
 </body>
 </html>
