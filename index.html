@@ -3021,71 +3021,89 @@ function showHuntHint(ev){
   /* Compact one-line featured strip. Sits between the hero and the
      community cards. Delete the whole <section class="feat-band"> above
      plus this <style> block to remove it. */
-  .feat-band { background: var(--cream-warm, #ede8df); padding: 14px 24px; }
+  .feat-band { background: var(--cream-warm, #ede8df); padding: 24px; }
   .feat-card {
     max-width: 1180px; margin: 0 auto;
-    display: flex; align-items: center; gap: 16px;
-    background: var(--white, #fff); border: 1px solid var(--border, #ddd6c8);
-    border-radius: 10px; padding: 8px 14px 8px 8px;
+    display: flex; align-items: center; gap: 20px;
+    background: var(--white, #fff); border: 1px solid var(--orange-light, #e8a040);
+    border-radius: 12px; padding: 12px 20px 12px 12px;
     text-decoration: none; color: inherit;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    /* Soft pulsing glow so the featured home pulls the eye. */
+    animation: featGlow 2.8s ease-in-out infinite;
+  }
+  @keyframes featGlow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(200,98,42,0.28),
+                  0 4px 16px rgba(42,38,30,0.07);
+    }
+    50% {
+      box-shadow: 0 0 22px 5px rgba(232,160,64,0.42),
+                  0 4px 20px rgba(42,38,30,0.10);
+    }
   }
   .feat-card:hover {
-    box-shadow: 0 6px 18px rgba(42,38,30,0.11);
+    animation-play-state: paused;
+    transform: translateY(-2px);
     border-color: var(--orange, #c8622a);
+    box-shadow: 0 0 26px 6px rgba(232,160,64,0.52),
+                0 8px 24px rgba(42,38,30,0.13);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .feat-card { animation: none; box-shadow: 0 0 16px 3px rgba(232,160,64,0.34); }
   }
 
   .feat-media {
     position: relative; flex: 0 0 auto;
-    width: 92px; height: 62px; border-radius: 7px; overflow: hidden;
+    width: 132px; height: 88px; border-radius: 9px; overflow: hidden;
     background: var(--green-soft, #3a5040);
   }
   .feat-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .feat-media-empty::after {
     content: '\01F3E0'; position: absolute; inset: 0;
     display: flex; align-items: center; justify-content: center;
-    font-size: 22px; opacity: 0.45;
+    font-size: 30px; opacity: 0.45;
   }
 
   .feat-body {
     flex: 1 1 auto; min-width: 0;
-    display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px;
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: 7px 14px;
   }
   .feat-tag {
     flex: 0 0 auto;
     background: var(--orange, #c8622a); color: #fff;
-    font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 4px 9px; border-radius: 999px; position: relative; top: -1px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 5px 11px; border-radius: 999px; position: relative; top: -1px;
   }
   .feat-addr {
     font-family: var(--serif, 'Playfair Display', Georgia, serif);
-    font-size: 17px; font-weight: 700; color: var(--green-deep, #1f2c1f);
+    font-size: 21px; font-weight: 700; color: var(--green-deep, #1f2c1f);
     white-space: nowrap;
   }
   .feat-price {
-    font-size: 16px; font-weight: 700; color: var(--orange, #c8622a); white-space: nowrap;
+    font-size: 20px; font-weight: 700; color: var(--orange, #c8622a); white-space: nowrap;
   }
   .feat-meta {
-    font-size: 12.5px; color: var(--muted, #6b6354); white-space: nowrap;
+    font-size: 13.5px; color: var(--muted, #6b6354); white-space: nowrap;
   }
 
   .feat-3d {
     flex: 0 0 auto;
     display: inline-flex; align-items: center; gap: 6px;
-    font-size: 10px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
     color: var(--orange-deep, #a14d1f);
-    border: 1px solid rgba(200,98,42,0.42); border-radius: 999px; padding: 6px 11px;
+    border: 1px solid rgba(200,98,42,0.5); border-radius: 999px; padding: 8px 14px;
     white-space: nowrap;
   }
-  .feat-3d-icon { font-size: 13px; animation: featBlink 1.15s steps(1, end) infinite; }
+  .feat-3d-icon { font-size: 15px; animation: featBlink 1.15s steps(1, end) infinite; }
   @keyframes featBlink { 0%,60% { opacity: 1; } 61%,100% { opacity: 0.25; } }
   @media (prefers-reduced-motion: reduce) { .feat-3d-icon { animation: none; } }
 
   .feat-btn {
     flex: 0 0 auto;
     background: var(--orange, #c8622a); color: #fff;
-    padding: 8px 15px; border-radius: 7px;
-    font-size: 12px; font-weight: 700; white-space: nowrap;
+    padding: 11px 20px; border-radius: 8px;
+    font-size: 13px; font-weight: 700; white-space: nowrap;
   }
   .feat-card:hover .feat-btn { background: var(--orange-deep, #a14d1f); }
 
@@ -3095,11 +3113,11 @@ function showHuntHint(ev){
     .feat-meta { display: none; }
   }
   @media (max-width: 680px) {
-    .feat-band { padding: 10px 16px; }
-    .feat-card { gap: 11px; padding: 7px 10px 7px 7px; }
-    .feat-media { width: 64px; height: 48px; }
-    .feat-addr { font-size: 15px; }
-    .feat-price { font-size: 14.5px; }
+    .feat-band { padding: 16px; }
+    .feat-card { gap: 14px; padding: 9px 14px 9px 9px; }
+    .feat-media { width: 92px; height: 64px; }
+    .feat-addr { font-size: 17px; }
+    .feat-price { font-size: 16px; }
     .feat-3d { display: none; }
   }
   @media (max-width: 460px) {
