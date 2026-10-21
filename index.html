@@ -499,6 +499,36 @@
   .ticker-bar:hover .ticker-track {
     animation-play-state: paused;
   }
+  /* Listings that carry a property-page URL render as links. The track pauses
+     on hover (above), so there is time to click one. */
+  .ticker-item-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: background 0.18s ease;
+  }
+  .ticker-item-link:hover,
+  .ticker-item-link:focus-visible {
+    background: rgba(255, 255, 255, 0.07);
+  }
+  .ticker-item-link:focus-visible {
+    outline: 2px solid var(--yellow, #e8b84b);
+    outline-offset: -2px;
+  }
+  .ticker-golink {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--yellow, #e8b84b);
+    border: 1px solid rgba(232, 184, 75, 0.45);
+    border-radius: 999px;
+    padding: 2px 9px;
+    white-space: nowrap;
+  }
+  .ticker-item-link:hover .ticker-golink {
+    background: rgba(232, 184, 75, 0.16);
+  }
   @keyframes ticker-scroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -2743,11 +2773,11 @@
 <div class="utility-bar">
   <div class="utility-inner">
     <div class="utility-left">
-      <span class="utility-item"><span class="lbl">Today's rate</span> <span class="val">30-yr Fixed <span id="rate-30">6.99%</span></span></span>
+      <!-- Fallback values below are overwritten by /api/rates on load. Freddie Mac
+           publishes 30-yr and 15-yr only, so there is no 5/1 ARM slot. -->
+      <span class="utility-item"><span class="lbl">Today's rate</span> <span class="val">30-yr Fixed <span id="rate-30">7.40%</span></span></span>
       <span class="utility-divider"></span>
-      <span class="utility-item"><span class="lbl">15-yr</span> <span class="val" id="rate-15">6.42%</span></span>
-      <span class="utility-divider"></span>
-      <span class="utility-item" id="rate-arm-item"><span class="lbl">5/1 ARM</span> <span class="val" id="rate-arm">6.61%</span></span>
+      <span class="utility-item"><span class="lbl">15-yr</span> <span class="val" id="rate-15">6.71%</span></span>
       <span class="utility-item" id="rate-asof" style="font-size:11px;opacity:0.65;"></span>
     </div>
     <div class="utility-right">
@@ -3496,21 +3526,21 @@ function showHuntHint(ev){
 <script>
 (function () {
   // ---- RATES (Freddie Mac via /api/rates) ----
+  // The API reports stale:true when both upstream sources fail, so the bar can
+  // say how old the number is instead of quietly showing a hardcoded value.
   fetch('/api/rates').then(function (r) { return r.json(); }).then(function (d) {
     var set = function (id, txt) { var el = document.getElementById(id); if (el) el.textContent = txt; };
-    if (d.thirtyYear != null) set('rate-30', d.thirtyYear.toFixed(2) + '%');
-    if (d.fifteenYear != null) set('rate-15', d.fifteenYear.toFixed(2) + '%');
-    if (d.fiveOneArm != null) {
-      set('rate-arm', d.fiveOneArm.toFixed(2) + '%');
-    } else {
-      // Freddie Mac doesn't publish a 5/1 ARM number — hide that slot
-      var item = document.getElementById('rate-arm-item');
-      if (item) item.style.display = 'none';
-      var div = item ? item.previousElementSibling : null;
-      if (div && div.className.indexOf('utility-divider') !== -1) div.style.display = 'none';
+    if (d.thirtyYear != null) set('rate-30', Number(d.thirtyYear).toFixed(2) + '%');
+    if (d.fifteenYear != null) set('rate-15', Number(d.fifteenYear).toFixed(2) + '%');
+    if (d.asOf) {
+      var label = (d.source || 'Freddie Mac') + ' \u00b7 ' + d.asOf;
+      if (d.stale) label += ' \u00b7 last known';
+      set('rate-asof', label);
     }
-    if (d.asOf) set('rate-asof', 'Freddie Mac · ' + d.asOf);
-  }).catch(function () { /* leave existing values; never show an error */ });
+  }).catch(function () {
+    var el = document.getElementById('rate-asof');
+    if (el) el.textContent = 'Freddie Mac \u00b7 Oct 15, 2026 \u00b7 last known';
+  });
 
   // ---- WEATHER (Open-Meteo, Sun City West) ----
   var lat = 33.6620, lon = -112.3413;
@@ -3534,8 +3564,8 @@ function showHuntHint(ev){
 
 
 <!-- Listings ticker data + renderer -->
-<script src="data-listings.js?v=20260825"></script>
-<script src="listings-data-patch.js?v=20260825"></script>
+<script src="data-listings.js?v=20261019"></script>
+<script src="listings-data-patch.js?v=20261019"></script>
 <script>
 (function buildTicker(){
   var track = document.getElementById('tickerTrack');
@@ -3585,14 +3615,25 @@ function showHuntHint(ev){
 
   if (!items.length) { if (bar) bar.style.display = 'none'; return; }
 
+  function esc(u){
+    return String(u || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+  }
+
+  // A listing with a `url` renders as a link to its property page; everything
+  // else stays a plain span. The track pauses on hover, so the link is clickable.
   function html(it){
-    return '<span class="ticker-item">'
+    var url = it.l.url;
+    var open = url
+      ? '<a class="ticker-item ticker-item-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">'
+      : '<span class="ticker-item">';
+    return open
       + '<span class="ticker-status ticker-status-' + it.cls + '">' + it.label + '</span>'
       + '<span class="ticker-addr">' + titleCase(it.l.addr) + '</span>'
       + '<span class="ticker-price">' + money(it.price) + '</span>'
       + '<span class="ticker-meta">' + meta(it.l) + '</span>'
       + (it.tail ? '<span class="ticker-model">' + it.tail + '</span>' : '')
-      + '</span>';
+      + (url ? '<span class="ticker-golink">View&nbsp;&rarr;</span>' : '')
+      + (url ? '</a>' : '</span>');
   }
 
   var pass = items.map(html).join('');
