@@ -2993,6 +2993,98 @@ function showHuntHint(ev){
 </section>
 
 <!-- ====================================================
+     FEATURED LISTING BAND
+     One hand-picked listing, directly under the hero.
+     To feature a different home, edit the href, the text and
+     the photo below, or remove this whole <section> to drop it.
+     ==================================================== -->
+<section class="feat-band">
+  <a class="feat-card" href="1948-e-morrow-dr.html">
+    <div class="feat-media">
+      <img src="https://images.homes.com/listings/102/0852611415-964721732/1948-e-morrow-dr-phoenix-az-primaryphoto.jpg"
+           alt="1948 E Morrow Dr, Phoenix AZ — 3 bed, 2 bath home with pool"
+           loading="lazy"
+           onerror="this.style.display='none';this.parentNode.classList.add('feat-media-empty');">
+      <span class="feat-tag">Featured Listing</span>
+    </div>
+    <div class="feat-body">
+      <div class="feat-eyebrow">Just Listed &middot; Phoenix 85024</div>
+      <h2 class="feat-addr">1948 E Morrow Dr</h2>
+      <div class="feat-price">$574,900</div>
+      <div class="feat-meta">3 bd &middot; 2 ba &middot; 1,586 sq ft &middot; Pool &middot; Built 1988</div>
+      <p class="feat-copy">Single-level Hillsdale home on a cul-de-sac. New roof, HVAC, water heater and every kitchen appliance in 2026, plus a PebbleTec pool with new equipment.</p>
+      <div class="feat-actions">
+        <span class="feat-btn">See Full Details &nbsp;&rarr;</span>
+        <span class="feat-3d"><span class="feat-3d-icon" aria-hidden="true">&#127917;</span> 3D Walkthrough</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<style>
+  .feat-band { background: var(--cream-warm, #ede8df); padding: 40px 24px; }
+  .feat-card {
+    max-width: 1180px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1.15fr; gap: 0;
+    background: var(--white, #fff); border: 1px solid var(--border, #ddd6c8);
+    border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit;
+    transition: box-shadow 0.22s ease, transform 0.22s ease;
+  }
+  .feat-card:hover { box-shadow: 0 14px 38px rgba(42,38,30,0.14); transform: translateY(-2px); }
+  @media (max-width: 860px) { .feat-card { grid-template-columns: 1fr; } }
+
+  .feat-media { position: relative; background: var(--green-soft, #3a5040); min-height: 260px; }
+  .feat-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .feat-media-empty::after {
+    content: '\01F3E0'; position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 44px; opacity: 0.45;
+  }
+  .feat-tag {
+    position: absolute; top: 14px; left: 14px;
+    background: var(--orange, #c8622a); color: #fff;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+    padding: 6px 13px; border-radius: 999px;
+  }
+
+  .feat-body { padding: 30px 34px; display: flex; flex-direction: column; justify-content: center; }
+  .feat-eyebrow {
+    font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--orange, #c8622a); font-weight: 700; margin-bottom: 9px;
+  }
+  .feat-addr {
+    font-family: var(--serif, 'Playfair Display', Georgia, serif);
+    font-size: clamp(25px, 3.1vw, 33px); font-weight: 700;
+    margin: 0 0 6px; color: var(--green-deep, #1f2c1f); line-height: 1.14;
+  }
+  .feat-price {
+    font-family: var(--serif, 'Playfair Display', Georgia, serif);
+    font-size: 27px; font-weight: 700; color: var(--orange, #c8622a); margin-bottom: 5px;
+  }
+  .feat-meta { font-size: 13.5px; color: var(--muted, #6b6354); margin-bottom: 14px; }
+  .feat-copy {
+    font-size: 14.5px; line-height: 1.65; color: var(--ink-soft, #5a4f44);
+    margin: 0 0 20px; max-width: 520px;
+  }
+  .feat-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .feat-btn {
+    background: var(--orange, #c8622a); color: #fff;
+    padding: 12px 22px; border-radius: 8px;
+    font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em;
+  }
+  .feat-card:hover .feat-btn { background: var(--orange-deep, #a14d1f); }
+  .feat-3d {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--orange-deep, #a14d1f);
+    border: 1px solid rgba(200,98,42,0.42); border-radius: 999px; padding: 9px 15px;
+  }
+  .feat-3d-icon { font-size: 15px; animation: featBlink 1.15s steps(1, end) infinite; }
+  @keyframes featBlink { 0%,60% { opacity: 1; } 61%,100% { opacity: 0.25; } }
+  @media (prefers-reduced-motion: reduce) { .feat-3d-icon { animation: none; } }
+</style>
+
+<!-- ====================================================
      COMMUNITY CARDS — moved below the hero into own band
      ==================================================== -->
 <section class="communities-section" id="communities-grid">
