@@ -33,6 +33,10 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = __dirname;
+// Lead form: saves to Supabase table web_leads (website can insert only) and emails LEAD_EMAIL.
+const SUPA_URL = 'https://vyqewievemmjjueqgpsr.supabase.co';
+const SUPA_KEY = 'sb_publishable_1sOtZKoOzGziAgAOhV-9_Q_s-Ju-zsO';   // public key, insert-only on web_leads
+const LEAD_EMAIL = 'billyheinzman@gmail.com';
 const OUT = path.join(ROOT, 'homes');
 const SITE = 'https://hometownaz.com';
 
@@ -144,6 +148,14 @@ h1{font-family:'Merriweather',Georgia,serif;font-size:27px;font-weight:700;line-
 .btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}
 .btn.flyer{display:block;text-align:center;border-color:var(--orange-deep);color:var(--orange-deep)}
 .btn.hc{display:block;text-align:center}
+.lead-h{font-family:'Merriweather',Georgia,serif;font-size:18px;color:var(--green);margin-bottom:10px}
+.lead input:not([type=radio]),.lead textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:6px;font:inherit;margin-bottom:8px;background:#fff}
+.lead-wants{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;font-size:14px}
+.lead-wants input{margin-right:6px;accent-color:var(--orange)}
+.lead .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.lead-msg{font-size:14px;margin-top:8px;min-height:1em}
+.lead-msg.ok{color:#2d6a3e;font-weight:600}.lead-msg.err{color:#a3341b}
+@media(max-width:860px){.lead{order:3}.about{order:4}.qrc{order:5}.who{order:6}}
 h2{font-family:'Merriweather',Georgia,serif;font-size:20px;margin:28px 0 10px}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pills span{background:#fff;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:13px}
 #map{height:280px;border-radius:8px;border:1px solid var(--border)}
@@ -157,7 +169,8 @@ const HEAD = (title, desc, img, url) => `<!DOCTYPE html><html lang="en"><head><m
 <title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><link rel="canonical" href="${url}">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="${url}">${img ? `<meta property="og:image" content="${esc(img.startsWith('http') ? img : SITE + img)}">` : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">`;
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<script defer src="/_vercel/insights/script.js"></script>`;
 const TOP = `<header class="top"><div class="in"><a class="brand" href="/">Lona King &amp; Billy Heinzman</a><a href="/our-listings.html">All our listings</a></div></header>`;
 const FOOT = `<footer><div class="in">Lona King | 623-203-6271 &nbsp;&nbsp; Billy Heinzman | 480-297-3830<br>HomeSmart | (623) 209-3200<br>Listing information is deemed reliable but not guaranteed and should be independently verified. Source: Arizona Regional Multiple Listing Service (ARMLS). Prices and availability subject to change.</div></footer>`;
 const QRLIB = `<script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>`;
@@ -201,7 +214,25 @@ for (const l of homes) {
   const flyer = hasFlyer(l._slug) ? `/flyers/${l._slug}.pdf` : '';
   const flyerBtn = flyer ? `<a class="btn flyer" href="${flyer}" target="_blank" rel="noopener" download="${l._slug}-flyer.pdf">&#128196; Download Flyer (PDF)</a>` : '';
   const sms = 'sms:4802973830?&body=' + encodeURIComponent('Hi Billy, I would like to see ' + addr);
+  // schema.org listing markup so Google and link previews understand the page
+  const ld = {
+    '@context': 'https://schema.org', '@type': 'RealEstateListing',
+    name: `${addr}, ${city} AZ ${l.zip || ''}`.trim(), url: l._url, description: l.remarks || '',
+    image: pics.map(p => p.startsWith('http') ? p : SITE + p),
+    datePosted: l.listDate || undefined,
+    offers: { '@type': 'Offer', price: price, priceCurrency: 'USD',
+      availability: sold ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock' },
+    about: { '@type': l.dwelling && /condo|apartment/i.test(l.dwelling) ? 'Apartment' : 'SingleFamilyResidence',
+      numberOfRooms: l.beds || undefined, numberOfBedrooms: l.beds || undefined, numberOfBathroomsTotal: l.baths || undefined,
+      floorSize: l.sqft ? { '@type': 'QuantitativeValue', value: l.sqft, unitCode: 'FTK' } : undefined,
+      yearBuilt: l.yr || undefined,
+      address: { '@type': 'PostalAddress', streetAddress: addr, addressLocality: city, addressRegion: 'AZ', postalCode: l.zip || '', addressCountry: 'US' },
+      geo: l.lat && l.lon ? { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lon } : undefined },
+    broker: { '@type': 'RealEstateAgent', name: 'Lona King & Billy Heinzman | HomeSmart', telephone: '+1-623-203-6271', url: SITE }
+  };
+  const ldTag = `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
   const html = `${HEAD(`${addr} | ${money(price)} | ${comm || city}`, desc, pics[0], l._url)}
+${ldTag}
 <style>${CSS}</style></head><body>${TOP}
 <main class="wrap">
 ${sold ? `<div class="sold-note"><b>This home has sold.</b> Thank you for your interest. <a href="/our-listings.html">See the homes we have for sale now.</a></div>` : ''}
@@ -221,6 +252,23 @@ ${sold ? `<div class="sold-note"><b>This home has sold.</b> Thank you for your i
    ${flyerBtn}
    ${l.homesUrl ? `<a class="btn hc" href="${esc(l.homesUrl)}" target="_blank" rel="noopener">&#127968; View on Homes.com</a>` : ''}
   </div>
+  ${sold ? '' : `<div class="card lead" id="lead">
+   <h3 class="lead-h">Want to see this home?</h3>
+   <form id="leadform" novalidate>
+    <div class="lead-wants">
+     <label><input type="radio" name="wants" value="showing" checked> Schedule a showing</label>
+     <label><input type="radio" name="wants" value="details"> Send me details</label>
+     <label><input type="radio" name="wants" value="question"> Ask a question</label>
+    </div>
+    <input name="name" placeholder="Your name" autocomplete="name" required maxlength="120">
+    <input name="phone" type="tel" placeholder="Phone" autocomplete="tel" maxlength="40">
+    <input name="email" type="email" placeholder="Email" autocomplete="email" maxlength="160">
+    <textarea name="message" rows="2" placeholder="Best times, questions (optional)" maxlength="2000"></textarea>
+    <input name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit" class="btn primary" style="width:100%;margin:6px 0 0">Send to Lona &amp; Billy</button>
+    <p class="lead-msg" id="leadmsg" role="status"></p>
+   </form>
+  </div>`}
   <div class="card center qrc"><div class="qr" id="qr" data-url="${l._url}"></div><p class="muted" style="margin-top:8px">Scan or share this home</p><p class="muted"><a id="qrdl" href="#" download="${slug2(l)}-qr.gif">Download QR code</a></p></div>
   <div class="card who"><p><b>Lona King</b><br>623-203-6271 | azlonaking@gmail.com</p><p style="margin-top:10px"><b>Billy Heinzman</b><br>480-297-3830 | billyheinzman@gmail.com</p><p class="muted" style="margin-top:10px">HomeSmart</p></div>
  </div>
@@ -231,6 +279,25 @@ ${QRLIB}<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leafle
 var P=${JSON.stringify(pics)},i=0;
 function step(d){i=(i+d+P.length)%P.length;document.getElementById('galimg').src=P[i];document.getElementById('cnt').textContent=(i+1)+' / '+P.length;}
 (function(){var el=document.getElementById('qr');if(window.qrcode){var q=qrcode(0,'M');q.addData(el.dataset.url);q.make();el.innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});document.getElementById('qrdl').href=q.createDataURL(12,4);}})();
+${sold ? '' : `(function(){
+ var f=document.getElementById('leadform'); if(!f) return; var m=document.getElementById('leadmsg');
+ var src=(location.pathname.match(/^\\/q\\/([a-z0-9-]+)\\//)||[])[1]||'web';
+ f.addEventListener('submit',function(e){
+  e.preventDefault(); if(f.company.value) return;
+  var d={name:f.name.value.trim(),phone:f.phone.value.trim()||null,email:f.email.value.trim()||null,
+   message:f.message.value.trim()||null,wants:(f.querySelector('input[name=wants]:checked')||{}).value||'showing',
+   listing_slug:${JSON.stringify(l._slug)},listing_mls:${JSON.stringify(l.mls)},listing_addr:${JSON.stringify(addr)},source:src,page_url:location.href.slice(0,300)};
+  if(!d.name||(!d.phone&&!d.email)){m.className='lead-msg err';m.textContent='Please add your name and a phone or email.';return;}
+  var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
+  fetch(${JSON.stringify(SUPA_URL + '/rest/v1/web_leads')},{method:'POST',headers:{'apikey':${JSON.stringify(SUPA_KEY)},'Authorization':'Bearer '+${JSON.stringify(SUPA_KEY)},'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(d)})
+  .then(function(r){ if(!r.ok) throw 0;
+    fetch(${JSON.stringify('https://formsubmit.co/ajax/' + LEAD_EMAIL)},{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+     body:JSON.stringify({_subject:'Website lead: '+d.listing_addr+' ('+d.wants+')',_template:'table',Name:d.name,Phone:d.phone||'',Email:d.email||'',Wants:d.wants,Home:d.listing_addr+' | MLS '+d.listing_mls,Message:d.message||'',Came_from:d.source,Page:d.page_url})}).catch(function(){});
+    if(window.va) window.va('event',{name:'lead'});
+    f.reset(); m.className='lead-msg ok'; m.textContent='Thank you! Lona or Billy will be in touch shortly.'; b.textContent='Sent';
+  }).catch(function(){ b.disabled=false; b.textContent='Send to Lona & Billy'; m.className='lead-msg err'; m.textContent='Sorry, that did not go through. Please call or text Billy at 480-297-3830.'; });
+ });
+})();`}
 ${l.lat && l.lon ? `if(window.L){var m=L.map('map',{scrollWheelZoom:false}).setView([${l.lat},${l.lon}],15);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap'}).addTo(m);L.marker([${l.lat},${l.lon}]).addTo(m);}` : ''}
 </script></body></html>`;
   fs.writeFileSync(path.join(OUT, l._slug + '.html'), html);
@@ -240,7 +307,7 @@ function slug2(l) { return l._slug; }
 // ---- printable QR sheet (white page, thin lines, light on ink) -----------------
 const forSale = homes.filter(l => l._bucket !== 'recentClosings');
 const tiles = [{ t: 'All our listings', s: 'Full portfolio', u: `${SITE}/our-listings.html` }]
-  .concat(forSale.map(l => ({ t: prettyAddr(l.addr), s: `${community(l) || cityOf(l)} | ${money(l.price)} | ${l._label}`, u: l._url })));
+  .concat(forSale.map(l => ({ t: prettyAddr(l.addr), s: `${community(l) || cityOf(l)} | ${money(l.price)} | ${l._label}`, u: `${SITE}/q/sign/${l._slug}` })));
 fs.writeFileSync(path.join(OUT, 'qr-sheet.html'), `<!DOCTYPE html><html><head><meta charset="utf-8"><title>QR codes | Our Listings</title><meta name="robots" content="noindex"><style>
 body{font-family:Helvetica,Arial,sans-serif;margin:24px;color:#2a2a2a}h1{font-weight:400;font-size:22px;margin:0 0 4px}p{color:#7a6e60;margin:0 0 18px;font-size:13px}
 .g{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #ccc;border-left:1px solid #ccc}
@@ -252,6 +319,14 @@ body{font-family:Helvetica,Arial,sans-serif;margin:24px;color:#2a2a2a}h1{font-we
 ${QRLIB}<script>document.querySelectorAll('[data-url]').forEach(function(el){var q=qrcode(0,'M');q.addData(el.dataset.url);q.make();el.innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});});</script></body></html>`);
 
 fs.writeFileSync(path.join(OUT, 'index.html'), `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/our-listings.html"><link rel="canonical" href="${SITE}/our-listings.html"><title>Our Listings</title></head><body><a href="/our-listings.html">Our Listings</a></body></html>`);
+
+// Small data file for the homepage ticker: only OUR listings, already patched.
+// Saves the homepage from downloading the full 1.2 MB data-listings.js.
+const slim = l => ({ mls: l.mls, addr: l.addr, price: l.price, beds: l.beds, baths: l.baths, sqft: l.sqft,
+  model: l.model, soldPrice: l.soldPrice, closeDate: l.closeDate, isOurListing: true, url: '/homes/' + l._slug });
+const OURS = { lastUpdated: A.lastUpdated || '', active: [], ucb: [], pending: [], comingSoon: [], recentClosings: [] };
+for (const l of homes) (OURS[l._bucket] = OURS[l._bucket] || []).push(slim(l));
+fs.writeFileSync(path.join(OUT, 'ours-data.js'), '// generated by build-homes.js | our listings only (homepage ticker)\nvar ACTIVE_LISTINGS = ' + JSON.stringify(OURS) + ';\n');
 
 // flyer map for the Our Listings popup (keyed by slug)
 const FLY = {};

@@ -161,7 +161,8 @@ def flyer(h, path):
         c.setFillColorRGB(*ORANGE); c.setFont(SANS, 9); c.drawString(ax + 66, M + 43, em)
         ax += 200
     qx = W - M - 76
-    c.drawImage(qr_image(h['url']), qx, M + 18, 76, 76)
+    # tagged link so analytics can count flyer scans separately (vercel.json rewrites /q/...)
+    c.drawImage(qr_image(h['url'].replace('/homes/', '/q/flyer/')), qx, M + 18, 76, 76)
     c.setFillColorRGB(*GREEN); c.setFont(SANSB, 8)
     c.drawRightString(qx - 8, M + 70, 'SCAN FOR')
     c.drawRightString(qx - 8, M + 60, 'MORE PHOTOS')

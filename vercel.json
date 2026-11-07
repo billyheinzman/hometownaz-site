@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/homes/:slug", "destination": "/homes/:slug.html" }
+    {
+      "source": "/q/:src/:slug",
+      "destination": "/homes/:slug.html"
+    },
+    {
+      "source": "/homes/:slug",
+      "destination": "/homes/:slug.html"
+    }
   ]
 }
