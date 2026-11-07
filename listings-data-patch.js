@@ -1,7 +1,8 @@
 // ============================================================
 // LISTINGS DATA PATCH — applies after data-listings.js loads
 // Rewritten 2026-08-20. Last hand-update 2026-11-07 (added 17125 N Firestone Ln,
-// real photo + map pin for 1948 E Morrow Dr, remarks text cleanup).
+// real photo + map pin for 1948 E Morrow Dr, remarks text cleanup,
+// Homes.com links, STATUS_FIX section for mid-week status changes).
 //
 // What this file does NOW:
 //   1. Attaches locally-hosted 12-photo galleries (images/listings/<mls>/01..12.jpg)
@@ -134,6 +135,54 @@
     var bucket = entry._bucket;
     delete entry._bucket;
     ACTIVE_LISTINGS[bucket].push(entry);
+  });
+
+  // --- 2b. Status corrections ---------------------------------------------
+  // Use when a listing's status changed after the last ARMLS export.
+  // Remove the line once a fresh data-listings.js shows the new status.
+  var STATUS_FIX = {
+    // '7095507': 'active'   // example: 15626 W Heritage Dr went back on market 11/6/2026
+  };
+  Object.keys(STATUS_FIX).forEach(function (mls) {
+    var hit = findByMls(mls), to = STATUS_FIX[mls];
+    if (!hit || hit.bucket === to) return;
+    var l = hit.arr.splice(hit.idx, 1)[0];
+    l.status = to;
+    if (to === 'active') { delete l.acceptingBackups; }
+    ACTIVE_LISTINGS[to].push(l);
+  });
+
+  // --- 2c. Homes.com listing pages ----------------------------------------
+  // Homes.com URLs carry an ID that can't be built from the address, so each
+  // one is listed here (copied from Lona's Homes.com agent profile).
+  var HOMES_COM = {
+    '7095582': '14854-w-domingo-ln-sun-city-west-az/0frtlfyv9l8le/',
+    '7098038': '15421-w-sentinel-dr-sun-city-west-az/jpvbs14zrf4bj/',
+    '7088722': '13664-w-ravenswood-dr-sun-city-west-az/b9vjx47zy0ed5/',
+    '7098041': '12931-w-prospect-dr-sun-city-west-az/b882p28pk4nl6/',
+    '7095502': '13607-w-pyracantha-dr-sun-city-west-az/c1hbn2qk1jgrq/',
+    '7095507': '15626-w-heritage-dr-sun-city-west-az-unit-45/m8zs0ngnktzz5/',
+    '7086407': '1948-e-morrow-dr-phoenix-az/d9vt50tsqmte1/',
+    '7101295': '17125-n-firestone-ln-surprise-az/q7py51yk0d5qv/',
+    '7080792': '19949-n-greenview-dr-sun-city-west-az/k5zj0csycbfn5/'
+  };
+  var HOMES_COM_BY_ADDR = {   // listings whose MLS # isn't handy: matched by street address
+    '19614 N BELLWOOD DR': '19614-n-bellwood-dr-sun-city-west-az/d6mhfglcygl3g/',
+    '14412 W ROBERTSON DR': '14412-w-robertson-dr-sun-city-west-az/26h4l298kb6w1/',
+    '22002 N ACAPULCO DR': '22002-n-acapulco-dr-sun-city-west-az/563gh5rlncx6l/',
+    '14912 W YOSEMITE DR': '14912-w-yosemite-dr-sun-city-west-az/ddzfgt8t9ctte/',
+    '15119 W LAS BRIZAS LN': '15119-w-las-brizas-ln-sun-city-west-az/lq4tqh0qxw4rp/',
+    '19638 N BELLWOOD DR': '19638-n-bellwood-dr-sun-city-west-az/71h0cq76y56hl/',
+    '15808 W HERITAGE DR': '15808-w-heritage-dr-sun-city-west-az/9njhzwey1x2mn/',
+    '14420 W SENTINEL DR': '14420-w-sentinel-dr-sun-city-west-az/b09llb32wx34e/',
+    '19511 N 143RD DR': '19511-n-143rd-dr-sun-city-west-az/pc9m7w3xbx2b8/'
+  };
+  ['active', 'pending', 'ucb', 'recentClosings'].forEach(function (b) {
+    ACTIVE_LISTINGS[b].forEach(function (l) {
+      if (!l) return;
+      var path = HOMES_COM[l.mls] || HOMES_COM_BY_ADDR[String(l.addr || '').toUpperCase()];
+      if (path) l.homesUrl = 'https://www.homes.com/property/' + path;
+    });
   });
 
   // --- 3. Text cleanup ----------------------------------------------------

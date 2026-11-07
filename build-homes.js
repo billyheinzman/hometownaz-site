@@ -132,6 +132,7 @@ h1{font-family:'Merriweather',Georgia,serif;font-size:27px;font-weight:700;line-
 .btn{display:inline-block;padding:11px 16px;border:1.5px solid var(--green);border-radius:6px;text-decoration:none;color:var(--green);font-size:14px;font-weight:600;margin:14px 8px 0 0}
 .btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}
 .btn.flyer{display:block;text-align:center;border-color:var(--orange-deep);color:var(--orange-deep)}
+.btn.hc{display:block;text-align:center}
 h2{font-family:'Merriweather',Georgia,serif;font-size:20px;margin:28px 0 10px}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pills span{background:#fff;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:13px}
 #map{height:280px;border-radius:8px;border:1px solid var(--border)}
@@ -207,6 +208,7 @@ ${sold ? `<div class="sold-note"><b>This home has sold.</b> Thank you for your i
    <div class="facts">${facts.map(f => `<div><span>${f[0]}</span>${esc(f[1])}</div>`).join('')}</div>
    ${sold ? `<a class="btn primary" href="/our-listings.html">See current listings</a>` : `<a class="btn primary" href="tel:+14802973830">Call Billy</a><a class="btn" href="tel:+16232036271">Call Lona</a><a class="btn" href="${sms}">Text to schedule a showing</a>`}
    ${flyerBtn}
+   ${l.homesUrl ? `<a class="btn hc" href="${esc(l.homesUrl)}" target="_blank" rel="noopener">&#127968; View on Homes.com</a>` : ''}
   </div>
   <div class="card center qrc"><div class="qr" id="qr" data-url="${l._url}"></div><p class="muted" style="margin-top:8px">Scan or share this home</p><p class="muted"><a id="qrdl" href="#" download="${slug2(l)}-qr.gif">Download QR code</a></p></div>
   <div class="card who"><p><b>Lona King</b><br>623-203-6271 | azlonaking@gmail.com</p><p style="margin-top:10px"><b>Billy Heinzman</b><br>480-297-3830 | billyheinzman@gmail.com</p><p class="muted" style="margin-top:10px">HomeSmart</p></div>
