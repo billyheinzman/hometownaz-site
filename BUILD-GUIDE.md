@@ -105,6 +105,10 @@ node build-homes.js
 - Slugs never change, so printed QR codes keep working. Sold homes keep their page,
   marked SOLD with a link to current listings.
 - The "Share Page & QR" button in the Our Listings detail popup links to these pages.
+- **Flyer PDFs:** save each home's flyer (front + back combined) as `flyers/<slug>.pdf`
+  (for example `flyers/15421-sentinel.pdf`) and run `node build-homes.js`. A "Download Flyer (PDF)"
+  button then appears on the home's page and a "Flyer PDF" button in the Our Listings popup.
+  Keep each file under about 5 MB so it opens quickly on phones.
 - When adding new for-sale pages, also add them to `sitemap.xml` between the
   `HOMES:START` / `HOMES:END` markers.
 
