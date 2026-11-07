@@ -2093,8 +2093,8 @@ body.fp-open { overflow: hidden; }
 <!-- ===== DETAILS MODAL ===== -->
 <div class="detail-modal-backdrop" id="detailModalBackdrop" onclick="closeDetails()"></div>
 
-<script src="data-listings.js?v=20261029"></script>
-<script src="listings-data-patch.js?v=20261029"></script>
+<script src="data-listings.js?v=20261107"></script>
+<script src="listings-data-patch.js?v=20261107b"></script>
 <script>
 // ============================================
 // OUR LISTINGS — Active / Pending / Sold viewer
@@ -2957,6 +2957,18 @@ function buildListingCard(l, idx) {
 }
 
 // ============ DETAILS MODAL ============
+// Matches build-homes.js: 17125 N FIRESTONE LN -> 17125-firestone (hometownaz.com/homes/<slug>)
+function homeSlug(addr) {
+  var DIRS = {N:1,S:1,E:1,W:1,NE:1,NW:1,SE:1,SW:1};
+  var SUF = {LN:1,DR:1,AVE:1,ST:1,RD:1,CT:1,CIR:1,WAY:1,BLVD:1,PL:1,TER:1,TRL:1,PKWY:1,LOOP:1};
+  var t = String(addr || '').toUpperCase().replace(/--/g, ' ').trim().split(/\s+/), out = [t[0]];
+  for (var i = 1; i < t.length; i++) {
+    if (i === 1 && DIRS[t[i]]) continue;
+    if (SUF[t[i]]) continue;
+    out.push(t[i].replace(/[^A-Z0-9]/g, ''));
+  }
+  return out.filter(Boolean).join('-').toLowerCase();
+}
 function openDetails(key) {
   var l = LISTING_BY_KEY[key];
   if (!l) return;
@@ -3051,6 +3063,7 @@ function openDetails(key) {
             return '';
           })() +
           '<button class="listing-btn outline" onclick="generateFlyer(\'' + key + '\')">📄 Print Flyer</button>' +
+          '<a href="/homes/' + homeSlug(l.addr) + '" class="listing-btn outline">🔗 Share Page &amp; QR</a>' +
           '<a href="https://www.zillow.com/homes/' + addrEsc + '_rb/" target="_blank" rel="noopener" class="listing-btn outline">🏠 On Zillow</a>' +
           '<a href="tel:+16232036271" class="listing-btn">📞 Call Lona</a>' +
           '<a href="mailto:azlonaking@gmail.com?subject=' + encodeURIComponent('Question about ' + addr) + '" class="listing-btn">✉️ Email</a>' +

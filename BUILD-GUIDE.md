@@ -81,6 +81,35 @@ for usage.
 
 ---
 
+## Listing pages + QR codes (`/homes/`)
+
+Every one of OUR listings gets its own shareable page with a QR code:
+`hometownaz.com/homes/<house number>-<street>` (for example `/homes/17125-firestone`).
+
+| File | Purpose |
+|---|---|
+| `build-homes.js` | Reads `data-listings.js` + `listings-data-patch.js` and writes `homes/*.html` |
+| `homes/qr-sheet.html` | Printable sheet of every for-sale QR code (`hometownaz.com/homes/qr-sheet`) |
+| `vercel.json` | Rewrite so `/homes/<slug>` serves `homes/<slug>.html` |
+
+**After every data refresh, run:**
+
+```bash
+node build-homes.js
+```
+
+(Same habit as `build-nav.py`. Needs Node only, no npm installs.)
+
+- A listing outside the Sun City West export (The Grand, Phoenix, etc.) is added by hand to
+  `OFF_FEED` in `listings-data-patch.js`. Firestone and Morrow live there now.
+- Slugs never change, so printed QR codes keep working. Sold homes keep their page,
+  marked SOLD with a link to current listings.
+- The "Share Page & QR" button in the Our Listings detail popup links to these pages.
+- When adding new for-sale pages, also add them to `sitemap.xml` between the
+  `HOMES:START` / `HOMES:END` markers.
+
+---
+
 ## Cookie hunt
 
 The Starbucks cookie-hunt feature uses 3 Vercel serverless functions in
