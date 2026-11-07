@@ -1,0 +1,2 @@
+# Homes that keep a hand-designed flyer (build-flyers.py skips these)
+15421-sentinel

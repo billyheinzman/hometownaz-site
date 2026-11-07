@@ -29,6 +29,7 @@ h1{font-family:'Merriweather',Georgia,serif;font-size:27px;font-weight:700;line-
 .btn{display:inline-block;padding:11px 16px;border:1.5px solid var(--green);border-radius:6px;text-decoration:none;color:var(--green);font-size:14px;font-weight:600;margin:14px 8px 0 0}
 .btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}
 .btn.flyer{display:block;text-align:center;border-color:var(--orange-deep);color:var(--orange-deep)}
+.btn.hc{display:block;text-align:center}
 h2{font-family:'Merriweather',Georgia,serif;font-size:20px;margin:28px 0 10px}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pills span{background:#fff;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:13px}
 #map{height:280px;border-radius:8px;border:1px solid var(--border)}
@@ -42,7 +43,7 @@ footer{border-top:1px solid var(--border);background:#fff;color:var(--muted);fon
 <div class="grid">
  <div class="col">
   <div class="gal" id="gal"><img id="galimg" src="https://cdn.photos.sparkplatform.com/az/20261023165443406270000000.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="badge">Active</span>
-  </div>
+  <button class="nav prev" onclick="step(-1)" aria-label="Previous photo">&#8249;</button><button class="nav next" onclick="step(1)" aria-label="Next photo">&#8250;</button><span class="cnt" id="cnt">1 / 2</span></div>
   <div class="about"><h2>About this home</h2><p>Remodeled Gemini twin home in Sun City West backing to green common area. The kitchen opens to the great room with a granite breakfast bar, granite counters, a vented stainless island hood, glass top range and stainless fridge and dishwasher. The original lanai was raised and brought inside as a den with a door to the covered patio, and the utility room is now an interior laundry. Wood look plank tile, updated baths with granite vanities, an accessible primary shower, a whole house water system, new Milgard windows and a 2022 heat pump. Attached garage with opener and direct entry. HOA covers roof repair and replacement, insurance, exterior and front yard care, water, sewer, trash and pest control. Pets and rentals OK. Leased solar with battery storage.</p>
   <div class="pills"><span>55+ community</span></div>
   <h2>Location</h2><div id="map"></div><p class="muted" style="margin-top:6px"><a href="https://www.google.com/maps/search/?api=1&query=33.653199,-112.337571" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
@@ -53,6 +54,7 @@ footer{border-top:1px solid var(--border);background:#fff;color:var(--muted);fon
    <div class="facts"><div><span>Price</span>$264,900</div><div><span>Status</span>Active</div><div><span>Bedrooms</span>2</div><div><span>Bathrooms</span>2</div><div><span>Living area</span>1,483 sf</div><div><span>Year built</span>1979</div><div><span>Garage</span>1 car</div><div><span>Home type</span>Gemini/Twin Home</div><div><span>MLS #</span>7098041</div></div>
    <a class="btn primary" href="tel:+14802973830">Call Billy</a><a class="btn" href="tel:+16232036271">Call Lona</a><a class="btn" href="sms:4802973830?&body=Hi%20Billy%2C%20I%20would%20like%20to%20see%2012931%20W%20Prospect%20Drive">Text to schedule a showing</a>
    <a class="btn flyer" href="/flyers/12931-prospect.pdf" target="_blank" rel="noopener" download="12931-prospect-flyer.pdf">&#128196; Download Flyer (PDF)</a>
+   <a class="btn hc" href="https://www.homes.com/property/12931-w-prospect-dr-sun-city-west-az/b882p28pk4nl6/" target="_blank" rel="noopener">&#127968; View on Homes.com</a>
   </div>
   <div class="card center qrc"><div class="qr" id="qr" data-url="https://hometownaz.com/homes/12931-prospect"></div><p class="muted" style="margin-top:8px">Scan or share this home</p><p class="muted"><a id="qrdl" href="#" download="12931-prospect-qr.gif">Download QR code</a></p></div>
   <div class="card who"><p><b>Lona King</b><br>623-203-6271 | azlonaking@gmail.com</p><p style="margin-top:10px"><b>Billy Heinzman</b><br>480-297-3830 | billyheinzman@gmail.com</p><p class="muted" style="margin-top:10px">HomeSmart</p></div>
@@ -61,7 +63,7 @@ footer{border-top:1px solid var(--border);background:#fff;color:var(--muted);fon
 </main><footer><div class="in">Lona King | 623-203-6271 &nbsp;&nbsp; Billy Heinzman | 480-297-3830<br>HomeSmart | (623) 209-3200<br>Listing information is deemed reliable but not guaranteed and should be independently verified. Source: Arizona Regional Multiple Listing Service (ARMLS). Prices and availability subject to change.</div></footer>
 <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-var P=["https://cdn.photos.sparkplatform.com/az/20261023165443406270000000.jpg"],i=0;
+var P=["https://cdn.photos.sparkplatform.com/az/20261023165443406270000000.jpg","/homes/photos/12931-prospect-1.jpg"],i=0;
 function step(d){i=(i+d+P.length)%P.length;document.getElementById('galimg').src=P[i];document.getElementById('cnt').textContent=(i+1)+' / '+P.length;}
 (function(){var el=document.getElementById('qr');if(window.qrcode){var q=qrcode(0,'M');q.addData(el.dataset.url);q.make();el.innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});document.getElementById('qrdl').href=q.createDataURL(12,4);}})();
 if(window.L){var m=L.map('map',{scrollWheelZoom:false}).setView([33.653199,-112.337571],15);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap'}).addTo(m);L.marker([33.653199,-112.337571]).addTo(m);}

@@ -5,7 +5,22 @@
   "mls": "7095582",
   "addr": "14854 W Domingo Lane",
   "status": "Active",
-  "price": 525000
+  "price": 525000,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1786,
+  "yr": 1997,
+  "lotsqft": 8328,
+  "garage": 2,
+  "model": "Flagstaff",
+  "remarks": "Stunning Stonework and Courtyard Entry Prepares you to view this Highly Upgraded Flagstaff Model w/a Great Room floor plan.* It checks every box on your buyer's wish list and then some. Roof 2018*Ac/Heat 2017*Porcelain Plank Flooring Throughout 2020*Wide baseboards*Milgard Windows Throughout*Hot Water Heater 2017*Crown Molding Throughout*Kitchen remodel*Granite Counters*Stainless Steel GE Profile Appliances*All Pull Out Cabinets*Custom Living Room Wall Unit w/Lighting*Both Baths Are Updated*Quartzite Counters w/Tito Sinks, Primary Has a Roll In Shower* Raised Panel Doors*New LG Washer/Dryer Inside Laundry w/Pantry*New Brushed Nickel Hardware*High End Fans and Lighting*Gorgeous Extended Covered Patio*Epoxy Coated* w/knee wall*Beautifully Landscaped*Garage w/Built-In Cabinets*Epoxy Floors.",
+  "photos": [
+   "/homes/photos/14854-domingo-1.jpg"
+  ]
  },
  {
   "slug": "15421-sentinel",
@@ -13,7 +28,22 @@
   "mls": "7098038",
   "addr": "15421 W Sentinel Drive",
   "status": "Active",
-  "price": 419000
+  "price": 419000,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 3,
+  "sqft": 1825,
+  "yr": 1992,
+  "lotsqft": 8700,
+  "garage": 2,
+  "model": "Ventana",
+  "remarks": "WELCOME HOME TO THIS SPACIOUS VENTANA MODEL! Offering 1,825 SF of comfortable living with a versatile floor plan featuring TWO PRIVATE BEDROOM SUITES, each with its own bath! The kitchen offers generous workspace and opens to the living and dining areas, perfect for everyday living and entertaining. Custom office features handsome built-ins, ideal for working from home or hobbies. Expanded interior laundry provides additional storage and functionality. Enjoy Arizona's beautiful weather on the extended covered patio, perfect for relaxing or outdoor dining. Leased solar offers potential energy savings! Two-car garage and access to Sun City West's outstanding amenities, including golf, recreation centers, pools, pickleball and more! A wonderful opportunity to enjoy the Arizona lifestyle!",
+  "photos": [
+   "/homes/photos/15421-sentinel-1.jpg"
+  ]
  },
  {
   "slug": "13664-ravenswood",
@@ -21,7 +51,22 @@
   "mls": "7088722",
   "addr": "13664 W Ravenswood Drive",
   "status": "Active",
-  "price": 410000
+  "price": 410000,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1438,
+  "yr": 1995,
+  "lotsqft": 5300,
+  "garage": 2,
+  "model": "Alpine",
+  "remarks": "Completely updated Expanded Alpine in Sun City West, and every update was done right. New roof, new AC, updated kitchen and both baths, new garage door, and all-new landscaping front and back. The kitchen features stainless appliances, a glass tile backsplash, updated counters, and a sunny breakfast nook with a slider to the patio. Both baths have walk-in tiled showers with frameless glass. Plantation shutters throughout, tile plank flooring in the living areas, and wood-look flooring in both bedrooms. The primary suite offers a bay window and a large walk-in closet with custom shelving. The garage has an epoxy floor, built-in cabinets, and laundry. Out back, an extended covered patio overlooks a water feature and a true oasis. 2 bed, 2 bath, 2-car garage. New whole-house water system.",
+  "photos": [
+   "/homes/photos/13664-ravenswood-1.jpg"
+  ]
  },
  {
   "slug": "12931-prospect",
@@ -29,7 +74,22 @@
   "mls": "7098041",
   "addr": "12931 W Prospect Drive",
   "status": "Active",
-  "price": 264900
+  "price": 264900,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1483,
+  "yr": 1979,
+  "lotsqft": 376,
+  "garage": 1,
+  "model": "",
+  "remarks": "Remodeled Gemini twin home in Sun City West backing to green common area. The kitchen opens to the great room with a granite breakfast bar, granite counters, a vented stainless island hood, glass top range and stainless fridge and dishwasher. The original lanai was raised and brought inside as a den with a door to the covered patio, and the utility room is now an interior laundry. Wood look plank tile, updated baths with granite vanities, an accessible primary shower, a whole house water system, new Milgard windows and a 2022 heat pump. Attached garage with opener and direct entry. HOA covers roof repair and replacement, insurance, exterior and front yard care, water, sewer, trash and pest control. Pets and rentals OK. Leased solar with battery storage.",
+  "photos": [
+   "/homes/photos/12931-prospect-1.jpg"
+  ]
  },
  {
   "slug": "13607-pyracantha",
@@ -37,7 +97,22 @@
   "mls": "7095502",
   "addr": "13607 W Pyracantha Drive",
   "status": "Active",
-  "price": 459000
+  "price": 459000,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 2156,
+  "yr": 1978,
+  "lotsqft": 9300,
+  "garage": 2,
+  "model": "LaSalle",
+  "remarks": "Renewed from the water line to the ceiling line! This 2,156 sf Sun City West home pairs mid-century charm with high end upgrades: Italian porcelain tile, smooth walls and ceilings, new doors and trim, designer lighting with dimmers, and high end ceiling fans. The galley kitchen boasts a ceiling raised 13 inches, recessed lighting and new appliances. The great room offers a stone fireplace, formal dining, and a wet bar with wine cooler. Milgard French doors and slider, plantation shutters, and a leaded glass entry. New roof with lifetime warranty, Trane HVAC (2022), updated electrical, and new water line. Custom gates open to a private travertine courtyard with a Henri Studio fountain, plus a covered back patio and fruit trees. Garage with cabinets and workbench. No HOA!",
+  "photos": [
+   "/homes/photos/13607-pyracantha-1.jpg"
+  ]
  },
  {
   "slug": "15626-heritage",
@@ -45,7 +120,22 @@
   "mls": "7095507",
   "addr": "15626 W Heritage Drive",
   "status": "Active",
-  "price": 419900
+  "price": 419900,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1669,
+  "yr": 1992,
+  "lotsqft": 9438,
+  "garage": 2,
+  "model": "Safford",
+  "remarks": "Curb appeal that stops you at the street, & a private gated courtyard that welcomes you in. This well cared for Safford sits on a corner lot in Sun City West with mature professional landscaping plus block & wrought iron fencing creating a secluded feel front & back. Out back, an extended paver patio with a built in barbecue turns the yard into an outdoor room. Inside, you will find upgraded kitchen & bath cabinetry, granite counters throughout, stainless appliances & a reverse osmosis system. The open kitchen offers real workspace & flows to the living & dining areas. Two bedrooms, two baths, a separate den or office & an expanded laundry room. Tile roof & two car garage. Residents enjoy golf, pools, pickleball, fitness & over one hundred clubs. A special find, inside & out.",
+  "photos": [
+   "/homes/photos/15626-heritage-1.jpg"
+  ]
  },
  {
   "slug": "1948-morrow",
@@ -53,7 +143,20 @@
   "mls": "7086407",
   "addr": "1948 E Morrow Drive",
   "status": "Active",
-  "price": 574900
+  "price": 574900,
+  "sold": false,
+  "community": "Hillsdale",
+  "city": "Phoenix",
+  "zip": "85024",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1586,
+  "yr": 1988,
+  "lotsqft": 8568,
+  "garage": 2,
+  "model": "",
+  "remarks": "Single-level Hillsdale home on a cul-de-sac lot. New in 2026: roof, HVAC, water heater and every kitchen appliance. Granite counters in the kitchen and both baths, tile in the main living areas, laminate in the bedrooms, fresh paint and new fixtures throughout. PebbleTec pool with new pump, filter and valve, resurfaced decking, and a fenced gated yard. Video doorbell and cameras convey.",
+  "photos": []
  },
  {
   "slug": "17125-firestone",
@@ -61,7 +164,22 @@
   "mls": "7101295",
   "addr": "17125 N Firestone Lane",
   "status": "Active",
-  "price": 369900
+  "price": 369900,
+  "sold": false,
+  "community": "The Grand",
+  "city": "Surprise",
+  "zip": "85374",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1495,
+  "yr": 2001,
+  "lotsqft": 4949,
+  "garage": 2,
+  "model": "Juniper",
+  "remarks": "Easy living in The Grand! This Juniper plan in Quail Run offers 2 bedrooms plus an office, 2 baths, 1,495 sq ft and a 2 car garage. New roof underlayment in 2025 means one less thing to worry about. The kitchen features maple raised panel cabinets with cathedral uppers, granite counters and stainless appliances, open to a sunny breakfast nook with a designer light. Relax by the gas fireplace and media wall in the great room. The primary suite offers a bay window, dual sinks, a walk-in closet and a private door to the covered patio. Roller shutters, sun screens and security doors add comfort and peace of mind. Low care desert landscaping and no neighbors directly behind. Golf, pools, fitness centers and clubs are all close by.",
+  "photos": [
+   "/homes/photos/17125-firestone-1.jpg"
+  ]
  },
  {
   "slug": "19614-bellwood",
@@ -69,7 +187,20 @@
   "mls": "7064924",
   "addr": "19614 N Bellwood Drive",
   "status": "Under Contract",
-  "price": 474900
+  "price": 474900,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1650,
+  "yr": 1985,
+  "lotsqft": 6900,
+  "garage": 2,
+  "model": "Del Mar Expanded",
+  "remarks": "Step into style with this beautifully updated patio home. Luxury wood-look tile throughout, spacious open-concept living with vaulted ceilings, modern fans, lights, and custom hardware. The chef's kitchen is the place to gather with modern cabinets, quartz counters, crisp designer backsplash, top-of-the-line stainless steel appliances, and a cooktop with a gorgeous hood. The open bonus room offers flexibility for an office or a card/game room; the options are endless. The primary suite features a spacious spa-inspired walk-in shower and custom closet. The guest bath was also updated with a walk-in shower. Excellent choice of new, decorator-style window treatments throughout. Enjoy a 2-car garage, golf cart parking, and a newer roof. Fresh, polished, and ready to impress!!",
+  "photos": []
  },
  {
   "slug": "14412-robertson",
@@ -77,7 +208,22 @@
   "mls": "7101199",
   "addr": "14412 W Robertson Drive",
   "status": "Under Contract",
-  "price": 499900
+  "price": 499900,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1858,
+  "yr": 1997,
+  "lotsqft": 9256,
+  "garage": 2,
+  "model": "Flagstaff",
+  "remarks": "Welcome home to Sun City West at its best! Golf course living with a guest casita. This extended Flagstaff floor plan backs to the fairway and offers room for everything. The large chef's kitchen features an island, abundant cabinetry and a built-in Sub-Zero refrigerator and freezer, opening to the breakfast nook and a spacious great room with fireplace and built-in media center. Two bedrooms plus a den/office with its own door to the patio. The front courtyard leads to the casita with its own bath, where visiting family or friends can enjoy their own private space. Enjoy entertaining on the large covered patio with fairway views. Quality 2x6 construction, indoor laundry room, and a 2-car garage. Roof underlayment redone and new AC unit in 2022. Come see this one today!",
+  "photos": [
+   "/homes/photos/14412-robertson-1.jpg"
+  ]
  },
  {
   "slug": "19949-greenview",
@@ -85,7 +231,20 @@
   "mls": "7080792",
   "addr": "19949 N Greenview Drive",
   "status": "Under Contract",
-  "price": 319900
+  "price": 319900,
+  "sold": false,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1396,
+  "yr": 1992,
+  "lotsqft": 2842,
+  "garage": 2,
+  "model": "Remodeled Fiesta",
+  "remarks": "Fully remodeled Del Webb Fiesta on a quiet Sun City West greenbelt with a private gated courtyard. Kitchen wall opened to the dining room and island enlarged: maple soft-close cabinets; the quartz counters and backsplash, stainless appliances, vent hood, drawer microwave. Wood-look plank tile throughout, new carpet in the primary, new baseboards, casings and window treatments, 9+ flat ceilings. Primary suite with a walk-in closet, spa shower, quartz and barn door slider; guest bath fully tiled. Extended laundry with new sink and cabinets, washer and dryer convey. Newer lower windows and slider, 2 skylights, tankless water heater, owned softener, reverse osmosis, heat pump 4 years, updated breaker panel, garage cabinets and opener. Alumawood-covered paver patio, synthetic grass, fenced yard",
+  "photos": []
  },
  {
   "slug": "22002-acapulco",
@@ -93,7 +252,20 @@
   "mls": "7073361",
   "addr": "22002 N Acapulco Drive",
   "status": "Sold",
-  "price": 715000
+  "price": 715000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 2235,
+  "yr": 1995,
+  "lotsqft": 10252,
+  "garage": 2,
+  "model": "Sedona Remodel Water View",
+  "remarks": "This recently remodeled and well-maintained Sedona model on an elevated double-fairway lot offers spectacular views from inside and out. Enjoy Arizona living and entertaining with a heated Pebble Tec pool, newly resurfaced cool deck, extended screened patio, and fenced yard. Inside, you will enjoy views from almost every room, wood-look plank tile throughout, vaulted ceilings, shutters, patio sliders with built-in blinds, a stacked-stone media wall with an electric fireplace, and an updated kitchen, baths, and laundry room. Two-car + golf cart garage with ample storage & a ductless A/C unit. Two A/C units (2023 and 2017), owned solar (no lease), front re-roof underlayment in 2021, whole-house water treatment. Beautifully updated, energy-efficient, and truly move-in ready.",
+  "photos": []
  },
  {
   "slug": "14912-yosemite",
@@ -101,7 +273,20 @@
   "mls": "7082495",
   "addr": "14912 W Yosemite Drive",
   "status": "Sold",
-  "price": 382000
+  "price": 382000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1669,
+  "yr": 1992,
+  "lotsqft": 9408,
+  "garage": 2,
+  "model": "Safford",
+  "remarks": "Some homes just feel cared for, and this one does. The popular Safford plan opens through double doors to warm wood floors, 10 foot ceilings and formal living and dining rooms with room for the good table. The kitchen wears brand new Formica counters with white cabinetry and stainless appliances, and opens to a sunny bay window nook and a casual sitting area. A spacious primary suite with walk-in shower, double vanity, and a generous walk-in closet; a vaulted guest bedroom and full bath; and a real laundry room. Out back, a long covered patio with a fan is made for morning coffee and evening card games. New flooring, several new windows, AC 5/2025, roof 2021, water heater 3/2022, garage door 4/2025, appliances 1/2025, solar lease at $110. Extended garage with golf cart space, no HOA.",
+  "photos": []
  },
  {
   "slug": "13631-bolero",
@@ -109,7 +294,20 @@
   "mls": "7067718",
   "addr": "13631 W Bolero Drive",
   "status": "Sold",
-  "price": 250000
+  "price": 250000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1150,
+  "yr": 1987,
+  "lotsqft": 270,
+  "garage": 1,
+  "model": "La Mirada",
+  "remarks": "Highly desirable end unit featuring the popular La Mirada split floor plan, 2BD/2BA, spacious great room, and vaulted ceilings. Large neutral tile and plantation shutters throughout. Open kitchen with granite counters, a breakfast bar, a raised ceiling, and abundant cabinets and storage. Generous primary suite offers double sliding doors to the patio, room for larger furniture, and an oversized walk-in closet; the primary bath has granite counters with a makeup area plus a separate room with a walk-in shower and toilet. Spacious guest bedroom with adjacent full bath and tub/shower combo. Outside, a large paver patio allows for easy, low-maintenance living. A wide double gate provides golf cart access, with a ramp to pull the cart directly into the garage. Great indoor-outdoor living.",
+  "photos": []
  },
  {
   "slug": "15119-las-brizas",
@@ -117,7 +315,20 @@
   "mls": "6945254",
   "addr": "15119 W Las Brizas Lane",
   "status": "Sold",
-  "price": 415000
+  "price": 415000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1893,
+  "yr": 1996,
+  "lotsqft": 9488,
+  "garage": 2,
+  "model": "Prescott Expanded",
+  "remarks": "Extended Garage, truck friendly in the Beautifully maintained Prescott floor plan offering 3 full bedrooms and numerous upgrades throughout! Roof replaced in 2015, AC/heat only 8 years old, and exterior painted 2 years ago. Updated kitchen (3 yrs ago) features a side door to the patio, crown molding, and plantation shutters. The extended den includes a 4-ft addition and closet creating a true 3rd bedroom. Baths updated with new sinks, refurbished cabinets, raised toilets, and a Jacuzzi tub in the guest bath. Laminate wood floors in bedrooms, extended-length garage with coated floors and new springs. Elevated lot with front courtyard, extended patio, new irrigation box (2025, 5-year warranty), plus prepaid weed and pest control warranties. Impeccably cared for and truly move-in ready!",
+  "photos": []
  },
  {
   "slug": "19638-bellwood",
@@ -125,7 +336,20 @@
   "mls": "7053261",
   "addr": "19638 N Bellwood Drive",
   "status": "Sold",
-  "price": 520000
+  "price": 520000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1795,
+  "yr": 1985,
+  "lotsqft": 6900,
+  "garage": 2,
+  "model": "Granada Expanded",
+  "remarks": "Rare expanded and remodeled Granada floor plan that lives large and shows even better. The spacious breakfast room addition creates an open, airy layout rarely found in this model. Features 42 owned solar panels (paid for, not leased), a brand-new 30-year roof (2026) with transferable warranty, Marvin Infinity replacement windows, Silestone countertops, and 4'' Kirkwood plantation shutters throughout. A Dagr media wall is the living room focal point. The spa-inspired primary bath offers Café Forest granite, wheelchair-accessible entry, and instant hot water. Enjoy a resort-style backyard with a sparkling salt water pool that is heated and cooled, oversized Alumawood patio, awnings, misters, remote-controlled lighting, cool decking, and pavers. There is much more to see!",
+  "photos": []
  },
  {
   "slug": "15808-heritage",
@@ -133,7 +357,20 @@
   "mls": "6970611",
   "addr": "15808 W Heritage Drive",
   "status": "Sold",
-  "price": 439000
+  "price": 439000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 3,
+  "sqft": 1900,
+  "yr": 1993,
+  "lotsqft": 10312,
+  "garage": 2,
+  "model": "Ventana",
+  "remarks": "PRE-PAID SOLAR, ROOF UNDERLAYMENT 2019, EXTERIOR PAINTED 2023. 2 primary suites, 2.5 baths, 1900 sq. ft., 2 designated office spaces, extended laundry room, living/dining, and a family room, breakfast nook. Plantation shutters, granite counters, island kitchen, gas cooking, insulated garage door, electric car garage plug-in, garage fan on a thermostat, 23 x 18 extended-length covered patio with a gas stub for the pit boss in the family, tastefully landscaped in a partially fenced yard. Located in the low-tax area of Sun City West with desirable north/south orientation, a custom front courtyard with beautiful coach lighting adds wonderful curb appeal.",
+  "photos": []
  },
  {
   "slug": "14420-sentinel",
@@ -141,7 +378,20 @@
   "mls": "7050182",
   "addr": "14420 W Sentinel Drive",
   "status": "Sold",
-  "price": 405000
+  "price": 405000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1908,
+  "yr": 1990,
+  "lotsqft": 9000,
+  "garage": 2,
+  "model": "Expanded Wexford",
+  "remarks": "Pride of ownership shines throughout this thoughtfully updated home featuring a new roof 2025, front windows 2021, gutters, and a private front courtyard. Vaulted ceilings, diagonal tile, and decorative accents enhance the open living spaces. The refreshed kitchen includes a tile backsplash, 2023 refrigerator, updated hardware, and water filtration. A flexible bonus room with vaulted ceiling and patio access offers space for guests, hobbies, or media, plus a separate den/office. The primary suite features a bay window, walk-in closet, and updated bath with granite and raised vanity. A 2.5 Golf Cart garage provides extensive storage, workbench, insulated door 2022, and whole-house water filtration. Two patios, pergola, BBQ area, block wall, and a spacious yard complete the outdoor setting.",
+  "photos": []
  },
  {
   "slug": "19511-143rd",
@@ -149,7 +399,20 @@
   "mls": "6949374",
   "addr": "19511 N 143rd Drive",
   "status": "Sold",
-  "price": 282500
+  "price": 282500,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1866,
+  "yr": 1987,
+  "lotsqft": 370,
+  "garage": 2,
+  "model": "Aspen",
+  "remarks": "Enjoy easy living in this beautifully maintained Aspen model offering 1,866 square feet of bright, comfortable living space. Featuring 2 bedrooms and 1.75 baths, this inviting home welcomes you with vaulted ceilings, abundant natural light, and an open floor plan designed for both everyday living and entertaining. The spacious kitchen includes Corian countertops, newer appliances, and a built-in office area perfect for working from home, managing household tasks, or enjoying your favorite hobbies. Major updates provide peace of mind, including a newer roof and A/C system installed in 2019. Step outside to enjoy the serene greenbelt setting, where mature landscaping, added privacy, and peaceful views create the perfect place to relax.",
+  "photos": []
  },
  {
   "slug": "14430-parada",
@@ -157,7 +420,20 @@
   "mls": "7012683",
   "addr": "14430 W Parada Drive",
   "status": "Sold",
-  "price": 625000
+  "price": 625000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 3,
+  "sqft": 2207,
+  "yr": 1994,
+  "lotsqft": 11474,
+  "garage": 2,
+  "model": "Pinetop Expanded Golf",
+  "remarks": "Location is everything, and this expanded Pinetop model delivers. Offering 2,207 sq ft on an elevated 11,474 sq ft golf course lot with stunning water and mountain views. The updated kitchen features granite counters, stainless steel appliances, custom backsplash, and raised-panel cabinetry. Custom built-ins enhance the extended family room. Split floor plan with spacious primary suite, spa jetted tub, separate shower, large guest bedroom, full guest bath, and built-in library/office. Additional highlights include a powder room, an extended laundry, and a golf cart garage. Roof replaced in 2018 with a transferable warranty. Exterior painted in 2024. North/south exposure with an extended patio and no golf cart path behind.",
+  "photos": []
  },
  {
   "slug": "12429-eveningside",
@@ -165,7 +441,20 @@
   "mls": "7027759",
   "addr": "12429 W Eveningside Drive",
   "status": "Sold",
-  "price": 384000
+  "price": 384000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1600,
+  "yr": 1984,
+  "lotsqft": 8700,
+  "garage": 2,
+  "model": "Expanded Kaibab",
+  "remarks": "UPDATED SUN CITY WEST HOME with a 2021 SALTWATER POOL that is HEATED & COOLED for year-round enjoyment! Features NEW ROOF (2025), NEW EXTERIOR PAINT 2/9/2026, LANDSCAPING 2021 with Arizona Rainfall, TILE & LAMINATE FLOORING, and VAULTED CEILINGS. Kitchen offers STAINLESS STEEL APPLIANCES, a pantry, and an extended laundry room. Spacious BONUS ROOM for hobbies or office. Primary suite includes BAY WINDOW, TRIPLE CLOSETS & DOUBLE SINKS. Covered outdoor living, mature landscaping, and major updates already completed for move-in-ready Arizona living! .",
+  "photos": []
  },
  {
   "slug": "14418-gunsight",
@@ -173,7 +462,20 @@
   "mls": "6908216",
   "addr": "14418 W Gunsight Drive",
   "status": "Sold",
-  "price": 430000
+  "price": 430000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 2039,
+  "yr": 1995,
+  "lotsqft": 10169,
+  "garage": 2,
+  "model": "Safford-bonus Rm-new Roof",
+  "remarks": "NEW ROOF APRIL 2026, AC/HEAT 2020. Expanded Safford Model with 2x6 construction and 2,039 sq. ft., including a 14x15 BONUS ROOM and 9x12 utility room. Features a gated front courtyard, epoxy-coated surfaces, front security door, 20'' neutral tile flooring, plantation shutters, and updated baths. Kitchen offers Silestone countertops, designer backsplash, undermount sink, and Kenmore appliances. Spacious primary suite includes a bay window. Major updates include WATER HEATER & SOFTENER (2021), DISPOSAL (2022), SHUT-OFF VALVES & FLEX HOSES (2022), TOILETS (2022), GARAGE DOOR (2022), and SPRINKLER VALVES (2022). Extended covered patio and 2-CAR GARAGE with built-in cabinets complete this move-in ready home.",
+  "photos": []
  },
  {
   "slug": "14141-robertson",
@@ -181,7 +483,20 @@
   "mls": "6980826",
   "addr": "14141 W Robertson Drive",
   "status": "Sold",
-  "price": 507000
+  "price": 507000,
+  "sold": true,
+  "community": "Sun City West",
+  "city": "Sun City West",
+  "zip": "85375",
+  "beds": 2,
+  "baths": 2,
+  "sqft": 2197,
+  "yr": 1994,
+  "lotsqft": 7843,
+  "garage": 2,
+  "model": "Sedona Updated*new Roof",
+  "remarks": "New Roof on this Popular Sedona model with a desirable split-bedroom layout. Elegant tile plank-style flooring adds warmth and style throughout. Beautifully remodeled kitchen and baths offer timeless appeal, plus a separate den/office perfect for hobbies or workspace. The spacious primary suite features a bay window, dual sinks, his & hers closets, and an oversized seated shower. Enjoy relaxing on the screened-in covered patio overlooking a fenced yard with a raised garden bed and two fruit trees. Select windows have been replaced, adding improved efficiency and comfort. Golf cart garage, owned water softener, newer LG washer & dryer, and all appliances convey (including garage freezer). Leased solar and ideal N/S exposure complete this welcoming, move-in-ready home.",
+  "photos": []
  },
  {
   "slug": "17404-99th-102",
@@ -189,6 +504,19 @@
   "mls": "6995008",
   "addr": "17404 N 99th Avenue #102",
   "status": "Sold",
-  "price": 190000
+  "price": 190000,
+  "sold": true,
+  "community": "Sun City",
+  "city": "Sun City",
+  "zip": "85373",
+  "beds": 1,
+  "baths": 1,
+  "sqft": 832,
+  "yr": 1985,
+  "lotsqft": 0,
+  "garage": 0,
+  "model": "The Heritage",
+  "remarks": "Single-level Heritage condo in Sun City with covered parking and community amenities.",
+  "photos": []
  }
 ]

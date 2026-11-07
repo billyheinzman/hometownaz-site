@@ -29,6 +29,7 @@ h1{font-family:'Merriweather',Georgia,serif;font-size:27px;font-weight:700;line-
 .btn{display:inline-block;padding:11px 16px;border:1.5px solid var(--green);border-radius:6px;text-decoration:none;color:var(--green);font-size:14px;font-weight:600;margin:14px 8px 0 0}
 .btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}
 .btn.flyer{display:block;text-align:center;border-color:var(--orange-deep);color:var(--orange-deep)}
+.btn.hc{display:block;text-align:center}
 h2{font-family:'Merriweather',Georgia,serif;font-size:20px;margin:28px 0 10px}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pills span{background:#fff;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:13px}
 #map{height:280px;border-radius:8px;border:1px solid var(--border)}
@@ -42,7 +43,7 @@ footer{border-top:1px solid var(--border);background:#fff;color:var(--muted);fon
 <div class="grid">
  <div class="col">
   <div class="gal" id="gal"><img id="galimg" src="https://cdn.photos.sparkplatform.com/az/20260926222402930200000000.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="badge">Active</span>
-  </div>
+  <button class="nav prev" onclick="step(-1)" aria-label="Previous photo">&#8249;</button><button class="nav next" onclick="step(1)" aria-label="Next photo">&#8250;</button><span class="cnt" id="cnt">1 / 2</span></div>
   <div class="about"><h2>About this home</h2><p>Completely updated Expanded Alpine in Sun City West, and every update was done right. New roof, new AC, updated kitchen and both baths, new garage door, and all-new landscaping front and back. The kitchen features stainless appliances, a glass tile backsplash, updated counters, and a sunny breakfast nook with a slider to the patio. Both baths have walk-in tiled showers with frameless glass. Plantation shutters throughout, tile plank flooring in the living areas, and wood-look flooring in both bedrooms. The primary suite offers a bay window and a large walk-in closet with custom shelving. The garage has an epoxy floor, built-in cabinets, and laundry. Out back, an extended covered patio overlooks a water feature and a true oasis. 2 bed, 2 bath, 2-car garage. New whole-house water system.</p>
   <div class="pills"><span>55+ community</span></div>
   <h2>Location</h2><div id="map"></div><p class="muted" style="margin-top:6px"><a href="https://www.google.com/maps/search/?api=1&query=33.657874,-112.356267" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
@@ -52,7 +53,8 @@ footer{border-top:1px solid var(--border);background:#fff;color:var(--muted);fon
    <div class="price">$410,000</div>
    <div class="facts"><div><span>Price</span>$410,000</div><div><span>Status</span>Active</div><div><span>Bedrooms</span>2</div><div><span>Bathrooms</span>2</div><div><span>Living area</span>1,438 sf</div><div><span>Lot</span>5,300 sf</div><div><span>Year built</span>1995</div><div><span>Garage</span>2 car</div><div><span>Model</span>Alpine</div><div><span>Home type</span>Single Family Residence</div><div><span>MLS #</span>7088722</div></div>
    <a class="btn primary" href="tel:+14802973830">Call Billy</a><a class="btn" href="tel:+16232036271">Call Lona</a><a class="btn" href="sms:4802973830?&body=Hi%20Billy%2C%20I%20would%20like%20to%20see%2013664%20W%20Ravenswood%20Drive">Text to schedule a showing</a>
-   
+   <a class="btn flyer" href="/flyers/13664-ravenswood.pdf" target="_blank" rel="noopener" download="13664-ravenswood-flyer.pdf">&#128196; Download Flyer (PDF)</a>
+   <a class="btn hc" href="https://www.homes.com/property/13664-w-ravenswood-dr-sun-city-west-az/b9vjx47zy0ed5/" target="_blank" rel="noopener">&#127968; View on Homes.com</a>
   </div>
   <div class="card center qrc"><div class="qr" id="qr" data-url="https://hometownaz.com/homes/13664-ravenswood"></div><p class="muted" style="margin-top:8px">Scan or share this home</p><p class="muted"><a id="qrdl" href="#" download="13664-ravenswood-qr.gif">Download QR code</a></p></div>
   <div class="card who"><p><b>Lona King</b><br>623-203-6271 | azlonaking@gmail.com</p><p style="margin-top:10px"><b>Billy Heinzman</b><br>480-297-3830 | billyheinzman@gmail.com</p><p class="muted" style="margin-top:10px">HomeSmart</p></div>
@@ -61,7 +63,7 @@ footer{border-top:1px solid var(--border);background:#fff;color:var(--muted);fon
 </main><footer><div class="in">Lona King | 623-203-6271 &nbsp;&nbsp; Billy Heinzman | 480-297-3830<br>HomeSmart | (623) 209-3200<br>Listing information is deemed reliable but not guaranteed and should be independently verified. Source: Arizona Regional Multiple Listing Service (ARMLS). Prices and availability subject to change.</div></footer>
 <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-var P=["https://cdn.photos.sparkplatform.com/az/20260926222402930200000000.jpg"],i=0;
+var P=["https://cdn.photos.sparkplatform.com/az/20260926222402930200000000.jpg","/homes/photos/13664-ravenswood-1.jpg"],i=0;
 function step(d){i=(i+d+P.length)%P.length;document.getElementById('galimg').src=P[i];document.getElementById('cnt').textContent=(i+1)+' / '+P.length;}
 (function(){var el=document.getElementById('qr');if(window.qrcode){var q=qrcode(0,'M');q.addData(el.dataset.url);q.make();el.innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});document.getElementById('qrdl').href=q.createDataURL(12,4);}})();
 if(window.L){var m=L.map('map',{scrollWheelZoom:false}).setView([33.657874,-112.356267],15);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap'}).addTo(m);L.marker([33.657874,-112.356267]).addTo(m);}
