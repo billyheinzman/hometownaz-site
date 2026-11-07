@@ -109,6 +109,9 @@ node build-homes.js
   (for example `flyers/15421-sentinel.pdf`) and run `node build-homes.js`. A "Download Flyer (PDF)"
   button then appears on the home's page and a "Flyer PDF" button in the Our Listings popup.
   Keep each file under about 5 MB so it opens quickly on phones.
+- **Listing photos + auto flyers:** save photos as `homes/photos/<slug>-1.jpg`, `-2.jpg` (first one is the
+  flyer's main photo). Then run `node build-homes.js`, `python build-flyers.py`, `node build-homes.js`.
+  Homes listed in `flyers/_designed.txt` keep their hand-designed flyer.
 - When adding new for-sale pages, also add them to `sitemap.xml` between the
   `HOMES:START` / `HOMES:END` markers.
 
