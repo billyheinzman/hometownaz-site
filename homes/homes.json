@@ -1,0 +1,194 @@
+[
+ {
+  "slug": "14854-domingo",
+  "url": "https://hometownaz.com/homes/14854-domingo",
+  "mls": "7095582",
+  "addr": "14854 W Domingo Lane",
+  "status": "Active",
+  "price": 525000
+ },
+ {
+  "slug": "15421-sentinel",
+  "url": "https://hometownaz.com/homes/15421-sentinel",
+  "mls": "7098038",
+  "addr": "15421 W Sentinel Drive",
+  "status": "Active",
+  "price": 419000
+ },
+ {
+  "slug": "13664-ravenswood",
+  "url": "https://hometownaz.com/homes/13664-ravenswood",
+  "mls": "7088722",
+  "addr": "13664 W Ravenswood Drive",
+  "status": "Active",
+  "price": 410000
+ },
+ {
+  "slug": "12931-prospect",
+  "url": "https://hometownaz.com/homes/12931-prospect",
+  "mls": "7098041",
+  "addr": "12931 W Prospect Drive",
+  "status": "Active",
+  "price": 264900
+ },
+ {
+  "slug": "13607-pyracantha",
+  "url": "https://hometownaz.com/homes/13607-pyracantha",
+  "mls": "7095502",
+  "addr": "13607 W Pyracantha Drive",
+  "status": "Active",
+  "price": 459000
+ },
+ {
+  "slug": "15626-heritage",
+  "url": "https://hometownaz.com/homes/15626-heritage",
+  "mls": "7095507",
+  "addr": "15626 W Heritage Drive",
+  "status": "Active",
+  "price": 419900
+ },
+ {
+  "slug": "1948-morrow",
+  "url": "https://hometownaz.com/homes/1948-morrow",
+  "mls": "7086407",
+  "addr": "1948 E Morrow Drive",
+  "status": "Active",
+  "price": 574900
+ },
+ {
+  "slug": "17125-firestone",
+  "url": "https://hometownaz.com/homes/17125-firestone",
+  "mls": "7101295",
+  "addr": "17125 N Firestone Lane",
+  "status": "Active",
+  "price": 369900
+ },
+ {
+  "slug": "19614-bellwood",
+  "url": "https://hometownaz.com/homes/19614-bellwood",
+  "mls": "7064924",
+  "addr": "19614 N Bellwood Drive",
+  "status": "Under Contract",
+  "price": 474900
+ },
+ {
+  "slug": "14412-robertson",
+  "url": "https://hometownaz.com/homes/14412-robertson",
+  "mls": "7101199",
+  "addr": "14412 W Robertson Drive",
+  "status": "Under Contract",
+  "price": 499900
+ },
+ {
+  "slug": "19949-greenview",
+  "url": "https://hometownaz.com/homes/19949-greenview",
+  "mls": "7080792",
+  "addr": "19949 N Greenview Drive",
+  "status": "Under Contract",
+  "price": 319900
+ },
+ {
+  "slug": "22002-acapulco",
+  "url": "https://hometownaz.com/homes/22002-acapulco",
+  "mls": "7073361",
+  "addr": "22002 N Acapulco Drive",
+  "status": "Sold",
+  "price": 715000
+ },
+ {
+  "slug": "14912-yosemite",
+  "url": "https://hometownaz.com/homes/14912-yosemite",
+  "mls": "7082495",
+  "addr": "14912 W Yosemite Drive",
+  "status": "Sold",
+  "price": 382000
+ },
+ {
+  "slug": "13631-bolero",
+  "url": "https://hometownaz.com/homes/13631-bolero",
+  "mls": "7067718",
+  "addr": "13631 W Bolero Drive",
+  "status": "Sold",
+  "price": 250000
+ },
+ {
+  "slug": "15119-las-brizas",
+  "url": "https://hometownaz.com/homes/15119-las-brizas",
+  "mls": "6945254",
+  "addr": "15119 W Las Brizas Lane",
+  "status": "Sold",
+  "price": 415000
+ },
+ {
+  "slug": "19638-bellwood",
+  "url": "https://hometownaz.com/homes/19638-bellwood",
+  "mls": "7053261",
+  "addr": "19638 N Bellwood Drive",
+  "status": "Sold",
+  "price": 520000
+ },
+ {
+  "slug": "15808-heritage",
+  "url": "https://hometownaz.com/homes/15808-heritage",
+  "mls": "6970611",
+  "addr": "15808 W Heritage Drive",
+  "status": "Sold",
+  "price": 439000
+ },
+ {
+  "slug": "14420-sentinel",
+  "url": "https://hometownaz.com/homes/14420-sentinel",
+  "mls": "7050182",
+  "addr": "14420 W Sentinel Drive",
+  "status": "Sold",
+  "price": 405000
+ },
+ {
+  "slug": "19511-143rd",
+  "url": "https://hometownaz.com/homes/19511-143rd",
+  "mls": "6949374",
+  "addr": "19511 N 143rd Drive",
+  "status": "Sold",
+  "price": 282500
+ },
+ {
+  "slug": "14430-parada",
+  "url": "https://hometownaz.com/homes/14430-parada",
+  "mls": "7012683",
+  "addr": "14430 W Parada Drive",
+  "status": "Sold",
+  "price": 625000
+ },
+ {
+  "slug": "12429-eveningside",
+  "url": "https://hometownaz.com/homes/12429-eveningside",
+  "mls": "7027759",
+  "addr": "12429 W Eveningside Drive",
+  "status": "Sold",
+  "price": 384000
+ },
+ {
+  "slug": "14418-gunsight",
+  "url": "https://hometownaz.com/homes/14418-gunsight",
+  "mls": "6908216",
+  "addr": "14418 W Gunsight Drive",
+  "status": "Sold",
+  "price": 430000
+ },
+ {
+  "slug": "14141-robertson",
+  "url": "https://hometownaz.com/homes/14141-robertson",
+  "mls": "6980826",
+  "addr": "14141 W Robertson Drive",
+  "status": "Sold",
+  "price": 507000
+ },
+ {
+  "slug": "17404-99th-102",
+  "url": "https://hometownaz.com/homes/17404-99th-102",
+  "mls": "6995008",
+  "addr": "17404 N 99th Avenue #102",
+  "status": "Sold",
+  "price": 190000
+ }
+]
